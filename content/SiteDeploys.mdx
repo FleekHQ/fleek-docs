@@ -1,0 +1,29 @@
+---
+name: Site Deploys
+menu: Terminal Sites
+---
+
+# Overview
+
+Each new website deployment by Terminal is deployed atomically, meaning that there will never be any inconsistencies when pushing new files or making changes to existing ones.
+
+### Deploy Summaries
+
+You can find a deploy summary on the detail page of any successful deploy, right above the deploy log. It allows you to quickly identify your deploy status and refer to the details in the log based on different types of information.
+
+## Create Deploys
+
+### Deploying with Git
+
+Simply set the base directory of your project to your github repository and define your build command [SHOW EXAMPLE PICTURE HERE]. Terminal will run your build command and deploy the result whenever you push to your Git repo. 
+* The benefits of using continuous deployment include:
+    * No deploying without committing and pushing first
+    * Easy collaboration through pull/merge request-s
+    * Fix a typo through your Git provider's web UI from your mobile
+
+### Deploying without Git
+You can also deploy your site by uploading the full code base for your website. However this will not allow for continuous deployment as you will have to upload the new code base each time you want to make a change.
+
+### We are here to help
+
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://terminal.co), in our [Discord](https://discord.gg/HdTu3pa), on [Twitter](https://twitter.com/terminaldotco), or at hi@terminal.co
