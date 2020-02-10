@@ -1,6 +1,6 @@
 const config = {
   gatsby: {
-    pathPrefix: "/",
+    pathPrefix: "__GATSBY_IPFS_PATH_PREFIX__",
     siteUrl: "https://terminal.co",
     gaTrackingId: null
   },
