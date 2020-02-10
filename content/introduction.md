@@ -1,7 +1,7 @@
 ---
 title: "Welcome"
-metaTitle: "This is the title tag of this page"
-metaDescription: "This is the meta description"
+metaTitle: "Terminal Docs"
+metaDescription: "Documentation for Terminal Sites"
 ---
 
 # Welcome To Terminal Sites
