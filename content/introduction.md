@@ -17,11 +17,11 @@ If you so choose, you can also delpoy by uploading the full code base for you we
 
 Below you can find a basic outline of our docs.
 
-- [Common Build Configurations](/BuildConfigurations)
+- [Common Build Configurations](/BuildConfigurations/)
 - [Troubleshooting Tips](/Troubleshooting)
 - [Deployment Overview](/SiteDeploys)
-- [Site Monitoring](MonitorSites)
-- [Custom Domains and HTTPS](DomainHTTPS)
+- [Site Monitoring](/MonitorSites)
+- [Custom Domains and HTTPS](/DomainHTTPS)
 
 ### We are here to help
 
