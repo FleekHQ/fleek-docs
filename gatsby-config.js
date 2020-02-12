@@ -3,7 +3,7 @@ const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
   "gatsby-plugin-catch-links",
-  // "gatsby-plugin-ipfs",
+  "gatsby-plugin-ipfs",
   "gatsby-plugin-sitemap",
   "gatsby-plugin-sharp",
   {
@@ -85,7 +85,7 @@ if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
   plugins.push("gatsby-plugin-remove-serviceworker");
 }
 module.exports = {
-  // pathPrefix: config.gatsby.pathPrefix,
+  pathPrefix: config.gatsby.pathPrefix,
   siteMetadata: {
     title: config.siteMetadata.title,
     description: config.siteMetadata.description,
