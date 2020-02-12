@@ -49,6 +49,18 @@ const plugins = [
       // enable ip anonymization
       anonymize: false
     }
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `gatsby-docs-terminal`,
+      short_name: `docs`,
+      start_url: `/`,
+      background_color: `#ffffff`,
+      theme_color: `#ffffff`,
+      display: `standalone`,
+      icon: `src/components/images/hex-logo.png`
+    }
   }
   // "gatsby-plugin-ipfs",
 ];
@@ -103,6 +115,6 @@ module.exports = {
     headerLinks: config.header.links,
     siteUrl: config.gatsby.siteUrl
   },
-  pathPrefix: config.gatsby.pathPrefix,
+  // pathPrefix: config.gatsby.pathPrefix,
   plugins: plugins
 };

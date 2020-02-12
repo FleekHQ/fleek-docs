@@ -46,7 +46,7 @@ const config = {
       crossOrigin: "use-credentials",
       icons: [
         {
-          src: "src/head-light-face-black.png", //Put Terminal Logo Here
+          src: "src/components/images/head-light-face-black.png", //Put Terminal Logo Here
           sizes: `512x512`,
           type: `image/png`
         }
