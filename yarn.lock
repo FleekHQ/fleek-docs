@@ -6221,6 +6221,14 @@ gatsby-plugin-algolia@^0.5.0:
     gatsby-cli "^1.1.58"
     lodash.chunk "^4.2.0"
 
+gatsby-plugin-catch-links@^2.1.25:
+  version "2.1.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.1.25.tgz#163332de7708317146239250f95dff16af748914"
+  integrity sha512-6B+oTJLrqY3gJOO3G3DdyazSemcl/CFe7XLuBQmB5OfiReUsulu/w6NbgWP5KRRhXYQHtNoL2z19Z1xbRHJNOg==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+    escape-string-regexp "^1.0.5"
+
 gatsby-plugin-emotion@^4.1.18:
   version "4.1.22"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.1.22.tgz#e153debef74afa205336738dcf1988c95b308c4f"
@@ -6404,7 +6412,7 @@ gatsby-remark-copy-linked-files@^2.1.33:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-images@^3.1.37:
+gatsby-remark-images@^3.1.44:
   version "3.1.44"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.44.tgz#0e56e1576b7bd8415b4e969b81712eb0f3614d9e"
   integrity sha512-zEUN8mMUJgL1Zsv8AnEdLoPIWO3sL8dp3OuMRBbg42qpOLh0t0NENFXhZ8VJxGwiUPE9Q025ws8GuRDPKeXgCA==
