@@ -7,7 +7,7 @@ const config = {
   header: {
     logo: "",
     logoLink: "",
-    title: "Terminal Sites Documentation",
+    title: "Terminal Documentation",
     githubUrl: "https://github.com/Terminal-Systems/terminal-docs",
     helpUrl: "",
     tweetText: "",
