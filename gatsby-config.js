@@ -3,7 +3,6 @@ const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
   // "gatsby-plugin-catch-links",
-  // "gatsby-plugin-ipfs",
   "gatsby-plugin-sitemap",
   "gatsby-plugin-sharp",
   {
@@ -51,6 +50,7 @@ const plugins = [
       anonymize: false
     }
   }
+  // "gatsby-plugin-ipfs",
 ];
 // check and add algolia
 if (
@@ -85,7 +85,7 @@ if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
   plugins.push("gatsby-plugin-remove-serviceworker");
 }
 module.exports = {
-  // pathPrefix: config.gatsby.pathPrefix,
+  pathPrefix: config.gatsby.pathPrefix,
   siteMetadata: {
     title: config.siteMetadata.title,
     description: config.siteMetadata.description,
@@ -103,5 +103,6 @@ module.exports = {
     headerLinks: config.header.links,
     siteUrl: config.gatsby.siteUrl
   },
+  pathPrefix: config.gatsby.pathPrefix,
   plugins: plugins
 };
