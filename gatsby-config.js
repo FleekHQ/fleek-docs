@@ -117,4 +117,7 @@ module.exports = {
   },
   // pathPrefix: config.gatsby.pathPrefix,
   plugins: plugins
+  plugins: [`gatsby-plugin-netlify-cms`]
+
 };
+
