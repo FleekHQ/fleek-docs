@@ -7,11 +7,7 @@ name: Site Deploys
 
 Each new website deployment by Terminal is deployed atomically, meaning that there will never be any inconsistencies when pushing new files or making changes to existing ones.
 
-### Deploy Summaries
-
-You can find a deploy summary on the detail page of any successful deploy, right above the deploy log. It allows you to quickly identify your deploy status and refer to the details in the log based on different types of information.
-
-## Create Deploys
+# Create Deploys
 
 ### Deploying with Git
 
@@ -24,13 +20,13 @@ Simply set the base directory of your project to your github repository and defi
   - Easy collaboration through pull/merge request-s
   - Fix a typo through your Git provider's web UI from your mobile
 
-### Advanced Settings
+# Advanced Settings
 
 When building your site, we make some assumptions about system dependencies and tools. If you are using a standard node.js environment this should be enough. There are some cases though where you might want to use custom tools not provided by default in a standard node.js distribution. For these cases, you can configure advanced settings. To do this, go to your site overview, click Settings and scroll down to the Advanced Settings section.
 
-![](advanced settings.png)
+![](advancedSettings.png)
 
-#### Environment Variables
+## Environment Variables
 
 Environment variables are exactly that: variables that exist on the machine that’s running your build. You can set up any amount of environment variables by clicking the “New Variable” button.
 
@@ -38,7 +34,7 @@ Environment variables are exactly that: variables that exist on the machine that
 
 A typical use case is setting up an staging environment. You can do this by adding two sites pointing to the same repository, and then setting up the `NODE_ENV` variable differently in each site. Then, in your node.js build script you can check for this variable by doing `process.env.NODE_ENV` and for example displaying a new feature only if `process.env.NODE_ENV === staging` so that the feature is only visible in your staging environment. That way you can test your new feature before it reaches all your users.
 
-#### Docker Image
+## Docker Image
 
 We run builds inside a [Docker](https://www.docker.com/resources/what-container) container. If no Docker image is specified, we try to infer which one is the best suited for your project. Sometimes though, the picked docker image might be missing a dependency or two. Or maybe other times you have few dependencies and want to use a leaner Docker image to speed up the build process. In these cases, it makes sense to use a custom docker image.
 
@@ -58,7 +54,7 @@ Some popular options are:
 If you can’t find a suitable Docker image for your project, you can always build and publish your own (it’s free!). To do so, head over to the official [Docker documentation here](https://docs.docker.com/docker-hub/publish/publish/). We will also be constantly publishing popular base images at https://hub.docker.com/u/terminalsystems.
 
 
-### Deploying without Git
+# Deploying without Git
 
 You can also deploy your site by uploading the full code base for your website. However this will not allow for continuous deployment as you will have to upload the new code base each time you want to make a change.
 
