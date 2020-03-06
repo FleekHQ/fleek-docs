@@ -61,8 +61,9 @@ const plugins = [
       display: `standalone`,
       icon: `src/components/images/hex-logo.png`
     }
-  }
-  // "gatsby-plugin-ipfs",
+  },
+   "gatsby-plugin-ipfs",
+   `gatsby-plugin-netlify-cms`
 ];
 // check and add algolia
 if (
@@ -117,7 +118,5 @@ module.exports = {
   },
   // pathPrefix: config.gatsby.pathPrefix,
   plugins: plugins
-  plugins: [`gatsby-plugin-netlify-cms`]
-
 };
 
