@@ -19,6 +19,15 @@ Similar to the configuration for Javascript SPA's, set the build command to `gas
 
 You will also need to have the `gatsby-plugin-ipfs` installed and configured in your gatsby-config file.
 
+- **Hugo**
+
+Set the following build settings:
+
+1. **Build Settings / Build command:** `hugo` (or call `hugo` from something else)
+2. **Build Settings / Publish directory:** `public`
+3. **Docker Image:** `toschwarz/hugo-builder:latest`
+
+
 ### We are here to help
 
 We are happy to help get your website up and running. Please feel free to reach out on our [website](https://terminal.co), in our [Community Chat](https://join.slack.com/t/terminal-public/shared_invite/enQtOTM1MjQ3NTExMDU3LTNkYjU1ZGJhZGUyYjgwN2I3OThjY2U5OThlMGY2MGY0OGYxMDI1OWIwMTMwYzViZGY4ZGU0NDA0YmY4ZjVhOTg), on [Twitter](https://twitter.com/terminaldotco), or at support@terminal.co
