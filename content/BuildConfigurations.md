@@ -25,7 +25,7 @@ Set the following build settings:
 
 1. **Build Settings / Build command:** `hugo` (or call `hugo` from something else)
 2. **Build Settings / Publish directory:** `public`
-3. **Docker Image:** `toschwarz/hugo-builder:latest`
+3. **Docker Image:** `samueleago/hugo-builder:latest`
 
 
 ### We are here to help
