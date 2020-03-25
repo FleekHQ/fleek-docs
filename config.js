@@ -2,7 +2,7 @@ const config = {
   gatsby: {
     pathPrefix: "__GATSBY_IPFS_PATH_PREFIX__",
     siteUrl: "https://terminal.co",
-    gaTrackingId: null
+    gaTrackingId: 'UA-144542192-2'
   },
   header: {
     logo: "",
