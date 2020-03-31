@@ -60,7 +60,7 @@ const Header = ({ location }) => (
       }
     `}
     render={data => {
-      const logoImg = require("./images/hex-logo.png");
+      const logoImg = require("./images/FleekIcon.png");
       const twitter = require("./images/twitter.svg");
       const {
         site: {

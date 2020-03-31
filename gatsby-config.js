@@ -53,13 +53,13 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `gatsby-docs-terminal`,
+      name: `gatsby-docs-Fleek`,
       short_name: `docs`,
       start_url: `/`,
       background_color: `#ffffff`,
       theme_color: `#ffffff`,
       display: `standalone`,
-      icon: `src/components/images/hex-logo.png`
+      icon: `src/components/images/FleekIcon.png`
     }
   },
    "gatsby-plugin-ipfs",
