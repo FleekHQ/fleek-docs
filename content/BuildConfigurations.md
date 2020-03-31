@@ -2,32 +2,99 @@
 name: Build Configurations
 ---
 
-# Common Configurations
+# File configuration
 
-- **JavaScript Single Page Applications (SPA's)**
-  - Javascript SPA’s generally have a build script defined in the `package.json` file. Simply set the build command to
+Using a .fleek.json configuration file, placed at the root of a project, you can provide options that changes the default build behavior and overrides settings from UI (except secrets).
 
-`npm run [BUILD_SCRIPT]` or `yarn [BUILD_SCRIPT]` depending on your preferred dependency manager. \* You will also have to define the publish directory, which is generally `dist` but can sometimes vary.
+```json
+{
+ "build": {
+   "image": "node:alpine",
+   "command": "npm install && npm run build && echo $SOME_ENV",
+   "publicDir": "build",
+   "baseDir": "frontend",
+   "environment": {
+     "SOME_ENV": "Build finished!"
+   }
+ }
+}
+```
 
-- **MonoRepos**
+#### All these fields are optional:
 
-If your codebase works as a monorepo, you can set up your deploy to point at a specific base directory in your code base. When you configure the base directory Fleek will use the base directory as the primary or root directory and build your site from there.
+- `image` public docker image, default to node:slim
+- `command` no command is executed by default
+- `baseDir` build command is executed in this directory, root directory is used by default
+- `publicDir` this directory is uploaded to IPFS, `baseDir` is used by default
+- `environment` key/value object of environment variables
 
-- **Gatsby**
+If you use `baseDir = /frontend` and `publicDir = /dist`, published path is `/frontend/dist`. If you need to publish directory above or next to your `baseDir`, you can use relative path `publicDir = ../../dist`.
 
-Similar to the configuration for Javascript SPA's, set the build command to `gastby build` and the publish directory to `public`
+### JavaScript Single Page Applications (SPA's)
+Javascript SPA’s generally have a build script defined in the `package.json` file. Simply set the build command to `npm install && npm run [BUILD_SCRIPT]` or `yarn && yarn [BUILD_SCRIPT]` depending on your preferred dependency manager.
 
-You will also need to have the `gatsby-plugin-ipfs` installed and configured in your gatsby-config file.
+You will also have to define correct `publicDir`, here's list of default configurations for popular frameworks:
 
-- **Hugo**
+<div id="framework-list">
 
-Set the following build settings:
+| Framework          | Docker Image           | Build Command                       | Public Directory |
+|--------------------|------------------------|-------------------------------------|------------------|
+| Create React App   | fleek/create-react-app | `yarn && yarn build`                | build            |
+| Gatsby             | fleek/gatsby           | `yarn && gatsby build`              | public           |
+| Hugo               | fleek/hugo             | `yarn && hugo`                      | public           |
+| Jekyll             | fleek/jekyll           | `jekyll build`                      | _site            |
+| Next JS            | fleek/next-js          | `yarn && yarn build && yarn export` | out              |
 
-1. **Build Settings / Build command:** `hugo` (or call `hugo` from something else)
-2. **Build Settings / Publish directory:** `public`
-3. **Docker Image:** `toschwarz/hugo-builder:latest`
+</div>
+
+### If you're using Gatsby
+
+You also need to have the `gatsby-plugin-ipfs` installed and configured in your `gatsby-config` file.
+
+# Testing builds locally
+
+We're using docker containers to execute your builds, so you can test them locally with Docker. Here's a sample docker-compose.yml, we're using Verdaccio as a local npm proxy (it's not supported for production builds).
+
+```yaml
+version: '3.7'
+services:
+  verdaccio:
+    container_name: verdaccio
+    image: verdaccio/verdaccio
+    ports:
+      - "4873:4873"
+
+  app:
+    image: $IMAGE
+    command: sh -c 'npm set registry http://verdaccio:4873 && $BUILD_COMMAND'
+    working_dir: /workspace/$BASE_DIR
+    environment: $ENVIRONMENT
+    volumes:
+      - './path/to/app:/workspace/$BASE_DIR'
+```
+
+#### Building Gatsby locally
+
+You can execute configuration below with command `docker-compose run -it --rm app`.
+
+```yaml
+version: '3.7'
+services:
+  verdaccio:
+    container_name: verdaccio
+    image: verdaccio/verdaccio
+    ports:
+      - "4873:4873"
+
+  app:
+    image: fleek/gatsby
+    command: sh -c 'npm set registry http://verdaccio:4873 && npm install && npm run build'
+    working_dir: /workspace
+    volumes:
+      - './path/to/app:/workspace'
+```
 
 
-### We are here to help
+# We are here to help
 
-We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://fleek.co), in our [Community Chat](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A), on [Twitter](https://twitter.com/FleekHQ), or at support@fleek.co

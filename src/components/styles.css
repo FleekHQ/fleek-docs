@@ -959,3 +959,11 @@ img {
     padding-left: 0px;
   }
 }
+
+#framework-list table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+#framework-list td {
+  font-size: 13px;
+}
