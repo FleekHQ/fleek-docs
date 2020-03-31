@@ -1,13 +1,13 @@
 const config = {
   gatsby: {
     pathPrefix: "__GATSBY_IPFS_PATH_PREFIX__",
-    siteUrl: "https://terminal.co",
+    siteUrl: "https://Fleek.co",
     gaTrackingId: 'UA-144542192-2'
   },
   header: {
     logo: "",
     logoLink: "",
-    title: "Terminal Documentation",
+    title: "Fleek Documentation",
     githubUrl: "https://github.com/Terminal-Systems/terminal-docs",
     helpUrl: "",
     tweetText: "",
@@ -23,12 +23,12 @@ const config = {
   sidebar: {
     forcedNavOrder: ["/introduction", "SiteDeploys", "BuildConfigurations"],
     collapsedNav: [""],
-    links: [{ text: "Terminal", link: "https://terminal.co" }],
+    links: [{ text: "Fleek", link: "https://Fleek.co" }],
     frontline: false,
     ignoreIndex: true
   },
   siteMetadata: {
-    title: "Terminal Documentation",
+    title: "Fleek Documentation",
     description: "Documentation built with mdx. Powering learn.hasura.io ",
     ogImage: null,
     docsLocation: "https://github.com/Terminal-Systems/terminal-docs",
@@ -46,7 +46,7 @@ const config = {
       crossOrigin: "use-credentials",
       icons: [
         {
-          src: "src/components/images/head-light-face-black.png", //Put Terminal Logo Here
+          src: "src/components/images/head-light-face-black.png", //Put Fleek Logo Here
           sizes: `512x512`,
           type: `image/png`
         }

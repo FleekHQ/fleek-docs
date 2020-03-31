@@ -11,7 +11,7 @@ name: Build Configurations
 
 - **MonoRepos**
 
-If your codebase works as a monorepo, you can set up your deploy to point at a specific base directory in your code base. When you configure the base directory Terminal will use the base directory as the primary or root directory and build your site from there.
+If your codebase works as a monorepo, you can set up your deploy to point at a specific base directory in your code base. When you configure the base directory Fleek will use the base directory as the primary or root directory and build your site from there.
 
 - **Gatsby**
 
@@ -30,4 +30,4 @@ Set the following build settings:
 
 ### We are here to help
 
-We are happy to help get your website up and running. Please feel free to reach out on our [website](https://terminal.co), in our [Community Chat](https://join.slack.com/t/terminal-public/shared_invite/enQtOTM1MjQ3NTExMDU3LTNkYjU1ZGJhZGUyYjgwN2I3OThjY2U5OThlMGY2MGY0OGYxMDI1OWIwMTMwYzViZGY4ZGU0NDA0YmY4ZjVhOTg), on [Twitter](https://twitter.com/terminaldotco), or at support@terminal.co
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://join.slack.com/t/terminal-public/shared_invite/enQtOTM1MjQ3NTExMDU3LTNkYjU1ZGJhZGUyYjgwN2I3OThjY2U5OThlMGY2MGY0OGYxMDI1OWIwMTMwYzViZGY4ZGU0NDA0YmY4ZjVhOTg), on [Twitter](https://twitter.com/terminaldotco), or at support@Fleek.co
