@@ -8,7 +8,7 @@ const config = {
     logo: "",
     logoLink: "",
     title: "Fleek Documentation",
-    githubUrl: "https://github.com/Terminal-Systems/terminal-docs",
+    githubUrl: "https://github.com/FleekHQ/fleek-docs",
     helpUrl: "",
     tweetText: "",
     links: [{ text: "", link: "" }],
@@ -31,7 +31,7 @@ const config = {
     title: "Fleek Documentation",
     description: "Documentation built with mdx. Powering learn.hasura.io ",
     ogImage: null,
-    docsLocation: "https://github.com/Terminal-Systems/terminal-docs",
+    docsLocation: "https://github.com/FleekHQ/fleek-docs",
     favicon: ""
   },
   pwa: {
@@ -46,7 +46,7 @@ const config = {
       crossOrigin: "use-credentials",
       icons: [
         {
-          src: "src/components/images/head-light-face-black.png", //Put Fleek Logo Here
+          src: "src/components/images/FleekIcon.png", //Put Fleek Logo Here
           sizes: `512x512`,
           type: `image/png`
         }

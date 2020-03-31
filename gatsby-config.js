@@ -59,7 +59,7 @@ const plugins = [
       background_color: `#ffffff`,
       theme_color: `#ffffff`,
       display: `standalone`,
-      icon: `src/components/images/hex-logo.png`
+      icon: `src/components/images/FleekIcon.png`
     }
   },
    "gatsby-plugin-ipfs",
