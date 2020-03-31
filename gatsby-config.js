@@ -53,7 +53,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `gatsby-docs-terminal`,
+      name: `gatsby-docs-Fleek`,
       short_name: `docs`,
       start_url: `/`,
       background_color: `#ffffff`,
