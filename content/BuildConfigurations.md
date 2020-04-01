@@ -53,10 +53,6 @@ By the default, the Fleek Docker images use the latest Node.js version available
 
 EG: To use Gatsby with Node 10, the Docker image is `fleek/gatsby:node-10`
 
-### If you're using Gatsby
-
-You also need to have the `gatsby-plugin-ipfs` installed and configured in your `gatsby-config` file.
-
 # Testing builds locally
 
 We're using docker containers to execute your builds, so you can test them locally with Docker. Here's a sample docker-compose.yml, we're using Verdaccio as a local npm proxy (it's not supported for production builds).
