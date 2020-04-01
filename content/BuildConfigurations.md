@@ -47,7 +47,7 @@ You will also have to define correct `publicDir`, here's list of default configu
 
 </div>
 
-### Using an Older Node Version
+### Using a Docker Image with an Older Node Version
 
 By the default, the Fleek Docker images use the latest Node.js version available when applicable. It is possible to use an older Node version by applying the correct Docker tag.
 
