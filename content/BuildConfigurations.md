@@ -47,9 +47,11 @@ You will also have to define correct `publicDir`, here's list of default configu
 
 </div>
 
-### If you're using Gatsby
+### Using a Docker Image with an Older Node Version
 
-You also need to have the `gatsby-plugin-ipfs` installed and configured in your `gatsby-config` file.
+By the default, the Fleek Docker images use the latest Node.js version available when applicable. It is possible to use an older Node version by applying the correct Docker tag.
+
+EG: To use Gatsby with Node 10, the Docker image is `fleek/gatsby:node-10`
 
 # Testing builds locally
 
