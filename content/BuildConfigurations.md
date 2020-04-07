@@ -2,6 +2,29 @@
 name: Build Configurations
 ---
 
+# JavaScript Single Page Applications (SPA's)
+Javascript SPA’s generally have a build script defined in the `package.json` file. Simply set the build command to `npm install && npm run [BUILD_SCRIPT]` or `yarn && yarn [BUILD_SCRIPT]` depending on your preferred dependency manager.
+
+You will also have to define correct `publicDir`, here's list of default configurations for popular frameworks:
+
+<div id="framework-list">
+
+| Framework          | Docker Image           | Build Command                       | Public Directory |
+|--------------------|------------------------|-------------------------------------|------------------|
+| Create React App   | fleek/create-react-app | `yarn && yarn build`                | build            |
+| Gatsby             | fleek/gatsby           | `yarn && gatsby build`              | public           |
+| Hugo               | fleek/hugo             | `yarn && hugo`                      | public           |
+| Jekyll             | fleek/jekyll           | `jekyll build`                      | _site            |
+| Next JS            | fleek/next-js          | `yarn && yarn build && yarn export` | out              |
+
+</div>
+
+### Using a Docker Image with an Older Node Version
+
+By the default, the Fleek Docker images use the latest Node.js version available when applicable. It is possible to use an older Node version by applying the correct Docker tag.
+
+EG: To use Gatsby with Node 10, the Docker image is `fleek/gatsby:node-10`
+
 # File configuration
 
 Using a .fleek.json configuration file, placed at the root of a project, you can provide options that changes the default build behavior and overrides settings from UI (except secrets).
@@ -29,29 +52,6 @@ Using a .fleek.json configuration file, placed at the root of a project, you can
 - `environment` key/value object of environment variables
 
 If you use `baseDir = /frontend` and `publicDir = /dist`, published path is `/frontend/dist`. If you need to publish directory above or next to your `baseDir`, you can use relative path `publicDir = ../../dist`.
-
-### JavaScript Single Page Applications (SPA's)
-Javascript SPA’s generally have a build script defined in the `package.json` file. Simply set the build command to `npm install && npm run [BUILD_SCRIPT]` or `yarn && yarn [BUILD_SCRIPT]` depending on your preferred dependency manager.
-
-You will also have to define correct `publicDir`, here's list of default configurations for popular frameworks:
-
-<div id="framework-list">
-
-| Framework          | Docker Image           | Build Command                       | Public Directory |
-|--------------------|------------------------|-------------------------------------|------------------|
-| Create React App   | fleek/create-react-app | `yarn && yarn build`                | build            |
-| Gatsby             | fleek/gatsby           | `yarn && gatsby build`              | public           |
-| Hugo               | fleek/hugo             | `yarn && hugo`                      | public           |
-| Jekyll             | fleek/jekyll           | `jekyll build`                      | _site            |
-| Next JS            | fleek/next-js          | `yarn && yarn build && yarn export` | out              |
-
-</div>
-
-### Using a Docker Image with an Older Node Version
-
-By the default, the Fleek Docker images use the latest Node.js version available when applicable. It is possible to use an older Node version by applying the correct Docker tag.
-
-EG: To use Gatsby with Node 10, the Docker image is `fleek/gatsby:node-10`
 
 # Testing builds locally
 
