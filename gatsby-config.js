@@ -3,7 +3,6 @@ const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
   // "gatsby-plugin-catch-links",
-  "gatsby-plugin-sitemap",
   "gatsby-plugin-sharp",
   {
     resolve: `gatsby-plugin-layout`,
@@ -19,6 +18,17 @@ const plugins = [
     options: {
       name: "docs",
       path: `${__dirname}/content/`
+    }
+  },
+  {
+    resolve: 'gatsby-plugin-sitemap',
+    options: {
+      output: '/sitemap.xml',
+      serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
+        url: site.siteMetadata.siteUrl + edge.node.path.replace('/__GATSBY_IPFS_PATH_PREFIX__', ''),
+        changefreq: 'daily',
+        priority: 0.7
+      }))
     }
   },
   {

@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: "__GATSBY_IPFS_PATH_PREFIX__",
-    siteUrl: "https://Fleek.co",
+    siteUrl: "https://docs.fleek.co",
     gaTrackingId: 'UA-144542192-2'
   },
   header: {
