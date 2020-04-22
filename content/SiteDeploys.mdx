@@ -13,7 +13,7 @@ Each new website deployment by Fleek is done atomically, meaning that there will
 
 ![](deploySettings.png)
 
-Simply set the public directory of your project to your github repository and define the build command. Fleek will run the build command and deploy the result whenever you push to your Git repo. 
+Simply set the public directory of your project to your GitHub repository and define the build command. Fleek will run the build command and deploy the result whenever you push to your Git repo. 
 The benefits of using continuous deployment include:
   - No deploying without committing and pushing first
   - Easy collaboration through pull requests
@@ -21,7 +21,7 @@ The benefits of using continuous deployment include:
 
 # Advanced Settings
 
-When building your site, we make some assumptions about system dependencies and tools. If you are using a standard node.js environment this should be enough. There are some cases though where you might want to use custom tools not provided by default in a standard node.js distribution. For these cases, you can configure advanced settings. To do this, go to your site overview, click Settings and scroll down to the Advanced Settings section.
+When building your site, we make some assumptions about system dependencies and tools. If you are using a standard node.js environment this should be enough. There are some cases though where you might want to use custom tools not provided by default in a standard node.js distribution. For these cases, you can configure advanced settings. To do this, go to your site overview, click Settings, and scroll down to the Advanced Settings section.
 
 ![](advancedSettings.png)
 
@@ -31,7 +31,7 @@ Environment variables are exactly that: variables that exist on the machine that
 
 ![](environmentVariables.png)
 
-A typical use case is setting up an staging environment. You can do this by adding two sites pointing to the same repository, and then setting up the `NODE_ENV` variable differently in each site. Then, in your node.js build script you can check for this variable by doing `process.env.NODE_ENV` and for example displaying a new feature only if `process.env.NODE_ENV === staging` so that the feature is only visible in your staging environment. That way you can test your new feature before it reaches all your users.
+A typical use case is setting up a staging environment. You can do this by adding two sites pointing to the same repository, and then setting up the `NODE_ENV` variable differently in each site. Then, in your node.js build script, you can check for this variable by doing `process.env.NODE_ENV` and for example displaying a new feature only if `process.env.NODE_ENV === staging` so that the feature is only visible in your staging environment. That way you can test your new feature before it reaches all your users.
 
 ## Docker Image
 
@@ -41,7 +41,7 @@ We run builds inside a [Docker](https://www.docker.com/resources/what-container)
 
 We provide Docker images for all the major frameworks such as Gatsby, Hugo, etc... These images can be found on Fleek's official Docker Hub org: <https://hub.docker.com/orgs/fleek/repositories>
 
-In addition to support for multiple frameworks, Fleek supports variations within each framework, such as support for multiple Node versions. The Node version is specified from the Docker tag. For example, the image `fleek/gatsby:node-10` will use the version 10 of Node.js.
+In addition, to support for multiple frameworks, Fleek supports variations within each framework, such as support for multiple Node versions. The Node version is specified from the Docker tag. For example, the image `fleek/gatsby:node-10` will use version 10 of Node.js.
 If no Node.js version is specified through the Docker tag, the image will use the latest version of Node.js. For example, `fleek/gatsby` is equivalent to `fleek/gatsby:latest` which is also the same as `fleek/gatsby:node-latest`, and they all use the latest Node.js version.
 
 Also, a list of the Docker tags is available for each image on the image page on Docker Hub.
