@@ -4,14 +4,14 @@ name: Domain & HTTPS
 ---
 
 ## Fleek DNS
-Fleek also has the ability to handle DNS management to allow for adding custom domains.
+Fleek also can handle DNS management to allow for adding custom domains.
 ## Custom Domains
  Upon site creation, Fleek will automatically assign a domain name in the following follow: [RANDOM_NAME].on.fleek.co.
  Of course, we allow users to point the site to a custom of their choice.
 
 ### Adding a Custom Domain 
 
-![](addCustomDomain.png)
+![](images/addCustomDomain.png)
 
 1. Go to your site's page and select `Add or register domain`
 2. Enter the domain you would like to add
@@ -19,35 +19,34 @@ Fleek also has the ability to handle DNS management to allow for adding custom d
 
 ### Verifying the Custom Domain
 After adding the custom domain, it will appear in the site's settings under `Domain Management` > `Domains`.
-![](checkdns.png)
+![](images/checkdns.png)
 
 The domain must be verified before it is linked to the site. To verify, click on the `Check DNS configuration` button. This will make a modal appear containing instructions to add the domain.
 Follow the instructions in the modal. The steps to update the records might be slightly different depending on your domain name provider.
-We then must wait for the domain to be propagated before clicing on `Verify DNS configuration` on the modal.
+We then must wait for the domain to be propagated before clicking on `Verify DNS configuration` on the modal.
 
 To verify that the DNS is indeed propagated before clicking on the button, you can use a tool such as <https://dnschecker.org/>
 
-![](verifydns.png)
+![](images/verifydns.png)
 
 If the verify dns was successfull, the domain name will become blue.
-![](finished-add-domain.png)
+![](images/finished-add-domain.png)
 
 ## HTTPS (SSL)
 Fleek offers HTTPS on all sites using the SSL protocol 
 Fleek automatically manages certificate creation and renewal. Your certificate will include all your domain names when it's issued, but note that the DNS also needs to be configured in advance for each alias for us to include them on your certificate.
 
 ## Definitions
-Domain name (or domain for short): full name used to access a site. For example, yoursitename.fleek.co or www.yourcustomdomain.com
-Apex domain (also known as a root, bare, or naked domain): the yourcustomdomain.com part in www.yourcustomdomain.com.
+The domain name (or domain for short): the full name used to access a site. For example, yoursitename.fleek.co or www.yourcustomdomain.com Apex domain (also known as root, bare, or naked domain): the yourcustomdomain.com part in www.yourcustomdomain.com.
 * Subdomain: a domain that is part of a larger domain; the only domain that is not also a subdomain is the apex domain. For example, www.yourcustomdomain.com and app.yourcustomdomain.com are subdomains of yourcustomdomain.com.
 * Fleek subdomain: Fleek term for the default domain with the form [name-of-your-site].Fleek.co given to each site.
 * Custom domain: a non-Fleek domain assigned to a site.
 * Primary domain: Fleek term for the main custom domain assigned to a site.
 * Domain alias: Fleek term for additional custom domains assigned to a site.
 * Domain registrar (or domain registration service): company that lets you register a domain name.
-* DNS provider: company that maintains the DNS servers that translate a domain name to a destination.
+* DNS provider: a company that maintains the DNS servers that translate a domain name to a destination.
 * Fleek DNS: Fleek's managed DNS service.
-* Nameserver (or DNS server): specialized server that translates domain names into IP addresses.
+* Nameserver (or DNS server): a specialized server that translates domain names into IP addresses.
 * DNS zone: provides information about one or more domain names. Each zone contains a list of DNS records with mappings between domain names and IP addresses.
 ### We are here to help
 

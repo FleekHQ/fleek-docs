@@ -2,10 +2,10 @@
 name: Build Configurations
 ---
 
-# JavaScript Single Page Applications (SPA's)
+# JavaScript Single Page Applications (SPA)
 Javascript SPA’s generally have a build script defined in the `package.json` file. Simply set the build command to `npm install && npm run [BUILD_SCRIPT]` or `yarn && yarn [BUILD_SCRIPT]` depending on your preferred dependency manager.
 
-You will also have to define correct `publicDir`, here's list of default configurations for popular frameworks:
+You will also have to define correct `publicDir`, here's the list of default configurations for popular frameworks:
 
 <div id="framework-list">
 
@@ -55,7 +55,7 @@ If you use `baseDir = /frontend` and `publicDir = /dist`, published path is `/fr
 
 # Testing builds locally
 
-We're using docker containers to execute your builds, so you can test them locally with Docker. Here's a sample docker-compose.yml, we're using Verdaccio as a local npm proxy (it's not supported for production builds).
+We're using Docker containers to execute your builds, so you can test them locally with Docker. Here's a sample docker-compose.yml, we're using Verdaccio as a local npm proxy (it's not supported for production builds).
 
 ```yaml
 version: '3.7'
