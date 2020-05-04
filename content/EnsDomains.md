@@ -25,3 +25,9 @@ Click Add ENS to add your personal ENS `.eth` domain, example `https://fleek.eth
 ENS Domain's works almost similar to almost any other domain, adding those domain would require verification, click on `Set Fleek as controller` to Set up Fleek ENS controller.
 
 ![](images/ens3.png)
+
+To get this fully setup, you would have to migrate your ens, clicking on the button that say's `Migrate` will take you to where you would migrate the domain `https://app.ens.domains/name/your-domain.eth`
+
+![](images/ens4.png)
+
+Once that is all setup click
