@@ -57,30 +57,32 @@ You can now easily point an ENS domain to your IPFS site and have the content au
 
 ## Deploying
 
-Once your app is deployed on fleek, go to the menu. on the settings page in the left-hand bar menu click`Domain Management` and scrolling a bit would land you on the section that says `ENS`
+Once your app is deployed on fleek, go to the settings page in the left-hand bar menu click`Domain Management` and scrolling a bit would land you on the section that says `ENS`
 
 ![](images/ens1.png)
 
 
 ## Adding ENS Domain
 
-Click Add ENS to add your ENS domain, for example `fleek.eth`. Once your domain has been added, verify you are the owner or registrant of the ENS domain
+Click Add ENS to add your ENS domain. Input your domain to verify it and add it. If the domain does not belong to anyone you will be redirected to the [ENS Dashboard](https://app.ens.domains) to buy it.
+
+NOTE: Your domain will appear in the settings page and can also be deleted from there.
 
 ![](images/ens2.png)
 
 ## Set Fleek as the Controller
 
-Fleek needs to be a controller of your ENS domain so we can automatically update your domain content hash when a site deployment succeeds. Click the `Set Fleek as Controller` button above to set this up:
+Fleek needs to be a controller of your ENS domain so we can automatically update your domain content hash when a site deployment succeeds. Click the `Set Fleek as Controller` button to set this up.
 
 ![](images/ens3.png)
 
-NOTE: Your domain will appear in the settings page and can also be deleted from there, you can also regain control of your domain by visiting your app.ens.domains dashboard
+If the domain is using the old ENS resolver, you will be prompted to migrate to the latest resolver. By clicking on the `Migrate` button, you will be redirected to the [ENS Dashboard](https://app.ens.domains) to complete the migration.
 
-Finally, If the domain is using the old ENS resolver, you would be prompted to migrate to the latest resolver.
-
-Clicking on the `Migrate` button will redirect you to the app.ens.domain dashboard to complete the migration. After successful migration, you can complete setting fleek as the domain controller.
+Finally, clicking on the `Set Fleek as controller` button, will trigger a modal to connect an Ethereum web3 provider, such as [metamask](https://metamask.io/). If using metamask, a popup will appear asking to connect. After, another popup will appear to accept the Ethereum transaction to set Fleek as controller.
 
 ![](images/ens4.png)
+
+On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek. 
 
 ### We are here to help
 
