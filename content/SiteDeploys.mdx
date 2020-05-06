@@ -65,6 +65,11 @@ Some popular options are:
 
 If you can’t find a suitable Docker image for your project, you can always build and publish your own (it’s free!). To do so, head over to the official [Docker documentation here](https://docs.docker.com/docker-hub/publish/publish/). We will also be constantly publishing popular base images at https://hub.docker.com/r/fleek/.
 
+## Tips by Framework
+### Hugo
+Hugo projects need to have relative urls activated so it can work properly on IPFS gateways.
+The line `relativeUrls = true` must be added to the config.toml file.
+See our [blog post](https://https://blog.fleek.co/posts/go-with-hugo-and-fleek) about Hugo and Fleek.
 
 ### We are here to help
 
