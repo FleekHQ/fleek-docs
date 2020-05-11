@@ -21,7 +21,7 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["/introduction", "SiteDeploys", "BuildConfigurations"],
+    forcedNavOrder: ["/introduction", "Sites", "Storage"],
     collapsedNav: [""],
     links: [{ text: "Fleek", link: "https://Fleek.co" }],
     frontline: false,
