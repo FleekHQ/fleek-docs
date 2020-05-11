@@ -4,24 +4,18 @@ metaTitle: "Fleek Docs"
 metaDescription: "Documentation for Fleek"
 ---
 
-# Welcome To Fleek
+# Welcome To the Fleek Docs!
 
-Fleek provides everything you need to launch and maintain fast, modern websites hosted on IPFS. Welcome to the new internet.
+Fleek provides everything you need to interact with IPFS in an easy and straightforward manner.
 
-### Get Started
+Our documentation will help you get the most of our products so you can confidently interact with the new internet.
 
-Get started with Fleek by deploying your first website. The quickest way to begin is by connecting your website's GitHub repository to deploy directly from there and allow for continuous deployment.
-If you so choose, you can also delpoy by uploading the full code base for you website.
+### Choose Your Product
 
-### Discover Fleek
+Fleek currently offers two IPFS-based products: Site Deployment and File Storage. You will find everything you need to know about each of them in their dedicated section.
 
-Below you can find a basic outline of our docs.
-
-- [Common Build Configurations](/BuildConfigurations/)
-- [Troubleshooting Tips](/Troubleshooting)
-- [Deployment Overview](/SiteDeploys)
-- [Site Monitoring](/MonitorSites)
-- [Custom Domains and HTTPS](/DomainHTTPS)
+- [Fleek Sites](/Sites)
+- [Fleek Storage](/Storage)
 
 ### We are here to help
 

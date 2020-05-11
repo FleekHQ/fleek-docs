@@ -11,7 +11,7 @@ Fleek also can handle DNS management to allow for adding custom domains.
 
 ### Adding a Custom Domain 
 
-![](images/addCustomDomain.png)
+![](/images/addCustomDomain.png)
 
 1. Go to your site's page and select `Add or register domain`
 2. Enter the domain you would like to add
@@ -19,7 +19,7 @@ Fleek also can handle DNS management to allow for adding custom domains.
 
 ### Verifying the Custom Domain
 After adding the custom domain, it will appear in the site's settings under `Domain Management` > `Domains`.
-![](images/checkdns.png)
+![](/images/checkdns.png)
 
 The domain must be verified before it is linked to the site. To verify, click on the `Check DNS configuration` button. This will make a modal appear containing instructions to add the domain.
 Follow the instructions in the modal. The steps to update the records might be slightly different depending on your domain name provider.
@@ -27,10 +27,10 @@ We then must wait for the domain to be propagated before clicking on `Verify DNS
 
 To verify that the DNS is indeed propagated before clicking on the button, you can use a tool such as <https://dnschecker.org/>
 
-![](images/verifydns.png)
+![](/images/verifydns.png)
 
 If the verify DNS was successful, the domain name will become blue.
-![](images/finished-add-domain.png)
+![](/images/finished-add-domain.png)
 
 ## HTTPS (SSL)
 Fleek offers HTTPS on all sites using the SSL protocol 
@@ -59,7 +59,7 @@ You can now easily point an ENS domain to your IPFS site and have the content au
 
 Once your app is deployed on fleek, go to the settings page in the left-hand bar menu click`Domain Management` and scrolling a bit would land you on the section that says `ENS`
 
-![](images/ens1.png)
+![](/images/ens1.png)
 
 
 ## Adding ENS Domain
@@ -68,19 +68,19 @@ Click Add ENS to add your ENS domain. Input your domain to verify it and add it.
 
 NOTE: Your domain will appear in the settings page and can also be deleted from there.
 
-![](images/ens2.png)
+![](/images/ens2.png)
 
 ## Set Fleek as the Controller
 
 Fleek needs to be a controller of your ENS domain so we can automatically update your domain content hash when a site deployment succeeds. Click the `Set Fleek as Controller` button to set this up.
 
-![](images/ens3.png)
+![](/images/ens3.png)
 
 If the domain is using the old ENS resolver, you will be prompted to migrate to the latest resolver. By clicking on the `Migrate` button, you will be redirected to the [ENS Dashboard](https://app.ens.domains) to complete the migration.
 
 Finally, clicking on the `Set Fleek as controller` button, will trigger a modal to connect an Ethereum web3 provider, such as [metamask](https://metamask.io/). If using metamask, a popup will appear asking to connect. After, another popup will appear to accept the Ethereum transaction to set Fleek as controller.
 
-![](images/ens4.png)
+![](/images/ens4.png)
 
 On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek. 
 
