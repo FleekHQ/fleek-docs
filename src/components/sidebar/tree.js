@@ -75,7 +75,6 @@ const calculateTreeData = edges => {
     }
     // sort items alphabetically.
     prevItems.map(item => {
-      console.log(item.items);
       item.items = item.items.sort(function(a, b) {
         console.log(b);
         if (a.label < b.label) return -1;
