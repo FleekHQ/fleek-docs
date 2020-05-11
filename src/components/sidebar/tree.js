@@ -73,14 +73,30 @@ const calculateTreeData = edges => {
       }
       prevItems = tmp.items;
     }
-    // sort items alphabetically.
+    // sort items by forcedNavOrderSubItems.
     prevItems.map(item => {
-      item.items = item.items.sort(function(a, b) {
-        console.log(b);
-        if (a.label < b.label) return -1;
-        if (a.label > b.label) return 1;
-        return 0;
-      });
+      const subItemsMapping = config.sidebar.forcedNavOrderSubItems[item.url]
+      if (subItemsMapping) {
+        const newItems = [];
+        subItemsMapping.forEach(mapping => {
+          const foundItem = item.items.find(currentItem => {
+            return currentItem.url === mapping;
+          })
+          if (foundItem) {
+            newItems.push(foundItem);
+          }
+        });
+        // adding the items that have no configs
+        item.items.forEach(currentItem => {
+          const foundItem = newItems.find(newItem => {
+            return newItem.url === currentItem.url 
+          });
+          if(!foundItem) {
+            newItems.push(currentItem);
+          }
+        });
+        item.items = newItems;
+      }
     });
     const index = prevItems.findIndex(
       ({ label }) => label === parts[parts.length - 1]
