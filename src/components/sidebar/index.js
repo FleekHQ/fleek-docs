@@ -31,6 +31,19 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    svg {
+      path {
+        fill: white;
+      }
+      title: {
+        content: "";
+      }
+    }
+  }
+  a:hover {
+    svg  path {
+      fill: #542683;
+    }
   }
 `;
 
@@ -133,26 +146,16 @@ const SidebarLayout = ({ location }) => (
         const DisplayedIcon = iconMapping[icon] || iconMapping["default"]
 
         return (
-          <div className={className}>
+          <div className={className} {...props} >
             <DisplayedIcon />
           </div>
         )
-
-        return (
-          <img src={displayedIcon} className={className} />
-        );
       })`
         display: inline-block;
         fill: white;
         svg {
           height: 30px;
           width: auto;
-          path {
-            fill: white;
-            :hover {
-              fill: #542683;
-            }
-          }
         }
       `;
 
@@ -166,7 +169,7 @@ const SidebarLayout = ({ location }) => (
               console.log(link);
               if (link.link !== "" && (link.text !== "" || link.icon !== "")) {
                 return (
-                  <ListItem key={key} to={link.link}>
+                  <ListItem key={key} to={link.link} title={link.tooltip}>
                     {link.text}
                     <Icon icon={link.icon} />
                   </ListItem>
