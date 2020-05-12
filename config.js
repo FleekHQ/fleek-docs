@@ -24,19 +24,32 @@ const config = {
     forcedNavOrder: ["/introduction", "Sites", "Storage"],
     forcedNavOrderSubItems: {
       "/Sites": [
-        "/Sites/SiteDeploys",
+        "/Sites/Overview",
+        "/Sites/SiteDeployment",
         "/Sites/BuildConfigurations",
-        "/Sites/DomainHTTPS",
+        "/Sites/SiteMonitoring",
+        "/Sites/CustomDomains",
+        "/Sites/ENSDomains",
+        "/Sites/Frameworks",
         "/Sites/Troubleshooting",
-        "/Sites/MonitorSites",
         ],
       "/Storage": [
-        "/Storage/WebApp",
-        "/Storage/ProgrammaticUsage",
+        "/Storage/Overview",
+        "/Storage/App",
+        "/Storage/CLI_SDK",
       ],
     },
     collapsedNav: [""],
-    links: [{ text: "Fleek", link: "https://Fleek.co" }],
+    links: [
+      { text: "", link: "https://twitter.com/FleekHQ", icon: 'twitter' },
+      { text: "", link: "https://app.slack.com/client/TT3NZ3XDY", icon: 'slack' },
+      { text: "", link: "https://community.fleek.co/", icon: 'discourse' },
+      { text: "", link:  "https://www.facebook.com/fleekhq/", icon: 'facebook' },
+      { text: "", link: "https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw", icon: 'youtube' },
+      { text: "", link: "https://github.com/FleekHQ", icon: 'github' },
+      { text: "", link: "https://blog.fleek.co", icon: 'fleek' },
+
+    ],
     frontline: false,
     ignoreIndex: true
   },

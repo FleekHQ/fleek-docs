@@ -1,8 +1,14 @@
 import React from "react";
+import Facebook from '@fortawesome/fontawesome-free/svgs/brands/facebook.svg';
+import Youtube from '@fortawesome/fontawesome-free/svgs/brands/youtube.svg';
+import Twitter from '@fortawesome/fontawesome-free/svgs/brands/twitter.svg';
+import Discourse from '@fortawesome/fontawesome-free/svgs/brands/discourse.svg';
+import Github from '@fortawesome/fontawesome-free/svgs/brands/github.svg';
+import Slack from '@fortawesome/fontawesome-free/svgs/brands/slack.svg';
+import Fleek from '../images/FleekIconForLight.svg';
 import Tree from "./tree";
 import { StaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
-import { ExternalLink } from "react-feather";
 import "../styles.css";
 import config from "../../../config";
 
@@ -12,37 +18,19 @@ const forcedNavOrder = config.sidebar.forcedNavOrder;
 const ListItem = styled(({ className, active, level, ...props }) => {
   return (
     <li className={className}>
-      <a href={props.to} {...props} />
+      <a href={props.to} target="_blank" rel="noopener noreferrer" {...props} />
     </li>
   );
 })`
   list-style: none;
-
+  display: inline-block;
   a {
-    color: #5c6975;
-    text-decoration: none;
-    font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
-    padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
-    display: block;
-    position: relative;
-
-    &:hover {
-      color: rgb(116, 76, 188) !important;
-    }
-
-    ${props =>
-      props.active &&
-      `
-      color: #663399;
-      border-color: rgb(230,236,241) !important;
-      border-style: solid none solid solid;
-      border-width: 1px 0px 1px 1px;
-      background-color: #fff;
-    `} // external link icon
-    svg {
-      float: right;
-      margin-right: 1rem;
-    }
+    width: 50px;
+    height: 50px;
+    padding: 0 !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -127,17 +115,60 @@ const SidebarLayout = ({ location }) => (
       }
     `}
     render={({ allMdx }) => {
+
+      const Icon = styled(props => {
+        const { icon, className } = props;
+
+        const iconMapping = {
+          twitter: Twitter,
+          facebook: Facebook,
+          discourse: Discourse,
+          slack: Slack,
+          youtube: Youtube,
+          fleek: Fleek,
+          github: Github,
+          default: Fleek,
+        };
+
+        const DisplayedIcon = iconMapping[icon] || iconMapping["default"]
+
+        return (
+          <div className={className}>
+            <DisplayedIcon />
+          </div>
+        )
+
+        return (
+          <img src={displayedIcon} className={className} />
+        );
+      })`
+        display: inline-block;
+        fill: white;
+        svg {
+          height: 30px;
+          width: auto;
+          path {
+            fill: white;
+            :hover {
+              fill: #542683;
+            }
+          }
+        }
+      `;
+
+
       return (
         <Sidebar>
           <ul className={"sideBarUL"}>
             <Tree edges={allMdx.edges} />
             <Divider />
             {config.sidebar.links.map((link, key) => {
-              if (link.link !== "" && link.text !== "") {
+              console.log(link);
+              if (link.link !== "" && (link.text !== "" || link.icon !== "")) {
                 return (
                   <ListItem key={key} to={link.link}>
                     {link.text}
-                    <ExternalLink size={14} />
+                    <Icon icon={link.icon} />
                   </ListItem>
                 );
               }
