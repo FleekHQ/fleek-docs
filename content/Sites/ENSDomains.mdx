@@ -1,0 +1,46 @@
+---
+title: ENS Domains
+
+---
+
+## Overview
+
+You can now easily point an ENS domain to your IPFS site and have the content automatically update for future deployments. Here is how to set up an ENS domain for your site:
+
+## Deploying
+
+Once your app is deployed on fleek, go to the settings page in the left-hand bar menu click`Domain Management` and scrolling a bit would land you on the section that says `ENS`
+
+![](/images/ens1.png)
+
+
+## Adding ENS Domain
+
+Click Add ENS to add your ENS domain. Input your domain to verify it and add it. If the domain does not belong to anyone you will be redirected to the [ENS Dashboard](https://app.ens.domains) to buy it.
+
+NOTE: Your domain will appear in the settings page and can also be deleted from there.
+
+![](/images/ens2.png)
+
+## Set Fleek as the Controller
+
+Fleek needs to be a controller of your ENS domain so we can automatically update your domain content hash when a site deployment succeeds. Click the `Set Fleek as Controller` button to set this up.
+
+![](/images/ens3.png)
+
+If the domain is using the old ENS resolver, you will be prompted to migrate to the latest resolver. By clicking on the `Migrate` button, you will be redirected to the [ENS Dashboard](https://app.ens.domains) to complete the migration.
+
+Finally, clicking on the `Set Fleek as controller` button, will trigger a modal to connect an Ethereum web3 provider, such as [metamask](https://metamask.io/). If using metamask, a popup will appear asking to connect. After, another popup will appear to accept the Ethereum transaction to set Fleek as controller.
+
+![](/images/ens4.png)
+
+On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek. 
+
+# Troubleshooting
+* You must ensure that your browser is able to resolve ENS domains. You can test this functionality with Fleek's homepage: [fleek.eth/](https://fleek.eth/).
+
+* It's possible the link doesn't immediately work. Most browsers, if not all of them, will redirect the user to an IPFS gateway and it is possible that the IPFS hash has not yet propagated to the gateway. Wait a few minutes if that is the case.
+
+### We are here to help
+
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co

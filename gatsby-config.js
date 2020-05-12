@@ -2,6 +2,14 @@ require("dotenv").config();
 const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
+  {
+    resolve: "gatsby-plugin-react-svg",
+    options: {
+      rule: {
+        include: /\.svg$/
+      }
+    }
+  },
   // "gatsby-plugin-catch-links",
   "gatsby-plugin-sharp",
   {

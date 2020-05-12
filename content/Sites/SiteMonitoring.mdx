@@ -1,0 +1,44 @@
+# Monitoring Your Site
+Fleek offers a host of logging tools to aid in monitoring your site.
+
+# Deploy Logs
+The deploy log includes all of the standard output which comes from running your build as well as Fleek-specific information about dependency caching, Fleek configuration file processing, and more. 
+![](/images/deploylogs1.png)
+![](/images/deploylogs2.png)
+
+# Deploy Summaries
+![](/images/DeploySummary.png)
+
+You can find a deploy summary on the detail page of any successful deploy, right above the deploy log. It allows you to quickly identify your deploy status and refer to the details in the log based on different types of information.
+
+The summary contains details such as the presence of Redirect rules and Header rules.
+
+## HTTPS (SSL)
+Fleek offers HTTPS on all sites using the SSL protocol 
+Fleek automatically manages certificate creation and renewal. Your certificate will include all your domain names when it's issued, but note that the DNS also needs to be configured in advance for each alias for us to include them on your certificate.
+
+## Definitions
+The domain name (or domain for short): the full name used to access a site. For example, yoursitename.fleek.co or www.yourcustomdomain.com Apex domain (also known as root, bare, or naked domain): the yourcustomdomain.com part in www.yourcustomdomain.com.
+* Subdomain: a domain that is part of a larger domain; the only domain that is not also a subdomain is the apex domain. For example, www.yourcustomdomain.com and app.yourcustomdomain.com are subdomains of yourcustomdomain.com.
+* Fleek subdomain: Fleek term for the default domain with the form [name-of-your-site].Fleek.co gave to each site.
+* Custom domain: a non-Fleek domain assigned to a site.
+* Primary domain: Fleek term for the main custom domain assigned to a site.
+* Domain alias: Fleek term for additional custom domains assigned to a site.
+* Domain registrar (or domain registration service): company that lets you register a domain name.
+* DNS provider: a company that maintains the DNS servers that translate a domain name to a destination.
+* Fleek DNS: Fleek's managed DNS service.
+* Nameserver (or DNS server): a specialized server that translates domain names into IP addresses.
+* DNS zone: provides information about one or more domain names. Each zone contains a list of DNS records with mappings between domain names and IP addresses.
+
+
+# Deleting a Site
+![](/images/delete-site.png)
+
+Deleting a site is an irreversible action so proceed with caution.
+
+To delete a site, go to the settings of the site and navigate to General > Danger Zone. A modal will then appear with a warning and instructions to delete the site.
+
+
+### We are here to help
+
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co
