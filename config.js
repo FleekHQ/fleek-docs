@@ -30,6 +30,7 @@ const config = {
         "/Sites/SiteMonitoring",
         "/Sites/CustomDomains",
         "/Sites/ENSDomains",
+        "/Sites/DNSLink",
         "/Sites/Frameworks",
         "/Sites/Troubleshooting",
         ],
