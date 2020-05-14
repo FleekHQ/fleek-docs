@@ -1,50 +1,100 @@
 ---
-name: Storage in-App
+title: CLI & SDK
 
 ---
+# Fleek Storage – Programmatic usage and API
 
-# Overview
 
-Upload, browse, and manage all your files through the app interface. All files uploaded are published to IPFS and published to DNS, with a CDN and File Compression. You can view and reference the files through the Fleek Storage URL, and can view directly on the IPFS gateway.
+## Introduction
 
-# Upload Folders and Files
+Fleek CLI is a new release that will give you access to all of our tools directly from your terminal. Currently it allows you to log in and generate API keys that you can use with Fleek Storage. Since Fleek Storage provides a S3 interface, you can use any S3 compatible SDK to access it from anywhere by providing the generated API keys.
 
-Go to the Storage page by selecting storage on the left-hand side navigation.
+## Installation
 
-Click on the upload button to open the upload pop up. 
+`npm install -g @fleekhq/fleek-cli`
 
-![](images/UploadButton.png)
+## Getting the API key
 
-You can browse folders and files directly from your Finder, or drag and drop folders and files into the pop up.
+Run the following command:
 
-![](images/uploadFolderFileModal.png)
+`fleek login`
 
-Browse through your folders by clicking on the folder. Once you're in a folder the bucket URL will adjust to the route pointing to that folder, and this works the same for opening specific files.
+It should open a browser window prompting you to log in. If you are already logged in, it will automatically close the browser window and generate the keys.
 
-### View the Bucket, Folders, or Files
+Next, run the command
 
-You can view your bucket, folders, or files via the Fleek Storage URL or directly on the IPFS gateway
+`fleek  whoami`
 
-Viewing the folder or file on the Fleek Storage URL will boast the benefits of the built in CDN, file compression, and image resizing.
+Take note of the fields apiKey and apiSecret which will be needed in the next step.
 
-Bucket URL 
-![](images/bucketURLexample.png)
-Folder URL
-![](images/folderURLexample.png)
 
-Viewing on the IPFS gateway will show the immutible IPFS file of the content within the URL.
+## Accessing your bucket from code
 
-![](images/FileHeader.png) 
+In this example we are going to use AWS SDK for Node.JS. Note that AWS SDK is available for multiple other languages such as JavaScript, Go, C++, Python and Ruby, so this example should be adaptable to most existing applications.
 
-### View File Details
+First, make sure that you install the dependencies in your package.json file. You can do this by running:
 
-When you open an individual file you can see detials about that particual file including the Image Preview, Object URL, Name, Size, and the IPFS Hash.
+`npm  init`
 
-![](images/SpecificFile1.png)
+`npm install --save   aws-sdk `
 
-### Other Actions
+Then, the following script outlines how to list your Fleek Storage buckets (replacing [[apiKey]] and [[apiSecret]] with the values obtained in the previous step).
 
-You can download and delete files. If you want to delete files in bulk you can select multiple, then select delete from the Actions menu.
+    const AWS = require('aws-sdk');
+   
+    const s3 = new AWS.S3({
+        apiVersion: '2006-03-01',
+        accessKeyId: '[[apiKey]]',
+        secretAccessKey: '[[apiSecret]]',
+        endpoint: 'https://storageapi.fleek.co',
+        region: 'us-east-1',
+        s3ForcePathStyle: true
+     });
+ 
+    s3.listBuckets(function (err, data) {
+        if (err) {
+          console.log("Error when listing buckets", err);
+        } else {
+          console.log("Success when listing buckets", data);
+        }
+     });
+
+Once you have your bucket name, you can fetch its contents using the following script:
+
+    const params = {
+         Bucket: "my-bucket",
+         MaxKeys: 20
+      };
+ 
+    s3.listObjectsV2(params, function (err, data) {
+         if (err) {
+            console.log("Error when listing objects", err);
+         } else {
+            console.log("Success when listing objects", data);
+         }
+     });
+
+
+Please read AWS SDK documentation for a full reference about other operations you can do on an S3 compatible API.
+
+## Accessing from the Terminal
+AWS also has tools for interacting with S3 from the terminal using AWS CLI. To do this, first install AWS CLI from https://aws.amazon.com/cli/
+
+Then, configure the AWS CLI to point to Fleek Storage endpoint (again, replacing [[apiKey]] and [[apiSecret]] with the values obtained in the previous step).:
+
+aws configure
+AWS Access Key ID [None]: [[apiKey]]
+AWS Secret Access Key [None]: [[apiSecret]]
+Default region name [None]: us-east-1
+Default output format [None]: ENTER
+
+To list your buckets, run the following command:
+
+`aws --endpoint-url https://storageapi.fleek.co s3 ls`
+
+To list objects within a bucket, run:
+
+`aws --endpoint-url https://storageapi.fleek.co s3 ls s3://my-bucket`
 
 
 ### We are here to help
