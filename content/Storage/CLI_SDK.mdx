@@ -9,11 +9,15 @@ title: CLI & SDK
 
 Fleek CLI is a new release that will give you access to all of our tools directly from your terminal. Currently it allows you to log in and generate API keys that you can use with Fleek Storage. Since Fleek Storage provides a S3 interface, you can use any S3 compatible SDK to access it from anywhere by providing the generated API keys.
 
+The Fleek Storage product is a tool meant to host web assets. As such, all files uploaded to Fleek Storage are public.
+
 ## Installation
 
 `npm install -g @fleekhq/fleek-cli`
 
 ## Getting the API key
+
+### From the CLI
 
 Run the following command:
 
@@ -26,6 +30,19 @@ Next, run the command
 `fleek  whoami`
 
 Take note of the fields apiKey and apiSecret which will be needed in the next step.
+
+### From the Web app
+
+You can also generate a new api key from the Web app at [app.fleek.co](https://app.fleek.co).
+
+The api generator is located in the user settings.
+
+![](images/userSettings.png)
+
+The new keys can be generated in the api section by clicking on `Create API keys`.
+Make sense to copy the secret somewhere because it is only visible once.
+
+![](images/apiKeys.png)
 
 
 ## Accessing your bucket from code
@@ -73,6 +90,36 @@ Once you have your bucket name, you can fetch its contents using the following s
             console.log("Success when listing objects", data);
          }
      });
+
+You can also upload your files to the bucket with the `putObject` command.
+
+```
+  const params = {
+    Bucket: 'my-team-bucket',
+    Key: 'folder/my-picture',
+    ContentType: 'image/png',
+    Body: myPictureFile,
+    ACL: 'public-read',
+  };
+
+  const request = s3.putObject(params);
+  request.send();
+```
+
+### Getting the IPFS hash from http headers
+Fleek will insert the ifps hash of files in the http headers.
+By default, we give a v1 base32 CID. However, users can also retrieve the v0 CID which is shorter and is therefore cheaper to store on public blockchains.
+
+```
+  const request = s3.putObject(params);
+
+  request.on('httpHeaders', (statusCode, headers) => {
+    const ipfsHash = headers['x-fleek-ipfs-hash'];
+    // Do stuff with ifps hash....
+    const ipfsHashV0 = headers['x-fleek-ipfs-hash-v0'];
+    // Do stuff with the short v0 ipfs hash... (appropriate for storing on blockchains)
+  }).send();
+```
 
 
 Please read AWS SDK documentation for a full reference about other operations you can do on an S3 compatible API.
