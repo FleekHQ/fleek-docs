@@ -21,8 +21,13 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["/introduction", "Sites", "Storage"],
+    forcedNavOrder: ["Welcome", "Sites", "StorageApp", "StorageSDK"],
     forcedNavOrderSubItems: {
+      "/Welcome": [
+        "/Welcome/Introduction",
+        "/Welcome/Products",
+        "/Welcome/WhatIsIPFS",
+      ],
       "/Sites": [
         "/Sites/Overview",
         "/Sites/SiteDeployment",
@@ -34,10 +39,20 @@ const config = {
         "/Sites/Frameworks",
         "/Sites/Troubleshooting",
         ],
-      "/Storage": [
-        "/Storage/Overview",
-        "/Storage/App",
-        "/Storage/CLI_SDK",
+      "/StorageApp": [
+        "/StorageApp/Overview",
+        "/StorageApp/UploadFoldersAndFiles",
+        "/StorageApp/ViewFoldersAndFiles",
+      ],
+      "/StorageSDK": [
+        "/StorageSDK/Overview",
+        "/StorageSDK/GettingApiKeys",
+        "/StorageSDK/CreatingAClientInstance",
+        "/StorageSDK/FetchingBuckets",
+        "/StorageSDK/ListingTheContentOfBucket",
+        "/StorageSDK/UploadingFiles",
+        "/StorageSDK/GettingTheIPFSHash",
+        "/StorageSDK/AccessingFilesFromTerminal",
       ],
     },
     collapsedNav: [""],
