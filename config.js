@@ -21,8 +21,13 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["/introduction", "Sites", "Storage"],
+    forcedNavOrder: ["Welcome", "Sites", "StorageApp", "StorageSDK"],
     forcedNavOrderSubItems: {
+      "/Welcome": [
+        "/Welcome/Introduction",
+        "/Welcome/Products",
+        "/Welcome/WhatIsIPFS",
+      ],
       "/Sites": [
         "/Sites/Overview",
         "/Sites/SiteDeployment",
