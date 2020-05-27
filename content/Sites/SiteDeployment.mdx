@@ -33,6 +33,8 @@ Environment variables are exactly that: variables that exist on the machine that
 
 A typical use case is setting up a staging environment. You can do this by adding two sites pointing to the same repository, and then setting up the `NODE_ENV` variable differently in each site. Then, in your node.js build script, you can check for this variable by doing `process.env.NODE_ENV` and for example displaying a new feature only if `process.env.NODE_ENV === staging` so that the feature is only visible in your staging environment. That way you can test your new feature before it reaches all your users.
 
+Furthermore, all variables are implicitly declared as strings. Therefore, to have the environmental variable `"1"`, simply enter `1` and not `"1"`.
+
 ## Docker Image
 
 We run builds inside a [Docker](https://www.docker.com/resources/what-container) container. Fleek will attempt to auto-detect the framework used in the project and fill the Docker Image settings with the appropriate Docker Image. However, any Docker image from Docker Hub can be used as a Docker image.

@@ -49,7 +49,7 @@ Using a .fleek.json configuration file, placed at the root of a project, you can
 - `command` no command is executed by default
 - `baseDir` build command is executed in this directory, root directory is used by default
 - `publicDir` this directory is uploaded to IPFS, `baseDir` is used by default
-- `environment` key/value object of environment variables
+- `environment variables` key/value object of environment variables. The variables are implicitly declared as strings.
 
 If you use `baseDir = /frontend` and `publicDir = /dist`, published path is `/frontend/dist`. If you need to publish directory above or next to your `baseDir`, you can use relative path `publicDir = ../../dist`.
 
