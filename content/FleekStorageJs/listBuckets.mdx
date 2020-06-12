@@ -1,0 +1,23 @@
+---
+title: "Method: listBuckets"
+
+---
+
+# listBuckets
+The `listBuckets` method returns an array of bucket names associated with the api key's account.
+
+Example of usage:
+
+```
+const buckets = await fleekStorage.listBuckets({
+  apiKey: 'my-key',
+  apiSecret: 'my-secret',
+})
+```
+
+# Input parameters of listBuckets
+
+|param  	|type  	|description  	|
+|-:	|-	|-	|
+| apiKey 	| String 	|  The api key used for authentication	|
+| apiSecret 	| String 	|  The api secret used for authentication	|

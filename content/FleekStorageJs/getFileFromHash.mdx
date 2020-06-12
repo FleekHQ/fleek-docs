@@ -1,0 +1,22 @@
+---
+title: "Method: getFileFromHash"
+
+---
+
+# getFileFromHash
+
+`getFileFromHash` is a utility function that downloads a file's data from Fleek's IPFS gateway using the hash. The key and secret is not required since the gateway is publicly available.
+
+Example of usage:
+
+```
+const myFile = await fleekStorage.getFileFromHash({
+  hash: 'bafybeige4bhzjvrptn7fdz7mqgigzoczcliqpuo7km4jm7vgjg2pbmuhna',
+})
+```
+
+# Input parameters of getFileFromHash
+
+|param  	|type  	|description  	|
+|-:	|-	|-	|
+| hash 	| String 	|  The hash of the requested file	|
