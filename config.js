@@ -27,6 +27,7 @@ const config = {
         "/Welcome/Introduction",
         "/Welcome/Products",
         "/Welcome/WhatIsIPFS",
+        "/Welcome/IPFSGateway",
       ],
       "/Sites": [
         "/Sites/Overview",
