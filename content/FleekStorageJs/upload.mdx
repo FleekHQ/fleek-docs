@@ -1,0 +1,34 @@
+---
+title: "Method: upload"
+
+---
+
+# upload
+
+The `upload` method uploads a file, identified by a key, to a bucket.
+The function returns the hash of the file, the publicUrl, the key and the bucket.
+
+Example of usage:
+
+```
+fs.readFile(filePath, async (error, fileData) => {
+  const uploadedFile = await fleekStorage.upload({
+    apiKey: 'my-key',
+    apiSecret: 'my-secret',
+    key: 'my-file-key',
+    data: fileData,
+  });
+})
+
+
+```
+
+# Input parameters of upload
+
+|param  	|type  	|description  	|
+|-:	|-	|-	|
+| apiKey 	| String 	|  The api key used for authentication	|
+| apiSecret 	| String 	|  The api secret used for authentication	|
+| key 	|  String	| The key identifying the requested file in the bucket  	|
+| bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
+| data 	| Any 	| The data of the file to be uploaded |

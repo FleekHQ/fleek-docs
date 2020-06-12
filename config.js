@@ -21,7 +21,7 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["Welcome", "Sites", "StorageApp", "StorageSDK"],
+    forcedNavOrder: ["Welcome", "Sites", "StorageApp", "FleekStorageJs","StorageSDK"],
     forcedNavOrderSubItems: {
       "/Welcome": [
         "/Welcome/Introduction",
@@ -43,6 +43,16 @@ const config = {
         "/StorageApp/Overview",
         "/StorageApp/UploadFoldersAndFiles",
         "/StorageApp/ViewFoldersAndFiles",
+      ],
+      "/FleekStorageJs": [
+        "/FleekStorageJs/Overview",
+        "/FleekStorageJs/GettingApiKeys",
+        "/FleekStorageJs/InstallingPackage",
+        "/FleekStorageJs/get",
+        "/FleekStorageJs/upload",
+        "/FleekStorageJs/listFiles",
+        "/FleekStorageJs/listBuckets",
+        "/FleekStorageJs/getFileFromHash",
       ],
       "/StorageSDK": [
         "/StorageSDK/Overview",

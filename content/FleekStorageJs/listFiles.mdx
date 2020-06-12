@@ -1,0 +1,31 @@
+---
+title: "Method: listFiles"
+
+---
+
+# listFiles
+The `listFiles` method is for fetching information about all files in a bucket such as the key, hash and publicUrl.
+
+Example of usage:
+
+```
+const files = await fleekStorage.listFiles({
+  apiKey: 'my-key',
+  apiSecret: 'my-secret',
+  getOptions: [
+    'bucket',
+    'key',
+    'hash',
+    'publicUrl'
+  ],
+})
+```
+
+# Input parameters of listFiles
+
+|param  	|type  	|description  	|
+|-:	|-	|-	|
+| apiKey 	| String 	|  The api key used for authentication	|
+| apiSecret 	| String 	|  The api secret used for authentication	|
+| bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
+| getOptions 	| Array, optional, defaults to ['key', 'bucket', 'publicUrl'] 	| An array specifying what type of information to retrieve concerning the file.	Possible values for the array includes `bucket`, `hash`, `key`, `publicUrl`|
