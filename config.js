@@ -68,7 +68,7 @@ const config = {
         "/StorageSDK/AccessingFilesFromTerminal",
       ],
     },
-    collapsedNav: [""],
+    collapsedNav: ["/Sites", "/StorageApp", "/FleekStorageJs", "/StorageSDK"],
     links: [
       { text: "", link: "https://twitter.com/FleekHQ", icon: 'twitter', tooltip: "Twitter" },
       { text: "", link: "https://app.slack.com/client/TT3NZ3XDY", icon: 'slack', tooltip: "Slack Community" },
