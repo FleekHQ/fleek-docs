@@ -83,6 +83,17 @@ const calculateTreeData = edges => {
             return currentItem.url === mapping;
           })
           if (foundItem) {
+            // organizing the third level of menu
+            if (foundItem.items.length > 0)  {
+              const thirdLevelMapping = config.sidebar.forcedNavOrderThirdLevel[foundItem.url]
+              if(thirdLevelMapping) {
+                const thirdLevelItems = thirdLevelMapping.map(thirdLevelUrl => {
+                  return foundItem.items.find(thirdLevelItem => (thirdLevelItem.url === thirdLevelUrl))
+                })
+                foundItem.items = thirdLevelItems;
+              }
+            }
+
             newItems.push(foundItem);
           }
         });
@@ -102,9 +113,19 @@ const calculateTreeData = edges => {
       ({ label }) => label === parts[parts.length - 1]
     );
     accu.items.unshift(prevItems.splice(index, 1)[0]);
-    //console.log(accu);
     return accu;
   }, tree);
+};
+
+const setDefaultCollapse = (item, defaultCollapsed) => {
+  if (
+    config.sidebar.collapsedNav &&
+    config.sidebar.collapsedNav.includes(item.url)
+  ) {
+    defaultCollapsed[item.url] = true;
+  } else {
+    defaultCollapsed[item.url] = false;
+  }
 };
 
 const Tree = ({ edges }) => {
@@ -113,13 +134,11 @@ const Tree = ({ edges }) => {
   });
   const defaultCollapsed = {};
   treeData.items.forEach(item => {
-    if (
-      config.sidebar.collapsedNav &&
-      config.sidebar.collapsedNav.includes(item.url)
-    ) {
-      defaultCollapsed[item.url] = true;
-    } else {
-      defaultCollapsed[item.url] = false;
+    setDefaultCollapse(item, defaultCollapsed);
+    if (item.items.length > 0) {
+      item.items.forEach(subItem => {
+        setDefaultCollapse(subItem, defaultCollapsed)
+      })
     }
   });
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
