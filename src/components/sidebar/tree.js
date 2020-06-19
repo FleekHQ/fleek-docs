@@ -83,6 +83,17 @@ const calculateTreeData = edges => {
             return currentItem.url === mapping;
           })
           if (foundItem) {
+            // organizing the third level of menu
+            if (foundItem.items.length > 0)  {
+              const thirdLevelMapping = config.sidebar.forcedNavOrderThirdLevel[foundItem.url]
+              if(thirdLevelMapping) {
+                const thirdLevelItems = thirdLevelMapping.map(thirdLevelUrl => {
+                  return foundItem.items.find(thirdLevelItem => (thirdLevelItem.url === thirdLevelUrl))
+                })
+                foundItem.items = thirdLevelItems;
+              }
+            }
+
             newItems.push(foundItem);
           }
         });
@@ -102,24 +113,35 @@ const calculateTreeData = edges => {
       ({ label }) => label === parts[parts.length - 1]
     );
     accu.items.unshift(prevItems.splice(index, 1)[0]);
-    //console.log(accu);
     return accu;
   }, tree);
 };
 
-const Tree = ({ edges }) => {
+const setDefaultCollapse = (item, defaultCollapsed, location) => {
+  const { pathname } = location;
+  const isCurrentPath = pathname.includes(item.url);
+  if (
+    config.sidebar.collapsedNav &&
+    config.sidebar.collapsedNav.includes(item.url) &&
+    !isCurrentPath
+  ) {
+    defaultCollapsed[item.url] = true;
+  } else {
+    defaultCollapsed[item.url] = false;
+  }
+};
+
+const Tree = ({ edges, location }) => {
   const [treeData] = useState(() => {
     return calculateTreeData(edges);
   });
   const defaultCollapsed = {};
   treeData.items.forEach(item => {
-    if (
-      config.sidebar.collapsedNav &&
-      config.sidebar.collapsedNav.includes(item.url)
-    ) {
-      defaultCollapsed[item.url] = true;
-    } else {
-      defaultCollapsed[item.url] = false;
+    setDefaultCollapse(item, defaultCollapsed, location);
+    if (item.items.length > 0) {
+      item.items.forEach(subItem => {
+        setDefaultCollapse(subItem, defaultCollapsed, location)
+      })
     }
   });
   const [collapsed, setCollapsed] = useState(defaultCollapsed);

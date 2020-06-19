@@ -21,7 +21,7 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["Welcome", "Sites", "StorageApp", "FleekStorageJs","StorageSDK"],
+    forcedNavOrder: ["Welcome", "Sites", "Storage"],
     forcedNavOrderSubItems: {
       "/Welcome": [
         "/Welcome/Introduction",
@@ -39,36 +39,50 @@ const config = {
         "/Sites/DNSLink",
         "/Sites/Frameworks",
         "/Sites/Troubleshooting",
-        ],
-      "/StorageApp": [
-        "/StorageApp/Overview",
-        "/StorageApp/UploadFoldersAndFiles",
-        "/StorageApp/ViewFoldersAndFiles",
       ],
-      "/FleekStorageJs": [
-        "/FleekStorageJs/Overview",
-        "/FleekStorageJs/GettingApiKeys",
-        "/FleekStorageJs/InstallingPackage",
-        "/FleekStorageJs/get",
-        "/FleekStorageJs/upload",
-        "/FleekStorageJs/listFiles",
-        "/FleekStorageJs/listBuckets",
-        "/FleekStorageJs/getFileFromHash",
-      ],
-      "/StorageSDK": [
-        "/StorageSDK/Overview",
-        "/StorageSDK/GettingApiKeys",
-        "/StorageSDK/CreatingAClientInstance",
-        "/StorageSDK/FetchingBuckets",
-        "/StorageSDK/ListingTheContentOfBucket",
-        "/StorageSDK/GettingPublicUrlOfFile",
-        "/StorageSDK/UploadingFiles",
-        "/StorageSDK/GettingTheIPFSHash",
-        "/StorageSDK/FetchingFileFromHash",
-        "/StorageSDK/AccessingFilesFromTerminal",
+      "/Storage": [
+        "/Storage/StorageApp",
+        "/Storage/FleekStorageJs",
+        "/Storage/s3Integration",
       ],
     },
-    collapsedNav: ["/Sites", "/StorageApp", "/FleekStorageJs", "/StorageSDK"],
+    forcedNavOrderThirdLevel: {
+      "/Storage/StorageApp": [
+        "/Storage/StorageApp/Overview",
+        "/Storage/StorageApp/UploadFoldersAndFiles",
+        "/Storage/StorageApp/ViewFoldersAndFiles",
+      ],
+      "/Storage/FleekStorageJs": [
+        "/Storage/FleekStorageJs/Overview",
+        "/Storage/FleekStorageJs/GettingApiKeys",
+        "/Storage/FleekStorageJs/InstallingPackage",
+        "/Storage/FleekStorageJs/get",
+        "/Storage/FleekStorageJs/upload",
+        "/Storage/FleekStorageJs/listFiles",
+        "/Storage/FleekStorageJs/listBuckets",
+        "/Storage/FleekStorageJs/getFileFromHash",
+      ],
+      "/Storage/s3Integration": [
+        "/Storage/s3Integration/Overview",
+        "/Storage/s3Integration/GettingApiKeys",
+        "/Storage/s3Integration/CreatingAClientInstance",
+        "/Storage/s3Integration/FetchingBuckets",
+        "/Storage/s3Integration/ListingTheContentOfBucket",
+        "/Storage/s3Integration/GettingPublicUrlOfFile",
+        "/Storage/s3Integration/UploadingFiles",
+        "/Storage/s3Integration/GettingTheIPFSHash",
+        "/Storage/s3Integration/FetchingFileFromHash",
+        "/Storage/s3Integration/AccessingFilesFromTerminal",
+      ],
+    },
+    collapsedNav: [
+      "/Welcome",
+      "/Sites",
+      "/Storage",
+      "/Storage/FleekStorageJs",
+      "/Storage/s3Integration",
+      "/Storage/StorageApp"
+    ],
     links: [
       { text: "", link: "https://twitter.com/FleekHQ", icon: 'twitter', tooltip: "Twitter" },
       { text: "", link: "https://app.slack.com/client/TT3NZ3XDY", icon: 'slack', tooltip: "Slack Community" },

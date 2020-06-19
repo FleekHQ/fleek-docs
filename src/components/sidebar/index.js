@@ -163,10 +163,9 @@ const SidebarLayout = ({ location }) => (
       return (
         <Sidebar>
           <ul className={"sideBarUL"}>
-            <Tree edges={allMdx.edges} />
+            <Tree edges={allMdx.edges} location={location} />
             <Divider />
             {config.sidebar.links.map((link, key) => {
-              console.log(link);
               if (link.link !== "" && (link.text !== "" || link.icon !== "")) {
                 return (
                   <ListItem key={key} to={link.link} title={link.tooltip}>
