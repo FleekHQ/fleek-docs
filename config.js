@@ -29,16 +29,16 @@ const config = {
         "/Welcome/WhatIsIPFS",
         "/Welcome/IPFSGateway",
       ],
-      "/Sites": [
-        "/Sites/Overview",
-        "/Sites/SiteDeployment",
-        "/Sites/BuildConfigurations",
-        "/Sites/SiteMonitoring",
-        "/Sites/CustomDomains",
-        "/Sites/ENSDomains",
-        "/Sites/DNSLink",
-        "/Sites/Frameworks",
-        "/Sites/Troubleshooting",
+      "/Hosting": [
+        "/Hosting/Overview",
+        "/Hosting/SiteDeployment",
+        "/Hosting/BuildConfigurations",
+        "/Hosting/SiteMonitoring",
+        "/Hosting/CustomDomains",
+        "/Hosting/ENSDomains",
+        "/Hosting/DNSLink",
+        "/Hosting/Frameworks",
+        "/Hosting/Troubleshooting",
       ],
       "/Storage": [
         "/Storage/StorageApp",
@@ -77,8 +77,6 @@ const config = {
     },
     collapsedNav: [
       "/Welcome",
-      "/Sites",
-      "/Storage",
       "/Storage/FleekStorageJs",
       "/Storage/s3Integration",
       "/Storage/StorageApp"
