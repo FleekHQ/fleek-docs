@@ -117,10 +117,13 @@ const calculateTreeData = edges => {
   }, tree);
 };
 
-const setDefaultCollapse = (item, defaultCollapsed) => {
+const setDefaultCollapse = (item, defaultCollapsed, location) => {
+  const { pathname } = location;
+  const isCurrentPath = pathname.includes(item.url);
   if (
     config.sidebar.collapsedNav &&
-    config.sidebar.collapsedNav.includes(item.url)
+    config.sidebar.collapsedNav.includes(item.url) &&
+    !isCurrentPath
   ) {
     defaultCollapsed[item.url] = true;
   } else {
@@ -128,16 +131,16 @@ const setDefaultCollapse = (item, defaultCollapsed) => {
   }
 };
 
-const Tree = ({ edges }) => {
+const Tree = ({ edges, location }) => {
   const [treeData] = useState(() => {
     return calculateTreeData(edges);
   });
   const defaultCollapsed = {};
   treeData.items.forEach(item => {
-    setDefaultCollapse(item, defaultCollapsed);
+    setDefaultCollapse(item, defaultCollapsed, location);
     if (item.items.length > 0) {
       item.items.forEach(subItem => {
-        setDefaultCollapse(subItem, defaultCollapsed)
+        setDefaultCollapse(subItem, defaultCollapsed, location)
       })
     }
   });

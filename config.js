@@ -75,7 +75,14 @@ const config = {
         "/Storage/s3Integration/AccessingFilesFromTerminal",
       ],
     },
-    collapsedNav: ["/Sites", "/Storage", "/Storage/FleekStorageJs", "/Storage/s3Integration", "/Storage/StorageApp"],
+    collapsedNav: [
+      "/Welcome",
+      "/Sites",
+      "/Storage",
+      "/Storage/FleekStorageJs",
+      "/Storage/s3Integration",
+      "/Storage/StorageApp"
+    ],
     links: [
       { text: "", link: "https://twitter.com/FleekHQ", icon: 'twitter', tooltip: "Twitter" },
       { text: "", link: "https://app.slack.com/client/TT3NZ3XDY", icon: 'slack', tooltip: "Slack Community" },
