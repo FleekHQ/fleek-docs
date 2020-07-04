@@ -1,0 +1,17 @@
+---
+title: "API: txlSubscribe"
+
+---
+
+#### .txlSubscribe()
+
+Returns a ReadableStream that notifies when something changed on the bucket (data stream returns the Bucket).
+
+```js
+  const txlStream = client.txlSubscribe();
+
+  txlStream.on('data', (res) => {
+    const bucket = res.getBucket();
+    console.log(bucket);
+  });
+```

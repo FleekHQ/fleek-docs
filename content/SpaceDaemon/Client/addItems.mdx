@@ -1,0 +1,28 @@
+---
+title: "API: addItems"
+
+---
+
+#### .addItems({ bucket: string, targetPath: string, sourcePaths: string[] })
+
+Add new items. Returns a readable stream to resolves the new items
+
+```js
+  const stream = client.addItems({
+    bucket: 'my-bucket',
+    targetPath: '/',
+    sourcePaths: ['/path-to-my-folder-or-file-to-upload']
+  });
+    
+  stream.on('data', (data) => {
+    console.log('data: ', data);
+  });
+  
+  stream.on('error', (error) => {
+    console.error('error: ', error);
+  });
+
+  stream.on('end', () => {
+    console.log('end');
+  });
+```

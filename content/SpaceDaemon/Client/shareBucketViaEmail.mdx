@@ -1,0 +1,30 @@
+---
+title: "API: shareBucketViaEmail"
+
+---
+
+#### .shareBucketViaEmail({ bucket: string, email: string })
+
+Shares a bucket via email
+
+```js
+  client
+    .shareBucketViaEmail({ bucket: 'my-bucket-slug', email: 'email@gmail.com' })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Asyn/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.shareBucketViaEmail({
+      bucket: 'my-bucket-slug',
+      email: 'email@gmail.com',
+    });
+    
+    console.log(res);
+  };
+```

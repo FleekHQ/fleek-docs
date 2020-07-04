@@ -1,0 +1,25 @@
+---
+title: "API: createUsernameAndEmail"
+
+---
+
+#### .createUsernameAndEmail({ username: string, email?: string })
+
+Create a new username with/out email. Returns a Promise that resolves to the username
+
+```js
+  client
+    .createUsernameAndEmail({ username: 'myusername' })
+    .then(() => {
+      console.log('username created');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.createUsernameAndEmail({ username: 'myusername', email: 'my-email@mydomain.com' });
+  };
+```

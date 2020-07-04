@@ -1,0 +1,42 @@
+---
+title: "API: listDirectory"
+
+---
+
+
+#### .listDirectory({ path: string, bucket: string })
+
+Returns the folder or files in the path directory.
+
+```js
+  client
+    .listDirectory({ path: '/', bucket: 'my-bucket' })
+    .then((res) => {
+      const entries = res.getEntriesList();
+
+      entries.forEach((entry) => {
+        console.log(entry.getPath());
+        console.log(entry.getName());
+        console.log(entry.getIsdir());
+        console.log(entry.getCreated());
+        console.log(entry.getUpdated());
+        console.log(entry.getIpfshash());
+        console.log(entry.getSizeinbytes());
+        console.log(entry.getFileextension());
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.listDirectory({ path: '/', bucket: 'my-bucket' });
+    const entries = res.getEntriesList();
+
+    entries.forEach((entry) => {
+      ...
+    });
+  };
+```

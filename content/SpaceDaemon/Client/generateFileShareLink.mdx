@@ -1,0 +1,33 @@
+---
+title: "API: generateFileShareLink"
+
+---
+
+#### .generateFileShareLink({ bucket: string, filePath: string })
+
+Generates a share link
+
+```js
+  client
+    .generateFileShareLink({
+      bucket: 'my-bucket-slug',
+      filePath: 'path/to/file.js',
+    })
+    .then((res) => {
+      console.log(res.getLink());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.generateFileShareLink({
+      bucket: 'my-bucket-slug',
+      filePath: 'path/to/file.js',
+    });
+    
+    console.log(res.getLink());
+  };
+```

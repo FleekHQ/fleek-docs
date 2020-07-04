@@ -1,0 +1,29 @@
+---
+title: "API: backupKeysByPassphrase"
+
+---
+
+#### .backupKeysByPassphrase({ passphrase: string })
+
+Backup keys by passphrase
+
+```js
+  client
+    .backupKeysByPassphrase({
+      passphrase: 'my-passphrase',
+    })
+    .then(() => {
+      console.log('keys backup');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.backupKeysByPassphrase({
+      passphrase: 'my-passphrase',
+    });
+  };
+```

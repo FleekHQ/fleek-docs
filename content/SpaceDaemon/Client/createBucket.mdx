@@ -1,0 +1,35 @@
+---
+title: "API: createBucket"
+
+---
+
+#### .createBucket({ slug: string })
+
+Creates a new bucket. Returns a Promise that resolves to the new bucket
+
+```js
+  client
+    .createBucket('myNewBucket')
+    .then((res) => {
+      const bucket = res.getBucket();
+
+      console.log(bucket.getKey());
+      console.log(bucket.getName());
+      console.log(bucket.getPath());
+      console.log(bucket.getCreatedat());
+      console.log(bucket.getUpdatedat());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.createBucket('myNewBucket');
+    const bucket = res.getBucket();
+
+    console.log(bucket.getName());
+    ...
+  };
+```
