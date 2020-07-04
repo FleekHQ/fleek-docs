@@ -1,0 +1,31 @@
+---
+title: "API: toggleFuseDrive"
+
+---
+
+#### .toggleFuseDrive({ mountDrive: boolean })
+
+Toggle Fuse drive
+
+```js
+  client
+    .toggleFuseDrive({
+      mountDrive: true || false,
+    })
+    .then((res) => {
+      console.log(res.getFusedrivemounted());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.toggleFuseDrive({
+      mountDrive: true || false,
+    });
+    
+    console.log(res.getFusedrivemounted());
+  };
+```

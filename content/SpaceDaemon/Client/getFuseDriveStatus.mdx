@@ -1,0 +1,28 @@
+---
+title: "API: getFuseDriveStatus"
+
+---
+
+
+#### .getFuseDriveStatus({})
+
+Get Fuse drive status
+
+```js
+  client
+    .getFuseDriveStatus({})
+    .then((res) => {
+      console.log(res.getFusedrivemounted());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getFuseDriveStatus({});
+    
+    console.log(res.getFusedrivemounted());
+  };
+```

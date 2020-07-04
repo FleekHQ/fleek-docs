@@ -1,0 +1,25 @@
+---
+title: "API: createFolder"
+
+---
+
+#### .createFolder({ path: string, bucket: string })
+
+Creates a new empty folder. Returns a Promise that resolves to the new folder
+
+```js
+  client
+    .createFolder({ path: '/', bucket: 'my-bucket' })
+    .then(() => {
+      console.log('folder created in path "/"');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.createFolder({ path: '/', bucket: 'my-bucket' });
+  };
+```

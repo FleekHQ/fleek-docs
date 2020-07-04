@@ -21,7 +21,7 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["Welcome", "Sites", "Storage"],
+    forcedNavOrder: ["Welcome", "Sites", "Storage", "SpaceDaemon"],
     forcedNavOrderSubItems: {
       "/Welcome": [
         "/Welcome/Introduction",
@@ -44,6 +44,10 @@ const config = {
         "/Storage/StorageApp",
         "/Storage/FleekStorageJs",
         "/Storage/s3Integration",
+      ],
+      "/SpaceDaemon": [
+        "/SpaceDaemon/Daemon",
+        "/SpaceDaemon/Client",
       ],
     },
     forcedNavOrderThirdLevel: {
@@ -74,12 +78,24 @@ const config = {
         "/Storage/s3Integration/FetchingFileFromHash",
         "/Storage/s3Integration/AccessingFilesFromTerminal",
       ],
+      "/SpaceDaemon/Daemon": [
+        "/SpaceDaemon/Daemon/Overview",
+        "/SpaceDaemon/Daemon/Installation",
+        "/SpaceDaemon/Daemon/Identity",
+        "/SpaceDaemon/Daemon/Authentication",
+      ],
+      "/SpaceDaemon/Client": [
+        "/SpaceDaemon/Client/Overview",
+        "/SpaceDaemon/Client/InitializeClient",
+      ],
     },
     collapsedNav: [
       "/Welcome",
       "/Storage/FleekStorageJs",
       "/Storage/s3Integration",
-      "/Storage/StorageApp"
+      "/Storage/StorageApp",
+      "/SpaceDaemon/Daemon",
+      "/SpaceDaemon/Client",
     ],
     links: [
       { text: "", link: "https://twitter.com/FleekHQ", icon: 'twitter', tooltip: "Twitter" },

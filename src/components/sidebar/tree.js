@@ -87,10 +87,18 @@ const calculateTreeData = edges => {
             if (foundItem.items.length > 0)  {
               const thirdLevelMapping = config.sidebar.forcedNavOrderThirdLevel[foundItem.url]
               if(thirdLevelMapping) {
-                const thirdLevelItems = thirdLevelMapping.map(thirdLevelUrl => {
+                const unorderedItems = [];
+                const orderedItems = thirdLevelMapping.map(thirdLevelUrl => {
                   return foundItem.items.find(thirdLevelItem => (thirdLevelItem.url === thirdLevelUrl))
                 })
-                foundItem.items = thirdLevelItems;
+                foundItem.items.forEach(thirdLevelItem => {
+                  const orderedItem = thirdLevelMapping.find(thirdLevelUrl => thirdLevelUrl === thirdLevelItem.url);
+                  if(!orderedItem) {
+                    unorderedItems.push(thirdLevelItem);
+                  }
+                });
+
+                foundItem.items = [...orderedItems, ...unorderedItems];
               }
             }
 

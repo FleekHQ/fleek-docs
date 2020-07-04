@@ -1,0 +1,36 @@
+---
+title: "API: listBuckets"
+
+---
+
+#### .listBuckets()
+
+Returns all the buckets available
+
+```js
+  client
+    .listBuckets()
+    .then((res) => {
+      const buckets = res.getBucketsList();
+      
+      buckets.forEach((bucket) => {
+        console.log('key:', bucket.getKey());
+        console.log('name:', bucket.getName());
+        console.log('path:', bucket.getPath());
+        console.log('createdAt:', bucket.getCreatedat());
+        console.log('updatedAt:', bucket.getUpdatedat());
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.listBuckets();
+    const buckets = res.getBucketsList();
+
+    ...
+  };
+```
