@@ -21,7 +21,7 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["Welcome", "Sites", "Storage", "SpaceDaemon"],
+    forcedNavOrder: ["Welcome", "Hosting", "Storage", "SpaceDaemon"],
     forcedNavOrderSubItems: {
       "/Welcome": [
         "/Welcome/Introduction",
