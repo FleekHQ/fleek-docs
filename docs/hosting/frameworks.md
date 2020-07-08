@@ -1,6 +1,6 @@
 # Frameworks
 
-Any framework can be deployed on Fleek through the us of proper Docker image. Therefor, the list below is a non-exhaustive representation of the apps that can be deployed on Fleek. They consist simply in popular frameworks for which we have written documentation for.
+Any framework can be deployed on Fleek through the use of a proper Docker image. Therefor, the list below is a non-exhaustive representation of the apps that can be deployed on Fleek. They consist simply of popular frameworks for which we have written documentation for.
 
 ## Hugo
 Hugo projects need to have relative urls activated so it can work properly on IPFS gateways.

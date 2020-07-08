@@ -2,7 +2,7 @@
 
 ## JS Single Page Applications (SPA)
 
-You will also have to define correct `publicDir`, here's list of default configurations for popular frameworks:
+You will also have to define the correct publish directory, here's list of default configurations for popular frameworks:
 
 | Framework          | Docker Image           | Build Command                       | Public Directory |
 |--------------------|------------------------|-------------------------------------|------------------|
@@ -20,7 +20,7 @@ EG: To use Gatsby with Node 10, the Docker image is `fleek/gatsby:node-10`
 
 ## File configuration
 
-Using a .fleek.json configuration file, placed at the root of a project, you can provide options that changes the default build behavior and overrides settings from UI (except secrets).
+Using a `.fleek.json` configuration file, placed at the root of a project, you can provide options that changes the default build behavior and overrides settings from UI (except secrets).
 
 ```json
 {
@@ -70,7 +70,7 @@ services:
 
 ### Building Gatsby
 
-You can execute configuration below with command `docker-compose run -it --rm app`.
+You can execute the configuration below with command `docker-compose run -it --rm app`.
 
 ```yaml
 version: '3.7'

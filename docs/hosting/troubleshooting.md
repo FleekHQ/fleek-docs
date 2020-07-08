@@ -8,7 +8,7 @@
 
 ## Command not found
 
-* IIf your build fails with the `command not found`, then your dependencies have not been installed. To install your dependencies, upload a configuration file such as `package.json` for NodeJS programs listing all of the required dependencies.
+* If your build fails with the `command not found`, then your dependencies have not been installed. To install your dependencies, upload a configuration file such as `package.json` for NodeJS programs listing all of the required dependencies.
 
 ## Build fails with 'exit status 128'
 
@@ -22,6 +22,6 @@
 ## Enqueued builds
 
 * System queue
-    * This occurs when the number of builds across all of our customers exceeds our current network capacity. When this happens builds will be queued as they come in and being deploying when other builds finish
+    * This occurs when the number of builds across all of our customers exceeds our current network capacity. When this happens builds will be queued as they come in and be deployed when other builds finish
 * Team queue
     * This occurs when the number of total builds across all of your sites exceeds the build limit. You can increase your concurrent builds by upgrading your account or by contacting support. If you have this issue, you can cancel other builds that may not be as important.

@@ -1,6 +1,6 @@
 # Custom Domains
- Upon site creation, Fleek will automatically assign a domain name in the following follow: assign a domain name in the following follow: [RANDOM_NAME].on.fleek.co.
- Of course, we allow users to point the site to a custom of their choice.
+ Upon site creation, Fleek will automatically assign a domain name in the following way: [RANDOM_NAME].on.fleek.co.
+ Of course, we allow users to point the site to a custom domain of their choice.
 
 ## Adding a Custom Domain 
 
@@ -8,7 +8,7 @@
 
 1. Go to your site's page and select `Add or register domain`
 2. Enter the domain you would like to add
-3. From here you will either have to confirm that you already own this domain. If you do not own the domain name and that it is available, you can buy it through Fleek.
+3. From here you will either have to confirm that you already own this domain or if you do not own the domain name and that it is available, you can buy it through Fleek.
 
 ## Verifying the Custom Domain
 After adding the custom domain, it will appear in the site's settings under `Domain Management` > `Domains`.
