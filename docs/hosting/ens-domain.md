@@ -4,7 +4,7 @@ You can now easily point an ENS domain to your IPFS site and have the content au
 
 ## Deploying
 
-Once your app is deployed on fleek, go to the settings page in the left-hand bar menu click`Domain Management` and scrolling a bit would land you on the section that says `ENS`
+Once your app is deployed on Fleek, go to the settings page in the left-hand bar menu and click `Domain Management`. Scrolling a bit would land you on the section that says `ENS`
 
 ![](imgs/ens1.png)
 
@@ -25,7 +25,7 @@ Fleek needs to be a controller of your ENS domain so we can automatically update
 
 If the domain is using the old ENS resolver, you will be prompted to migrate to the latest resolver. By clicking on the `Migrate` button, you will be redirected to the [ENS Dashboard](https://app.ens.domains) to complete the migration.
 
-Finally, clicking on the `Set Fleek as controller` button, will trigger a modal to connect an Ethereum web3 provider, such as [metamask](https://metamask.io/). If using metamask, a popup will appear asking to connect. After, another popup will appear to accept the Ethereum transaction to set Fleek as controller.
+Finally, clicking on the `Set Fleek as controller` button will trigger a modal to connect an Ethereum web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect. After, another popup will appear to accept the Ethereum transaction to set Fleek as controller.
 
 ![](imgs/ens4.png)
 
@@ -43,4 +43,4 @@ After manually setting the controller, adding the ENS through the app will work 
 
 * You must ensure that your browser is able to resolve ENS domains. You can test this functionality with Fleek's homepage: [fleek.eth/](https://fleek.eth/).
 
-* It's possible the link doesn't immediately work. Most browsers, if not all of them, will redirect the user to an IPFS gateway and it is possible that the IPFS hash has not yet propagated to the gateway. Wait a few minutes if that is the case.
+* It's possible the link doesn't immediately work. Most browsers, if not all of them, will redirect the user to an IPFS gateway and it is possible that the content for that IPFS hash has not yet propagated to the gateway. Wait a few minutes if that is the case.

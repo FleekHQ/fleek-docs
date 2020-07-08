@@ -10,13 +10,13 @@ Join our public [Slack](https://join.slack.com/t/fleek-public/shared_invite/zt-b
 
 ### Commands
 
-Before execute any mkdocs command, make sure to install [mkdocs-material](https://github.com/squidfunk/mkdocs-material) by running:
+Before executing any mkdocs command, make sure to install [mkdocs-material](https://github.com/squidfunk/mkdocs-material) by running:
 
 ```sh
 pip install mkdocs-material
 ```
 
-#### Running Locally
+#### Run Locally
 ```sh
 mkdocs serve
 ```

@@ -8,7 +8,7 @@ First thing is go the [latest release](https://github.com/FleekHQ/space-daemon/r
 
 #### Run the daemon
 
-Once you downloaded the dameon binary, open a new terminal window and go to the path where you placed the daemon and change its the access permissions by doing:
+Once you downloaded the daemon binary, open a new terminal window and go to the path where you placed the daemon and change its access permissions by doing:
 
 ```bash
 chmod 755 space_binary_file
@@ -53,7 +53,7 @@ If everything goes well, you will see the daemon logs indicating that Daemon is 
 
 #### Download the client
 
-If you are using NodeJS, you can install the space client package so you can interact with the daemon using nice and simple javascript methods without worring about gRPC calls.
+If you are using NodeJS, you can install the space client package so you can interact with the daemon using nice and simple JavaScript methods without worring about gRPC calls.
 
 Space client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web)
 
@@ -347,7 +347,7 @@ const asyncFunc = async () => {
 
 > .txlSubscribe()
 
-Returns a ReadableStream that notifies when something changed on the bucket (data stream returns the Bucket name).
+Returns a ReadableStream that notifies when something changed on the bucket (data stream returns the Bucket name). NOTE: currently the payload will always be the bucket and then you would have to use the other functions to find the data that change, however we have an open issue to track this so we can return more granular information in the event payload.
 
 ```js
   const txlStream = client.txlSubscribe();
@@ -534,7 +534,9 @@ Generates a share link
 ```
 
 #### Share a bucket
-> .shareBucket({ bucket: string })
+> `[WIP]` <em>.shareBucket({ bucket: string })</em>
+>
+> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Shares a bucket. Returns a promis that resolves to the threadInfo (required to join a bucket)
 
@@ -561,7 +563,9 @@ Shares a bucket. Returns a promis that resolves to the threadInfo (required to j
 
 #### Join a shared bucket
 
-> .joinBucket({ bucket: string, threadInfo: { key: string, addresses: [string] } })
+> `[WIP]` <em>.joinBucket({ bucket: string, threadInfo: { key: string, addresses: [string] } })</em>
+>
+> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Joins a shared bucket
 

@@ -1,8 +1,10 @@
 ![](imgs/hero.png)
 
-The [Space Daemon](https://github.com/FleekHQ/space-daemon) packages together [IPFS](https://ipfs.io/), [Textile](https://textile.io/) Threads/Buckets, and Textile Powergate (Filecoin) into one easy to install and JS interface to make it easy to build peer to peer and  privacy focused apps.
+The [Space Daemon](https://github.com/FleekHQ/space-daemon) packages together [IPFS](https://ipfs.io/), [Textile](https://textile.io/) Threads/Buckets, and Textile Powergate (Filecoin*) into one easy to install and JS interface to make it easy to build peer to peer and  privacy focused apps.
 
-Installing the [Space Daemon](https://github.com/FleekHQ/space-daemon) is easy and comes with all the tools packaged together including IPFS and Textile nodes, and and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets, and User Controlled Data. You can access same methods using our [JS client](https://github.com/FleekHQ/space-client), so you don't need to worry about gRCP calls.
+* NOTE: Filecoin is still pending and will be integrated in the next sprint.
+
+Installing the [Space Daemon](https://github.com/FleekHQ/space-daemon) is easy and comes with all the tools packaged together including IPFS and Textile nodes, and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets (TBD), and User Controlled Data. You can access same methods using our [JS client](https://github.com/FleekHQ/space-client), so you don't need to worry about gRCP calls.
 
 !!! warning
 
@@ -13,8 +15,8 @@ Space is the next evolution of Cloud, where users can interact with apps fully p
 - Fully Private file upload via encrypted textile buckets.
 - Peer to Peer file sharing selectively with other people and/or within teams.
 - Identity solution to enable users to be anywhere from fully anonymous to having as many identity associations as they want.
-- Filecoin network interaction for file storage and retrieval markets.
-- Super easy to use Js library with easy to understand functions for File CRUD, Sharing, Identity, Backups, etc.
+- Filecoin network interaction for file storage and retrieval markets. (TBD)
+- Super easy to use JS library with easy to understand functions for File CRUD, Sharing, Identity, Backups, etc.
 - Datastore for applications and application registry to enable user data controlled applications.
 - Trustless Data backups.
 - Local file system mounting.
