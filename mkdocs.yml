@@ -38,6 +38,14 @@ nav:
     - Overview: space-daemon/overview.md
     - Getting Started: space-daemon/getting-started.md
     - Examples: space-daemon/examples.md
+  - Tutorials:
+    - Hosting: tutorials/hosting.md
+    - Storage: tutorials/storage.md
+    - Daemon: tutorials/daemon.md
+  - Examples:
+    - Hosting: examples/hosting.md
+    - Storage: examples/storage.md
+    - Daemon: examples/daemon.md
 extra:
   social:
     - icon: fontawesome/brands/github-alt
