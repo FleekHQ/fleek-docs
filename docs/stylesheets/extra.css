@@ -1,0 +1,72 @@
+:root {
+  --md-primary-fg-color: #2d2d2d;
+}
+
+:root > * {
+  --md-text-link-color: #006eff;
+}
+
+.md-header-nav__button.md-logo {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.md-nav__title .md-nav__button.md-logo img,
+.md-header-nav__button.md-logo > img {
+  width: auto;
+  height: 1.5rem;
+}
+
+.md-nav__link:hover {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.md-nav__link.md-nav__link--active,
+.md-nav__link:hover.md-nav__link--active{
+  font-weight: normal;
+  color: var(--md-text-link-color);
+}
+
+.prev-boxes-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: -5px;
+}
+
+.prev-box {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+}
+
+.prev-box:hover {
+  transition: box-shadow ease-in .3s;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.prev-box > p,
+.prev-box > h5 {
+  margin: 0;
+}
+
+.prev-box > p {
+  font-size: .8em;
+  color: var(--md-primary-fg-color);
+}
+
+.prev-box > h5 {
+  color: var(--md-text-link-color);
+}
+
+.md-footer-nav {
+  background-color: white;
+  color: var(--md-primary-fg-color);
+}
+
+.md-footer-meta {
+  background-color: var(--md-text-link-color);
+}
