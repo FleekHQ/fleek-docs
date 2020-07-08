@@ -1,0 +1,52 @@
+site_name: "Documentation"
+site_author: fleek.co
+site_url: https://docs.fleek.co/
+copyright: '© 2020 Fleek'
+repo_name: fleekhq/fleek-docs
+repo_url: https://github.com/fleekhq/fleek-docs
+theme:
+  name: material
+  favicon: './imgs/favicon.ico'
+  logo: './imgs/logo.png'
+  font:
+    text: 'Open Sans'
+extra_css:
+  - 'stylesheets/extra.css'
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Introduction: index.md
+  - Hosting:
+    - Overview: hosting/overview.md
+    - Site Deployment: hosting/site-deployment.md
+    - Build Configurations: hosting/build-configurations.md
+    - Site Monitoring: hosting/site-monitoring.md
+    - Custom Domain: hosting/custom-domain.md
+    - ENS Domain: hosting/ens-domain.md
+    - DNS Link: hosting/dns-link.md
+    - Frameworks: hosting/frameworks.md
+    - Troubleshooting: hosting/troubleshooting.md
+  - Storage:
+    - Overview: storage/overview.md
+    - Storage App: storage/storage-app.md
+    - Fleek Storage JS: storage/fleek-storage-js.md
+    - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
+  - Space Daemon:
+    - Overview: space-daemon/overview.md
+    - Getting Started: space-daemon/getting-started.md
+    - Examples: space-daemon/examples.md
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/FleekHQ
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/FleekHQ
+    - icon: fontawesome/brands/slack
+      link: https://app.slack.com/client/TT3NZ3XDY
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/fleekhq/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCBzlwYM0JjZpjDZ52-SLUmw
