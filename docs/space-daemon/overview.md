@@ -27,7 +27,8 @@ Space is the next evolution of Cloud, where users can interact with apps fully p
 
     The Space Daemon is a service that runs on users desktops. It is ideal for building desktop apps that need file encryption and sharing on top of it. Space Daemon can be bundled and distributed with desktop apps and eventually mobile apps too. It can not be “embedded” in a JavaScript web application though.
 
-    If you are building a web application that needs decentralized file or data storage where the user owns their data, it’s probably better to use Textile’s Threads DB or Buckets directly since they have independent JavaScript interfaces. If you want to build an app that connects to Space Daemon after users already installed it (think of as a wallet), it is a good idea to use Space Client for the connection from your web app to your users Daemon.
+    Building apps with the Space Daemon via a desktop or mobile app experience will put a IPFS/Textile node in the users machine and allow for the most private and peer to peer experience. The same Daemon on the machine can be used to connect to web applications. However, if your just building a web application where you would not expect the user to have a Space Daemon or local IPFS/Textile node it's probably better to use Textiles ThreadDB/Buckets directly since they have independent JavaScript interfaces.
+
 
 <div class="prev-boxes-list">
   <a href="../getting-started/#installation" class="prev-box">
