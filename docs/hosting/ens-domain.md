@@ -13,7 +13,8 @@ Once your app is deployed on Fleek, go to the settings page in the left-hand bar
 
 Click Add ENS to add your ENS domain. Input your domain to verify it and add it. If the domain does not belong to anyone you will be redirected to the [ENS Dashboard](https://app.ens.domains) to buy it.
 
-NOTE: Your domain will appear in the settings page and can also be deleted from there.
+!!! note
+    Your domain will appear in the settings page and can also be deleted from there.
 
 ![](imgs/ens2.png)
 
