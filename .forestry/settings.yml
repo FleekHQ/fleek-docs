@@ -4,14 +4,33 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: docs/index.md
+  label: introduction
 - type: directory
   path: docs/hosting
   label: hosting
   create: all
   match: "**/*"
-- type: document
-  path: docs/index.md
-  label: introduction
+- type: directory
+  path: docs/storage
+  label: storage
+  create: all
+  match: "**/*"
+- type: directory
+  path: docs/space-daemon
+  label: space daemon
+  create: all
+  match: "**/*"
+- type: directory
+  path: docs/tutorials
+  label: tutorials
+  create: all
+  match: "**/*"
+- type: directory
+  path: docs/examples
+  label: examples
+  create: all
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
