@@ -24,6 +24,7 @@ nav:
     - Site Deployment: hosting/site-deployment.md
     - Build Configurations: hosting/build-configurations.md
     - Site Monitoring: hosting/site-monitoring.md
+    - Deploy Previews: hosting/deploy-previews.md
     - Custom Domain: hosting/custom-domain.md
     - ENS Domain: hosting/ens-domain.md
     - DNS Link: hosting/dns-link.md
