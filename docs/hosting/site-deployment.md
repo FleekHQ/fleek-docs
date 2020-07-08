@@ -48,7 +48,9 @@ Finally, if you wish to see the Dockerfile from which each image is built from, 
 Sometimes, the Fleek Docker image is missing a dependency or two, or maybe you have few dependencies and want to use a leaner Docker image to speed up the build process. In these cases, it makes sense to use a custom Docker image.
 
 ![](imgs/docker-logs.png)
-*Note: You can see in our build logs which docker image was picked for your build.*
+
+!!! note
+    You can see in our build logs which docker image was picked for your build.
 
 To use a custom Docker image, you just need to fill the Docker Image input with a valid Docker name and tag from an image that exists in the Docker Hub. The [Docker Hub](https://hub.docker.com/) contains thousands of publicly curated images to choose from. We recommend choosing one of the official packages and making sure the version is compatible with your build settings. Also check that the syntax of your Docker Image input is correct, it should be in the format `[name]:[tag]`.
 
