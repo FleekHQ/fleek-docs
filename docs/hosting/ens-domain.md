@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 # ENS Domains
 
 You can now easily point an ENS domain to your IPFS site and have the content automatically update for future deployments. Here is how to set up an ENS domain for your site:
