@@ -13,3 +13,4 @@ fields:
 pages:
 - docs/examples/daemon.md
 - docs/examples/hosting.md
+- docs/index.md
