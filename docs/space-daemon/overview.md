@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 ![](imgs/hero.png)
 
 The [Space Daemon](https://github.com/FleekHQ/space-daemon) packages together [IPFS](https://ipfs.io/), [Textile](https://textile.io/) Threads/Buckets, and Textile Powergate (Filecoin*) into one easy to install and JS interface to make it easy to build peer to peer and  privacy focused apps.

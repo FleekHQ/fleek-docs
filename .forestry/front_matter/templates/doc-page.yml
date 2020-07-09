@@ -24,6 +24,8 @@ pages:
 - docs/hosting/site-monitoring.md
 - docs/hosting/troubleshooting.md
 - docs/index.md
+- docs/space-daemon/getting-started.md
+- docs/space-daemon/overview.md
 - docs/storage/fleek-storage-js.md
 - docs/storage/overview.md
 - docs/storage/storage-app.md

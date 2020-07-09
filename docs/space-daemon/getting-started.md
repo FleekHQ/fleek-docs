@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 ### Installation
 
 #### Download the daemon
