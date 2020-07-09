@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 # Custom Domains
  Upon site creation, Fleek will automatically assign a domain name in the following way: [RANDOM_NAME].on.fleek.co.
  Of course, we allow users to point the site to a custom domain of their choice.
