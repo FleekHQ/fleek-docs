@@ -2,13 +2,13 @@
 label: doc-page
 hide_body: false
 fields:
-- name: template
+- name: date
   type: text
   config:
     required: false
   description: This is just to fill the frontmatter and prevent a bug with the framework
-  label: template
-  default: doc
+  label: date
+  default: '1'
   hidden: true
 pages:
 - docs/examples/hosting.md
