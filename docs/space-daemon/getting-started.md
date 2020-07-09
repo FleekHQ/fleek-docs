@@ -50,7 +50,6 @@ this time you will get a new warning window, click `Open`
 
 ![New warning window](https://gpuente105-team-bucket.storage.fleek.co/imgs/Screen%20Shot%202020-07-07%20at%2012.36.51.png)
 
-
 If everything goes well, you will see the daemon logs indicating that Daemon is ready
 
 ![Daemon Ready](https://gpuente105-team-bucket.storage.fleek.co/imgs/Screen%20Shot%202020-07-07%20at%2012.37.06.png)
@@ -63,7 +62,6 @@ Space client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-we
 
 You can install the client on your project as any normal package, using `npm` or `yarn`:
 
-
 ```bash
 npm install @fleekhq/space-client
 ```
@@ -74,17 +72,15 @@ or
 yarn add @fleekhq/space-client
 ```
 
-
 !!! info "Space client on server side"
 
     As space-client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web), if you want to use the client on server side you'll need to install XMLHttpRequest package:
     
     yarn add xmlhttprequest
-
+    
     or
-
+    
     npm install xmlhttprequest
-
 
 #### Setup the client
 
@@ -103,9 +99,7 @@ Please have in mind that [space daemon](https://github.com/FleekHQ/space-daemon)
   ...
 ```
 
-
 If you are running the client on the server-side, you need to declare `XMLHttpRequest` module as global. (this is because client is based on [grpc-web](https://www.npmjs.com/package/grpc-web), which is supposed to be used on client-side).
-
 
 ```js
   global.XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
@@ -158,7 +152,7 @@ Creates a new bucket. Returns a Promise that resolves to the new bucket instance
 #### List buckets
 
 > `[WIP]` <em>.listBuckets()</em>
-> 
+>
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Returns all the buckets available
@@ -193,7 +187,7 @@ Returns all the buckets available
 
 #### Upload files/folders
 
-> .addItems({ bucket: string, targetPath: string, sourcePaths: string[] })
+> .addItems({ bucket: string, targetPath: string, sourcePaths: string\[\] })
 
 Add new items. Returns a readable stream to resolves the new items
 
@@ -318,8 +312,6 @@ Returns a Promise that resolves to list of Entry representing all the folders an
   };
 ```
 
-
-
 #### Open a file
 
 > .openFile({ path: string, bucket: string })
@@ -346,7 +338,6 @@ const asyncFunc = async () => {
 };
 ```
 
-
 #### Subscribe to txl events
 
 > .txlSubscribe()
@@ -361,7 +352,6 @@ Returns a ReadableStream that notifies when something changed on the bucket (dat
     console.log(bucket);
   });
 ```
-
 
 #### Subscribe to buckets events
 
@@ -440,6 +430,70 @@ Get an indentity based on a username. Returns a Promise that resolves if a usern
 ```
 
 ### Sharing
+
+#### Share a bucket
+
+> `[WIP]` <em>.shareBucket({ bucket: string })</em>
+>
+> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+
+Shares a bucket. Returns a promis that resolves to the threadInfo (required to join a bucket)
+
+      client
+        .shareBucket({ bucket: 'my-bucket' })
+        .then((res) => {
+          const threadInfo = res.getThreadinfo();
+          console.log('key:', threadInfo.getKey());
+          console.log('addresses:', threadInfo.getAddressesList());
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    
+      /* Or using Async/Await */
+    
+      const asyncFunc = async () => {
+        const res = await client.shareBucket({ bucket: 'my-bucket' });
+        const threadInfo = res.getThreadinfo();
+        ...
+      };
+
+#### Join a shared bucket
+
+> `[WIP]` <em>.joinBucket({ bucket: string, threadInfo: { key: string, addresses: \[string\] } })</em>
+>
+> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+
+Joins a shared bucket
+
+      client
+        .joinBucket({
+          bucket: 'my-bucket',
+          threadInfo: {
+            key: 'my-key',
+            addresses: ['address1', 'address2', 'address3'],
+          },
+        })
+        .then((res) => {
+          console.log('result', res.getResult());
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    
+      /* Or using Async/Await */
+      
+      const asyncFunc = async () => {
+        const res = await client.joinBucket({
+          bucket: 'my-bucket',
+          threadInfo: {
+            key: 'my-key',
+            addresses: ['address1', 'address2', 'address3'],
+          },
+        });
+        console.log('result', res.getResult());
+        ...
+      };
 
 #### Share a bucket via email
 
@@ -537,79 +591,12 @@ Generates a share link
   };
 ```
 
-#### Share a bucket
-> `[WIP]` <em>.shareBucket({ bucket: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
-
-Shares a bucket. Returns a promis that resolves to the threadInfo (required to join a bucket)
-
-```js
-  client
-    .shareBucket({ bucket: 'my-bucket' })
-    .then((res) => {
-      const threadInfo = res.getThreadinfo();
-      console.log('key:', threadInfo.getKey());
-      console.log('addresses:', threadInfo.getAddressesList());
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-
-  /* Or using Async/Await */
-
-  const asyncFunc = async () => {
-    const res = await client.shareBucket({ bucket: 'my-bucket' });
-    const threadInfo = res.getThreadinfo();
-    ...
-  };
-```
-
-#### Join a shared bucket
-
-> `[WIP]` <em>.joinBucket({ bucket: string, threadInfo: { key: string, addresses: [string] } })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
-
-Joins a shared bucket
-
-```js
-  client
-    .joinBucket({
-      bucket: 'my-bucket',
-      threadInfo: {
-        key: 'my-key',
-        addresses: ['address1', 'address2', 'address3'],
-      },
-    })
-    .then((res) => {
-      console.log('result', res.getResult());
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-
-  /* Or using Async/Await */
-  
-  const asyncFunc = async () => {
-    const res = await client.joinBucket({
-      bucket: 'my-bucket',
-      threadInfo: {
-        key: 'my-key',
-        addresses: ['address1', 'address2', 'address3'],
-      },
-    });
-    console.log('result', res.getResult());
-    ...
-  };
-```
-
 ### Backup
 
 #### Backup keys by passphrase
 
 > `[WIP]` <em>.backupKeysByPassphrase({ passphrase: string })</em>
-> 
+>
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Backup keys by passphrase
@@ -638,7 +625,7 @@ Backup keys by passphrase
 #### Recovery keys by passphrase
 
 > `[WIP]` <em>.recoverKeysByPassphrase({ passphrase: string })</em>
-> 
+>
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Recovery keys by passphrase
@@ -669,7 +656,7 @@ Recovery keys by passphrase
 #### Toggle fuse drive
 
 > `[WIP]` <em>.toggleFuseDrive({ mountDrive: boolean })</em>
-> 
+>
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Mounts the fuse drive on your machine
@@ -700,7 +687,7 @@ Mounts the fuse drive on your machine
 #### Get fuse drive status
 
 > `[WIP]` <em>.getFuseDriveStatus({})</em>
-> 
+>
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
 Get the current Fuse drive status
