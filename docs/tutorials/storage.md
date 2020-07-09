@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 ### Guides 
 We have several guides on our [blog](https://blog.fleek.co) on Fleek Storage.
 Below are some links to get you started!
