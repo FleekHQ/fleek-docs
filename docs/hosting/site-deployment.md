@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 # Site Deployment
 
 Each new website deployment by Fleek is done atomically, meaning that there will never be any inconsistencies when pushing new files or making changes to existing ones.
