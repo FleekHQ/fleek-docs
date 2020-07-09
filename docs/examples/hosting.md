@@ -1,4 +1,5 @@
 ---
+template: doc
 
 ---
 ### Fleek Homepage

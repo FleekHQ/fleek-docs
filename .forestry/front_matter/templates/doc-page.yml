@@ -10,3 +10,5 @@ fields:
   label: template
   default: doc
   hidden: true
+pages:
+- docs/examples/hosting.md
