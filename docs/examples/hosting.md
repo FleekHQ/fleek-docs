@@ -1,7 +1,11 @@
+---
+date: ''
+
+---
 ### Fleek Homepage
 
 ![](https://fleekblog-team-bucket.storage.fleek.co/docs/examples/fleek-homepage.png)
-We lead by example at Fleek. Our [homepage](https://fleek.co) is deployed on Fleek and is a great example of a beautiful, modern web page running on IPFS.
+We lead by example at Fleek. Our [homepage](https://fleek.co) is deployed on Fleek and is a great example of a beautiful, modern web page running on IPFS. 
 
 ### Fleek Blog
 
