@@ -24,4 +24,5 @@ pages:
 - docs/hosting/site-monitoring.md
 - docs/hosting/troubleshooting.md
 - docs/index.md
+- docs/storage/storage-app.md
 - docs/storage/storage-aws-s3-integration.md

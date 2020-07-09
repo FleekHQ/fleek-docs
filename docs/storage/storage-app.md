@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 Upload, browse, and manage all your files through the app interface. All files uploaded are published to IPFS and published to DNS, with a CDN and File Compression. You can view and reference the files through the Fleek Storage URL, and can view directly on the IPFS gateway.
 
 The Fleek Storage app is a tool meant to host public web assets.
@@ -42,4 +46,3 @@ When you open an individual file you can see detials about that particual file i
 ## Other Actions
 
 You can download and delete files. If you want to delete files in bulk you can select multiple, then select delete from the Actions menu.
-
