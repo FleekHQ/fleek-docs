@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 # Troubleshooting
 
 ## Build Troubleshooting Tips
