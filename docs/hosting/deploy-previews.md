@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 Deploy previews allow you to preview a deployment before pushing it to production. You can safely view what your site will look like before you merge the pull request.
 
 It should come in handy when you want to make sure that everything is in order with the changes you want to make and avoid bad surprises due to unfortunate oversights.
