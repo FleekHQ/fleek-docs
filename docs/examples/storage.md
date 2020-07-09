@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 ### The Crypto Museum: NFTs assets storage on IPFS
 ![](https://fleekblog-team-bucket.storage.fleek.co/docs/examples/crypto-museum.png)
 

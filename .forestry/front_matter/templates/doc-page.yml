@@ -13,6 +13,7 @@ fields:
 pages:
 - docs/examples/daemon.md
 - docs/examples/hosting.md
+- docs/examples/storage.md
 - docs/hosting/build-configurations.md
 - docs/hosting/custom-domain.md
 - docs/hosting/deploy-previews.md
