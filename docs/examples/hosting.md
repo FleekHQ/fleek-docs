@@ -1,7 +1,3 @@
----
-template: doc
-
----
 ### Fleek Homepage
 
 ![](https://fleekblog-team-bucket.storage.fleek.co/docs/examples/fleek-homepage.png)
