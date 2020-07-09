@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 # DNSLink
 
 DNSLink allows the mapping of a domain name to an IPFS hash. Setting up DNSLink will allow you to use a domain name to access the latest version of your site through IPFS.
