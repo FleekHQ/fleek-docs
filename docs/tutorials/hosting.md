@@ -1,3 +1,7 @@
+---
+date: "1"
+
+---
 ### Guides 
 We have several guides on our [blog](https://blog.fleek.co) explaining how to deploy with popular frameworks.Use the table below to find the content you need.
 
