@@ -186,7 +186,7 @@ const buckets = await fleekStorage.listBuckets({
 
 ### getFileFromHash
 
-`getFileFromHash` is a utility function that downloads a file's data from {Fleek's IPFS gateway](/#fleeks-ipfs-gateway) using the hash. The key and secret is not required since the gateway is publicly available.
+`getFileFromHash` is a utility function that downloads a file's data from [Fleek's IPFS gateway](/#fleeks-ipfs-gateway) using the hash. The key and secret is not required since the gateway is publicly available.
 
 Example of usage:
 
