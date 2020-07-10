@@ -83,9 +83,9 @@ The Space Daemon packages together IPFS, Textile Threads/Buckets, and Textile Po
 </a>
 </div>
 
-## Fleek's IPFS Gateway
+## IPFS Gateway
 
-Fleek's provides its own IPFS gateway so that anyone can access files on IPFS. Simply replace `HASH` with the IPFS hash (also called CID) of your file and you are good to go.
+Fleek provides its own IPFS gateway so that anyone can access files on IPFS. Simply replace `HASH` with the IPFS hash (also called CID) of your file and you are good to go.
 
 `https://ipfs.fleek.co/ipfs/HASH`
 
