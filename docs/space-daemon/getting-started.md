@@ -194,7 +194,7 @@ Add new items. Returns a readable stream to resolves the new items
 ```js
   const stream = client.addItems({
     bucket: 'my-bucket',
-    targetPath: '/',
+    targetPath: '/', // path in the bucket to be saved
     sourcePaths: ['/path-to-my-folder-or-file-to-upload']
   });
     
