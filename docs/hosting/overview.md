@@ -18,24 +18,24 @@ Getting Started with Fleek by deploying your first website. The quickest way to 
 If you so choose, you can also delpoy by uploading the full code base for you website.
 
 <div class="prev-boxes-list">
-  <a href="../site-deployment/" class="prev-box">
+  <a href="../site-deployment/#creating-a-deployment" class="prev-box">
     <h5>Deploy</h5>
     <p>Deploy in Few Quick Clicks</p>
   </a>
-  <a href="../build-configurations/" class="prev-box">
+  <a href="../site-deployment/#configuring-the-deployment" class="prev-box">
     <h5>Build Configurations</h5>
     <p>Get Build Settings for Popular Frameworks</p>
   </a>
-  <a href="../frameworks/" class="prev-box">
-    <h5>Frameworks</h5>
-    <p>Guides and Tutorials on Popular Frameworks</p>
-  </a>
-  <a href="../custom-domain/" class="prev-box">
-    <h5>Custom Domain</h5>
+  <a href="../domain-management/" class="prev-box">
+    <h5>Domain management</h5>
     <p>Add Root/Sub Domains To Your Site</p>
   </a>
-  <a href="../ens-domain/" class="prev-box">
+  <a href="../domain-management/#adding-ens-domain" class="prev-box">
     <h5>ENS Domains</h5>
     <p>Add ENS Domains To Your Site</p>
+  </a>
+    <a href="../../tutorials/hosting/" class="prev-box">
+    <h5>Tutorials</h5>
+    <p>Guides and Tutorials on Popular Frameworks</p>
   </a>
 </div>
