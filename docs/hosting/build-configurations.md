@@ -15,6 +15,10 @@ You will also have to define the correct publish directory, here's list of defau
 | Hugo               | fleek/hugo             | `yarn && hugo`                      | public           |
 | Jekyll             | fleek/jekyll           | `jekyll build`                      | _site            |
 | Next JS            | fleek/next-js          | `yarn && yarn build && yarn export` | out              |
+| Gridsome           | fleek/gridsome:node-12 | `yarn && yarn build`                | dist             |
+| Svelte             | fleek/svelte           | `yarn && yarn build`                | public           |
+| Svelte + Sapper    | fleek/svelte           | `yarn && yarn export`               | \__sapper__/export|
+| MkDocs             | fleek/mkdocs           | `mkdocs build`                      | site             |
 
 Using a Docker Image with an Older Node Version:
 
