@@ -89,7 +89,7 @@ Fleek's provides its own IPFS gateway so that anyone can access files on IPFS. S
 
 `https://ipfs.fleek.co/ipfs/HASH`
 
-You can easily download IPFS files from the gateway using [getFileFromHash](/storage/fleek-storage-js/#getfilefromhash) command of [Fleek Storage Js](/storage/fleek-storage-js).
+Also, you can easily download files from the gateway using the [getFileFromHash](/storage/fleek-storage-js/#getfilefromhash) command of [Fleek Storage Js](/storage/fleek-storage-js).
 
 ## Other Resources
 
