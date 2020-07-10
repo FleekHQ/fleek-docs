@@ -27,6 +27,7 @@ nav:
     - Deploy Previews: hosting/deploy-previews.md
     - Custom Domain: hosting/custom-domain.md
     - ENS Domain: hosting/ens-domain.md
+    - Domain Management: hosting/domain-management.md
     - DNS Link: hosting/dns-link.md
     - Frameworks: hosting/frameworks.md
     - Troubleshooting: hosting/troubleshooting.md
