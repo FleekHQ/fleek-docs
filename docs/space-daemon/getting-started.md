@@ -116,6 +116,32 @@ If you are running the client on the server-side, you need to declare `XMLHttpRe
 
 ### CRUD Operations
 
+#### Create client instance
+
+> class SpaceClient(opts)
+
+Use this class to create space client instances able to interact with space-daemon
+
+Options:
+
+- `opts.url`: <em>**(string, required)**</em> space dameon url + port (`https://0.0.0.0:9998`)
+- `opts.defaultBucket?`: <em>**(string, optional)**</em> change the default bucket. This value is used when you don't pass the bucket param on some of the methods below. if you don't pass this property, `personal` bucket is going to be used as default value (`personal` bucket is created by default when you run space-daemon for the first time).
+- `opts.options?`: <em>**(object, optional)**</em> [grpc-web](https://github.com/grpc/grpc-web) client options.
+- `opts.credentials?`: <em>**(object, optional)**</em> [grpc-web](https://github.com/grpc/grpc-web) client credentials.
+
+
+```js
+import { SpaceClient } from '@fleekhq/space-client';
+
+const opts = {
+  url: 'http://0.0.0.0:9998',
+  defaultBucket: 'my-bucket',
+};
+
+const client = new SpaceClient(opts);
+```
+
+
 #### Create bucket
 
 > .createBucket({ slug: string })
@@ -187,9 +213,10 @@ Returns all the buckets available
 
 #### Upload files/folders
 
-> .addItems({ bucket: string, targetPath: string, sourcePaths: string\[\] })
+> .addItems({ bucket?: string, targetPath: string, sourcePaths: string\[\] })
 
-Add new items. Returns a readable stream to resolves the new items
+Add new items. Returns a readable stream to resolves the new items.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   const stream = client.addItems({
@@ -213,9 +240,10 @@ Add new items. Returns a readable stream to resolves the new items
 
 #### Create folders
 
-> .createFolder({ path: string, bucket: string })
+> .createFolder({ path: string, bucket?: string })
 
-Creates a new empty folder. Returns a Promise that resolves to the new folder
+Creates a new empty folder. Returns a Promise that resolves to the new folder.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   client
@@ -236,9 +264,10 @@ Creates a new empty folder. Returns a Promise that resolves to the new folder
 
 #### List a directory
 
-> .listDirectory({ path: string, bucket: string })
+> .listDirectory({ path: string, bucket?: string })
 
 Returns a promise that resolves to list of Entry instances representing each folder and files present in the path directory.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   client
@@ -275,9 +304,10 @@ Returns a promise that resolves to list of Entry instances representing each fol
 
 #### List all the bucket directories/files
 
-> .listDirectories({ bucket: string })
+> .listDirectories({ bucket?: string })
 
 Returns a Promise that resolves to list of Entry representing all the folders and files inside the bucket.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   client
@@ -314,9 +344,10 @@ Returns a Promise that resolves to list of Entry representing all the folders an
 
 #### Open a file
 
-> .openFile({ path: string, bucket: string })
+> .openFile({ path: string, bucket?: string })
 
-Copies the file referenced by the path arg to a temp folder on your machine and returns a Promise that resolves to the file location
+Copies the file referenced by the path arg to a temp folder on your machine and returns a Promise that resolves to the file location.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
 const asyncFunc = async () => {
@@ -433,75 +464,78 @@ Get an indentity based on a username. Returns a Promise that resolves if a usern
 
 #### Share a bucket
 
-> `[WIP]` <em>.shareBucket({ bucket: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> .shareBucket({ bucket?: string })
 
-Shares a bucket. Returns a promis that resolves to the threadInfo (required to join a bucket)
+Shares a bucket. Returns a promis that resolves to the threadInfo (required to join a bucket).
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
-      client
-        .shareBucket({ bucket: 'my-bucket' })
-        .then((res) => {
-          const threadInfo = res.getThreadinfo();
-          console.log('key:', threadInfo.getKey());
-          console.log('addresses:', threadInfo.getAddressesList());
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    
-      /* Or using Async/Await */
-    
-      const asyncFunc = async () => {
-        const res = await client.shareBucket({ bucket: 'my-bucket' });
-        const threadInfo = res.getThreadinfo();
-        ...
-      };
+```js
+  client
+    .shareBucket({ bucket: 'my-bucket' })
+    .then((res) => {
+      const threadInfo = res.getThreadinfo();
+      console.log('key:', threadInfo.getKey());
+      console.log('addresses:', threadInfo.getAddressesList());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.shareBucket({ bucket: 'my-bucket' });
+    const threadInfo = res.getThreadinfo();
+    ...
+  };
+```
 
 #### Join a shared bucket
 
-> `[WIP]` <em>.joinBucket({ bucket: string, threadInfo: { key: string, addresses: \[string\] } })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> joinBucket({ bucket?: string, threadInfo: { key: string, addresses: \[string\] } })
 
 Joins a shared bucket
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
-      client
-        .joinBucket({
-          bucket: 'my-bucket',
-          threadInfo: {
-            key: 'my-key',
-            addresses: ['address1', 'address2', 'address3'],
-          },
-        })
-        .then((res) => {
-          console.log('result', res.getResult());
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    
-      /* Or using Async/Await */
-      
-      const asyncFunc = async () => {
-        const res = await client.joinBucket({
-          bucket: 'my-bucket',
-          threadInfo: {
-            key: 'my-key',
-            addresses: ['address1', 'address2', 'address3'],
-          },
-        });
-        console.log('result', res.getResult());
-        ...
-      };
+```js
+  client
+    .joinBucket({
+      bucket: 'my-bucket',
+      threadInfo: {
+        key: 'my-key',
+        addresses: ['address1', 'address2', 'address3'],
+      },
+    })
+    .then((res) => {
+      console.log('result', res.getResult());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+  
+  const asyncFunc = async () => {
+    const res = await client.joinBucket({
+      bucket: 'my-bucket',
+      threadInfo: {
+        key: 'my-key',
+        addresses: ['address1', 'address2', 'address3'],
+      },
+    });
+    console.log('result', res.getResult());
+    ...
+  };
+```
 
 #### Share a bucket via email
 
-> `[WIP]` <em>.shareBucketViaEmail({ bucket: string, email: string })</em>
+> `[WIP]` <em>.shareBucketViaEmail({ bucket?: string, email: string })</em>
 >
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
-Shares a bucket via email
+Shares a bucket via email.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   client
@@ -527,9 +561,10 @@ Shares a bucket via email
 
 #### Share a bucket via identity
 
-> .shareBucketViaIdentity({ identityType: 'USERNAME' | 'EMAIL', identityValue: string, bucket: string })
+> .shareBucketViaIdentity({ identityType: 'USERNAME' | 'EMAIL', identityValue: string, bucket?: string })
 
-Shares a bucket via identity
+Shares a bucket via identity.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   client
@@ -560,11 +595,12 @@ Shares a bucket via identity
 
 #### Generate a file share link
 
-> `[WIP]` <em>.generateFileShareLink({ bucket: string, filePath: string })</em>
+> `[WIP]` <em>.generateFileShareLink({ bucket?: string, filePath: string })</em>
 >
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
-Generates a share link
+Generates a share link.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
 
 ```js
   client
