@@ -150,7 +150,7 @@ Creates a new bucket. Returns a Promise that resolves to the new bucket instance
 
 ```js
   client
-    .createBucket('myNewBucket')
+    .createBucket({ slug: 'myNewBucket'})
     .then((res) => {
       const bucket = res.getBucket();
 
@@ -167,7 +167,7 @@ Creates a new bucket. Returns a Promise that resolves to the new bucket instance
   /* Or using Async/Await */
 
   const asyncFunc = async () => {
-    const res = await client.createBucket('my-bucket');
+    const res = await client.createBucket({ slug: 'my-bucket'});
     const bucket = res.getBucket();
 
     console.log(bucket.getName());
