@@ -627,6 +627,64 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   };
 ```
 
+#### Share files through email or address
+
+> .shareItemsToSelectGroup(payload)
+
+Share files through email or space address.
+
+payload (object):
+
+- `bucket`: <em>**(string, optional)**</em> bucket name where are located the files that you want to share.
+- `itemPaths`: <em>**([string], required)**</em> list of the files paths that you want to share (bucket file paths).
+- `customMessage`: <em>**(string, optional)**</em> custom message to be attached to the email invitation.
+- `invitationType`: <em>**([InvitationType], required)**</em> list of invitations types (see details below)
+
+InvitationType (object):
+
+- `invitationType`: <em>**(enum('INVITE_THROUGH_EMAIL' | 'INVITE_THROUGH_ADDRESS'), required)**</em> defines the type of invitation: `INVITE_THROUGH_EMAIL` for email invitation, `INVITE_THROUGH_ADDRESS` for space address invitation.
+- `invitationValue`: <em>**(string, required)**</em> invitation value according to the `invitationType` selected. If the `invitationType` selected is `INVITE_THROUGH_EMAIL`, `invitationValue` should be an email address, otherwise, if the `invitationType` selected is `INVITE_THROUGH_ADDRESS`, `invitationType` value should be the user space address with whom you want to share the file/s.
+
+
+```js
+  client
+    .shareItemsToSelectGroup({
+      bucket: 'my-bucket',
+      itemPaths: ['subfolder/docs/file.txt', 'subfolder/docs/image.jpg'],
+      customMessage: 'Hello world!',
+      invitations: [
+        {
+          invitationType: 'INVITE_THROUGH_EMAIL',
+          invitationValue: 'some_email@test.com',
+        },
+      ],
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {ch 
+    const res = await client.shareItemsToSelectGroup({
+      bucket: 'my-bucket',
+      itemPaths: ['subfolder/docs/file.txt', 'subfolder/docs/image.jpg'],
+      customMessage: 'Hello world!',
+      invitations: [
+        {
+          invitationType: 'INVITE_THROUGH_EMAIL',
+          invitationValue: 'some_email@test.com',
+        },
+      ],
+    });
+
+    ...
+  };
+```
+
 ### Backup
 
 #### Backup keys by passphrase
