@@ -627,6 +627,22 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   };
 ```
 
+#### Subscribe to notifications
+
+> .notificationSubscribe()
+
+Returns a ReadableStream that notifies about new notifications.
+Notifications are triggered upon another member's interaction with a shared file or bucket, for example if he attempts to add a new file.
+
+```js
+  const notificationStream = client.notificationSubscribe();
+
+  notificationStream.on('data', (res) => {
+    const notification = res.getNotification();
+    console.log(notification);
+  });
+```
+
 ### Backup
 
 #### Backup keys by passphrase
