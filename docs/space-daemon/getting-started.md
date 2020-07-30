@@ -632,7 +632,7 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
 > .notificationSubscribe()
 
 Returns a ReadableStream that notifies about new notifications.
-Notifications are triggered upon another member's interaction with a shared file or bucket, for example if he attempts to add a new file.
+Notifications are triggered upon another member's interaction with a shared file or bucket, for example if he attempts to add a new file to a shared bucket.
 
 ```js
   const notificationStream = client.notificationSubscribe();
