@@ -645,6 +645,32 @@ Recovery keys by passphrase
   };
 ```
 
+
+#### Delete Key Pair
+
+> .deleteKeyPair()
+
+Deletes the Key Pair
+
+```js
+  client
+    .deleteKeyPair()
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    const res = await client.deleteKeyPair();
+
+    console.log(res);
+    ...
+  };
+```
+
 ### Mount
 
 #### Toggle fuse drive
