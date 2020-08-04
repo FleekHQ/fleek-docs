@@ -708,3 +708,30 @@ Get the current Fuse drive status
     console.log(res.getFusedrivemounted());
   };
 ```
+
+### Account
+
+#### Delete Account
+
+> deleteAccount()
+
+Delete an account.
+
+```js
+  client
+    .deleteAccount()
+    .then(() => {
+      console.log('account deleted');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.deleteAccount();
+
+    console.log('account deleted');
+  };
+```
