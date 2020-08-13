@@ -56,9 +56,9 @@ If everything goes well, you will see the daemon logs indicating that Daemon is 
 
 #### Download the client
 
-If you are using NodeJS, you can install the space client package so you can interact with the daemon using nice and simple JavaScript methods without worring about gRPC calls.
+If you are using NodeJS, you can install the Space Js client package so you can interact with the daemon using nice and simple JavaScript methods without worring about gRPC calls.
 
-Space client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web)
+The Space Js client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web)
 
 You can install the client on your project as any normal package, using `npm` or `yarn`:
 
@@ -72,7 +72,7 @@ or
 yarn add @fleekhq/space-client
 ```
 
-!!! info "Space client on server side"
+!!! info "Space Js client on server side"
 
     As space-client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web), if you want to use the client on server side you'll need to install XMLHttpRequest package:
     
@@ -120,7 +120,7 @@ If you are running the client on the server-side, you need to declare `XMLHttpRe
 
 > class SpaceClient(opts)
 
-Use this class to create space client instances able to interact with space-daemon
+Use this class to create Space Js client instances able to interact with space-daemon
 
 Options:
 
