@@ -577,6 +577,29 @@ Returns a list of notifications objects. Notifications objects represent just sh
 
 ### Backup
 
+#### Toggle Bucket Backup
+
+> `[WIP]` <em>.toggleBucketBackup({ bucket: string, backup: boolean })</em>
+>
+> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+
+Toggles whether or not to back up the content of a bucket to Space.
+
+```js
+  client
+    .toggleBucketBackup({ bucket: 'bucket-name', backup: true })
+    .then(() => {
+      console.log('bucket-name is backed up in Space!');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    await client.toggleBucketBackup({ bucket: 'bucket-name', backup: true });
+  };
+```
+
 #### Get Public Key
 
 > getPublicKey()
