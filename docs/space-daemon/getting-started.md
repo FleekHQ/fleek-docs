@@ -384,6 +384,18 @@ Returns a ReadableStream that notifies when something changed on the bucket (dat
   });
 ```
 
+#### .fileInfoSubscribe()
+
+Returns a ReadableStream that notifies when a change related to the a file has occured such as the amount of members the file is shared with or whether the file is backup in Space.
+
+```js
+  const fileInfoStream = client.fileInfoSubscribe();
+  fileInfoStream.on('data', (res) => {
+    const file = res.getFile();
+    console.log(file);
+  });
+```
+
 #### Subscribe to buckets events
 
 > .subscribe()
