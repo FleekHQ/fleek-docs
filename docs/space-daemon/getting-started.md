@@ -284,6 +284,9 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
         console.log(entry.getIpfshash());
         console.log(entry.getSizeinbytes());
         console.log(entry.getFileextension());
+        console.log(entry.getIslocallyavailable());
+        console.log(entry.getBackupcount());
+        console.log(entry.getMembersList());
       });
     })
     .catch((err) => {
@@ -324,6 +327,9 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
         console.log(entry.getIpfshash());
         console.log(entry.getSizeinbytes());
         console.log(entry.getFileextension());
+        console.log(entry.getIslocallyavailable());
+        console.log(entry.getBackupcount());
+        console.log(entry.getMembersList());
       });
     })
     .catch((err) => {
