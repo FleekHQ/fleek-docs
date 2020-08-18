@@ -618,7 +618,6 @@ Fetches account storage usage info such as amount of space used locally and in S
   };
 ```
 
-
 #### Get Public Key
 
 > getPublicKey()
