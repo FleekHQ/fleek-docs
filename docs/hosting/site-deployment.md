@@ -25,7 +25,7 @@ Fleek will attempt to autodetect the site's framework and apply the correct buil
 Below are the build parameters which you can modify.
 
 - `Docker image`: The name of the docker image on [docker hub](https://hub.docker.com/) in which your site will be built, defaults to `node:slim`. Fleek provides [images for many popular frameworks](https://hub.docker.com/orgs/fleek/repositories), but you can use any that suits your project.
-- `Build command`: The commands to execute to build the site. EG: `npm install &&& npm run build`  
+- `Build command`: The commands to execute to build the site. EG: `npm install && npm run build`
 - `Publish directory`: The name of the directory containing the `index.html` file of your site after it has been built
 - `Environment variables`: The values of your environment variables. It is here for example that you might set your environment as `production`
 
