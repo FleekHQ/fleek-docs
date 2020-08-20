@@ -581,10 +581,6 @@ Returns a list of notifications objects. Notifications objects represent just sh
 
 > .getUsageInfo()
 
-> `[WIP]` <em>.getUsageInfo()</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
-
 Fetches account storage usage info such as amount of space used locally and in Space, alongside bandwith quotas and limits. 
 
 ```js
