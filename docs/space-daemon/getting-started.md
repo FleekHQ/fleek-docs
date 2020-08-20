@@ -577,6 +577,27 @@ Returns a list of notifications objects. Notifications objects represent just sh
 
 ### Backup
 
+#### Toggle Bucket Backup
+
+> toggleBucketBackup({ bucket: string, backup: boolean })
+
+Toggles whether or not to back up the content of a bucket to Space.
+
+```js
+  client
+    .toggleBucketBackup({ bucket: 'bucket-name', backup: true })
+    .then(() => {
+      console.log('bucket-name is backed up in Space!');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+    
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    await client.toggleBucketBackup({ bucket: 'bucket-name', backup: true });   
+  }
+
 #### Get Usage Info
 
 > .getUsageInfo()
@@ -599,6 +620,7 @@ Fetches account storage usage info such as amount of space used locally and in S
     .catch((err) => {
       console.error(err);
     });
+    
   /* Or using Async/Await */
   const asyncFunc = async () => {
     const usageInfoRes = await client.getUsageInfo();
@@ -610,7 +632,6 @@ Fetches account storage usage info such as amount of space used locally and in S
       usagequota: usageInfoRes.getUsagequota(),
     }
     console.log(usageInfo);
-    ...
   };
 ```
 
