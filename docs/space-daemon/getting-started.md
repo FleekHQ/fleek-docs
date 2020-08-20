@@ -579,9 +579,7 @@ Returns a list of notifications objects. Notifications objects represent just sh
 
 #### Toggle Bucket Backup
 
-> `[WIP]` <em>.toggleBucketBackup({ bucket: string, backup: boolean })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> toggleBucketBackup({ bucket: string, backup: boolean })
 
 Toggles whether or not to back up the content of a bucket to Space.
 
