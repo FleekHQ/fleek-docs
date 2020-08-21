@@ -496,6 +496,58 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   };
 ```
 
+
+#### Get files shared with me
+
+> .getSharedWithMeFiles({ seek: string, limit: number })
+
+Returns the list of files shared with me
+
+```js
+  client
+    .getSharedWithMeFiles({
+      seek: "seek_value",
+      limit: 30,
+    })
+    .then((res) => {
+      const result = {
+        nextOffset: result.getNextoffset(),
+        items: result.getItemsList().map((item) => ({
+          path: item.getPath(),
+          isDir: item.getIsdir(),
+          name: item.getName(),
+          sizeInBytes: item.getSizeinbytes(),
+          created: item.getCreated(),
+          updated: item.getUpdated(),
+          fileExtension: item.getFileextension(),
+          ipfsHash: item.getIpfshash(),
+          isLocallyAvailable: item.getIslocallyavailable(),
+          backupCount: item.getBackupcount(),
+          members: item.getMembersList().map((member) => ({
+            publicKey: member.getPublickey(),
+          })),
+        })),
+      };
+
+      console.log(result);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getSharedWithMeFiles({
+      seek: "seek_value",
+      limit: 30,
+    });
+
+    console.log(res.getItemsList());
+    ...
+  };
+```
+
 #### Subscribe to notifications
 
 > .notificationSubscribe()
