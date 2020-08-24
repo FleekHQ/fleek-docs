@@ -775,6 +775,7 @@ Get the current api session tokens.
 
     ...
   };
+```
 
 #### Backup keys by passphrase
 
