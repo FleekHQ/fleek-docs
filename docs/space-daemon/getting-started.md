@@ -496,6 +496,44 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   };
 ```
 
+#### Share Files via public key
+
+> .shareFilesViaPublicKey({ bucket?: string, paths: [string], publicKeys: [string] })
+
+Share files with other users via their public keys.
+
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
+- `bucket`: source bucket
+- `paths`: argument is an array of paths (strings) of the files that you want to share from your bucket.
+- `publicKeys`: argument is an array of the public keys of the users that you want to share with.
+
+```js
+  client
+    .shareFilesViaPublicKey({
+      bucket: 'my-bucket',
+      paths: ['path/to/my/file.txt', 'second/path/file2.txt'],
+      publicKeys: ['pubKey1', 'pubKey2', 'pubKey3'],
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.shareFilesViaPublicKey({
+      bucket: 'my-bucket',
+      paths: ['path/to/my/file.txt', 'second/path/file2.txt'],
+      publicKeys: ['pubKey1', 'pubKey2', 'pubKey3'],
+    });
+
+    console.log(res);
+    ...
+  };
+```
 
 #### Get files shared with me
 
