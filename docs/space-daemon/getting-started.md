@@ -745,6 +745,38 @@ Get the stored mnemonic seed.
   };
 ```
 
+#### Get API Session Tokens
+
+> getAPISessionTokens()
+
+Get the current api session tokens.
+
+```js
+  client
+    .getAPISessionTokens()
+    .then((res) => {
+      const hubToken = res.getHubtoken();
+      const servicestoken = res.getServicestoken();
+
+      console.log('hubToken', hubToken);
+      console.log('servicestoken', servicestoken);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getAPISessionTokens();
+
+    console.log('hubToken', res.getHubtoken());
+    console.log('servicestoken', res.getServicestoken());
+
+    ...
+  };
+```
+
 #### Backup keys by passphrase
 
 > `[WIP]` <em>.backupKeysByPassphrase({ passphrase: string })</em>
