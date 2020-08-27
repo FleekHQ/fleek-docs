@@ -580,6 +580,50 @@ Returns a list of the recently members that you shared with
   };
 ```
 
+#### Generate a file public link
+
+> .generatePublicFileLink({ bucket?: string, password: string, itemPaths: [string] })
+
+Generates a sharing public link for the files specified.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
+
+```js
+  client
+    .generatePublicFileLink({
+      bucket: 'my-bucket',
+      password: '123asd',
+      itemPaths: ['path/to/file1.txt', 'path/to/file2.txt'],
+    })
+    .then((res) => {
+      const fileInfo = {
+        link: res.getLink(),
+        fileCid: res.getFilecid(),
+      };
+
+      console.log(fileInfo);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.generatePublicFileLink({
+      bucket: 'my-bucket',
+      password: '123asd',
+      itemPaths: ['path/to/file1.txt', 'path/to/file2.txt'],
+    });
+
+    const fileInfo = {
+      link: res.getLink(),
+      fileCid: res.getFilecid(),
+    };
+
+    ...
+  };
+```
+
 
 #### Subscribe to notifications
 
