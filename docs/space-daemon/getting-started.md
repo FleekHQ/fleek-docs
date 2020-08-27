@@ -548,6 +548,39 @@ Returns the list of files shared with me
   };
 ```
 
+#### Get a list of the recently members that you shared with
+
+> .getRecentlySharedWith()
+
+Returns a list of the recently members that you shared with
+
+
+```js
+  client
+    .getRecentlySharedWith()
+    .then((res) => {
+      const membersList = res.getMembersList();
+
+      const members = membersList.map((member) => ({
+        address: member.getAddress(),
+        publicKey: member.getPublickey(),
+      }));
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getRecentlySharedWith();
+
+    const membersList = res.getMembersList();
+    ...
+  };
+```
+
+
 #### Subscribe to notifications
 
 > .notificationSubscribe()
@@ -648,7 +681,9 @@ Toggles whether or not to back up the content of a bucket to Space.
   /* Or using Async/Await */
   const asyncFunc = async () => {
     await client.toggleBucketBackup({ bucket: 'bucket-name', backup: true });   
+    ...
   }
+```  
 
 #### Get Usage Info
 
