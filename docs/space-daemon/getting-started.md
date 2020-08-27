@@ -779,15 +779,14 @@ Get the current api session tokens.
 
 #### Backup keys by passphrase
 
-> `[WIP]` <em>.backupKeysByPassphrase({ passphrase: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> .backupKeysByPassphrase({ uuid: string, passphrase: string })
 
-Backup keys by passphrase
+Backup keys by a passphrase
 
 ```js
   client
     .backupKeysByPassphrase({
+      uuid: 'user-uuid',
       passphrase: 'my-passphrase',
     })
     .then(() => {
@@ -801,6 +800,7 @@ Backup keys by passphrase
 
   const asyncFunc = async () => {
     await client.backupKeysByPassphrase({
+      uuid: 'user-uuid',
       passphrase: 'my-passphrase',
     });
   };
