@@ -951,7 +951,34 @@ Recovery keys by passphrase
     });
   };
 ```
+#### Test Keys Passphrase
 
+> .testKeysPassphrase({ uuid: string, passphrase: string })
+
+Test keys with passphrase
+
+```js
+  client
+    .testKeysPassphrase({
+      uuid: 'user-uuid',
+      passphrase: 'my-passphrase',
+    })
+    .then(() => {
+      console.log('test success');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.testKeysPassphrase({
+      uuid: 'user-uuid',
+      passphrase: 'my-passphrase',
+    });
+  };
+```
 
 #### Delete Key Pair
 
