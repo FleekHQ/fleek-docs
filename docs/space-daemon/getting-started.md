@@ -746,3 +746,14 @@ Get the current Fuse drive status
     console.log(res.getFusedrivemounted());
   };
 ```
+
+### Powergate
+
+Currently, a Filecoin/Powergate implementation is available on the `filecoin` branch of the [Space Daemon](https://github.com/FleekHQ/space-daemon). Current releases do not contain this feature yet. Therefore, the binaries must be built from source as explained in the [Space Daemon README](https://github.com/FleekHQ/space-daemon#running-from-source).
+
+The Powergate client can be started by running `make localnet-up` in the root folder.
+After that, the binaries can be build and executed with the appropriate flags: `make && ./bin/space -filecoin -ipfsnode=false`.
+
+The Space version of the Powergate client runs in localhost, port 6005 (`http://0.0.0.0:6005`).
+
+The [Powergate Js Client](https://textileio.github.io/js-powergate-client/) is the recommended way to intereact with Filecoin. Our Space Client workshop includes [an example](https://github.com/FleekHQ/space-client-workshop/blob/master/src/components/Powergate/index.js) on how to upload a file to Filecoin.
