@@ -761,17 +761,35 @@ This timestamp can be used to track which notification has not yet been seen by 
     .setNotificationsLastSeenAt({ timestamp: 1598889151456 })
     .then(() => {
       console.log('Updated the notifications timestamp');
+    }).catch((err) => {
+        console.error(err);
+      });
+    /* Or using Async/Await */
+    const asyncFunc = async () => {
+      await client.setNotificationsLastSeenAt({ timestamp: 1598889151456 });
+    };
+```
+
+#### Handle Files Invitation
+
+> .handleFilesInvitation({ invitationID: string, accept: boolean })
+
+This method is for accepting or rejecting an invitation to a sharing request of a file.
+
+```js
+  client
+    .handleFilesInvitation({ invitationID: '123-123-123', accept: true })
+    .then((response) => {
+      console.log(response);
     })
     .catch((err) => {
       console.error(err);
     });
   /* Or using Async/Await */
   const asyncFunc = async () => {
-    await client.setNotificationsLastSeenAt({ timestamp: 1598889151456 });
-    ...
+    await client.handleFilesInvitation({ invitationID: '123-123-123', accept: true });
   };
 ```
-
 
 ### Backup
 
