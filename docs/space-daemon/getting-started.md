@@ -714,7 +714,6 @@ Mark a notification as read.
 #### Get notifications
 > .getNotifications({ seek: string, limit: number })
 
-#### .getNotifications({ seek: string, limit: number })
 Returns a list of notifications objects. Notifications objects represent just share file invitations for now.
 
 ```js
@@ -750,6 +749,27 @@ Returns a list of notifications objects. Notifications objects represent just sh
   };
 ```
 
+#### Set Notifications Last Seen At
+
+> .setNotificationsLastSeenAt({ seek: string, limit: number })
+
+Updates the timestamp which is returned by the `getNotifications()` method through calling `getLastseenat()`.
+This timestamp can be used to track which notification has not yet been seen by the user.
+
+```js
+  client
+    .setNotificationsLastSeenAt({ timestamp: 1598889151456 })
+    .then(() => {
+      console.log('Updated the notifications timestamp');
+    }).catch((err) => {
+        console.error(err);
+      });
+    /* Or using Async/Await */
+    const asyncFunc = async () => {
+      await client.setNotificationsLastSeenAt({ timestamp: 1598889151456 });
+    };
+```
+
 #### Handle Files Invitation
 
 > .handleFilesInvitation({ invitationID: string, accept: boolean })
@@ -767,9 +787,7 @@ This method is for accepting or rejecting an invitation to a sharing request of 
     });
   /* Or using Async/Await */
   const asyncFunc = async () => {
-    
     await client.handleFilesInvitation({ invitationID: '123-123-123', accept: true });
-    ...
   };
 ```
 
