@@ -759,6 +759,9 @@ This method is for accepting or rejecting an invitation to a sharing request of 
 ```js
   client
     .handleFilesInvitation({ invitationID: '123-123-123', accept: true })
+    .then((response) => {
+      console.log(response);
+    })
     .catch((err) => {
       console.error(err);
     });
