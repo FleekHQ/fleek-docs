@@ -1054,6 +1054,29 @@ Deletes the Key Pair
   };
 ```
 
+#### Generate Key Pair With Force
+
+> .generateKeyPairWithForce()
+
+Generate key pair with force
+
+```js
+  client
+    .generateKeyPairWithForce()
+    .then(() => {
+      console.log('keys generated');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.generateKeyPairWithForce();
+  };
+```
+
 ### Mount
 
 #### Toggle fuse drive
