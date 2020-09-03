@@ -498,21 +498,26 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
 
 #### Share Files via public key
 
-> .shareFilesViaPublicKey({ bucket?: string, paths: [string], publicKeys: [string] })
+> .shareFilesViaPublicKey({ publicKeys: [string], paths: [{ dbId?: string, bucket?: string, path: string }] })
 
 Share files with other users via their public keys.
 
 If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
-- `bucket`: source bucket
-- `paths`: argument is an array of paths (strings) of the files that you want to share from your bucket.
+- `paths`:
+  - `path`: path of the file that you want to share in your bucket.
+  - `bucket`: (optional) source bucket
+  - `dbId`: (optional) database id
 - `publicKeys`: argument is an array of the public keys of the users that you want to share with.
 
 ```js
   client
     .shareFilesViaPublicKey({
-      bucket: 'my-bucket',
-      paths: ['path/to/my/file.txt', 'second/path/file2.txt'],
       publicKeys: ['pubKey1', 'pubKey2', 'pubKey3'],
+      paths: [{
+        path: 'path1/file.jpeg',
+        dbId: 'db-id-1',
+        bucket: 'my-bucket',
+      }],
     })
     .then((res) => {
       console.log(res);
@@ -525,9 +530,12 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
 
   const asyncFunc = async () => {
     const res = await client.shareFilesViaPublicKey({
-      bucket: 'my-bucket',
-      paths: ['path/to/my/file.txt', 'second/path/file2.txt'],
       publicKeys: ['pubKey1', 'pubKey2', 'pubKey3'],
+      paths: [{
+        path: 'path1/file.jpeg',
+        dbId: 'db-id-1',
+        bucket: 'my-bucket',
+      }],
     });
 
     console.log(res);
