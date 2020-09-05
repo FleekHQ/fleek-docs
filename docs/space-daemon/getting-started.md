@@ -56,9 +56,9 @@ If everything goes well, you will see the daemon logs indicating that Daemon is 
 
 #### Download the client
 
-If you are using NodeJS, you can install the space client package so you can interact with the daemon using nice and simple JavaScript methods without worring about gRPC calls.
+If you are using NodeJS, you can install the Space Js client package so you can interact with the daemon using nice and simple JavaScript methods without worring about gRPC calls.
 
-Space client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web)
+The Space Js client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web)
 
 You can install the client on your project as any normal package, using `npm` or `yarn`:
 
@@ -72,7 +72,7 @@ or
 yarn add @fleekhq/space-client
 ```
 
-!!! info "Space client on server side"
+!!! info "Space Js client on server side"
 
     As space-client is built on top of [grpc-web](https://www.npmjs.com/package/grpc-web), if you want to use the client on server side you'll need to install XMLHttpRequest package:
     
@@ -120,7 +120,7 @@ If you are running the client on the server-side, you need to declare `XMLHttpRe
 
 > class SpaceClient(opts)
 
-Use this class to create space client instances able to interact with space-daemon
+Use this class to create Space Js client instances able to interact with space-daemon
 
 Options:
 
@@ -1171,3 +1171,15 @@ Delete an account.
     console.log('account deleted');
   };
 ```
+
+
+### Powergate
+
+Currently, a Filecoin/Powergate implementation is available on the `filecoin` branch of the [Space Daemon](https://github.com/FleekHQ/space-daemon). Current releases do not contain this feature yet. Therefore, the binaries must be built from source as explained in the [Space Daemon README](https://github.com/FleekHQ/space-daemon#running-from-source).
+
+The Powergate client can be started by running `make localnet-up` in the root folder.
+After that, the binaries can be build and executed with the appropriate flags: `make && ./bin/space -filecoin -ipfsnode=false`.
+
+The Space version of the Powergate client runs in localhost, port 6005 (`http://0.0.0.0:6005`).
+
+The [Powergate Js Client](https://textileio.github.io/js-powergate-client/) is the recommended way to intereact with Filecoin. Our Space Client workshop includes [an example](https://github.com/FleekHQ/space-client-workshop/blob/master/src/components/Powergate/index.js) on how to upload a file to Filecoin.
