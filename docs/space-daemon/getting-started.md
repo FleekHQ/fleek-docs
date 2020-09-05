@@ -284,6 +284,9 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
         console.log(entry.getIpfshash());
         console.log(entry.getSizeinbytes());
         console.log(entry.getFileextension());
+        console.log(entry.getIslocallyavailable());
+        console.log(entry.getBackupcount());
+        console.log(entry.getMembersList());
       });
     })
     .catch((err) => {
@@ -324,6 +327,9 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
         console.log(entry.getIpfshash());
         console.log(entry.getSizeinbytes());
         console.log(entry.getFileextension());
+        console.log(entry.getIslocallyavailable());
+        console.log(entry.getBackupcount());
+        console.log(entry.getMembersList());
       });
     })
     .catch((err) => {
@@ -384,6 +390,18 @@ Returns a ReadableStream that notifies when something changed on the bucket (dat
   });
 ```
 
+#### .fileInfoSubscribe()
+
+Returns a ReadableStream that notifies when a change related to the a file has occured such as the amount of members the file is shared with or whether the file is backup in Space.
+
+```js
+  const fileInfoStream = client.fileInfoSubscribe();
+  fileInfoStream.on('data', (res) => {
+    const file = res.getFile();
+    console.log(file);
+  });
+```
+
 #### Subscribe to buckets events
 
 > .subscribe()
@@ -408,56 +426,6 @@ Event type can be one of `[ENTRY_ADDED, ENTRY_DELETED, ENTRY_UPDATED]`
     console.log('sizeInBytes', entry.getSizeinbytes());
     console.log('fileExtension', entry.getFileextension());
   });
-```
-
-### Identity
-
-#### Create username and email
-
-> .createUsernameAndEmail({ username: string, email?: string })
-
-Create a new username with/out email. Returns a Promise that resolves to the username
-
-```js
-  client
-    .createUsernameAndEmail({ username: 'myusername' })
-    .then(() => {
-      console.log('username created');
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-
-  /* Or using Async/Await */
-
-  const asyncFunc = async () => {
-    await client.createUsernameAndEmail({ username: 'myusername', email: 'my-email@mydomain.com' });
-  };
-```
-
-#### Get identity by username
-
-> .getIdentityByUsername({ username: string, email?: string })
-
-Get an indentity based on a username. Returns a Promise that resolves if a username already exists
-
-```js
-  client
-    .getIdentityByUsername({ username: 'myusername' })
-    .then((res) => {
-      console.log(res.getIdentity());
-    })
-    .catch(() => {
-      console.log('Username doesnt exists.');
-    });
-
-  /* Or using Async/Await */
-
-  const asyncFunc = async () => {
-    const res = await client.getIdentityByUsername({ username: 'myusername' });
-    
-    console.log(res.getIdentity());
-  };
 ```
 
 ### Sharing
@@ -528,50 +496,28 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   };
 ```
 
-#### Share a bucket via email
+#### Share Files via public key
 
-> `[WIP]` <em>.shareBucketViaEmail({ bucket?: string, email: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> .shareFilesViaPublicKey({ publicKeys: [string], paths: [{ dbId?: string, bucket?: string, path: string }] })
 
-Shares a bucket via email.
+Share files with other users via their public keys.
+
 If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
+- `paths`:
+  - `path`: path of the file that you want to share in your bucket.
+  - `bucket`: (optional) source bucket
+  - `dbId`: (optional) database id
+- `publicKeys`: argument is an array of the public keys of the users that you want to share with.
 
 ```js
   client
-    .shareBucketViaEmail({ bucket: 'my-bucket-slug', email: 'email@gmail.com' })
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-
-  /* Or using Asyn/Await */
-
-  const asyncFunc = async () => {
-    const res = await client.shareBucketViaEmail({
-      bucket: 'my-bucket-slug',
-      email: 'email@gmail.com',
-    });
-    
-    console.log(res);
-  };
-```
-
-#### Share a bucket via identity
-
-> .shareBucketViaIdentity({ identityType: 'USERNAME' | 'EMAIL', identityValue: string, bucket?: string })
-
-Shares a bucket via identity.
-If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
-
-```js
-  client
-    .shareBucketViaIdentity({
-      bucket: 'my-bucket-slug',
-      identityType: 'USERNAME',
-      identityValue: 'user123',
+    .shareFilesViaPublicKey({
+      publicKeys: ['pubKey1', 'pubKey2', 'pubKey3'],
+      paths: [{
+        path: 'path1/file.jpeg',
+        dbId: 'db-id-1',
+        bucket: 'my-bucket',
+      }],
     })
     .then((res) => {
       console.log(res);
@@ -583,33 +529,59 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   /* Or using Async/Await */
 
   const asyncFunc = async () => {
-    const res = await client.shareBucketViaIdentity({
-      bucket: 'my-bucket-slug',
-      identityType: 'USERNAME',
-      identityValue: 'user123',
+    const res = await client.shareFilesViaPublicKey({
+      publicKeys: ['pubKey1', 'pubKey2', 'pubKey3'],
+      paths: [{
+        path: 'path1/file.jpeg',
+        dbId: 'db-id-1',
+        bucket: 'my-bucket',
+      }],
     });
-    
+
     console.log(res);
+    ...
   };
 ```
 
-#### Generate a file share link
+#### Get files shared with me
 
-> `[WIP]` <em>.generateFileShareLink({ bucket?: string, filePath: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> .getSharedWithMeFiles({ seek: string, limit: number })
 
-Generates a share link.
-If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
+Returns the list of files shared with me
 
 ```js
   client
-    .generateFileShareLink({
-      bucket: 'my-bucket-slug',
-      filePath: 'path/to/file.js',
+    .getSharedWithMeFiles({
+      seek: "seek_value",
+      limit: 30,
     })
     .then((res) => {
-      console.log(res.getLink());
+      const result = {
+        nextOffset: result.getNextoffset(),
+        items: result.getItemsList().map((item) => {
+          const entry = item.getEntry();
+          
+          return {
+            dbId: item.getDbid(),
+            bucket: item.getBucket(),
+            path: entry.getEntrygetPath(),
+            isDir: entry.getIsdir(),
+            name: entry.getName(),
+            sizeInBytes: entry.getSizeinbytes(),
+            created: entry.getCreated(),
+            updated: entry.getUpdated(),
+            fileExtension: entry.getFileextension(),
+            ipfsHash: entry.getIpfshash(),
+            isLocallyAvailable: entry.getIslocallyavailable(),
+            backupCount: entry.getBackupcount(),
+            members: entry.getMembersList().map((member) => ({
+              publicKey: member.getPublickey(),
+            })),
+          };
+        }),
+      };
+
+      console.log(result);
     })
     .catch((err) => {
       console.error(err);
@@ -618,28 +590,377 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   /* Or using Async/Await */
 
   const asyncFunc = async () => {
-    const res = await client.generateFileShareLink({
-      bucket: 'my-bucket-slug',
-      filePath: 'path/to/file.js',
+    const res = await client.getSharedWithMeFiles({
+      seek: "seek_value",
+      limit: 30,
     });
-    
-    console.log(res.getLink());
+
+    console.log(res.getItemsList());
+    ...
+  };
+```
+
+#### Get a list of the recently members that you shared with
+
+> .getRecentlySharedWith()
+
+Returns a list of the recently members that you shared with
+
+
+```js
+  client
+    .getRecentlySharedWith()
+    .then((res) => {
+      const membersList = res.getMembersList();
+
+      const members = membersList.map((member) => ({
+        address: member.getAddress(),
+        publicKey: member.getPublickey(),
+      }));
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getRecentlySharedWith();
+
+    const membersList = res.getMembersList();
+    ...
+  };
+```
+
+#### Generate a file public link
+
+> .generatePublicFileLink({ bucket?: string, password: string, itemPaths: [string], dbId: string })
+
+Generates a sharing public link for the files specified.
+If you don't specify the `bucket` property, `client.defaultBucket` value is going to be used instead.
+
+```js
+  client
+    .generatePublicFileLink({
+      dbId: 'db-id-string',
+      bucket: 'my-bucket',
+      password: '123asd',
+      itemPaths: ['path/to/file1.txt', 'path/to/file2.txt'],
+    })
+    .then((res) => {
+      const fileInfo = {
+        link: res.getLink(),
+        fileCid: res.getFilecid(),
+      };
+
+      console.log(fileInfo);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.generatePublicFileLink({
+      dbId: 'db-id-string',
+      bucket: 'my-bucket',
+      password: '123asd',
+      itemPaths: ['path/to/file1.txt', 'path/to/file2.txt'],
+    });
+
+    const fileInfo = {
+      link: res.getLink(),
+      fileCid: res.getFilecid(),
+    };
+
+    ...
+  };
+```
+
+
+#### Subscribe to notifications
+
+> .notificationSubscribe()
+Returns a ReadableStream that notifies about new notifications.
+Notifications are triggered upon another member's interaction with a shared file or bucket, for example if he attempts to add a new file to a shared bucket.
+
+```js
+  const notificationStream = client.notificationSubscribe();
+  notificationStream.on('data', (res) => {
+    const notification = res.getNotification();
+    console.log(notification);
+  });
+```
+
+#### Read Notification
+
+> .readNotification({ ID: '1234' })
+
+Mark a notification as read.
+
+```js
+  client
+    .readNotifcation({ ID: '1234' })
+    .then(() => {
+      console.log('notifcation was marked as read');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.readNotification({ ID: '1234' });
+
+    console.log('notifcation was marked as read');
+    ...
+  };
+```
+
+#### Get notifications
+> .getNotifications({ seek: string, limit: number })
+
+Returns a list of notifications objects. Notifications objects represent just share file invitations for now.
+
+```js
+  client
+    .getNotifications({ seek: 'some-value', limit: 20 })
+    .then((res) => {
+      const objectRes = {
+        nextOffset: res.getNextoffset(),
+        notifications: res.getNotificationsList().map((notification) => ({
+          id: notification.getId(),
+          body: notification.getBody(),
+          type: notification.getType(),
+          readAt: notification.getReadat(),
+          subject: notification.getSubject(),
+          createdAt: notification.getCreatedat(),
+          relatedObject: notification.getRelatedobjectCase(),
+        })),
+      };
+
+      console.log(objectRes);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getNotifications({ seek: 'some-value', limit: 20 });
+
+    console.log(res);
+    ...
+  };
+```
+
+#### Set Notifications Last Seen At
+
+> .setNotificationsLastSeenAt({ seek: string, limit: number })
+
+Updates the timestamp which is returned by the `getNotifications()` method through calling `getLastseenat()`.
+This timestamp can be used to track which notification has not yet been seen by the user.
+
+```js
+  client
+    .setNotificationsLastSeenAt({ timestamp: 1598889151456 })
+    .then(() => {
+      console.log('Updated the notifications timestamp');
+    }).catch((err) => {
+        console.error(err);
+      });
+    /* Or using Async/Await */
+    const asyncFunc = async () => {
+      await client.setNotificationsLastSeenAt({ timestamp: 1598889151456 });
+    };
+```
+
+#### Handle Files Invitation
+
+> .handleFilesInvitation({ invitationID: string, accept: boolean })
+
+This method is for accepting or rejecting an invitation to a sharing request of a file.
+
+```js
+  client
+    .handleFilesInvitation({ invitationID: '123-123-123', accept: true })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    await client.handleFilesInvitation({ invitationID: '123-123-123', accept: true });
   };
 ```
 
 ### Backup
 
+#### Toggle Bucket Backup
+
+> toggleBucketBackup({ bucket: string, backup: boolean })
+
+Toggles whether or not to back up the content of a bucket to Space.
+
+```js
+  client
+    .toggleBucketBackup({ bucket: 'bucket-name', backup: true })
+    .then(() => {
+      console.log('bucket-name is backed up in Space!');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+    
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    await client.toggleBucketBackup({ bucket: 'bucket-name', backup: true });   
+    ...
+  }
+```  
+
+#### Get Usage Info
+
+> .getUsageInfo()
+
+Fetches account storage usage info such as amount of space used locally and in Space, alongside bandwith quotas and limits. 
+
+```js
+  client
+    .getUsageInfo()
+    .then((usageInfoRes) => {
+      const usageInfo = {
+        localstorageused: usageInfoRes.getLocalstorageused(),
+        localbandwidthused: usageInfoRes.getLocalbandwidthused(),
+        spacestorageused: usageInfoRes.getSpacestorageused(),
+        spacebandwidthused: usageInfoRes.getSpacebandwidthused(),
+        usagequota: usageInfoRes.getUsagequota(),
+      }
+      console.log(usageInfo);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+    
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    const usageInfoRes = await client.getUsageInfo();
+    const usageInfo = {
+      localstorageused: usageInfoRes.getLocalstorageused(),
+      localbandwidthused: usageInfoRes.getLocalbandwidthused(),
+      spacestorageused: usageInfoRes.getSpacestorageused(),
+      spacebandwidthused: usageInfoRes.getSpacebandwidthused(),
+      usagequota: usageInfoRes.getUsagequota(),
+    }
+    console.log(usageInfo);
+  };
+```
+
+#### Get Public Key
+
+> getPublicKey()
+
+Get the current public key generated by the daemon and the hub auth token.
+
+```js
+  client
+    .getPublicKey()
+    .then((res) => {
+      const publicKey = res.getPublickey();
+      const hubAuthToken = res.getHubauthtoken();
+
+      console.log('publicKey', publicKey);
+      console.log('hubAuthToken', hubAuthToken);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getPublicKey();
+
+    console.log('publicKey', res.getPublickey());
+    console.log('hubAuthToken', res.getHubauthtoken());
+
+    ...
+  };
+```
+
+#### Get Stored Mnemonic
+
+> getStoredMnemonic()
+
+Get the stored mnemonic seed. 
+
+```js
+  client
+    .getStoredMnemonic()
+    .then((res) => {
+      console.log('mnemonic', res.getMnemonic());
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getMnemonic();
+
+    console.log('mnemonic', res.getMnemonic());
+    ...
+  };
+```
+
+#### Get API Session Tokens
+
+> getAPISessionTokens()
+
+Get the current api session tokens.
+
+```js
+  client
+    .getAPISessionTokens()
+    .then((res) => {
+      const hubToken = res.getHubtoken();
+      const servicestoken = res.getServicestoken();
+
+      console.log('hubToken', hubToken);
+      console.log('servicestoken', servicestoken);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getAPISessionTokens();
+
+    console.log('hubToken', res.getHubtoken());
+    console.log('servicestoken', res.getServicestoken());
+
+    ...
+  };
+```
+
 #### Backup keys by passphrase
 
-> `[WIP]` <em>.backupKeysByPassphrase({ passphrase: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> .backupKeysByPassphrase({ uuid: string, passphrase: string })
 
-Backup keys by passphrase
+Backup keys by a passphrase
 
 ```js
   client
     .backupKeysByPassphrase({
+      uuid: 'user-uuid',
       passphrase: 'my-passphrase',
     })
     .then(() => {
@@ -653,6 +974,7 @@ Backup keys by passphrase
 
   const asyncFunc = async () => {
     await client.backupKeysByPassphrase({
+      uuid: 'user-uuid',
       passphrase: 'my-passphrase',
     });
   };
@@ -660,15 +982,14 @@ Backup keys by passphrase
 
 #### Recovery keys by passphrase
 
-> `[WIP]` <em>.recoverKeysByPassphrase({ passphrase: string })</em>
->
-> this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
+> .recoverKeysByPassphrase({ uuid: string, passphrase: string })
 
 Recovery keys by passphrase
 
 ```js
   client
     .recoverKeysByPassphrase({
+      uuid: 'user-uuid',
       passphrase: 'my-passphrase',
     })
     .then(() => {
@@ -682,8 +1003,85 @@ Recovery keys by passphrase
 
   const asyncFunc = async () => {
     await client.recoverKeysByPassphrase({
+      uuid: 'user-uuid',
       passphrase: 'my-passphrase',
     });
+  };
+```
+#### Test Keys Passphrase
+
+> .testKeysPassphrase({ uuid: string, passphrase: string })
+
+Test keys with passphrase
+
+```js
+  client
+    .testKeysPassphrase({
+      uuid: 'user-uuid',
+      passphrase: 'my-passphrase',
+    })
+    .then(() => {
+      console.log('test success');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.testKeysPassphrase({
+      uuid: 'user-uuid',
+      passphrase: 'my-passphrase',
+    });
+  };
+```
+
+#### Delete Key Pair
+
+> .deleteKeyPair()
+
+Deletes the Key Pair
+
+```js
+  client
+    .deleteKeyPair()
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+  const asyncFunc = async () => {
+    const res = await client.deleteKeyPair();
+
+    console.log(res);
+    ...
+  };
+```
+
+#### Generate Key Pair With Force
+
+> .generateKeyPairWithForce()
+
+Generate key pair with force
+
+```js
+  client
+    .generateKeyPairWithForce()
+    .then(() => {
+      console.log('keys generated');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.generateKeyPairWithForce();
   };
 ```
 
@@ -746,6 +1144,34 @@ Get the current Fuse drive status
     console.log(res.getFusedrivemounted());
   };
 ```
+
+### Account
+
+#### Delete Account
+
+> deleteAccount()
+
+Delete an account.
+
+```js
+  client
+    .deleteAccount()
+    .then(() => {
+      console.log('account deleted');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    await client.deleteAccount();
+
+    console.log('account deleted');
+  };
+```
+
 
 ### Powergate
 
