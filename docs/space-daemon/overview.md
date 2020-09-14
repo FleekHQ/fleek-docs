@@ -6,9 +6,6 @@ date: "1"
 
 The [Space Daemon](https://github.com/FleekHQ/space-daemon) packages together [IPFS](https://ipfs.io/), [Textile](https://textile.io/) Threads/Buckets, and Textile Powergate (Filecoin*) into one easy to install and JS interface to make it easy to build peer to peer and  privacy focused apps.
 
-!!! note
-    Filecoin is still pending and will be integrated in the next sprint.
-
 Installing the [Space Daemon](https://github.com/FleekHQ/space-daemon) is easy and comes with all the tools packaged together including IPFS and Textile nodes, and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets (TBD), and User Controlled Data. You can access same methods using our [JS client](https://github.com/FleekHQ/space-client), so you don't need to worry about gRCP calls.
 
 !!! warning
