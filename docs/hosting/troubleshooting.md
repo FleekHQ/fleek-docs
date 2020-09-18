@@ -23,6 +23,18 @@ date: "1"
 * Sites with many thousands of HTML files can often take a significant amount of time to deploy
 * Our CDN does not support files of 10 MB or greater
 
+## Site is not loading properly via IPFS gateway
+
+* Most likely, your assets are being loaded from incorrect URL like `ipfs.io/app.js` instead of `ipfs.io/ipfs/$hash/app.js`. If you want to support loading sites through IPFS Gateway, you need to make sure your assets are loaded from relative paths. Some frameworks supports `homepage` field in `package.json`:
+
+```json
+{
+   "homepage": "./"
+}
+```
+
+<https://create-react-app.dev/docs/deployment/#building-for-relative-paths>
+    
 ## Enqueued builds
 
 * System queue
