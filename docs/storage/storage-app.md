@@ -39,7 +39,7 @@ Viewing on the IPFS gateway will show the immutible IPFS file of the content wit
 
 ## View File Details
 
-When you open an individual file you can see detials about that particual file including the Image Preview, Object URL, Name, Size, and the IPFS Hash.
+When you open an individual file you can see details about that particual file including the Image Preview, Object URL, Name, Size, and the IPFS Hash.
 
 ![](imgs/file-specific-page.png)
 
