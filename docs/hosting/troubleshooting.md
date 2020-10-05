@@ -4,6 +4,30 @@ date: "1"
 ---
 # Troubleshooting
 
+## Site is not loading properly via IPFS gateway and shows invalid ipfs path error
+
+Most likely, your assets are being loaded from an incorrect URL like `ipfs.io/my-image.jpg` instead of `ipfs.io/ipfs/$hash/my-image.jpg`. Therefore, this error should occur on IPFS gateways only.
+
+You can verify that this is indeed the case by going to the developer tools of your web browser and looking at the request for you images, js and css files, etc... and seeing if they are being loaded.
+
+If you want to support loading sites through an IPFS Gateway, you need to make sure your assets are loaded from relative paths. If the app uses a `package.json` file, for example, adding an `homepage` field with the value `./` should fix the issue:
+
+```json
+{
+  "homepage": "./",
+  "dependencies": { ... },
+  "scripts": { ... }
+}
+```
+
+Using relative paths in React: <https://create-react-app.dev/docs/deployment/#building-for-relative-paths>
+
+## My single-page application (SPA) breaks when changing routes via an IPFS gatway
+
+IPFS gateways url are formatted in the following manner `ipfs.io/ipfs/$hash`. As such, the SPA might think that the root of the application is `ipfs.io` instead of `ipfs.io/ipfs/$hash`. For this reason, we recommend apps use hash routing to minimize such errors when using an IPFS gateway.
+
+Adding a hash router in React: <https://reactrouter.com/web/api/HashRouter>
+
 ## Build Troubleshooting Tips
 
 * If your build fails, the first thing you should check is if you can build your file locally in the development environment.
@@ -22,18 +46,6 @@ date: "1"
 
 * Sites with many thousands of HTML files can often take a significant amount of time to deploy
 * Our CDN does not support files of 10 MB or greater
-
-## Site is not loading properly via IPFS gateway
-
-* Most likely, your assets are being loaded from incorrect URL like `ipfs.io/app.js` instead of `ipfs.io/ipfs/$hash/app.js`. If you want to support loading sites through IPFS Gateway, you need to make sure your assets are loaded from relative paths. Some frameworks supports `homepage` field in `package.json`:
-
-```json
-{
-   "homepage": "./"
-}
-```
-
-<https://create-react-app.dev/docs/deployment/#building-for-relative-paths>
     
 ## Enqueued builds
 
