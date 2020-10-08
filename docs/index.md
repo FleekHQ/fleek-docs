@@ -23,19 +23,19 @@ From local development to global deployment, Fleek is everything you need to hos
 <h5>Deploy</h5>
 <p>Deploy in Few Quick Clicks</p>
 </a>
-<a href="./hosting/build-configurations/" class="prev-box">
+<a href="./hosting/site-deployment/#common-frameworks" class="prev-box">
 <h5>Build Configurations</h5>
 <p>Get Build Settings for Popular Frameworks</p>
 </a>
-<a href="./hosting/frameworks/" class="prev-box">
+<a href="./tutorials/hosting" class="prev-box">
 <h5>Frameworks</h5>
 <p>Guides and Tutorials on Popular Frameworks</p>
 </a>
-<a href="./hosting/custom-domain/" class="prev-box">
+<a href="./hosting/domain-management/#custom-domains" class="prev-box">
 <h5>Custom Domain</h5>
 <p>Add Root/Sub Domains To Your Site</p>
 </a>
-<a href="./hosting/ens-domain/" class="prev-box">
+<a href="./hosting/domain-management/#ens-domains" class="prev-box">
 <h5>ENS Domains</h5>
 <p>Add ENS Domains To Your Site</p>
 </a>
