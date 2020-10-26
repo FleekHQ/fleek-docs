@@ -15,7 +15,7 @@ From local development to global deployment, Fleek is everything you need to hos
 ### Getting Started
 
 Getting Started with Fleek by deploying your first website. The quickest way to begin is by connecting your website's GitHub repository to deploy directly from there and allow for continuous deployment.
-If you so choose, you can also delpoy by uploading the full code base for you website.
+If you so choose, you can also deploy by uploading the full code base for you website.
 
 <div class="prev-boxes-list">
   <a href="../site-deployment/#creating-a-deployment" class="prev-box">
@@ -28,14 +28,5 @@ If you so choose, you can also delpoy by uploading the full code base for you we
   </a>
   <a href="../domain-management/" class="prev-box">
     <h5>Domain management</h5>
-    <p>Add Root/Sub Domains To Your Site</p>
-  </a>
-  <a href="../domain-management/#adding-ens-domain" class="prev-box">
-    <h5>ENS Domains</h5>
-    <p>Add ENS Domains To Your Site</p>
-  </a>
-    <a href="../../tutorials/hosting/" class="prev-box">
-    <h5>Tutorials</h5>
-    <p>Guides and Tutorials on Popular Frameworks</p>
   </a>
 </div>
