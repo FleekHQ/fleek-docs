@@ -444,8 +444,14 @@ Search files/folder by name. Returns an EntryList with the results.
     .then((res) => {
       const entriesList = res.getEntriesList();
 
-      const entries = entriesList.map((entry) => {
+      const entries = entriesList.map((item) => {
+        const dbId = item.getDbid();
+        const entry = item.getEntry();
+        const bucket = item.getBucket();
+
         return {
+          dbId,
+          bucket,
           path: entry.getPath(),
           name: entry.getName(),
           isDir: entry.getIsdir(),
