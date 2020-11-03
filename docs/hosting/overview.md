@@ -28,10 +28,9 @@ If you so choose, you can also deploy by uploading the full code base for you we
   </a>
   <a href="../domain-management/" class="prev-box">
     <h5>Domain management</h5>
-      <p>Add Root/Sub Domains To Your Site</p>
+    <p>Add Root/Sub Domains To Your Site</p>
   </a>
     <a href="../domain-management/#adding-ens-domain" class="prev-box">
-</div>
     <h5>ENS Domains</h5>
     <p>Add ENS Domains To Your Site</p>
   </a>
