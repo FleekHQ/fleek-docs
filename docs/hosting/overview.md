@@ -30,7 +30,7 @@ If you so choose, you can also deploy by uploading the full code base for you we
     <h5>Domain management</h5>
     <p>Add Root/Sub Domains To Your Site</p>
   </a>
-    <a href="../domain-management/#adding-ens-domain" class="prev-box">
+  <a href="../domain-management/#adding-ens-domain" class="prev-box">
     <h5>ENS Domains</h5>
     <p>Add ENS Domains To Your Site</p>
   </a>
@@ -38,5 +38,4 @@ If you so choose, you can also deploy by uploading the full code base for you we
     <h5>Tutorials</h5>
     <p>Guides and Tutorials on Popular Frameworks</p>
   </a>
-</div>
 </div>
