@@ -392,24 +392,30 @@ Returns a ReadableStream that notifies when something changed on the bucket (dat
   });
 ```
 
-#### .fileInfoSubscribe()
-
-Returns a ReadableStream that notifies when a change related to the a file has occured such as the amount of members the file is shared with or whether the file is backup in Space.
-
-```js
-  const fileInfoStream = client.fileInfoSubscribe();
-  fileInfoStream.on('data', (res) => {
-    const file = res.getFile();
-    console.log(file);
-  });
-```
 
 #### Subscribe to buckets events
 
 > .subscribe()
 
 Returns a ReadableStream that notifies when something changed on the bucket (data stream returns the event type + the entry affected).
-Event type can be one of `[ENTRY_ADDED, ENTRY_DELETED, ENTRY_UPDATED]`
+Event type can be one of:
+
+```protobuf
+  enum EventType {
+    ENTRY_ADDED = 0;
+    ENTRY_DELETED = 1;
+    ENTRY_UPDATED = 2;
+    ENTRY_BACKUP_IN_PROGRESS = 3;
+    ENTRY_BACKUP_READY = 4;
+    ENTRY_RESTORE_IN_PROGRESS = 5;
+    ENTRY_RESTORE_READY = 6;
+    FOLDER_ADDED = 7;
+    FOLDER_DELETED = 8;
+    FOLDER_UPDATED = 9;
+  }
+```
+
+example:
 
 ```js
   const subscribeStream = client.subscribe();
@@ -417,16 +423,22 @@ Event type can be one of `[ENTRY_ADDED, ENTRY_DELETED, ENTRY_UPDATED]`
   subscribeStream.on('data', (res) => {
     const eventType = res.getType();
     const entry = res.getEntry();
+    const bucket = res.getBucket();
+    const dbId = res.getDbid();
 
-    console.log('eventType', eventType.toString());
-    console.log('path', entry.getPath());
-    console.log('name', entry.getName());
-    console.log('isDir', entry.getIsdir());
-    console.log('created', entry.getCreated());
-    console.log('updated', entry.getUpdated());
-    console.log('ipfsHash', entry.getIpfshash());
-    console.log('sizeInBytes', entry.getSizeinbytes());
-    console.log('fileExtension', entry.getFileextension());
+    console.log('subscribe data:', {
+      dbId,
+      bucket,
+      eventType: eventType.toString(),
+      path: entry.getPath(),
+      name: entry.getName(),
+      isDir: entry.getIsdir(),
+      created: entry.getCreated(),
+      updated: entry.getUpdated(),
+      ipfsHash: entry.getIpfshash(),
+      sizeInBytes: entry.getSizeinbytes(),
+      fileExtension: entry.getFileextension(),
+    });
   });
 ```
 
