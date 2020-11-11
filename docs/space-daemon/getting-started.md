@@ -628,7 +628,7 @@ Returns the list of files shared with me
         nextOffset: result.getNextoffset(),
         items: result.getItemsList().map((item) => {
           const entry = item.getEntry();
-          
+
           return {
             dbId: item.getDbid(),
             bucket: item.getBucket(),
@@ -659,6 +659,63 @@ Returns the list of files shared with me
 
   const asyncFunc = async () => {
     const res = await client.getSharedWithMeFiles({
+      seek: "seek_value",
+      limit: 30,
+    });
+
+    console.log(res.getItemsList());
+    ...
+  };
+```
+
+#### Get files shared by me
+
+> .getSharedByMeFiles({ seek: string, limit: number })
+
+Returns the list of files shared by me
+
+```js
+  client
+    .getSharedByMeFiles({
+      seek: "seek_value",
+      limit: 30,
+    })
+    .then((res) => {
+      const result = {
+        nextOffset: result.getNextoffset(),
+        items: result.getItemsList().map((item) => {
+          const entry = item.getEntry();
+
+          return {
+            dbId: item.getDbid(),
+            bucket: item.getBucket(),
+            path: entry.getEntrygetPath(),
+            isDir: entry.getIsdir(),
+            name: entry.getName(),
+            sizeInBytes: entry.getSizeinbytes(),
+            created: entry.getCreated(),
+            updated: entry.getUpdated(),
+            fileExtension: entry.getFileextension(),
+            ipfsHash: entry.getIpfshash(),
+            isLocallyAvailable: entry.getIslocallyavailable(),
+            backupCount: entry.getBackupcount(),
+            members: entry.getMembersList().map((member) => ({
+              publicKey: member.getPublickey(),
+            })),
+          };
+        }),
+      };
+
+      console.log(result);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.getSharedByMeFiles({
       seek: "seek_value",
       limit: 30,
     });
@@ -746,6 +803,42 @@ If you don't specify the `bucket` property, `client.defaultBucket` value is goin
   };
 ```
 
+#### Open a public file
+
+> .openPublicFile({ fileCid: string, password: string, filename: string })
+
+Open a file from a shared public link.
+
+```js
+  client
+    .openPublicFile({
+      fileCid: 'some-id',
+      password: 'file-password',
+      filename: 'some-filename',
+    })
+    .then((res) => {
+      const location = res.getLocation();
+
+      console.log(location);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+  /* Or using Async/Await */
+
+  const asyncFunc = async () => {
+    const res = await client.openPublicFile({
+      fileCid: 'some-id',
+      fileKey: 'some-password',
+      filename: 'some-filename',
+    });
+
+    res.getLocation()
+
+    ...
+  };
+```
 
 #### Subscribe to notifications
 
