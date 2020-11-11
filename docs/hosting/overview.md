@@ -15,7 +15,7 @@ From local development to global deployment, Fleek is everything you need to hos
 ### Getting Started
 
 Getting Started with Fleek by deploying your first website. The quickest way to begin is by connecting your website's GitHub repository to deploy directly from there and allow for continuous deployment.
-If you so choose, you can also delpoy by uploading the full code base for you website.
+If you so choose, you can also deploy by uploading the full code base for you website.
 
 <div class="prev-boxes-list">
   <a href="../site-deployment/#creating-a-deployment" class="prev-box">
