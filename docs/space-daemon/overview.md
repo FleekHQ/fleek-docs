@@ -4,9 +4,9 @@ date: "1"
 ---
 ![](imgs/hero.png)
 
-The [Space Daemon](https://github.com/FleekHQ/space-daemon) packages together [IPFS](https://ipfs.io/), [Textile](https://textile.io/) Threads/Buckets, and Textile Powergate (Filecoin*) into one easy to install and JS interface to make it easy to build peer to peer and  privacy focused apps.
+The [Space Daemon](https://github.com/FleekHQ/space-daemon) packages together [IPFS](https://ipfs.io/), [Textile](https://textile.io/) Threads/Buckets, and Textile Powergate (Filecoin*) into one easy to install background service. Its gRPC and JavaScript compatible interface makes it quick and easy to build peer to peer and privacy focused apps.
 
-Installing the [Space Daemon](https://github.com/FleekHQ/space-daemon) is easy and comes with all the tools packaged together including IPFS and Textile nodes, and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets (TBD), and User Controlled Data. You can access same methods using our [JS client](https://github.com/FleekHQ/space-client), so you don't need to worry about gRCP calls.
+Installing the [Space Daemon](https://github.com/FleekHQ/space-daemon) is simple and comes with all the tools packaged together including IPFS and Textile nodes, and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets (TBD), and User Controlled Data. You can access same methods using our [JS client](https://github.com/FleekHQ/space-client), so you don't need to worry about gRCP calls.
 
 !!! warning
 
@@ -29,7 +29,7 @@ Space is the next evolution of Cloud, where users can interact with apps fully p
 
     The Space Daemon is a service that runs on users desktops. It is ideal for building desktop apps that need file encryption and sharing on top of it. Space Daemon can be bundled and distributed with desktop apps and eventually mobile apps too. It can not be “embedded” in a JavaScript web application though.
 
-    Building apps with the Space Daemon via a desktop or mobile app experience will put a IPFS/Textile node in the users machine and allow for the most private and peer to peer experience. The same Daemon on the machine can be used to connect to web applications. However, if your just building a web application where you would not expect the user to have a Space Daemon or local IPFS/Textile node it's probably better to use Textiles ThreadDB/Buckets directly since they have independent JavaScript interfaces.
+    Building apps with the Space Daemon via a desktop or mobile app experience will put a IPFS/Textile node in the users machine and allow for the most private and peer to peer experience. The same Daemon on the machine can be used to connect to web applications. However, if your just building a web application where you would not expect the user to have a Space Daemon or local IPFS/Textile node it's probably better to use Textile's ThreadDB/Buckets directly since they have independent JavaScript interfaces.
 
 
 <div class="prev-boxes-list">
