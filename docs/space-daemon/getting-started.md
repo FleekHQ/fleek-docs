@@ -1254,6 +1254,16 @@ Generate key pair with force
 >
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
+Fuse Status:
+```protobuf
+enum FuseState {
+  UNSUPPORTED = 0;
+  NOT_INSTALLED = 1;
+  UNMOUNTED = 2;
+  MOUNTED = 3;
+}
+```
+
 Mounts the fuse drive on your machine
 
 ```js
@@ -1262,7 +1272,7 @@ Mounts the fuse drive on your machine
       mountDrive: true || false,
     })
     .then((res) => {
-      console.log(res.getFusedrivemounted());
+      console.log(res.getState());
     })
     .catch((err) => {
       console.error(err);
@@ -1275,7 +1285,7 @@ Mounts the fuse drive on your machine
       mountDrive: true || false,
     });
     
-    console.log(res.getFusedrivemounted());
+    console.log(res.getState());
   };
 ```
 
@@ -1285,13 +1295,24 @@ Mounts the fuse drive on your machine
 >
 > this method is still not supported by [space-daemon](https://github.com/FleekHQ/space-daemon)
 
+
+Fuse Status:
+```protobuf
+enum FuseState {
+  UNSUPPORTED = 0;
+  NOT_INSTALLED = 1;
+  UNMOUNTED = 2;
+  MOUNTED = 3;
+}
+```
+
 Get the current Fuse drive status
 
 ```js
   client
     .getFuseDriveStatus({})
     .then((res) => {
-      console.log(res.getFusedrivemounted());
+      console.log(res.getState());
     })
     .catch((err) => {
       console.error(err);
@@ -1302,7 +1323,7 @@ Get the current Fuse drive status
   const asyncFunc = async () => {
     const res = await client.getFuseDriveStatus({});
     
-    console.log(res.getFusedrivemounted());
+    console.log(res.getState());
   };
 ```
 
