@@ -12,7 +12,9 @@ Download the `.dmg` image and drag the Space Desktop app to your Applications fo
 
 ### Windows
 
-Download the `.exe` executable file and just install the Space Desktop app as you usually do with others Windows apps. 
+Download the .exe executable file and execute the Space Desktop app as you usually do with other executable Windows apps.
+
+The entire application is bundled into the exe, you can place that anywhere you'd like to store the app and add shortcuts as needed (e.g., your Taskbar or Desktop).
 
 ### Linux
 
@@ -30,8 +32,8 @@ And then, just run it!
 
 !!! important
 
-    We highly recommend to install the `AppImage` with [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher/releases/latest), it will give you a better experience and also is recommended by the [electron builder library](https://www.electron.build/configuration/appimage){target=_blank} that we use to build the Space Desktop app.
+    We highly recommend to open the `space-app-{LATEST_VERSION}-linux-x86_64.AppImage` app with [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher/releases/latest), it will give you a better experience and also is recommended by the [electron builder library](https://www.electron.build/configuration/appimage){target=_blank} that we use to build the Space Desktop app.
 
 !!! info
 
-    You don't know what it is an `AppImage` app? You can visit the [AppImage website](https://appimage.org/){target=_blank} to get more information.
+    You don't know what it is an `.AppImage` app? You can visit the [AppImage website](https://appimage.org/){target=_blank} to get more information.
