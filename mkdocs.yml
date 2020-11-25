@@ -15,6 +15,7 @@ extra_css:
 markdown_extensions:
   - codehilite
   - admonition
+  - attr_list
   - toc:
       permalink: true
 nav:
@@ -34,6 +35,8 @@ nav:
     - Getting Started: space-daemon/getting-started.md
     - Examples: space-daemon/examples.md
     - Security And Cryptography: space-daemon/crypto.md
+  - Space Desktop:
+    - Overview: space-desktop/overview.md
   - Tutorials:
     - Hosting: tutorials/hosting.md
     - Storage: tutorials/storage.md
