@@ -1114,7 +1114,7 @@ Get the current api session tokens.
 
 #### Backup keys by passphrase
 
-> .backupKeysByPassphrase({ uuid: string, passphrase: string })
+> .backupKeysByPassphrase({ uuid: string, passphrase: string, type: number })
 
 Backup keys by a passphrase
 
@@ -1123,6 +1123,7 @@ Backup keys by a passphrase
     .backupKeysByPassphrase({
       uuid: 'user-uuid',
       passphrase: 'my-passphrase',
+      type: 0, // 0 = PASSWORD; 1 = GOOGLE; 2 = TWITTER; 3 = EMAIL
     })
     .then(() => {
       console.log('keys backup');
@@ -1137,13 +1138,14 @@ Backup keys by a passphrase
     await client.backupKeysByPassphrase({
       uuid: 'user-uuid',
       passphrase: 'my-passphrase',
+      type: 0, // 0 = PASSWORD; 1 = GOOGLE; 2 = TWITTER; 3 = EMAIL
     });
   };
 ```
 
 #### Recovery keys by passphrase
 
-> .recoverKeysByPassphrase({ uuid: string, passphrase: string })
+> .recoverKeysByPassphrase({ uuid: string, passphrase: string, type: number })
 
 Recovery keys by passphrase
 
@@ -1152,6 +1154,7 @@ Recovery keys by passphrase
     .recoverKeysByPassphrase({
       uuid: 'user-uuid',
       passphrase: 'my-passphrase',
+      type: 0, // 0 = PASSWORD; 1 = GOOGLE; 2 = TWITTER; 3 = EMAIL
     })
     .then(() => {
       console.log('recovery keys');
@@ -1166,6 +1169,7 @@ Recovery keys by passphrase
     await client.recoverKeysByPassphrase({
       uuid: 'user-uuid',
       passphrase: 'my-passphrase',
+      type: 0, // 0 = PASSWORD; 1 = GOOGLE; 2 = TWITTER; 3 = EMAIL
     });
   };
 ```
