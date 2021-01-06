@@ -45,7 +45,6 @@ Adding a hash router in React: <https://reactrouter.com/web/api/HashRouter>
 ## Large files or sites
 
 * Sites with many thousands of HTML files can often take a significant amount of time to deploy
-* Our CDN does not support files of 10 MB or greater
     
 ## Enqueued builds
 
