@@ -35,6 +35,7 @@ nav:
     - Getting Started: space-daemon/getting-started.md
     - Examples: space-daemon/examples.md
     - Security And Cryptography: space-daemon/crypto.md
+    - Reset Environment: space-daemon/reset-env.md
   - Space Desktop:
     - Overview: space-desktop/overview.md
   - Tutorials:
