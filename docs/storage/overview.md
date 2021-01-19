@@ -29,4 +29,4 @@ Whether you prefer to use simple interfaces, programming, or use your current co
   </a>
 </div>
 
-We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://slack.fleek.co/), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co

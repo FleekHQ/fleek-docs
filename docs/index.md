@@ -93,4 +93,4 @@ Also, you can easily download files from the gateway using the [getFileFromHash]
 
 ## Other Resources
 
-Join our public [Slack](https://join.slack.com/t/fleek-public/shared_invite/zt-bxna7y1d-PbVdut4rgHt5jM6Zjg9g9A), visit our [GitHub](https://github.com/FleekHQ), follow us on [Twitter](https://twitter.com/FleekHQ), and check out the [Blog](https://blog.fleek.co)!
+Join our public [Slack](https://slack.fleek.co/), visit our [GitHub](https://github.com/FleekHQ), follow us on [Twitter](https://twitter.com/FleekHQ), and check out the [Blog](https://blog.fleek.co)!
