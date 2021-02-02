@@ -36,7 +36,7 @@ The Space SDK is a set of modular interfaces that include all necessary tools to
 - Private and end-to-end encrypted file sharing.
 - Decentralized / trustless key & metadata storage and handling.
 
-The Space SDK packages these features in a set of APIs and interfaces that you as a user can use as is, with the current protocol implementations, or personalize to add -for example- your own custom storage layer instead of using Textile/IPFS. 
+The Space SDK packages these features in a set of APIs and interfaces that you as a user can use as is, with the current protocol implementations, or personalize to add -for example- your own custom storage layer instead of using Textile/IPFS. In Space, for example, we plug [Torus](https://tor.us/) as a seamless key management layer.
 
 ## Currently Available APIs
 The Space SDK currently includes the following API:
