@@ -94,7 +94,7 @@ It's the successor of the Space Daemon, our desktop-based library. The Space SDK
 <h5>Overview</h5>
 <p>Learn about the SDK</p>
 </a>
-<a href="./space-sdk/overview/#currently-available-modules" class="prev-box">
+<a href="./space-sdk/overview/#currently-available-apis" class="prev-box">
 <h5>Available Modules</h5>
 <p>View the current interfaces</p>
 </a>
