@@ -38,6 +38,8 @@ nav:
     - Reset Environment: space-daemon/reset-env.md
   - Space Desktop:
     - Overview: space-desktop/overview.md
+  - Space SDK:
+    - Overview: space-sdk/overview.md
   - Tutorials:
     - Hosting: tutorials/hosting.md
     - Storage: tutorials/storage.md
