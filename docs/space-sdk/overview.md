@@ -15,7 +15,7 @@ date: "1"
 
 ![](imgs/sdk.png)
 
-The [Space SDK](https://github.com/FleekHQ/space-sdk) is a Javascript/Typescript modular library and set of interfaces that packages tools and features enabled by Open Web protocols like [IPFS](https://ipfs.io/), [Textile](https://textile.io/), [Filecoin](https://filecoin.io/), [GunDB](https://gun.eco/), [Ethereum](https://ethereum.org/) , and [Torus](https://tor.us/) in easy to use commands, **via the Space API**, for anyone to use when building applications or websites powered by the Distributed Open Web.
+The [Space SDK](https://github.com/FleekHQ/space-sdk) is a Javascript/Typescript modular library and set of interfaces that packages tools and features enabled by Open Web protocols like [IPFS](https://ipfs.io/), [Textile](https://textile.io/), [Filecoin](https://filecoin.io/), [GunDB](https://gun.eco/), and [Ethereum](https://ethereum.org/) in easy to use commands, **via the Space API**, for anyone to use when building applications or websites powered by the Distributed Open Web.
 
 ![](imgs/protocols1.png)
 
@@ -36,7 +36,7 @@ The Space SDK is a set of modular interfaces that include all necessary tools to
 - Private and end-to-end encrypted file sharing.
 - Decentralized / trustless key & metadata storage and handling.
 
-The Space SDK packages these features in a set of APIs and interfaces that you as a user can use as is, with the current protocol implementations, or personalize to add -for example- your own custom storage layer instead of using Textile/IPFS.
+The Space SDK packages these features in a set of APIs and interfaces that you as a user can use as is, with the current protocol implementations, or personalize to add -for example- your own custom storage layer instead of using Textile/IPFS. 
 
 ## Currently Available APIs
 The Space SDK currently includes the following API:
