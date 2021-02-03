@@ -23,6 +23,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: docs/space-sdk
+  label: space sdk
+  create: all
+  match: "**/*"
+- type: directory
   path: docs/tutorials
   label: tutorials
   create: all

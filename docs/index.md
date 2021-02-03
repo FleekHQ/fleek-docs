@@ -83,6 +83,35 @@ The Space Daemon packages together IPFS, Textile Threads/Buckets, and Textile Po
 </a>
 </div>
 
+## Space SDK
+
+The Space web application is built using the Space SDK, a modular JS library that packages the IPFS, Textile, Filecoin, and GunDB implementations necessary to build Open Web apps into easy to use commands and interfaces. It's open source and designed as a tool that anyone can plug into their websites or applications and implement Web3-enabled functionalities to make their projects more trustless and user-controlled. 
+
+It's the successor of the Space Daemon, our desktop-based library. The Space SDK take the perks of the Daemon (encryption, user-controlled storage, peer-to-peer interactions, etc.) and makes them available on browser and mobile experiences. It's modular, and protocol agnostic, meaning you can use our own implementations (Textile hub for users, for example) or plug in your own layer and still leverage the SDK as an interface to manage it. For example, we plug in Torus as a seamless key management layer!
+
+<div class="prev-boxes-list">
+<a href="./space-sdk/overview/#Introduction" class="prev-box">
+<h5>Overview</h5>
+<p>Learn about the SDK</p>
+</a>
+<a href="./space-sdk/overview/#currently-available-apis" class="prev-box">
+<h5>Available Modules</h5>
+<p>View the current interfaces</p>
+</a>
+<a href="./space-sdk/overview/#the-space-sdk-versus-the-space-daemon" class="prev-box">
+<h5>Space SDK vs Space Daemon</h5>
+<p>What are the main differences?</p>
+</a>
+<a href="./space-sdk/overview/#installing-the-space-sdk" class="prev-box">
+<h5>Installing the Space SDK</h5>
+<p>How to get started with the SDK</p>
+</a>
+<a href="./space-sdk/overview/#migrating-from-the-space-daemon" class="prev-box">
+<h5>Migrating from Space Daemon</h5>
+<p>Learn the corresponding methods</p>
+</a>
+</div>
+
 ## IPFS Gateway
 
 Fleek provides its own IPFS gateway so that anyone can access files on IPFS. Simply replace `HASH` with the IPFS hash (also called CID) of your file in the url below and navigate to the address with your web browser to access your file.
