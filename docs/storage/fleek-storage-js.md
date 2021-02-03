@@ -136,6 +136,33 @@ fs.readFile(filePath, async (error, fileData) => {
 | bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
 | data 	| Any 	| The data of the file to be uploaded |
 
+### deleteFile
+
+The `deleteFile` method deletes a file, identified by its key and bucket.
+The function returns the key and bucket of the deleted file if successful.
+If the file does not exist, the method will still execute successfully.
+
+Example of usage:
+
+```js
+  await fleekStorage.deleteFile({
+    apiKey: 'my-key',
+    apiSecret: 'my-secret',
+    key: 'my-file-key',
+    bucket: 'my-bucket',
+  });
+
+```
+
+**Input parameters of deleteFile**
+
+|param  	|type  	|description  	|
+|-:	|-	|-	|
+| apiKey 	| String 	|  The api key used for authentication	|
+| apiSecret 	| String 	|  The api secret used for authentication	|
+| key 	|  String	| The key identifying the file in the bucket  	|
+| bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
+
 ### listFiles
 
 The `listFiles` method is for fetching information about all files in a bucket such as the key, hash and publicUrl.
