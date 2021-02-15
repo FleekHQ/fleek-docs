@@ -10,7 +10,15 @@ Most likely, your assets are being loaded from an incorrect URL like `ipfs.io/my
 
 You can verify that this is indeed the case by going to the developer tools of your web browser and looking at the request for you images, js and css files, etc... and seeing if they are being loaded.
 
-If you want to support loading sites through an IPFS Gateway, you need to make sure your assets are loaded from relative paths. If the app uses a `package.json` file, for example, adding an `homepage` field with the value `./` should fix the issue:
+If you want to support loading sites through an IPFS Gateway, you need to make sure your assets are loaded from relative paths. 
+
+If the app has hard-coded absolute paths (e.g. in an `index.html` file), converting these to relative paths should enable proper resolution:
+
+```html
+<script src='./build/bundle.js'></script>
+```
+
+If the app is built using [Create React App](https://create-react-app.dev), adding a `homepage` field with the value `./` to the `package.json` file should fix the issue:
 
 ```json
 {
