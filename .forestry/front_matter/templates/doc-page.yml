@@ -18,6 +18,7 @@ pages:
 - docs/hosting/site-deployment.md
 - docs/hosting/troubleshooting.md
 - docs/index.md
+- docs/filecoin-archiving/overview.md
 - docs/space-daemon/examples.md
 - docs/space-daemon/getting-started.md
 - docs/space-daemon/overview.md

@@ -40,6 +40,8 @@ nav:
     - Overview: space-desktop/overview.md
   - Space SDK:
     - Overview: space-sdk/overview.md
+  - Filecoin Archiving:
+    - Overview: filecoin-archiving/overview.md  
   - Tutorials:
     - Hosting: tutorials/hosting.md
     - Storage: tutorials/storage.md
