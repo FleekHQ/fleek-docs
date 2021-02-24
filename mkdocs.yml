@@ -34,6 +34,7 @@ nav:
     - Overview: filecoin-archiving/overview.md  
   - Fleek CLI:
     - Overview: fleek-cli/overview.md  
+    - Getting Started: fleek-cli/getting-started.md
   - Space Daemon:
     - Overview: space-daemon/overview.md
     - Getting Started: space-daemon/getting-started.md

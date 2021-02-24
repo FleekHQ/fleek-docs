@@ -4,17 +4,12 @@ date: "1"
 ---
 
 
-![](imgs/Filecoin-logo.jpg)
+![](imgs/fleekcli.png)
 
 The Fleek CLI is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **Hosting** products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
 
 ### **Technical Documentation**
 > This is a general overview of the Fleek CLI, and an example of how to work with it. To get started on it, view the CLIs [complete documentation](https://fleekhq.github.io/space-sdk/docs/) page.
-
-**You can find the repository and documentation here:**
-
-* [Fleek CLI Github](https://github.com/FleekHQ/space-sdk)
-* [Fleek CLI Documentation](https://fleekhq.github.io/space-sdk/docs/)
 
 ## Fleek CLI Overview
 The Fleek CLI currently encompasses two main areas of Fleek.
