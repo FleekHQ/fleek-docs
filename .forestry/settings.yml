@@ -21,6 +21,11 @@ sections:
   path: docs/filecoin-archiving
   label: filecoin archiving
   create: all
+  match: "**/*"
+- type: directory
+  path: docs/fleek-cli
+  label: fleek cli
+  create: all
   match: "**/*"  
 - type: directory
   path: docs/space-daemon

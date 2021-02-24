@@ -19,6 +19,7 @@ pages:
 - docs/hosting/troubleshooting.md
 - docs/index.md
 - docs/filecoin-archiving/overview.md
+- docs/flee-cli/overview.md
 - docs/space-daemon/examples.md
 - docs/space-daemon/getting-started.md
 - docs/space-daemon/overview.md
