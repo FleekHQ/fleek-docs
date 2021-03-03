@@ -10,11 +10,10 @@ With Fleek, you can seamlessly deploy **static sites** to Dfinity's Internet Com
 
 Furthermore, for the Dfinity ecosystem, we provide the following tools:
 
- * Fleek Dfinity Gateway.
- * Proxy/Service Worker Resolving Options.
- * Automatic Cycle Management.
- * Developer CLI/API with GitHub Action Support.
-
+- Fleek Dfinity Gateway
+- Proxy/Service Worker Resolving Options
+- Automatic Cycle Management
+- Developer CLI/API with GitHub Action Support
 
 !!! info
 
