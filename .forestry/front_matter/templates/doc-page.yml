@@ -17,6 +17,11 @@ pages:
 - docs/hosting/overview.md
 - docs/hosting/site-deployment.md
 - docs/hosting/troubleshooting.md
+- docs/hosting/domain-management.md
+- docs/dfinity-hosting/overview.md
+- docs/dfinity-hosting/site-deployment.md
+- docs/dfinity-hosting/troubleshooting.md
+- docs/dfinity-hosting/domain-management.md
 - docs/index.md
 - docs/filecoin-archiving/overview.md
 - docs/flee-cli/overview.md

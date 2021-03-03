@@ -20,7 +20,12 @@ markdown_extensions:
       permalink: true
 nav:
   - Introduction: index.md
-  - Hosting:
+  - Dfinity Hosting:
+    - Overview: dfinity-hosting/overview.md
+    - Site Deployment: hosting/site-deployment.md
+    - Domain Management: hosting/domain-management.md
+    - Troubleshooting: hosting/troubleshooting.md  
+  - IPFS Hosting:
     - Overview: hosting/overview.md
     - Site Deployment: hosting/site-deployment.md
     - Domain Management: hosting/domain-management.md

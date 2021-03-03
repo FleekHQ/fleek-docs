@@ -13,6 +13,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: docs/dfinity-hosting
+  label: dfinity hosting
+  create: all
+  match: "**/*"
+- type: directory
   path: docs/storage
   label: storage
   create: all
