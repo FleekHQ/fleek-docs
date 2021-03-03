@@ -6,20 +6,20 @@ date: "1"
 
 ![](imgs/hero.png)
 
-From local development to global deployment, Fleek is everything you need to host fast, modern sites & apps on IPFS. All in one seamless workflow. Deploy your site in a few quick clicks onto IPFS with a built in CDN for blazing fast performance. 
+With Fleek, you can seamlessly deploy **static sites** to Dfinity's Internet Computer. The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on Dfinity's trustless, permissionless, and open infrastructure in a couple clicks.
+
 
 !!! info
 
-    When you deploy on Fleek your site will have an IPFS hash and future automatic deployments will also update the IPFS hash of your site. Your site comes with a CDN, free SSL certificate, and a Fleek preview URL. You can add Custom Domains, ENS Domains, Configure Deploy Previews, and more.
+    When you deploy a static site to Dfinity via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Dfinity site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, Dfinity supports custom DNS domains, but ENS and other alternatives will be added in the future.
 
 ### Getting Started
 
-Getting Started with Fleek by deploying your first website. The quickest way to begin is by connecting your website's GitHub repository to deploy directly from there and allow for continuous deployment.
-If you so choose, you can also deploy by uploading the full code base for you website.
+Get started on the Internet Computer with Fleek! What do you need to get started? A GitHub repository with a static website (we're Jamstack-ready!) is the fastest way to get started, just link it to Fleek, customize your build settings (or let Fleek do it for you), and hit deploy.
 
 <div class="prev-boxes-list">
   <a href="../site-deployment/#creating-a-deployment" class="prev-box">
-    <h5>Deploy</h5>
+    <h5>Deploy to Dfinity</h5>
     <p>Deploy in Few Quick Clicks</p>
   </a>
   <a href="../site-deployment/#configuring-the-deployment" class="prev-box">
@@ -27,12 +27,9 @@ If you so choose, you can also deploy by uploading the full code base for you we
     <p>Get Build Settings for Popular Frameworks</p>
   </a>
   <a href="../domain-management/" class="prev-box">
-    <h5>Domain management</h5>
+    <h5>Dfinity Domain management</h5>
     <p>Add Root/Sub Domains To Your Site</p>
   </a>
-  <a href="../domain-management/#adding-ens-domain" class="prev-box">
-    <h5>ENS Domains</h5>
-    <p>Add ENS Domains To Your Site</p>
   </a>
     <a href="../../tutorials/hosting/" class="prev-box">
     <h5>Tutorials</h5>
