@@ -8,9 +8,40 @@ date: "1"
 
 Welcome to the Fleek documentation. Whether you are an expert or an absolute beginner, you'll find your answers here. Pick a starting point below, or use the search box to find documents matching your keywords.
 
-Fleek makes it easy to build and integrate privacy, encryption, and p2p functionality into your sites, web & native apps. Built on top of IPFS, Textile, & Filecoin, our suite of products allows you to effortlessly take advantage of the benefits of these new technologies. Build on the new Internet!
+Fleek makes it easy to build on Open Web protocols and a base layer infrastructure powered by them. Build and host your sites, apps, Dapps, and other services on trustless, permissionless, and open technologies focused on creating user-controlled, encrypted, private, p2p experiences easily. Build on the New Internet, and take the road to Web 3.0.
 
-## Fleek Hosting
+Packaging Open Web protocols like Dfinity, IPFS, Filecoin, Ethereum, GunDB, ENS, and more, in an ever-shifting stack of technologies that provide technical guarantees, no promises or trust isssues.
+
+## Fleek Dfinity Site Hosting
+
+With Fleek, you can seamlessly deploy **static sites** to Dfinity's Internet Computer. The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on Dfinity's trustless, permissionless, and open infrastructure in a couple clicks.
+
+Furthermore, for the Dfinity ecosystem, we provide the following tools:
+* Fleek Dfinity Gateway.
+* Proxy/Service Worker Resolving Options.
+* Automatic Cycle Management.
+* Developer CLI/API with GitHub Action Support.
+
+
+!!! info
+
+    When you deploy a static site to Dfinity via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Dfinity site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, Dfinity supports custom DNS domains, but ENS and other alternatives will be added in the future.
+
+<div class="prev-boxes-list">
+<a href="./dfinity-hosting/site-deployment/" class="prev-box">
+<h5>Deploy to Dfinity</h5>
+<p>Deploy to the Internet Computer</p>
+</a>
+<a href="./dfinity-hosting/domain-management/#canister-proxy" class="prev-box">
+<h5>Build Configurations</h5>
+<p>Get Build Settings for Popular Frameworks</p>
+</a>
+<a href="./dfinity-hosting/troubleshooting" class="prev-box"> </a>
+<h5>Troubleshooting</h5>
+<p>Common Issues and Fixes for Dfinity-hosted Sites</p>
+</div>
+
+## Fleek IPFS Hosting
 
 From local development to global deployment, Fleek is everything you need to host fast, modern sites & apps on IPFS. All in one seamless workflow. Deploy your site in a few quick clicks onto IPFS with a built in CDN for blazing fast performance.
 

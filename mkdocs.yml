@@ -22,9 +22,9 @@ nav:
   - Introduction: index.md
   - Dfinity Hosting:
     - Overview: dfinity-hosting/overview.md
-    - Site Deployment: hosting/site-deployment.md
-    - Domain Management: hosting/domain-management.md
-    - Troubleshooting: hosting/troubleshooting.md  
+    - Site Deployment: dfinity-hosting/site-deployment.md
+    - Domain Management: dfinity-hosting/domain-management.md
+    - Troubleshooting: dfinity-hosting/troubleshooting.md  
   - IPFS Hosting:
     - Overview: hosting/overview.md
     - Site Deployment: hosting/site-deployment.md
