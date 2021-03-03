@@ -9,10 +9,11 @@ date: "1"
 With Fleek, you can seamlessly deploy **static sites** to Dfinity's Internet Computer. The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on Dfinity's trustless, permissionless, and open infrastructure in a couple clicks.
 
 Furthermore, for the Dfinity ecosystem, we provide the following tools:
-* Fleek Dfinity Gateway.
-* Proxy/Service Worker Resolving Options.
-* Automatic Cycle Management.
-* Developer CLI/API with GitHub Action Support.
+
+ * Fleek Dfinity Gateway.
+ * Proxy/Service Worker Resolving Options.
+ * Automatic Cycle Management.
+ * Developer CLI/API with GitHub Action Support.
 
 
 !!! info
