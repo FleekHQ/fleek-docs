@@ -4,12 +4,16 @@ date: "1"
 ---
 # Static Site Deployment on Dfinity
 
-Deploying a static site to Dfinity on Fleek is as easy as it is to do so on IPFS, or any other space. With our GitHub integration (you can use other deployment environments through our CLI) there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
+Deploying a static site to Dfinity on Fleek is as easy as it is to do so on IPFS, or the Web 2.0 services you know, but don't love much because of their trust-based or centralized approaches. 
+
+With our GitHub integration (you can use other deployment environments through our CLI) there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
 
 ## How Does Fleek Host Static Sites on Dfinity?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
 
-When you first build a site on Dfinity through Fleek (on the site's first deployment), Fleek will **create a new canister on the Internet Computer** for you, with the website's content/code/files in it. This is done via the **Dfinity SDK**, as Fleek interacts directly with the networks' native APIs.
+When you first build a site on Dfinity through Fleek (on the site's first deployment), Fleek will **create a new canister on the Internet Computer** for you, with the website's content/code/files in it. This is done via the **Dfinity SDK** [(view documentation)](https://sdk.dfinity.org/docs/index.html), as Fleek interacts directly with the networks' native APIs.
+
+![](imgs/flow.png)
 
 Once your canister and first deployment is set, and your site is live, Fleek will update the content of that canister **upon each deployment** automatically. Meaning you will have one assigned front-end canister for each site you push to the Dfinity's Internet Computer.
 
