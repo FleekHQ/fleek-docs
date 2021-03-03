@@ -2,25 +2,46 @@
 date: "1"
 
 ---
-# Site Deployment
+# Static Site Deployment on Dfinity
 
-Each new website deployment by Fleek is done atomically, meaning that there will never be any inconsistencies when pushing new files or making changes to existing ones.
+Deploying a static site to Dfinity on Fleek is as easy as it is to do so on IPFS, or any other space. With our GitHub integration (you can use other deployment environments through our CLI) there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
 
-## Creating a deployment
+## How Does Fleek Host Sites on Dfinity?
+Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
 
-### With Git
+When you first build a site on Dfinity through Fleek (on the site's first deployment), Fleek will **create a new canister on the Internet Computer** for you, with the website's content/code/files in it. This is done via the **Dfinity SDK**, as Fleek interacts directly with the networks' native APIs.
 
-![](imgs/deploy-settings.png)
+Once your canister and first deployment is set, and your site is live, Fleek will update the content of that canister **upon each deployment** automatically. Meaning you will have one assigned front-end canister for each site you push to the Dfinity's Internet Computer.
 
-Simply set the public directory of your project to your GitHub repository and define the build command. Fleek will run the build command and deploy the result whenever you push to your Git repo. The benefits of using continuous deployment include:
+!!! info
 
-- No deploying without committing and pushing first
-- Easy collaboration through pull requests
-- Fix a typo through your Git provider's web UI from your mobile
+    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit Dfinity canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
+
+## Deploy a Static Site to Dfinity
+
+### With Fleek's Native GitHub Integration
+
+![](imgs/fleek-github.png)
+
+Visit the Hosting tab and **add a new site** to begin the process. **First, you will need to link your GitHub account** and define the repositories that Fleek will have access to for you to select from and deploy to Dfinity.
+
+You will then select the proper repository where your static site is in, and the branch (if multiple are available) that will be used for deploying your site.
+
+![](imgs/pick-repository.png)
+
+You will need to have a repository ready with static site public directory (most Jamstack frameworks are supported), and set the build settings. It is set and forget, so once your site is built and configured, you will benefit from **continuous deployments**. Just push your changed to the proper branch on GitHub, and done!
+
+### Selecting Dfinity as the Deployment Location
+Got a repo and branch ready? Cool! Now, you will have to pick where you want to host your website. Dfinity, or IPFS. Open the dropdown menu and select Dfinity (should be the default option) and hit next.
+
+Remember that when deploying to Dfinity, you are deploying to the Internet Computer computational blockchain. This is a decentralized and trustless environment that doesn't depend on Fleek. IPFS, on the other hand, is a distributed node environment that provides a user-controlled and performant location for sites, but it does depend on Fleek. Their perks and different, and both represent different approaches to Open Web hosting!
+
+![](imgs/dfinity-dropdown.png)
 
 ## Configuring the deployment
 ### Build parameters
-Fleek will attempt to autodetect the site's framework and apply the correct build parameters. In some cases, however, you might need to input the parameters manually, either at the initial site deployment stage, or in the site settings after the site has already been deployed.
+Fleek handles build parameters equally across Dfinity and IPFS. First, it will try to autodetect the site's framework and apply the standard build parameters. **However in some cases** you might need to add the parameters manually (or you might want to customize them further). **Don't worry if you mistakenly place a wrong parameter**, these can be changed both here, and after the deployment in the site's **build settings.**
+
 
 Below are the build parameters which you can modify.
 
