@@ -6,7 +6,7 @@ date: "1"
 
 Deploying a static site to Dfinity on Fleek is as easy as it is to do so on IPFS, or any other space. With our GitHub integration (you can use other deployment environments through our CLI) there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
 
-## How Does Fleek Host Sites on Dfinity?
+## How Does Fleek Host Static Sites on Dfinity?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
 
 When you first build a site on Dfinity through Fleek (on the site's first deployment), Fleek will **create a new canister on the Internet Computer** for you, with the website's content/code/files in it. This is done via the **Dfinity SDK**, as Fleek interacts directly with the networks' native APIs.
@@ -32,27 +32,61 @@ You will then select the proper repository where your static site is in, and the
 You will need to have a repository ready with static site public directory (most Jamstack frameworks are supported), and set the build settings. It is set and forget, so once your site is built and configured, you will benefit from **continuous deployments**. Just push your changed to the proper branch on GitHub, and done!
 
 ### Selecting Dfinity as the Deployment Location
+![](imgs/dfinity-dropdown.png)
+
 Got a repo and branch ready? Cool! Now, you will have to pick where you want to host your website. Dfinity, or IPFS. Open the dropdown menu and select Dfinity (should be the default option) and hit next.
 
 Remember that when deploying to Dfinity, you are deploying to the Internet Computer computational blockchain. This is a decentralized and trustless environment that doesn't depend on Fleek. IPFS, on the other hand, is a distributed node environment that provides a user-controlled and performant location for sites, but it does depend on Fleek. Their perks and different, and both represent different approaches to Open Web hosting!
 
-![](imgs/dfinity-dropdown.png)
-
 ## Configuring the deployment
 ### Build parameters
+![](imgs/build2.png)
 Fleek handles build parameters equally across Dfinity and IPFS. First, it will try to autodetect the site's framework and apply the standard build parameters. **However in some cases** you might need to add the parameters manually (or you might want to customize them further). **Don't worry if you mistakenly place a wrong parameter**, these can be changed both here, and after the deployment in the site's **build settings.**
 
 
 Below are the build parameters which you can modify.
 
+- `Branch`: Right after your Repository, you can select the proper branch for your deployment.
+- `Framework`: If Fleek doesn't autodetect the proper framework, you can select one of our automatically supported ones from the list.
 - `Docker image`: The name of the docker image on [docker hub](https://hub.docker.com/) in which your site will be built, defaults to `node:slim`. Fleek provides [images for many popular frameworks](https://hub.docker.com/orgs/fleek/repositories), but you can use any that suits your project.
 - `Build command`: The commands to execute to build the site. EG: `npm install && npm run build`
 - `Publish directory`: The name of the directory containing the `index.html` file of your site after it has been built
+
+## Advanced Settings
+
 - `Environment variables`: The values of your environment variables. It is here for example that you might set your environment as `production`
+- `Canister Proxying:` See below for detailed explanation.
 
-### Common frameworks
+## Canister Proxy
+![](imgs/proxying.png)
 
-You will also have to define the correct publish directory, here's list of default configurations for popular frameworks:
+With Fleek, you have **two different options** when it comes to Dfinity canister static site hosting resolving. 
+
+- Using Fleek's Proxy as intermediary (middleman, no loading screen)
+- Using Service Workers to go directly to Dfinity (no middleman, loading screen)
+
+### Using the Proxy vs Service Worker
+Choosing one or another is a matter of balancing experience, or further decentralization.
+
+![](imgs/service-worker.jpeg)
+
+#### **The Fleek Proxy**
+If you choose to **use Fleek as a proxy**, Fleek will use its Dfinity gateway to **act as a middleman** between users, and your static site canister on the Internet Computer, translating their requests. This is the default option, since it provides the most seamless experience for users and doesn't involve a Dfinity loading screen. However, this option does depend on Fleek's servers, or Fleek itself, as a middleman.
+
+#### **Service Workers**
+The alternative is to use **Service Workers** to connect to Dfinity directly. If you select this option, users will interact **once with Fleek´s gateway**, to receive a bootstrap script that installs a service worker and reloads their page, showing a quick animated loading screen (for a very few seconds). 
+
+![](imgs/loading.gif)
+
+Once the Service Worker is installed, all of the user's requests will communicate directly with Dfinity's Internet Computer, and your canister and no loading screen will be present, that only happens once when the service worker is registered in their browser. This option **doesn't rely on Fleeks servers constantly**.
+
+### Bots, Crawlers, and Other Non-human Requests
+To ensure your static sites on Dfinity are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example) **Fleek handles all bot requests through the Proxy and our Dfinity/IC gateway**. This is mostly because bots, for these purposes, are not compatible with Service Workers.
+
+
+## Common Website Frameworks
+
+When you define the publish directory, if it is not automatically set, you can use this list of popular frameworks as a reference of the usual commands and public directory:
 
 | Framework          | Docker Image           | Build Command                       | Public Directory | Additional documentation |
 |--------------------|------------------------|-------------------------------------|------------------|------------------|
@@ -65,6 +99,7 @@ You will also have to define the correct publish directory, here's list of defau
 | Svelte             | fleek/svelte           | `yarn && yarn build`                | public           | |
 | Svelte + Sapper    | fleek/svelte           | `yarn && yarn export`               | \__sapper__/export|
 | MkDocs             | fleek/mkdocs           | `mkdocs build`                      | site             | |
+
 
 ### File configuration
 
@@ -89,7 +124,7 @@ All these fields are optional:
 - `image` public docker image, default to node:slim
 - `command` no command is executed by default
 - `baseDir` build command is executed in this directory, root directory is used by default
-- `publicDir` this directory is uploaded to IPFS, `baseDir` is used by default
+- `publicDir` this directory is uploaded to Dfinity, `baseDir` is used by default
 - `environment` key/value object of environment variables
 
 If you use `baseDir = /frontend` and `publicDir = /dist`, published path is `/frontend/dist`. If you need to publish directory above or next to your `baseDir`, you can use relative path `publicDir = ../../dist`.
