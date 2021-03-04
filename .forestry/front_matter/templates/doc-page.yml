@@ -22,6 +22,7 @@ pages:
 - docs/dfinity-hosting/site-deployment.md
 - docs/dfinity-hosting/troubleshooting.md
 - docs/dfinity-hosting/domain-management.md
+- docs/dfinity-hosting/dfinity-gateway-proxy.md    
 - docs/index.md
 - docs/filecoin-archiving/overview.md
 - docs/flee-cli/overview.md
