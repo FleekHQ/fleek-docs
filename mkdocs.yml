@@ -24,6 +24,7 @@ nav:
     - Overview: dfinity-hosting/overview.md
     - Site Deployment: dfinity-hosting/site-deployment.md
     - Domain Management: dfinity-hosting/domain-management.md
+    - Dfinity Gateway & Proxying: dfinity-hosting/dfinity-gateway-proxy.md    
     - Troubleshooting: dfinity-hosting/troubleshooting.md  
   - IPFS Hosting:
     - Overview: hosting/overview.md
