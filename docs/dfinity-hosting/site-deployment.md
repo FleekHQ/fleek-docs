@@ -26,6 +26,8 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
     IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit Dfinity canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
 
+With Fleek's Dfinity IC Gateway, we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for Dfinity resolving on applications/websites that could help eliminate the need for bridges.
+
 ## Deploy a Static Site to Dfinity
 
 ### 1) Use the Fleek Native GitHub Integration
