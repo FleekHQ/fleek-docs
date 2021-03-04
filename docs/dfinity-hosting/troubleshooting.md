@@ -4,6 +4,14 @@ date: "1"
 ---
 # Troubleshooting
 
+## Dfinity-specific Limitations and Common Issues
+### File Size and Canister Storage Limit
+Currently, there is a temporary file size and storage limitation involved in Dfinity canisters. There is an approximate 2.5GB total canister storage limit (meaning, your entire repository can't go above that number).
+
+Secondly, there is a 2MB per-file size limit, independently of the total storage utilized on the canister. Usually, this doesn't affect **static sites**. However, it might affect files included and utilized in the website, such as **images, videos, gifs, audio**, or any file with tendency to go above 1MB. Media, naturally, is the most affected.
+
+To bypass this issue, you can **host and store files in Fleek's IPFS storage** and embed them into your Dfinity hosted site with their public URL. View our Storage [(documentation)](https://docs.fleek.co/storage/storage-app/) for more information.
+
 ## Build Troubleshooting Tips
 
 Before getting started on specific tips, the most important thing you should check first is to **build your file locally in the development environment**. If it builds locally, but not non Fleek, then you should verify dependencies and follow tips below.
@@ -49,6 +57,7 @@ The public directory is always relative to the base directory. So to use the `pu
 | Svelte             | fleek/svelte           | `yarn && yarn build`                | public           | |
 | Svelte + Sapper    | fleek/svelte           | `yarn && yarn export`               | \__sapper__/export|
 | MkDocs             | fleek/mkdocs           | `mkdocs build`                      | site             | |
+
 
 ## Command not found
 
