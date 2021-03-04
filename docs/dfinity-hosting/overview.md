@@ -24,11 +24,11 @@ Furthermore, for the Dfinity ecosystem, we provide the following tools:
 Get started on the Internet Computer with Fleek! What do you need to get started? A GitHub repository with a static website (we're Jamstack-ready!) is the fastest way to get started, just link it to Fleek, customize your build settings (or let Fleek do it for you), and hit deploy. You can begin simple, with any Jamstack site, or use our CLI to create a personalized deployment workflows with GitHub Actions.
 
 <div class="prev-boxes-list">
-  <a href="../site-deployment/#creating-a-deployment" class="prev-box">
+  <a href="../site-deployment/#1-use-the-fleek-native-github-integration" class="prev-box">
     <h5>Deploy to Dfinity</h5>
     <p>Deploy in Few Quick Clicks</p>
   </a>
-  <a href="../site-deployment/#configuring-the-deployment" class="prev-box">
+  <a href="../site-deployment/#3-configure-the-deployment-build-parameters" class="prev-box">
     <h5>Build Configurations</h5>
     <p>Get Build Settings for Popular Frameworks</p>
   </a>
