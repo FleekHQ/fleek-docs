@@ -6,7 +6,7 @@ date: "1"
 
 Deploying a static site to Dfinity on Fleek is as easy as it is to do so on IPFS, or the Web 2.0 services you know, but don't love much because of their trust-based or centralized approaches. 
 
-With our GitHub integration (you can use other deployment environments through our CLI) there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
+With our GitHub integration (you can use other deployment environments through the Fleek CLI) there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
 
 ## How Does Fleek Host Static Sites on Dfinity?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
@@ -26,7 +26,9 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
     IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit Dfinity canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
 
-With Fleek's Dfinity IC Gateway, we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for Dfinity resolving on applications/websites that could help eliminate the need for bridges.
+With Fleek's [(Dfinity IC Gateway)]("../dfinity-gateway-proxy/"), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
+
+This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for Dfinity resolving on applications/websites that could help eliminate the need for bridges.
 
 ## Deploy a Static Site to Dfinity
 
@@ -35,6 +37,8 @@ With Fleek's Dfinity IC Gateway, we take care of power SSL certificates, custom 
 ![](imgs/fleek-github.png)
 
 Visit the Hosting tab and **add a new site** to begin the process. **First, you will need to link your GitHub account** and define the repositories that Fleek will have access to for you to select from and deploy to Dfinity.
+
+**Reminder: to use other environments** instead of GitHub, such as local machine, to deploy your sites, use the [(Fleek CLI)]("./fleek-cli/overview"). 
 
 You will then select the proper repository where your static site is in, and the branch (if multiple are available) that will be used for deploying your site.
 

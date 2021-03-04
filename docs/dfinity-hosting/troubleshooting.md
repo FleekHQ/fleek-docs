@@ -25,7 +25,7 @@ Visit your Fleek account, go into the site's details and into the failed deploym
 
 The fix is easy. You have to visit the **Build & Deploy** tabs in your website's settings, and find the **Specify Docker Image** section. By default **Fleek uses the latest Node.js available, always**. So, you must edit this settings and **add a tag to specify the Node.js version you want to use**:
 
-![](imgs/specifydocker.png)
+![](imgs/docker-hd.png)
 
 ### Double Check Dependencies
 If the problem persists, you might be missing a dependency that you have locally but not on Fleek. To troubleshoot this, visit your **failed deployment logs**, and see if there was an element that was not found. In the example below, you can see the /bin/sh: 1: pnpm was not found.
