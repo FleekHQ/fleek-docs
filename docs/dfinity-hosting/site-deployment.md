@@ -26,7 +26,7 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
     IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit Dfinity canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
 
-With Fleek's [Dfinity IC Gateway]("https://docs.fleek.co/dfinity-hosting/dfinity-gateway-proxy/"), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
+With Fleek's [Dfinity IC Gateway](https://docs.fleek.co/dfinity-hosting/dfinity-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
 
 This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for Dfinity resolving on applications/websites that could help eliminate the need for bridges.
 
@@ -38,7 +38,7 @@ This set of tools that are part of the nexus between the current web (Web 2.0) a
 
 Visit the Hosting tab and **add a new site** to begin the process. **First, you will need to link your GitHub account** and define the repositories that Fleek will have access to for you to select from and deploy to Dfinity.
 
-**Reminder: to use other environments** instead of GitHub, such as local machine, to deploy your sites, use the [(Fleek CLI)]("https://docs.fleek.co/fleek-cli/overview/"). 
+**Reminder: to use other environments** instead of GitHub, such as local machine, to deploy your sites, use the [(Fleek CLI)](https://docs.fleek.co/fleek-cli/overview/). 
 
 You will then select the proper repository where your static site is in, and the branch (if multiple are available) that will be used for deploying your site.
 
@@ -65,7 +65,7 @@ Fleek handles build parameters equally across Dfinity and IPFS. First, it will t
 Below are the build parameters which you can modify.
 
 - `Branch`: Right after your Repository, you can select the proper branch for your deployment.
-- `Framework`: If Fleek doesn't autodetect the proper framework, you can select one of our automatically supported ones from the list.
+- `Framework`: If Fleek doesn't auto-detect the proper framework, you can select one of our automatically supported ones from the list.
 - `Docker image`: The name of the docker image on [docker hub](https://hub.docker.com/) in which your site will be built, defaults to `node:slim`. Fleek provides [images for many popular frameworks](https://hub.docker.com/orgs/fleek/repositories), but you can use any that suits your project.
 - `Build command`: The commands to execute to build the site. EG: `npm install && npm run build`
 - `Publish directory`: The name of the directory containing the `index.html` file of your site after it has been built

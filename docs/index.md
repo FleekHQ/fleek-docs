@@ -14,7 +14,7 @@ Packaging Open Web protocols like Dfinity, IPFS, Filecoin, Ethereum, GunDB, ENS,
 
 ## Fleek Dfinity Site Hosting
 
-With Fleek, you can seamlessly deploy **static sites** to [Dfinity]("https://dfinity.org/"). The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on Dfinity's trustless, permissionless, and open infrastructure in a couple clicks.
+With Fleek, you can seamlessly deploy **static sites** to [Dfinity](https://dfinity.org/). The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on Dfinity's trustless, permissionless, and open infrastructure in a couple clicks.
 
 Furthermore, for the Dfinity ecosystem, we provide the following tools:
 
