@@ -33,7 +33,7 @@ Furthermore, for the Dfinity ecosystem, we provide the following tools:
 <h5>Deploy to Dfinity</h5>
 <p>Deploy to the Internet Computer</p>
 </a>
-<a href="./dfinity-hosting/domain-management/#canister-proxy" class="prev-box">
+<a href="./dfinity-hosting/site-deployment/#canister-proxy" class="prev-box">
 <h5>Canister Proxying</h5>
 <p>Seamless Proxy for the IC or No-middleman with Service Workers</p>
 </a>
