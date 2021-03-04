@@ -4,43 +4,51 @@ date: "1"
 ---
 # Troubleshooting
 
-## Site is not loading properly via IPFS gateway and shows invalid ipfs path error
-
-Most likely, your assets are being loaded from an incorrect URL like `ipfs.io/my-image.jpg` instead of `ipfs.io/ipfs/$hash/my-image.jpg`. Therefore, this error should occur on IPFS gateways only.
-
-You can verify that this is indeed the case by going to the developer tools of your web browser and looking at the request for you images, js and css files, etc... and seeing if they are being loaded.
-
-If you want to support loading sites through an IPFS Gateway, you need to make sure your assets are loaded from relative paths. 
-
-If the app has hard-coded absolute paths (e.g. in an `index.html` file), converting these to relative paths should enable proper resolution:
-
-```html
-<script src='./build/bundle.js'></script>
-```
-
-If the app is built using [Create React App](https://create-react-app.dev), adding a `homepage` field with the value `./` to the `package.json` file should fix the issue:
-
-```json
-{
-  "homepage": "./",
-  "dependencies": { ... },
-  "scripts": { ... }
-}
-```
-
-Using relative paths in React: <https://create-react-app.dev/docs/deployment/#building-for-relative-paths>
-
-## My single-page application (SPA) breaks when changing routes via an IPFS gatway
-
-IPFS gateways url are formatted in the following manner `ipfs.io/ipfs/$hash`. As such, the SPA might think that the root of the application is `ipfs.io` instead of `ipfs.io/ipfs/$hash`. For this reason, we recommend apps use hash routing to minimize such errors when using an IPFS gateway.
-
-Adding a hash router in React: <https://reactrouter.com/web/api/HashRouter>
-
 ## Build Troubleshooting Tips
 
-* If your build fails, the first thing you should check is if you can build your file locally in the development environment.
-* If it builds successfully locally, then you should check if the dependencies installed by Fleek are the same as the ones being used locally. For example, you may need to specify the Node.js version
-* The public directory is always relative to the base directory. So to use the `public` folder in the project root simply input `public` for the public directory field.
+Before getting started on specific tips, the most important thing you should check first is to **build your file locally in the development environment**. If it builds locally, but not non Fleek, then you should verify dependencies and follow tips below.
+
+### Verify you are Using the Correct Node Version
+When you are working on your site locally, you are using a particular Node.js version. If when uploading and building on Fleek, it fails, you must verify that you are using a compatible Node.js version Fleek when building.
+
+Visit your Fleek account, go into the site's details and into the failed deployment's log. There you should see an error as the following "error node-version...".   In this case, it expected version 12 and got 15.2.1.
+
+![](imgs/log-nodejs.png)
+
+The fix is easy. You have to visit the **Build & Deploy** tabs in your website's settings, and find the **Specify Docker Image** section. By default **Fleek uses the latest Node.js available, always**. So, you must edit this settings and **add a tag to specify the Node.js version you want to use**:
+
+![](imgs/specifydocker.png)
+
+### Double Check Dependencies
+If the problem persists, you might be missing a dependency that you have locally but not on Fleek. To troubleshoot this, visit your **failed deployment logs**, and see if there was an element that was not found. In the example below, you can see the /bin/sh: 1: pnpm was not found.
+
+![](imgs/bin.png) 
+
+This means there is a dependency that is missing (pnpm). **How do you fix this?** Even if you put the right build command, if the dependency is not installed like it is locally, Fleek won't be able to use the build commands necessary to create your deployment.
+
+So, to fix this you will need to **Specify a Docker Image** that contains the missing dependency (pnpm in this case). You can create and specify your own, or go on Docker Hub and search for one that is compatible https://hub.docker.com/. 
+
+![](imgs/pnpm.png)
+
+Once you find, build or specify one. Simply hit trigger deploy on top of your failed deployment, and test again.
+
+### Verify the Publish Directory
+
+The public directory is always relative to the base directory. So to use the `public` folder in the project root simply input `public` for the public directory field.
+
+**How do I know if I have the right publish directory?** This varies depending on the framework you use. A simple way to find it is to **build it locally** and see the build folder that it appears and its name.
+
+| Framework          | Docker Image           | Build Command                       | Public Directory | Additional documentation |
+|--------------------|------------------------|-------------------------------------|------------------|------------------|
+| Create React App   | fleek/create-react-app | `yarn && yarn build`                | build            | <a href="https://blog.fleek.co/posts/fleek-create-react-app" target="_blank">Tutorial blog post</a> |
+| Gatsby             | fleek/gatsby           | `yarn && gatsby build`              | public           | <a href="https://blog.fleek.co/posts/Gatsby-Fleek" target="_blank">Tutorial blog post</a> |
+| Hugo               | fleek/hugo             | `yarn && hugo`                      | public           | <a href="https://blog.fleek.co/posts/go-with-hugo-and-fleek" target="_blank">Tutorial blog post</a> |
+| Jekyll             | fleek/jekyll           | `jekyll build`                      | _site            | <a href="https://blog.fleek.co/posts/deploy-jekyll-blog-on-fleek" target="_blank">Tutorial blog post</a> |
+| Next JS            | fleek/next-js          | `yarn && yarn build && yarn export` | out              | <a href="https://blog.fleek.co/posts/fleek-nextJS" target="_blank">Tutorial blog post</a> |
+| Gridsome           | fleek/gridsome:node-12 | `yarn && yarn build`                | dist             | |
+| Svelte             | fleek/svelte           | `yarn && yarn build`                | public           | |
+| Svelte + Sapper    | fleek/svelte           | `yarn && yarn export`               | \__sapper__/export|
+| MkDocs             | fleek/mkdocs           | `mkdocs build`                      | site             | |
 
 ## Command not found
 

@@ -18,10 +18,10 @@ With Fleek, you can seamlessly deploy **static sites** to Dfinity's Internet Com
 
 Furthermore, for the Dfinity ecosystem, we provide the following tools:
 
- * Fleek Dfinity Gateway.
- * Proxy/Service Worker Resolving Options.
- * Automatic Cycle Management.
- * Developer CLI/API with GitHub Action Support.
+ - Fleek Dfinity Gateway
+ - Proxy/Service Worker Resolving Options
+ - Automatic Cycle Management
+ - Developer CLI/API with GitHub Action Support
 
 
 !!! info
@@ -34,8 +34,16 @@ Furthermore, for the Dfinity ecosystem, we provide the following tools:
 <p>Deploy to the Internet Computer</p>
 </a>
 <a href="./dfinity-hosting/domain-management/#canister-proxy" class="prev-box">
-<h5>Build Configurations</h5>
-<p>Get Build Settings for Popular Frameworks</p>
+<h5>Canister Proxying</h5>
+<p>Seamless Proxy for the IC or No-middleman with Service Workers</p>
+</a>
+<a href="./dfinity-hosting/dfinity-gateway-proxy/" class="prev-box">
+<h5>Fleek's Dfinity IC Gateway</h5>
+<p>Access Any Canister's Data on Dfinity Over HTTP With Fleek </p>
+</a>
+<a href="./fleek-cli/overview" class="prev-box">
+<h5>Hosting CLI/API</h5>
+<p>Manage Your Fleek IC Hosting via Terminal, use GitHub Actions</p>
 </a>
 <a href="./dfinity-hosting/troubleshooting" class="prev-box">
 <h5>Troubleshooting</h5>
