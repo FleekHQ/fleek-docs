@@ -20,17 +20,17 @@ markdown_extensions:
       permalink: true
 nav:
   - Introduction: index.md
+  - IPFS Hosting:
+    - Overview: hosting/overview.md
+    - Site Deployment: hosting/site-deployment.md
+    - Domain Management: hosting/domain-management.md
+    - Troubleshooting: hosting/troubleshooting.md
   - Dfinity Hosting:
     - Overview: dfinity-hosting/overview.md
     - Site Deployment: dfinity-hosting/site-deployment.md
     - Domain Management: dfinity-hosting/domain-management.md
     - Dfinity Gateway & Proxying: dfinity-hosting/dfinity-gateway-proxy.md    
     - Troubleshooting: dfinity-hosting/troubleshooting.md  
-  - IPFS Hosting:
-    - Overview: hosting/overview.md
-    - Site Deployment: hosting/site-deployment.md
-    - Domain Management: hosting/domain-management.md
-    - Troubleshooting: hosting/troubleshooting.md
   - Storage:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
