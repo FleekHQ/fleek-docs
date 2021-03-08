@@ -6,10 +6,10 @@ date: "1"
 
 ![](imgs/fleekcli.png)
 
-The Fleek CLI is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **Hosting** products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
+The Fleek CLI is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **hosting**  products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
 
 ### **Technical Documentation**
-> This is a general overview of the Fleek CLI, and an example of how to work with it. To get started on it, view the CLIs [complete documentation](https://fleekhq.github.io/space-sdk/docs/) page.
+> This is a general overview of the Fleek CLI, and an example of how to work with it. To get started on it, install it and follow the information in the help commands. Currently IPFS is supported only for hosting deployments, Dfinity will be added soon!
 
 ## Fleek CLI Overview
 The Fleek CLI currently encompasses two main areas of Fleek.
