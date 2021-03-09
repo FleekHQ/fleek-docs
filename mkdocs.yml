@@ -20,16 +20,24 @@ markdown_extensions:
       permalink: true
 nav:
   - Introduction: index.md
-  - Hosting:
+  - IPFS Hosting:
     - Overview: hosting/overview.md
     - Site Deployment: hosting/site-deployment.md
     - Domain Management: hosting/domain-management.md
     - Troubleshooting: hosting/troubleshooting.md
+  - Internet Computer Hosting:
+    - Overview: internet-computer-hosting/overview.md
+    - Site Deployment: internet-computer-hosting/site-deployment.md
+    - Domain Management: internet-computer-hosting/domain-management.md
+    - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
+    - Troubleshooting: internet-computer-hosting/troubleshooting.md  
   - Storage:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
+  - Filecoin Archiving:
+    - Overview: filecoin-archiving/overview.md  
   - Space Daemon:
     - Overview: space-daemon/overview.md
     - Getting Started: space-daemon/getting-started.md
@@ -40,8 +48,6 @@ nav:
     - Overview: space-desktop/overview.md
   - Space SDK:
     - Overview: space-sdk/overview.md
-  - Filecoin Archiving:
-    - Overview: filecoin-archiving/overview.md  
   - Tutorials:
     - Hosting: tutorials/hosting.md
     - Storage: tutorials/storage.md

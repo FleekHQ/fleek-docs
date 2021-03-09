@@ -17,6 +17,12 @@ pages:
 - docs/hosting/overview.md
 - docs/hosting/site-deployment.md
 - docs/hosting/troubleshooting.md
+- docs/hosting/domain-management.md
+- docs/internet-computer-hosting/overview.md
+- docs/internet-computer-hosting/site-deployment.md
+- docs/internet-computer-hosting/troubleshooting.md
+- docs/internet-computer-hosting/domain-management.md
+- docs/internet-computer-hosting/ic-gateway-proxy.md    
 - docs/index.md
 - docs/filecoin-archiving/overview.md
 - docs/space-daemon/examples.md

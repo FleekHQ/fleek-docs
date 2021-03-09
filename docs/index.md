@@ -8,9 +8,12 @@ date: "1"
 
 Welcome to the Fleek documentation. Whether you are an expert or an absolute beginner, you'll find your answers here. Pick a starting point below, or use the search box to find documents matching your keywords.
 
-Fleek makes it easy to build and integrate privacy, encryption, and p2p functionality into your sites, web & native apps. Built on top of IPFS, Textile, & Filecoin, our suite of products allows you to effortlessly take advantage of the benefits of these new technologies. Build on the new Internet!
+Fleek makes it easy to build on Open Web protocols and a base layer infrastructure powered by them. Build and host your sites, apps, Dapps, and other services on trustless, permissionless, and open technologies focused on creating user-controlled, encrypted, private, p2p experiences easily. Build on the New Internet, and take the road to Web 3.0.
 
-## Fleek Hosting
+Packaging Open Web protocols like the Internet Computer, IPFS, Filecoin, Ethereum, GunDB, ENS, and more, in an ever-shifting stack of technologies that provide technical guarantees, no promises or trust isssues.
+
+
+## Fleek IPFS Hosting
 
 From local development to global deployment, Fleek is everything you need to host fast, modern sites & apps on IPFS. All in one seamless workflow. Deploy your site in a few quick clicks onto IPFS with a built in CDN for blazing fast performance.
 
@@ -38,6 +41,40 @@ From local development to global deployment, Fleek is everything you need to hos
 <a href="./hosting/domain-management/#ens-domains" class="prev-box">
 <h5>ENS Domains</h5>
 <p>Add ENS Domains To Your Site</p>
+</a>
+</div>
+
+## Fleek Internet Computer Site Hosting
+
+With Fleek, you can seamlessly deploy **static sites** to [DFINITY's](https://dfinity.org/) Internet Computer ('IC'). The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on the IC trustless, permissionless, and open infrastructure in a couple clicks.
+
+Furthermore, for the Internet Computer's ecosystem, we provide the following tools:
+
+ - Fleek IC Gateway
+ - Proxy/Service Worker Resolving Options
+ - Automatic Cycle Management
+
+
+!!! info
+
+    When you deploy a static site to the IC via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Internet Computer site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, we supports custom DNS domains, but ENS and other alternatives will be added in the future for IC-hosted sites.
+
+<div class="prev-boxes-list">
+<a href="./internet-computer-hosting/site-deployment/" class="prev-box">
+<h5>Deploy to the IC with Fleek</h5>
+<p>Deploy to the Internet Computer</p>
+</a>
+<a href="./internet-computer-hosting/site-deployment/#canister-proxy" class="prev-box">
+<h5>Canister Proxying</h5>
+<p>Seamless Proxy for the IC or No-middleman with Service Workers</p>
+</a>
+<a href="./internet-computer-hosting/ic-gateway-proxy/" class="prev-box">
+<h5>Fleek's Internet Computer Gateway</h5>
+<p>Access Any Canister's Data on IC Over HTTP With Fleek </p>
+</a>
+<a href="./internet-computer-hosting/troubleshooting" class="prev-box">
+<h5>Troubleshooting</h5>
+<p>Common Issues and Fixes for IC-hosted Sites</p>
 </a>
 </div>
 

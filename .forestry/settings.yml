@@ -13,6 +13,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: docs/internet-computer-hosting
+  label: internet computer hosting
+  create: all
+  match: "**/*"
+- type: directory
   path: docs/storage
   label: storage
   create: all
@@ -21,7 +26,7 @@ sections:
   path: docs/filecoin-archiving
   label: filecoin archiving
   create: all
-  match: "**/*"  
+  match: "**/*"
 - type: directory
   path: docs/space-daemon
   label: space daemon
