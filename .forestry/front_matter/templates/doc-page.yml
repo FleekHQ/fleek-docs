@@ -18,11 +18,11 @@ pages:
 - docs/hosting/site-deployment.md
 - docs/hosting/troubleshooting.md
 - docs/hosting/domain-management.md
-- docs/dfinity-hosting/overview.md
-- docs/dfinity-hosting/site-deployment.md
-- docs/dfinity-hosting/troubleshooting.md
-- docs/dfinity-hosting/domain-management.md
-- docs/dfinity-hosting/dfinity-gateway-proxy.md    
+- docs/internet-computer-hosting/overview.md
+- docs/internet-computer-hosting/site-deployment.md
+- docs/internet-computer-hosting/troubleshooting.md
+- docs/internet-computer-hosting/domain-management.md
+- docs/internet-computer-hosting/ic-gateway-proxy.md    
 - docs/index.md
 - docs/filecoin-archiving/overview.md
 - docs/space-daemon/examples.md

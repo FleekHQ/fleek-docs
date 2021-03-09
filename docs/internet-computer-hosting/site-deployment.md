@@ -8,6 +8,11 @@ Deploying a static site to DFINITY's Internet Computer on Fleek is as easy as it
 
 With our GitHub integration there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on DFINITY's Internet Computer accordingly.**
 
+### An Alpha Product
+It's important to note that this is an **Alpha product**, which we are building on top of the Internet Computer's Mainnet Alpha. It is an experimental and early version that will help anyone test and build sites, apps or Dapps on the Internet Computer, in a realistic environment with cycles, in preparation for the Mainnet Beta release.
+
+When Mainnet Beta genesis arrives, all sites on the Internet Computer with Fleek will be migrated and redeployed to the Beta.
+
 ## How Does Fleek Host Static Sites on the Internet Computer?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
 
