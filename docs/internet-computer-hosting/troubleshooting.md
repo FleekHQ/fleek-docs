@@ -4,13 +4,13 @@ date: "1"
 ---
 # Troubleshooting
 
-## Dfinity-specific Limitations and Common Issues
+## Internet Computer-specific Limitations and Common Issues
 ### File Size and Canister Storage Limit
-Currently, there is a temporary file size and storage limitation involved in Dfinity canisters. There is an approximate 2.5GB total canister storage limit (meaning, your entire repository can't go above that number).
+Currently, there is a temporary file size and storage limitation involved in Internet Computer canisters. There is an approximate 2.5GB total canister storage limit (meaning, your entire repository can't go above that number).
 
 Secondly, there is a 2MB per-file size limit, independently of the total storage utilized on the canister. Usually, this doesn't affect **static sites**. However, it might affect files included and utilized in the website, such as **images, videos, gifs, audio**, or any file with tendency to go above 1MB. Media, naturally, is the most affected.
 
-To bypass this issue, you can **host and store files in Fleek's IPFS storage** and embed them into your Dfinity hosted site with their public URL. View our Storage [(documentation)](https://docs.fleek.co/storage/storage-app/) for more information.
+To bypass this issue, you can **host and store files in Fleek's IPFS storage** and embed them into your IC hosted site with their public URL. View our Storage [(documentation)](https://docs.fleek.co/storage/storage-app/) for more information.
 
 ## Build Troubleshooting Tips
 

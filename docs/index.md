@@ -10,7 +10,7 @@ Welcome to the Fleek documentation. Whether you are an expert or an absolute beg
 
 Fleek makes it easy to build on Open Web protocols and a base layer infrastructure powered by them. Build and host your sites, apps, Dapps, and other services on trustless, permissionless, and open technologies focused on creating user-controlled, encrypted, private, p2p experiences easily. Build on the New Internet, and take the road to Web 3.0.
 
-Packaging Open Web protocols like Dfinity, IPFS, Filecoin, Ethereum, GunDB, ENS, and more, in an ever-shifting stack of technologies that provide technical guarantees, no promises or trust isssues.
+Packaging Open Web protocols like the Internet Computer, IPFS, Filecoin, Ethereum, GunDB, ENS, and more, in an ever-shifting stack of technologies that provide technical guarantees, no promises or trust isssues.
 
 
 ## Fleek IPFS Hosting
@@ -44,37 +44,37 @@ From local development to global deployment, Fleek is everything you need to hos
 </a>
 </div>
 
-## Fleek Dfinity Site Hosting
+## Fleek Internet Computer Site Hosting
 
-With Fleek, you can seamlessly deploy **static sites** to [Dfinity](https://dfinity.org/). The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on Dfinity's trustless, permissionless, and open infrastructure in a couple clicks.
+With Fleek, you can seamlessly deploy **static sites** to [DFINITY's](https://dfinity.org/) Internet Computer ('IC'). The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on the IC trustless, permissionless, and open infrastructure in a couple clicks.
 
-Furthermore, for the Dfinity ecosystem, we provide the following tools:
+Furthermore, for the Internet Computer's ecosystem, we provide the following tools:
 
- - Fleek Dfinity Gateway
+ - Fleek IC Gateway
  - Proxy/Service Worker Resolving Options
  - Automatic Cycle Management
 
 
 !!! info
 
-    When you deploy a static site to Dfinity via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Dfinity site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, Dfinity supports custom DNS domains, but ENS and other alternatives will be added in the future.
+    When you deploy a static site to the IC via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Internet Computer site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, we supports custom DNS domains, but ENS and other alternatives will be added in the future for IC-hosted sites.
 
 <div class="prev-boxes-list">
-<a href="./dfinity-hosting/site-deployment/" class="prev-box">
-<h5>Deploy to Dfinity</h5>
+<a href="./internet-computer-hosting/site-deployment/" class="prev-box">
+<h5>Deploy to the IC with Fleek</h5>
 <p>Deploy to the Internet Computer</p>
 </a>
-<a href="./dfinity-hosting/site-deployment/#canister-proxy" class="prev-box">
+<a href="./internet-computer-hosting/site-deployment/#canister-proxy" class="prev-box">
 <h5>Canister Proxying</h5>
 <p>Seamless Proxy for the IC or No-middleman with Service Workers</p>
 </a>
-<a href="./dfinity-hosting/dfinity-gateway-proxy/" class="prev-box">
-<h5>Fleek's Dfinity IC Gateway</h5>
-<p>Access Any Canister's Data on Dfinity Over HTTP With Fleek </p>
+<a href="./internet-computer-hosting/ic-gateway-proxy/" class="prev-box">
+<h5>Fleek's Internet Computer Gateway</h5>
+<p>Access Any Canister's Data on IC Over HTTP With Fleek </p>
 </a>
-<a href="./dfinity-hosting/troubleshooting" class="prev-box">
+<a href="./internet-computer-hosting/troubleshooting" class="prev-box">
 <h5>Troubleshooting</h5>
-<p>Common Issues and Fixes for Dfinity-hosted Sites</p>
+<p>Common Issues and Fixes for IC-hosted Sites</p>
 </a>
 </div>
 

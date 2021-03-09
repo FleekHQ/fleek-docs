@@ -2,16 +2,16 @@
 date: "1"
 
 ---
-# Static Site Deployment on Dfinity
+# Static Site Deployment on the Internet Computer
 
-Deploying a static site to Dfinity on Fleek is as easy as it is to do so on IPFS, or the Web 2.0 services you know, but don't love much because of their trust-based or centralized approaches. 
+Deploying a static site to DFINITY's Internet Computer on Fleek is as easy as it is to do so on IPFS, or the Web 2.0 services you know, but don't love much because of their trust-based or centralized approaches. 
 
-With our GitHub integration there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on Dfinity's Internet Computer accordingly.**
+With our GitHub integration there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on DFINITY's Internet Computer accordingly.**
 
-## How Does Fleek Host Static Sites on Dfinity?
+## How Does Fleek Host Static Sites on the Internet Computer?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
 
-When you first build a site on Dfinity through Fleek (on the site's first deployment), Fleek will **create a new canister on the Internet Computer** for you, with the website's content/code/files in it. This is done via the **Dfinity SDK** [(view documentation)](https://sdk.dfinity.org/docs/index.html), as Fleek interacts directly with the networks' native APIs.
+When you first build a site on the Internet Computer (IC) through Fleek (on the site's first deployment), Fleek will **create a new canister on the Internet Computer** for you, with the website's content/code/files in it. This is done via the **DFINITY SDK** [(view documentation)](https://sdk.dfinity.org/docs/index.html), as Fleek interacts directly with the networks' native APIs.
 &nbsp;
 
 &nbsp;
@@ -20,23 +20,23 @@ When you first build a site on Dfinity through Fleek (on the site's first deploy
 ![](imgs/flow.png)
 &nbsp;
 
-Once your canister and first deployment is set, and your site is live, Fleek will update the content of that canister **upon each deployment** automatically. Meaning you will have one assigned front-end canister for each site you push to the Dfinity's Internet Computer.
+Once your canister and first deployment is set, and your site is live, Fleek will update the content of that canister **upon each deployment** automatically. Meaning you will have one assigned front-end canister for each site you push to the DFINITY Internet Computer.
 
 !!! info
 
-    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit Dfinity canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
+    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
 
-With Fleek's [Dfinity IC Gateway](https://docs.fleek.co/dfinity-hosting/dfinity-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
+With Fleek's [Internet Computer Gateway](https://docs.fleek.co/internet-computer-hosting/ic-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
 
-This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for Dfinity resolving on applications/websites that could help eliminate the need for bridges.
+This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for the IC resolving on applications/websites that could help eliminate the need for bridges.
 
-## Deploy a Static Site to Dfinity
+## Deploy a Static Site to the Internet Computer
 
 ### 1) Use the Fleek Native GitHub Integration
 
 ![](imgs/fleek-github.png)
 
-Visit the Hosting tab and **add a new site** to begin the process. **First, you will need to link your GitHub account** and define the repositories that Fleek will have access to for you to select from and deploy to Dfinity.
+Visit the Hosting tab and **add a new site** to begin the process. **First, you will need to link your GitHub account** and define the repositories that Fleek will have access to for you to select from and deploy to the IC.
 
 You will then select the proper repository where your static site is in, and the branch (if multiple are available) that will be used for deploying your site.
 
@@ -44,17 +44,17 @@ You will then select the proper repository where your static site is in, and the
 
 You will need to have a repository ready with static site public directory (most Jamstack frameworks are supported), and set the build settings. It is set and forget, so once your site is built and configured, you will benefit from **continuous deployments**. Just push your changed to the proper branch on GitHub, and done!
 
-### 2) Select Dfinity as the Deployment Location
-![](imgs/dfinity-dropdown.png)
+### 2) Select Internet Computer as the Deployment Location
+![](imgs/icdrop.png)
 
-Got a repo and branch ready? Cool! Now, you will have to pick where you want to host your website. Dfinity, or IPFS. Open the dropdown menu and select Dfinity (should be the default option) and hit next.
+Got a repo and branch ready? Cool! Now, you will have to pick where you want to host your website. Internet Computer, or IPFS. Open the dropdown menu and select Internet Computer and hit next.
 
-Remember that when deploying to Dfinity, you are deploying to the Internet Computer computational blockchain. This is a decentralized and trustless environment that doesn't depend on Fleek. 
+Remember that when deploying to the IC, you are deploying to the Internet Computer computational blockchain. This is a decentralized and trustless environment that doesn't depend on Fleek. 
 
 IPFS, on the other hand, is a distributed node environment that provides a user-controlled and performant location for sites, but it does depend on Fleek. Their perks and different, and both represent different approaches to Open Web hosting!
 
 ### 3) Configure the Deployment - Build Parameters
-Fleek handles build parameters equally across Dfinity and IPFS. First, it will try to autodetect the site's framework and apply the standard build parameters.
+Fleek handles build parameters equally across the IC and IPFS. First, it will try to autodetect the site's framework and apply the standard build parameters.
 
 **However in some cases** you might need to add the parameters manually (or you might want to customize them further). **Don't worry if you mistakenly place a wrong parameter**, these can be changed both here, and after the deployment in the site's **build settings.**
 
@@ -75,12 +75,12 @@ Below are the build parameters which you can modify.
 - `Specify Docker Images`: Customize the docker image to fit your own needs/dependencies, or let Fleek auto-detect it
 
 ## Canister Proxy
-With Fleek, you have **two different options** when it comes to Dfinity canister static site hosting resolving. 
+With Fleek, you have **two different options** when it comes to Internet Computer canister static site hosting resolving. 
 
-![](imgs/proxying.png)
+![](imgs/canisterpro.png)
 
 - Using Fleek's Proxy as intermediary (middleman, no loading screen)
-- Using Service Workers to go directly to Dfinity (no middleman, loading screen)
+- Using Service Workers to go directly to the IC (no middleman, loading screen)
 
 ### Using the Proxy versus the Service Worker
 Choosing one or another is a matter of preference. Do you want a seamless experience, but that depends on a middleman; or can you accept a change in the experience, but then decentralize further your resolving?
@@ -88,17 +88,17 @@ Choosing one or another is a matter of preference. Do you want a seamless experi
 ![](imgs/service-worker.jpeg)
 
 #### **The Fleek Proxy**
-If you choose to **use Fleek as a proxy**, Fleek will use its Dfinity gateway to **act as a middleman** between users, and your static site canister on the Internet Computer, translating their requests. This is the default option, since it provides the most seamless experience for users and doesn't involve a Dfinity loading screen. However, this option does depend on Fleek's servers, or Fleek itself, as a middleman.
+If you choose to **use Fleek as a proxy**, Fleek will use its Internet Computer gateway to **act as a middleman** between users, and your static site canister on the Internet Computer, translating their requests. This is the default option, since it provides the most seamless experience for users and doesn't involve an IC loading screen. However, this option does depend on Fleek's servers, or Fleek itself, as a middleman.
 
 #### **Service Workers**
-The alternative is to use **Service Workers** to connect to Dfinity directly. If you select this option, users will interact **once with Fleek´s gateway**, to receive a bootstrap script that installs a service worker and reloads their page, showing a quick animated loading screen (for a very few seconds). 
+The alternative is to use **Service Workers** to connect to the Internet Computer directly. If you select this option, users will interact **once with Fleek´s gateway**, to receive a bootstrap script that installs a service worker and reloads their page, showing a quick animated loading screen (for a very few seconds). 
 
 ![](imgs/loading.gif)
 
-Once the Service Worker is installed, all of the user's requests will communicate directly with Dfinity's Internet Computer and your canister, **and no loading screen will be present**, that only happens once when the service worker is registered in their browser. This option **doesn't rely on Fleeks servers constantly**.
+Once the Service Worker is installed, all of the user's requests will communicate directly with the Internet Computer and your canister, **and no loading screen will be present**, that only happens once when the service worker is registered in their browser. This option **doesn't rely on Fleeks servers constantly**.
 
 ### Bots, Crawlers, and Other Non-human Requests
-To ensure your static sites on Dfinity are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example) **Fleek handles all bot requests through the Proxy and our Dfinity/IC gateway**.
+To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example) **Fleek handles all bot requests through the Proxy and our IC Gateway**.
 
 
 
@@ -148,9 +148,9 @@ If you can’t find a suitable Docker image for your project, you can always bui
 
 ## Common Website Frameworks
 
-When you define the publish directory, if it is not automatically set, you can use this list of popular frameworks as a reference of the usual commands and public directory. You can find more guides on popular frameworks here [(hosting tutorials and guides).](https://sdk.dfinity.org/docs/index.html) Frameworks and build settings work **exactly the same** across IPFS/Dfinity.
+When you define the publish directory, if it is not automatically set, you can use this list of popular frameworks as a reference of the usual commands and public directory. You can find more guides on popular frameworks here [(hosting tutorials and guides).](https://sdk.dfinity.org/docs/index.html) Frameworks and build settings work **exactly the same** across IPFS/IC.
 
-All frameworks guides can be applied to both environments, the only difference being the moment you select the deployment location, where in this case you select Dfinity. 
+All frameworks guides can be applied to both environments, the only difference being the moment you select the deployment location, where in this case you select the Internet Computer. 
 
 | Framework          | Docker Image           | Build Command                       | Public Directory | Additional documentation |
 |--------------------|------------------------|-------------------------------------|------------------|------------------|
@@ -188,7 +188,7 @@ All these fields are optional:
 - `image` public docker image, default to node:slim
 - `command` no command is executed by default
 - `baseDir` build command is executed in this directory, root directory is used by default
-- `publicDir` this directory is uploaded to Dfinity, `baseDir` is used by default
+- `publicDir` this directory is uploaded to the Internet Computer, `baseDir` is used by default
 - `environment` key/value object of environment variables
 
 If you use `baseDir = /frontend` and `publicDir = /dist`, published path is `/frontend/dist`. If you need to publish directory above or next to your `baseDir`, you can use relative path `publicDir = ../../dist`.

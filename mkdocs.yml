@@ -25,12 +25,12 @@ nav:
     - Site Deployment: hosting/site-deployment.md
     - Domain Management: hosting/domain-management.md
     - Troubleshooting: hosting/troubleshooting.md
-  - Dfinity Hosting:
-    - Overview: dfinity-hosting/overview.md
-    - Site Deployment: dfinity-hosting/site-deployment.md
-    - Domain Management: dfinity-hosting/domain-management.md
-    - Dfinity Gateway & Proxying: dfinity-hosting/dfinity-gateway-proxy.md    
-    - Troubleshooting: dfinity-hosting/troubleshooting.md  
+  - Internet Computer Hosting:
+    - Overview: internet-computer-hosting/overview.md
+    - Site Deployment: internet-computer-hosting/site-deployment.md
+    - Domain Management: internet-computer-hosting/domain-management.md
+    - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
+    - Troubleshooting: internet-computer-hosting/troubleshooting.md  
   - Storage:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
