@@ -28,11 +28,6 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: docs/fleek-cli
-  label: fleek cli
-  create: all
-  match: "**/*"  
-- type: directory
   path: docs/space-daemon
   label: space daemon
   create: all
