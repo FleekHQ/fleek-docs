@@ -36,6 +36,10 @@ nav:
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
+  - Fleek CLI:
+    - Overview: fleek-cli/overview.md  
+    - Getting Started: fleek-cli/getting-started.md  
+    - GitHub Actions: fleek-cli/github-actions.md  
   - Filecoin Archiving:
     - Overview: filecoin-archiving/overview.md  
   - Space Daemon:
