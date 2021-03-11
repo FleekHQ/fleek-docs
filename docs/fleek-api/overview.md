@@ -11,19 +11,19 @@ The Fleek API is a simple GraphQL API that exposes **Hosting** functionalities t
 The API is accessible at [https://api.fleek.co/graphql](https://api.fleek.co/graphql) and requires an API Key to authenticate yourself. Right now you can use the API's schema to navigate and learn all available queries and mutations, we will expose a GraphQL playground in the near future as an alternative to this.
 
 <div class="prev-boxes-list">
-  <a href="https://docs.fleek.co/fleek-api/schema" class="prev-box">
+  <a href="https://docs.fleek.co/fleek-api/schema/" class="prev-box">
     <h5>GraphQL Schema</h5>
     <p>View All Queries and Mutations</p>
   </a>
-  <a href="#hosting-api-key" class="prev-box">
+  <a href="#hosting-api-keys" class="prev-box">
     <h5>API Keys</h5>
     <p>Generating an API Key</p>
   </a>
-  <a href="#authenticatio" class="prev-box">
+  <a href="#authentication" class="prev-box">
     <h5>Authentication</h5>
     <p>Authenticating Against the API</p>
   </a>
-    <a href="#query-examples-and-uses-cases-for-the-ap" class="prev-box">
+    <a href="#query-examples-and-uses-cases-for-the-api" class="prev-box">
     <h5>Query Examples </h5>
     <p>Fetch Data, Trigger Deploys</p>
   </a>
