@@ -30,8 +30,15 @@ The API is accessible at [https://api.fleek.co/graphql](https://api.fleek.co/gra
 </div>
 
 ---
-## API Keys
-To authenticate the API, you need to generate an API Key for your team by going to the settings screen of the corresponding team. Generate a Sites API Key by going to your [Fleek account](https://fleek.co), and visit the settings menu where you will find the Key Generator.
+## Hosting API Keys
+To authenticate the API, you need to generate an API Key for your team by going to the settings screen of the corresponding team. 
+
+Generate a Sites API Key by going to your [Fleek account](https://fleek.co), and visit the settings menu where you will find the Hosting Api Key Generator.
+![](imgs/settingsapi.gif)
+
+Here you will find the **Hosting API Key** generator, which you can use to create several different Hosting keys for your different projects or implementations. Generate a new one, and save it for the next step.
+
+![](imgs/apikey.gif)
 
 ## Authentication
 To authenticate against the API, pass your API Key as the `Authorization` header to the request, this will be use to authenticate the request against the team the key was generated for.
