@@ -6,10 +6,11 @@ date: "1"
 
 ![](imgs/fleekcli.png)
 
-The Fleek CLI is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **hosting**  products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
+The Fleek API is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **hosting**  products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
 
 ### **Deployment Location**
-> Currently IPFS is supported only for hosting deployments. For users looking to hosting on the Internet Computer, we recommend either using our Web UI (fleek.co) for a simple workflow, or DFINITY'S command line environment [(DFX)](https://sdk.dfinity.org/docs/developers-guide/cli-reference.html) as it supports further important customization related to your deployment on the Internet computer.
+> Currently IPFS is supported only for hosting deployments. For users looking to host on the Internet Computer, we recommend either using our Web UI (fleek.co) for a simple workflow, or DFINITY'S command line environment [(DFX)](https://sdk.dfinity.org/docs/developers-guide/cli-reference.html) as it supports further important customization related to your deployment on the Internet computer.
+---
 
 <div class="prev-boxes-list">
   <a href="#fleek-cli-overview" class="prev-box">
@@ -18,14 +19,23 @@ The Fleek CLI is a command line interface that allows you to interact and contro
   </a>
   <a href="#getting-started-with-the-fleek-cli" class="prev-box">
     <h5>Getting Started</h5>
-    <p>Start Using the CLI</p>
+    <p>Install the CLI</p>
+  </a>
+    <a href="#sites" class="prev-box">
+    <h5>Sites </h5>
+    <p>Deploy from Local</p>
+  </a>
+    <a href="#storage" class="prev-box">
+    <h5>Storage</h5>
+    <p>Use Fleek Storage</p>
   </a>
 </div>
 
 ## Fleek CLI Overview
-The Fleek CLI currently encompasses two main areas of Fleek.
+The Fleek CLI currently encompasses two main areas of Fleek:
+
 - Hosting
-- API key generation.
+- API key generation
 
 ### Hosting
 With the CLI, you can access Fleek's hosting products and deployment pipelines directly from your terminal, and open up new alternative use cases and workflows than the traditional flow we provide via our UI and web application.

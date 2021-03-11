@@ -25,8 +25,9 @@ pages:
 - docs/internet-computer-hosting/ic-gateway-proxy.md    
 - docs/index.md
 - docs/fleek-cli/overview.md
-- docs/fleek-cli/getting-started.md
 - docs/fleek-cli/github-actions.md
+- docs/fleek-api/overview.md
+- docs/fleek-api/schema.md
 - docs/filecoin-archiving/overview.md
 - docs/space-daemon/examples.md
 - docs/space-daemon/getting-started.md
