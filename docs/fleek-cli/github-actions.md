@@ -8,7 +8,7 @@ date: "1"
 
 ## Using Custom GitHub Actions
 
-You can use custom GitHub actions if you want to replace the CLI's workflow that uses the ``site:deploy`` call, for your own GitHub CI. This assumes you have a an existing repository codebase that you would like to deploy on Fleek. The flow would be as follows:
+You can use custom GitHub actions if you want to replace the CLI's workflow that uses the ``site:deploy`` call, for your own GitHub CI. This assumes you have an existing repository codebase that you would like to deploy on Fleek. The flow would be as follows:
 
 1. You run the CLI's ``site:init`` call on a built repository to create the necessary .fleek.json config file.
 2. The updated, built, and initialized code is then pushed to GitHub to reflect changes.
