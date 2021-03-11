@@ -20,7 +20,7 @@ The Fleek CLI is a command line interface that allows you to interact and contro
     <h5>Getting Started</h5>
     <p>Start Using the CLI</p>
   </a>
-
+</div>
 
 ## Fleek CLI Overview
 The Fleek CLI currently encompasses two main areas of Fleek.
