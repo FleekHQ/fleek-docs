@@ -9,6 +9,7 @@ date: "1"
 The Fleek API is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **hosting**  products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
 
 ### **Deployment Location**
+
 > Currently IPFS is supported only for hosting deployments. For users looking to host on the Internet Computer, we recommend either using our Web UI (fleek.co) for a simple workflow, or DFINITY'S command line environment [(DFX)](https://sdk.dfinity.org/docs/developers-guide/cli-reference.html) as it supports further important customization related to your deployment on the Internet computer.
 ---
 

@@ -31,7 +31,7 @@ nav:
     - Domain Management: internet-computer-hosting/domain-management.md
     - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
     - Troubleshooting: internet-computer-hosting/troubleshooting.md  
-  - Storage:
+  - Fleek Storage:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
