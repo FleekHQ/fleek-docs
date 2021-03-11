@@ -4,7 +4,7 @@ date: "1"
 ---
 
 
-![](imgs/fleekcli.png)
+![](imgs/api.png)
 
 ## Fleek's API GraphQL Schema
 

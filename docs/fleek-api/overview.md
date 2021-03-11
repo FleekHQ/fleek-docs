@@ -4,7 +4,7 @@ date: "1"
 ---
 
 
-![](imgs/fleekcli.png)
+![](imgs/api.png)
 
 The Fleek API is a simple GraphQL API that exposes **Hosting** functionalities to manage sites in the Fleek platform, fetch data from them, or trigger new deployments.
 

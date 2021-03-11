@@ -4,7 +4,7 @@ date: "1"
 ---
 
 
-![](imgs/fleekcli.png)
+![](imgs/deploy-action.png)
 
 ## Using Custom GitHub Actions
 
