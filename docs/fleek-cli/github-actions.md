@@ -8,7 +8,14 @@ date: "1"
 
 ## Using Custom GitHub Actions
 
-TBD
+You can use custom GitHub actions if you want to replace the CLI's workflow that uses the ``site:deploy`` call, for your own GitHub CI. This assumes you have a an existing repository codebase that you would like to deploy on Fleek. The flow would be as follows:
+
+1. You run the CLI's ``site:init`` call on a built repository to create the necessary .fleek.json config file.
+2. The updated, built, and initialized code is then pushed to GitHub to reflect changes.
+3. You will have a previously setup GitHub action that executes the equivalent of the CLI's ``site:deploy`` call.
+4. Then, upon push or your set up trigger, the GitHub Action will deploy your site to Fleek.
+
+You can create your own GitHub Actions with any necessary additions to the sample we shared below, or use that sample itself (Deploy Action), available on the marketplace already.
 
 ## Sample Action: Deploy Action
 We created a sample GitHub Action, our own Deploy Action! Useful for deploying your configured Fleek site publish directory. Deployed and ready on GitHub's action marketplace.
