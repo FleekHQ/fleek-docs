@@ -166,7 +166,7 @@ The IPFS hash of the file can be accessed through the HTTP Headers of the reques
 
 Fleek Storage leverages the power of IPFS. As such, all files in Fleek Storage are on IPFS and have a corresponding IPFS hash, also called a CID.
 
-Fleek will insert the ifps hash of files in the http headers of the `putObject` command, used for [file upload](/storage/storage-aws-s3-integration/#uploading-files).
+Fleek will insert the ipfs hash of files in the http headers of the `putObject` command, used for [file upload](/storage/storage-aws-s3-integration/#uploading-files).
 
 By default, we give a v1 base32 CID. However, users can also retrieve the v0 CID which is shorter and is therefore cheaper to store on public blockchains.
 

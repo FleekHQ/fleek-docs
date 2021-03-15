@@ -33,7 +33,7 @@ Folder URL
 File URL
 ![](imgs/fleek-file-url.png)
 
-Viewing on the IPFS gateway will show the immutible IPFS file of the content within the URL.
+Viewing on the IPFS gateway will show the immutable IPFS file of the content within the URL.
 
 ![](imgs/file-verify-ipfs.png) 
 

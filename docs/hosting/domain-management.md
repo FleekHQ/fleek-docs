@@ -20,7 +20,7 @@ After adding the custom domain, it will appear in the site's settings under `Dom
 
 The domain must be verified before it is linked to the site. To verify, click on the `Check DNS configuration` button. This will make a modal appear containing instructions to add the domain.
 Follow the instructions in the modal. The steps to update the records might be slightly different depending on your domain name provider.
-We then must wait for the domain to be propagated before clicing on `Verify DNS configuration` on the modal.
+We then must wait for the domain to be propagated before clicking on `Verify DNS configuration` on the modal.
 
 To verify that the DNS is indeed propagated before clicking on the button, you can use a tool such as <https://dnschecker.org/>
 

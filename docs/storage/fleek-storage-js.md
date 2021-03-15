@@ -4,7 +4,7 @@ date: "1"
 ---
 Fleek provides everything you need to securely store files on IPFS and distribute them for the web applications.
 
-Fleek Storage JS is an SDK that will allow you to easily interact programatically with Fleek Storage. It allows getting file contant, hash, publicUrl, and uploading files.
+Fleek Storage JS is an SDK that will allow you to easily interact programatically with Fleek Storage. It allows getting file content, hash, publicUrl, and uploading files.
 
 ## Getting the API key
 
