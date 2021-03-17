@@ -16,6 +16,7 @@ We have several guides on our [blog](https://blog.fleek.co) explaining how to de
 |  NextJS Framework	|   <a href="https://blog.fleek.co/posts/fleek-nextJS" target="_blank">Go to guide</a>	| Deploy a site with NextJS! |
 |  React Framework	|   <a href="https://blog.fleek.co/posts/fleek-create-react-app" target="_blank">Go to guide</a>	| Learn how to deploy a React app. Great for frontends of all kinds, commercial projects, side projects, hackathon projects, etc... |
 |  Forestry CMS + Fleek 	|   <a href="https://blog.fleek.co/posts/make-website-without-coding-cms" target="_blank">Go to guide</a>	| Deploy a site with the Forestry CMS. You can have a great blog, personal sites, etc... without having to write a single line of code |
+|  Webflow Static + Fleek 	|   <a href="https://blog.fleek.co/posts/hosting-static-webflow-sites-on-fleek/" target="_blank">Go to guide</a>	| Learn how to transform your Webflow static exports into a Fleek-ready site! |
 
 
 ### Videos
