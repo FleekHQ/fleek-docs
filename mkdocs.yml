@@ -31,11 +31,17 @@ nav:
     - Domain Management: internet-computer-hosting/domain-management.md
     - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
     - Troubleshooting: internet-computer-hosting/troubleshooting.md  
-  - Storage:
+  - Fleek Storage:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
+  - Fleek CLI:
+    - Overview: fleek-cli/overview.md 
+    - GitHub Actions: fleek-cli/github-actions.md
+  - Fleek API:
+    - Overview: fleek-api/overview.md 
+    - Schema: fleek-api/schema.md        
   - Filecoin Archiving:
     - Overview: filecoin-archiving/overview.md  
   - Space Daemon:

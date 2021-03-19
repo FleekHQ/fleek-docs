@@ -23,6 +23,16 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: docs/fleek-cli
+  label: fleek cli
+  create: all
+  match: "**/*"
+- type: directory
+  path: docs/fleek-api
+  label: fleek api
+  create: all
+  match: "**/*"  
+- type: directory
   path: docs/filecoin-archiving
   label: filecoin archiving
   create: all
