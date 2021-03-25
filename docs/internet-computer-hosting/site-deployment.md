@@ -35,7 +35,14 @@ With Fleek's [Internet Computer Gateway](https://docs.fleek.co/internet-computer
 
 This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for the IC resolving on applications/websites that could help eliminate the need for bridges.
 
-## Deploy a Static Site to the Internet Computer
+### Other resources: IC Deploy GitHub Action 
+Aside from our Internet Computer hosting feature, we are working on releasing several resources to simplify development on DFINITY's IC and dev work with canisters, independently of the Fleek platform and its products.
+
+Our team has released the [**IC Deploy Action**](https://github.com/FleekHQ/IC-Deploy-Action), a GitHub Action that anyone can use to integrate GitHub's CI/CD deployments to your canister development pipeline. It wraps DFX commands and uses GitHub secrets so that you can deploy and push changes to canisters on the Internet Computer **upon commits to your repository**.
+
+This works for any type of canister, not just FE asset canisters, and is meant to help make IC development a little more seamless, just like Fleek's automatic FE hosting on the Internet Computer is.
+
+## Deploy a Static Site to the Internet Computer with Fleek
 
 ### 1) Use the Fleek Native GitHub Integration
 
