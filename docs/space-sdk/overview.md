@@ -35,7 +35,7 @@ The Space SDK currently includes the following API:
 |-:	|-	|-	|
 | Users 	|  Key-pair based identity creation, and challenge authentication.	| Textile Users API
 | Storage 	|  File, directory, and bucket creation/listing.	| IPFS / Textile / GunDB
-| Sharing 	|  **Coming soon!**	|
+| Sharing 	|  Sharing specific files 	| Textile
 
 ## The Space SDK versus the Space Daemon
 The Space SDK is the next evolution of our other open source library, the [Space Daemon](https://github.com/FleekHQ/space-daemon/), which is a desktop-focused Go library. They both have different purposes, but enable similar functionalities.
