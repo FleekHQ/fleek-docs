@@ -60,3 +60,9 @@ Adding a hash router in React: <https://reactrouter.com/web/api/HashRouter>
     * This occurs when the number of builds across all of our customers exceeds our current network capacity. When this happens builds will be queued as they come in and be deployed when other builds finish
 * Team queue
     * This occurs when the number of total builds across all of your sites exceeds the build limit. You can increase your concurrent builds by upgrading your account or by contacting support. If you have this issue, you can cancel other builds that may not be as important.
+
+## Adding 404 errors
+
+If no file is found, IPFS will search for a file called `ipfs-404.html` in the requested path. This file can be used for showing 404 errors or redirecting.
+See the following blog post for more information:
+<https://blog.ipfs.io/2020-06-26-go-ipfs-0-6-0/>
