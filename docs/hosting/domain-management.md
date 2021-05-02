@@ -6,6 +6,10 @@ date: "1"
  Upon site creation, Fleek will automatically assign a domain name in the following way: [RANDOM_NAME].on.fleek.co.
  Of course, we allow users to point the site to a custom domain of their choice.
 
+ !!! info
+
+    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. If you set up your DNS domain before May 2021, you can migrate to this new configuration. See the section "Migrating to New DNS Configuration".
+
 #### Adding a Custom Domain 
 
 ![](imgs/add-custom-domain.png)
@@ -28,6 +32,29 @@ To verify that the DNS is indeed propagated before clicking on the button, you c
 
 If the verify dns was successfull, the domain name will become blue.
 ![](imgs/finished-add-domain.png)
+
+## Migrating to New DNS Configuration (DDOS Protected, Faster)
+If you setup your Fleek site/app with a DNS domain before May 2021, you are using Fleek's old infrastructure with HAProxy.
+
+Since then, we have upgraded and migrated to a new infrastructure that uses BunnyCDN to provide users utilizing DNS domains with scalable and automatic DDOS/HTTP attack protection, perma-caching, and faster auto-routing for high availability.
+
+To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
+
+(Image)
+
+Once inside a site's detail view, visit the SETTINGS tab and there, look for the Domain Management tab on the vertical sub-menu.
+
+(Image)
+
+There, you will see the Custom Domains section, showing the Custom DNS Domain name you set up and connected to your Fleek site/app. Click on the "Upgrade DNS Button" to re-configure your site.
+
+(Image)
+
+In a nutshell, you will need to update your CNAME record on your DNS domain. This is because your custom domains needs to point to Fleek's new upgraded infrastructure.
+
+(Image)
+
+Once you have updated your CNAME record on your DNS provider, come back to Fleek to Verify the DNS Configuration. That is all! Your site will be updated to our new faster, and safer, DNS configuration.
 
 ### ENS Domains
 
