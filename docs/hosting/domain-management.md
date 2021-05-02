@@ -6,9 +6,11 @@ date: "1"
  Upon site creation, Fleek will automatically assign a domain name in the following way: [RANDOM_NAME].on.fleek.co.
  Of course, we allow users to point the site to a custom domain of their choice.
 
- !!! info
+!!! info
 
-    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. If you set up your DNS domain before May 2021, you can migrate to this new configuration. See the section "Migrating to New DNS Configuration".
+    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME records.
+
+    If you set up your DNS domain before May 2021, you can migrate to this new configuration. See the section "Migrating to New DNS Configuration".
 
 #### Adding a Custom Domain 
 
@@ -36,7 +38,9 @@ If the verify dns was successfull, the domain name will become blue.
 ### Migrating to New DNS Configuration (DDOS Protected, Faster)
 If you setup your Fleek site/app with a DNS domain before May 2021, you are using Fleek's old infrastructure with HAProxy.
 
-Since then, we have upgraded and migrated to a new infrastructure that uses BunnyCDN to provide users utilizing DNS domains with scalable and automatic DDOS/HTTP attack protection, perma-caching, and faster auto-routing for high availability.
+Since then, we have upgraded and migrated to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with scalable and automatic DDOS/HTTP attack protection, perma-caching, and faster auto-routing for high availability.
+
+**Important requirement**: This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so before trying to migrate, or move to a new provider if needed.
 
 To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
 
