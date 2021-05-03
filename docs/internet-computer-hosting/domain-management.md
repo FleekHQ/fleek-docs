@@ -51,7 +51,7 @@ Since then, we have upgraded and migrated to a new infrastructure that uses Bunn
 - Perma-caching
 - Faster auto-routing
 
-**Important requirement**: This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so before trying to migrate, or move to a new provider if needed.
+**Important requirement**: This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to migrate**, or move to a new provider if needed.
 
 To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
 
@@ -64,7 +64,7 @@ Once inside a site's detail view, visit the SETTINGS tab and there, look for the
 
 There, you will see the Custom Domains section, showing the Custom DNS Domain name you set up and connected to your Fleek site/app. Click on "Upgrade DNS Configuration" to re-configure your site.
 
-In a nutshell, you will need to update your ANAME record on your DNS domain. This is because your custom domains needs to point to Fleek's new upgraded infrastructure.
+In a nutshell, you will need to update your ANAME record on your DNS domain. This is because your custom domains needs to point to Fleek's new upgraded infrastructure, which doesn't use CNAME records anymore.
 
 Once you have updated your records on your DNS provider, come back to Fleek to Verify the DNS Configuration. 
 
