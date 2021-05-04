@@ -38,10 +38,11 @@ If the verify dns was successfull, the domain name will become blue.
 
 ![](imgs/finished-add-domain.png)
 
-#### Upgrading to New DNS Configuration (DDOS Protected)
-If you setup your Fleek site/app with a DNS domain before May 2021, you are using Fleek's old infrastructure with HAProxy.
+#### Upgrading to New DNS Configuration
 
-Since then, we have upgraded and migrated to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
+If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy.
+
+Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
 
 - Automatic DDOS/HTTP attack protection
 - Perma-caching
@@ -53,7 +54,6 @@ To migrate your site log into your Fleek account, and do this for every site tha
 
 ![](imgs/dns.gif)
 
-
 Once inside a site's detail view, visit the SETTINGS tab and there, look for the Domain Management tab on the vertical sub-menu.
 
 ![](imgs/dns-space.png)
@@ -62,7 +62,7 @@ There, you will see the Custom Domains section, showing the Custom DNS Domain na
 
 In a nutshell, you will need to update the records on your DNS domain. This is because your custom domains need to point to Fleek's new upgraded infrastructure. 
 
-**Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME**.
+Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME.
 
 **In some providers like Cloudflare**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
 
