@@ -35,9 +35,10 @@ To verify that the DNS is indeed propagated before clicking on the button, you c
 ![](imgs/verifydns.png)
 
 If the verify dns was successfull, the domain name will become blue.
+
 ![](imgs/finished-add-domain.png)
 
-### Upgrading to New DNS Configuration (DDOS Protected)
+#### Upgrading to New DNS Configuration (DDOS Protected)
 If you setup your Fleek site/app with a DNS domain before May 2021, you are using Fleek's old infrastructure with HAProxy.
 
 Since then, we have upgraded and migrated to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
