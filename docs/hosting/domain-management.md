@@ -64,6 +64,8 @@ In a nutshell, you will need to update the records on your DNS domain. This is b
 
 Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME.
 
+**What about DNSLink domains?** Those will continue to point to your Fleek-assigned subdomain and a CNAME record, so keep them that way for now.
+
 **In some providers like Cloudflare**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
 
 ![](imgs/aname1.png)
