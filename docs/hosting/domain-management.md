@@ -8,7 +8,7 @@ date: "1"
 
 !!! info
 
-    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME records.
+    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME.
 
     If you set up your DNS domain before May 2021, you need to migrate to this new configuration before May 31st, where all sites using the legacy proxy/DNS will stop working.
     
@@ -59,7 +59,9 @@ Once inside a site's detail view, visit the SETTINGS tab and there, look for the
 
 There, you will see the Custom Domains section, showing the Custom DNS Domain name you set up and connected to your Fleek site/app. Click on "Upgrade DNS Configuration" to re-configure your site.
 
-In a nutshell, you will need to update your ANAME record on your DNS domain. This is because your custom domains needs to point to Fleek's new upgraded infrastructure, which doesn't use CNAME records anymore.
+In a nutshell, you will need to update the records on your DNS domain. This is because your custom domains needs to point to Fleek's new upgraded infrastructure.
+
+![](imgs/cname.png)
 
 Once you have updated your records on your DNS provider, come back to Fleek to Verify the DNS Configuration. 
 
