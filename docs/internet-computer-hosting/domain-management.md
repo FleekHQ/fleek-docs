@@ -66,11 +66,15 @@ Once inside a site's detail view, visit the SETTINGS tab and there, look for the
 
 There, you will see the Custom Domains section, showing the Custom DNS Domain name you set up and connected to your Fleek site/app. Click on "Upgrade DNS Configuration" to re-configure your site.
 
-In a nutshell, you will need to update the records on your DNS domain. This is because your custom domains needs to point to Fleek's new upgraded infrastructure.
+In a nutshell, you will need to update the records on your DNS domain. This is because your custom domains need to point to Fleek's new upgraded infrastructure. 
 
-![](imgs/cname.png)
+**Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME**.
 
-Once you have updated your records on your DNS provider, come back to Fleek to Verify the DNS Configuration. 
+**In some providers like Cloudflare**, ANAME records are inputted as CNAME, so verify with your provider's documentation first.
+
+![](imgs/aname1.png)
+
+Once you have updated your records on your DNS provider, come back to Fleek to Verify the DNS Configuration once you do so. 
 
 That is all! Your site will be updated to our new faster, and safer, DNS infrastructure.
 
