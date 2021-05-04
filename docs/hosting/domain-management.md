@@ -10,7 +10,7 @@ date: "1"
 
     As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME records.
 
-    If you set up your DNS domain before May 2021, you have to migrate to this new configuration to unlock these features.
+    If you set up your DNS domain before May 2021, you need to migrate to this new configuration before May 31st, where all sites using the legacy proxy/DNS will stop working.
     
     See the section "Upgrading to New DNS Configuration".
 
