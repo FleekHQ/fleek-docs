@@ -58,7 +58,7 @@ There is a difference in how to upgrade your DNS settings depending **whether yo
 
 **Does you DNS provider not support ANAME?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
 
-### Upgrading DNS Configuration (Non Cloudflare Providers)
+#### How to Upgrade (Non Cloudflare Providers)
 
 To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
 
@@ -84,7 +84,7 @@ Once you have updated your records on your DNS provider, come back to Fleek to V
 
 That is all! Your site will be updated to our new faster, and safer, DNS infrastructure.
 
-### Upgrading DNS Configuration (Using Cloudflare as Provider)
+#### How to Upgrade (Using Cloudflare as Provider)
 
 If you are using Cloudflare, as in pointing your domains to their name servers to use Cloudflare's DNS service, you can still upgrade your DNS records to the new DDOS protected infrastructure. 
 
