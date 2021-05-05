@@ -2,7 +2,7 @@
 date: "1"
 
 ---
-### Custom Domains
+## Custom Domains
  Upon site creation, Fleek will automatically assign a domain name in the following way: [RANDOM_NAME].on.fleek.co.
  Of course, we allow users to point the site to a custom domain of their choice.
 
@@ -14,7 +14,7 @@ date: "1"
     
     See the section "Upgrading to New DNS Configuration".
 
-#### Adding a Custom Domain 
+### Adding a Custom Domain 
 
 ![](imgs/add-custom-domain.png)
 
@@ -22,7 +22,7 @@ date: "1"
 2. Enter the domain you would like to add
 3. From here you will either have to confirm that you already own this domain or if you do not own the domain name and that it is available, you can buy it through Fleek.
 
-#### Verifying the Custom Domain
+### Verifying the Custom Domain
 After adding the custom domain, it will appear in the site's settings under `Domain Management` > `Domains`.
 ![](imgs/checkdns.png)
 
@@ -34,13 +34,13 @@ To verify that the DNS is indeed propagated before clicking on the button, you c
 
 ![](imgs/verifydns.png)
 
-If the verify dns was successfull, the domain name will become blue.
+If the verify dns was successful, the domain name will become blue.
 
 ![](imgs/finished-add-domain.png)
 
-#### Upgrading to New DNS Configuration
+## Upgrading to New DNS Configuration
 
-If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy.
+If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy, and will need to update your DNS records. 
 
 Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
 
@@ -48,7 +48,15 @@ Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provi
 - Perma-caching
 - Faster auto-routing
 
-**Important requirement**: This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed.
+There is a difference in how to upgrade your DNS settings depending whether you use Cloudflare as your DNS provider, or not. See the separate sections below.
+
+### Requirements for Upgrading DNS
+
+This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
+
+**Does you DNS provider not support ANAME?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
+
+### How to Upgrade (Non Cloudflare Providers)
 
 To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
 
@@ -66,7 +74,7 @@ Root domain names (space.storage) will ask for an ANAME record, whereas any subd
 
 **What about DNSLink domains?** Those will continue to point to your Fleek-assigned subdomain and a CNAME record, so keep them that way for now.
 
-**In some providers like Cloudflare**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
+**Some providers**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
 
 ![](imgs/aname1.png)
 
@@ -74,18 +82,36 @@ Once you have updated your records on your DNS provider, come back to Fleek to V
 
 That is all! Your site will be updated to our new faster, and safer, DNS infrastructure.
 
-### ENS Domains
+### How to Upgrade (Using Cloudflare as Provider)
+
+If you are using Cloudflare, as in pointing your domains to their name servers to use Cloudflare's DNS service, you can still upgrade your DNS records to the new DDOS protected infrastructure. 
+
+**Follow the instructions above, with these two slight differences:**
+
+1. In Cloudflare, ANAME records need to be set as CNAME records.
+2. You need to turn Orange Cloud OFF (disabling HTTP proxy mode) in Cloudflare for your DNS domains.
+
+If you **don´t turn off the Orange Cloud/Proxy** for your domain when setting your DNS records on Cloudflare, your custom domain will **fail its DNS verification on Fleek**.
+
+To do so, visit the **DNS App** in Cloudflare, and edit your DNS records, there you can **Click the orange cloud on each record** to turn it OFF (Grey).
+
+![](imgs/orange.png)
+
+If you wanted to have that Cloudflare feature on because of its CDN perks and DDOS protection, don't worry, **you will have access to those features through us and BunnyCDN**, which is the reason why we upgraded our DNS configuration.
+
+
+## ENS Domains
 
 You can now easily point an ENS domain to your IPFS site and have the content automatically update for future deployments. Here is how to set up an ENS domain for your site:
 
-#### Deploying
+### Deploying
 
 Once your app is deployed on Fleek, go to the settings page in the left-hand bar menu and click `Domain Management`. Scrolling a bit would land you on the section that says `ENS`
 
 ![](imgs/ens1.png)
 
 
-#### Adding ENS Domain
+### Adding ENS Domain
 
 Click Add ENS to add your ENS domain. Input your domain to verify it and add it. If the domain does not belong to anyone you will be redirected to the [ENS Dashboard](https://app.ens.domains) to buy it.
 
@@ -94,7 +120,7 @@ Click Add ENS to add your ENS domain. Input your domain to verify it and add it.
 
 ![](imgs/ens2.png)
 
-#### Set Fleek as the Controller through the UI
+### Set Fleek as the Controller through the UI
 
 Fleek needs to be a controller of your ENS domain so we can automatically update your domain content hash when a site deployment succeeds. Click the `Set Fleek as Controller` button to set this up.
 
@@ -108,21 +134,21 @@ Finally, clicking on the `Set Fleek as controller` button will trigger a modal t
 
 On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek. 
 
-#### Set Fleek as Controller manually
+### Set Fleek as Controller manually
 The Fleek controller can also be set manually through the official [ENS frontend](https://app.ens.domains), or by interacting directly with the smart contracts.
 
 The value for the controller address must be `0x31166ec8996643A35c2cf8cEbED980e26cd89D06`, which corresponds to the Ethereum address of Fleek's controller.
 
 After manually setting the controller, adding the ENS through the app will work normally, except that Fleek will detect that the controller is already set and will complete the setup without executing an Ethereum transaction.
 
-#### Troubleshooting ENS domains
+### Troubleshooting ENS domains
 * You can quickly test that the ENS domain is correctly synced with the IPFS hash of the current build by appending `.link` after the domain. EG: <https://fleekhq.eth.link>
 
 * You must ensure that your browser is able to resolve ENS domains. You can test this functionality with Fleek's homepage: [fleek.eth/](https://fleek.eth/).
 
 * It's possible the link doesn't immediately work. Most browsers, if not all of them, will redirect the user to an IPFS gateway and it is possible that the content for that IPFS hash has not yet propagated to the gateway. Wait a few minutes if that is the case.
 
-### HNS Domains
+## HNS Domains
 
 With Fleek you can also add [Handshake](https://handshake.org/) (HNS) domain names from the Handshake protocol/blockchain. This alternative to DNS/ENS is a decentralized naming protocol in which you don't buy domains themselves, but Top Level Domains (TLDs) like .domain or .fleek.
 
@@ -130,7 +156,7 @@ With Fleek you can also add [Handshake](https://handshake.org/) (HNS) domain nam
 
 You can then create domains inside those TLDs and use them just like DNS on your Fleek-hosted site, via the HNS flow. To buy a new domain name, go to [Namebase](https://www.namebase.io/).
 
-#### Adding HNS Domains
+### Adding HNS Domains
 
 Visit the `Domain Management` after deploying a site on Fleek, and search for the `HNS` section. HNS works exactly like DNS in terms of the workflow you must complete to link it to your Fleek site:
 
@@ -142,7 +168,7 @@ Visit the `Domain Management` after deploying a site on Fleek, and search for th
 
 If you enter a domain that already has been purchased, you will be asked to confirm if it is yours; if it is not purchased yet, you will have the option to be redirected to Namebase to do so.
 
-#### Configuring Records
+### Configuring Records
 
 Finally, once you add or purchase a new HNS domain, you must do just like with DNS domain names: you need to configure a custom record so that it is properly linked and verified.
 
@@ -162,7 +188,7 @@ If you want, you can also change your **devices' DNS** to point to HNS resolving
 
 For more options, visit [Namebase's guide](https://learn.namebase.io/starting-from-zero/how-to-access-handshake-sites#level-3-dns) detailing all available options by technical level.
 
-### DNSLink
+## DNSLink
 
 DNSLink allows the mapping of a domain name to an IPFS hash. Setting up DNSLink will allow you to use a domain name to access the latest version of your site through IPFS.
 
@@ -170,7 +196,7 @@ For example, accessing [ipfs.io/ipns/fleek.co](https://ipfs.io/ipns/fleek.co/) w
 
 The [IPFS documentation](https://docs.ipfs.io/guides/concepts/dnslink/) extrapolates further on the subject.
 
-#### Setting Up DNSLink
+### Setting Up DNSLink
 The option to set up DNSLink can be accessed by navigating from the site's Settings to Domain Management > Domains > Custom Domains and clicking on the three vertical dots.
 
 ![](imgs/dnslink_setup.png)
