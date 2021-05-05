@@ -54,13 +54,11 @@ Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provi
 - Perma-caching
 - Faster auto-routing
 
-If your domain was added before May 2020, you need to upgrade your legacy DNS configuration to take advantage of this. Furthermore, domains using the previous configuration will stop working by May 31st. 
-
 There is a difference in how to upgrade your DNS settings depending **whether you use Cloudflare as your DNS provider, or not.** See the separate sections below.
 
 #### Requirements for Upgrading DNS
 
-**Important requirement**. This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
+This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
 
 **Does you DNS provider not support ANAME?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
 
