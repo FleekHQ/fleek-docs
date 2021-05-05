@@ -44,21 +44,31 @@ To verify that the DNS is indeed propagated before clicking on the button, you c
 If the verify dns was successfull, the domain name will become blue.
 ![](imgs/finished-add-domain.png)
 
-### Upgrading to New DNS Configuration (DDOS Protected)
-If you setup your Fleek site/app with a DNS domain before May 2021, you are using Fleek's old infrastructure with HAProxy.
+### Upgrading to New DNS Configuration
 
-Since then, we have upgraded and migrated to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
+If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy. 
+
+Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
 
 - Automatic DDOS/HTTP attack protection
 - Perma-caching
 - Faster auto-routing
 
-**Important requirement**: This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to migrate**, or move to a new provider if needed.
+If your domain was added before May 2020, you need to upgrade your legacy DNS configuration to take advantage of this. Furthermore, domains using the previous configuration will stop working by May 31st. 
+
+There is a difference in how to upgrade your DNS settings depending **whether you use Cloudflare as your DNS provider, or not.** See the separate sections below.
+
+#### Requirements for Upgrading DNS
+
+**Important requirement**. This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
+
+**Does you DNS provider not support ANAME?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
+
+### Upgrading DNS Configuration (Non Cloudflare Providers)
 
 To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
 
 ![](imgs/dns.gif)
-
 
 Once inside a site's detail view, visit the SETTINGS tab and there, look for the Domain Management tab on the vertical sub-menu.
 
@@ -68,17 +78,35 @@ There, you will see the Custom Domains section, showing the Custom DNS Domain na
 
 In a nutshell, you will need to update the records on your DNS domain. This is because your custom domains need to point to Fleek's new upgraded infrastructure. 
 
-**Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME**.
+Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME.
 
 **What about DNSLink domains?** Those will continue to point to your Fleek-assigned subdomain and a CNAME record, so keep them that way for now.
 
-**In some providers like Cloudflare**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
+**Some providers**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
 
 ![](imgs/aname1.png)
 
 Once you have updated your records on your DNS provider, come back to Fleek to Verify the DNS Configuration once you do so. 
 
 That is all! Your site will be updated to our new faster, and safer, DNS infrastructure.
+
+### Upgrading DNS Configuration (Using Cloudflare as Provider)
+
+If you are using Cloudflare, as in pointing your domains to their name servers to use Cloudflare's DNS service, you can still upgrade your DNS records to the new DDOS protected infrastructure. 
+
+**Follow the instructions above, with these two slight differences:**
+
+1. In Cloudflare, ANAME records need to be set as CNAME records.
+2. You need to turn Orange Cloud OFF (disabling HTTP proxy mode) in Cloudflare for your DNS domains.
+
+If you **don´t turn off the Orange Cloud/Proxy** for your domain when setting your DNS records on Cloudflare, your custom domain will **fail its DNS verification on Fleek**.
+
+To do so, visit the **DNS App** in Cloudflare, and edit your DNS records, there you can **Click the orange cloud on each record** to turn it OFF (Grey).
+
+![](imgs/orange.png)
+
+If you wanted to have that Cloudflare feature on because of its CDN perks and DDOS protection, don't worry, **you will have access to those features through us and BunnyCDN**, which is the reason why we upgraded our DNS configuration.
+
 
 ## HNS Domains
 
