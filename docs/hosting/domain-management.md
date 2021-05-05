@@ -40,7 +40,7 @@ If the verify dns was successful, the domain name will become blue.
 
 ## Upgrading to New DNS Configuration
 
-If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy. 
+If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy, and will need to update your DNS records. 
 
 Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
 

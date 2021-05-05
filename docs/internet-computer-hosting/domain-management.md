@@ -2,7 +2,7 @@
 date: "1"
 
 ---
-### Custom Domains
+## Custom Domains
  Upon deploying a site on Internet Computer hosted sites/apps, Fleek will automatically assign a domain name in the following way: [CANISTER_ID].ic.fleek.co. For example, it could look like this:
 
  `https://x4ytk-6yaaa-aaaab-qaiqq-cai.ic.fleek.co/`
@@ -44,9 +44,9 @@ To verify that the DNS is indeed propagated before clicking on the button, you c
 If the verify dns was successfull, the domain name will become blue.
 ![](imgs/finished-add-domain.png)
 
-### Upgrading to New DNS Configuration
+## Upgrading to New DNS Configuration
 
-If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy. 
+If you setup your Fleek site/app with a DNS domain before May 2021, you are using our old DNS configuration with HAProxy, and will need to update your DNS records.
 
 Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provide users that utilize DNS domains with CDN & security perks:
 
@@ -56,13 +56,13 @@ Since then, we have upgraded to a new infrastructure that uses BunnyCDN to provi
 
 There is a difference in how to upgrade your DNS settings depending **whether you use Cloudflare as your DNS provider, or not.** See the separate sections below.
 
-#### Requirements for Upgrading DNS
+### Requirements for Upgrading DNS
 
 This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
 
 **Does you DNS provider not support ANAME?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
 
-#### How to Upgrade (Non Cloudflare Providers)
+### How to Upgrade (Non Cloudflare Providers)
 
 To migrate your site log into your Fleek account, and do this for every site that uses a custom DNS domain. Once you're logged in, visit the hosting tab, and click on a site on the list to get started.
 
@@ -88,7 +88,7 @@ Once you have updated your records on your DNS provider, come back to Fleek to V
 
 That is all! Your site will be updated to our new faster, and safer, DNS infrastructure.
 
-#### How to Upgrade (Using Cloudflare as Provider)
+### How to Upgrade (Using Cloudflare as Provider)
 
 If you are using Cloudflare, as in pointing your domains to their name servers to use Cloudflare's DNS service, you can still upgrade your DNS records to the new DDOS protected infrastructure. 
 
