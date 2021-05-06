@@ -29,7 +29,7 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
 !!! info
 
-    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
+    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; This doesn't affect most static websites, but a quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide. This amount might increase with the Internet Computers continuous development.
 
 With Fleek's [Internet Computer Gateway](https://docs.fleek.co/internet-computer-hosting/ic-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
 
