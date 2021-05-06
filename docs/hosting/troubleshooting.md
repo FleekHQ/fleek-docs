@@ -30,6 +30,8 @@ If the app is built using [Create React App](https://create-react-app.dev), addi
 
 Using relative paths in React: <https://create-react-app.dev/docs/deployment/#building-for-relative-paths>
 
+Set up relative URLs for other static-site generators: https://docs.ipfs.io/how-to/websites-on-ipfs/static-site-generators/
+
 ## My single-page application (SPA) breaks when changing routes via an IPFS gatway
 
 IPFS gateways url are formatted in the following manner `ipfs.io/ipfs/$hash`. As such, the SPA might think that the root of the application is `ipfs.io` instead of `ipfs.io/ipfs/$hash`. For this reason, we recommend apps use hash routing to minimize such errors when using an IPFS gateway.
