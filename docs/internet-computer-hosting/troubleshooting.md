@@ -5,6 +5,13 @@ date: "1"
 # Troubleshooting
 
 ## Internet Computer-specific Limitations and Common Issues
+
+### Migrating Site From Alpha Mainnet to Beta Mainnet
+If you originally deploy a static site/app to the Internet Computer's Alpha Mainnet through Fleek, it would have stopped working by now as we migrated to the IC's Beta Mainnet.
+
+Don't worry! It is super easy to redeploy it and get it back live again. Visit the Fleek app, go into the **Hosting Tab** and visit the site you want to redeploy. Once in the site view, visit the **DEPLOYS** tab, and **trigger a new deploy or retrigger the last deployment**. Fleek will rebuild your site and deploy it automatically to Beta Mainnet.
+
+
 ### File Size and Canister Storage Limit
 Currently, there is a temporary file size and storage limitation involved in Internet Computer canisters. There is an approximate 2.5GB total canister storage limit (meaning, your entire repository can't go above that number).
 
