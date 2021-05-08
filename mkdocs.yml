@@ -31,7 +31,7 @@ nav:
     - Domain Management: internet-computer-hosting/domain-management.md
     - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
     - Troubleshooting: internet-computer-hosting/troubleshooting.md  
-   - Domain Management:
+  - Domain Management:
     - Overview: domain-management/overview.md
     - Custom DNS Domains: domain-management/custom-dns-domains.md
     - ENS Domains: domain-management/ens-domains.md
