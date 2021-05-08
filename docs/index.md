@@ -34,14 +34,18 @@ From local development to global deployment, Fleek is everything you need to hos
 <h5>Frameworks</h5>
 <p>Guides and Tutorials on Popular Frameworks</p>
 </a>
-<a href="./hosting/domain-management/#custom-domains" class="prev-box">
-<h5>Custom Domain</h5>
-<p>Add Root/Sub Domains To Your Site</p>
-</a>
-<a href="./hosting/domain-management/#ens-domains" class="prev-box">
-<h5>ENS Domains</h5>
-<p>Add ENS Domains To Your Site</p>
-</a>
+<a href="https://docs.fleek.co/domain-management/custom-dns-domains/" class="prev-box">
+    <h5>Domain management</h5>
+    <p>Add Root/Sub Domains To Your Site</p>
+  </a>
+<a href="https://docs.fleek.co/domain-management/ens-domains/" class="prev-box">
+    <h5>ENS Domains</h5>
+    <p>Add ENS Domains To Your Site</p>
+  </a>
+<a href="https://docs.fleek.co/domain-management/hns-domains/" class="prev-box">
+    <h5>HNS Domains</h5>
+    <p>Add HNS Domains To Your Site</p>
+  </a>  
 </div>
 
 ## Fleek Internet Computer Site Hosting
@@ -72,6 +76,14 @@ Furthermore, for the Internet Computer's ecosystem, we provide the following too
 <h5>Fleek's Internet Computer Gateway</h5>
 <p>Access Any Canister's Data on IC Over HTTP With Fleek </p>
 </a>
+<a href="https://docs.fleek.co/domain-management/custom-dns-domains/" class="prev-box">
+    <h5>Domain management</h5>
+    <p>Add Root/Sub Domains To Your Site</p>
+  </a>
+<a href="https://docs.fleek.co/domain-management/hns-domains/" class="prev-box">
+    <h5>HNS Domains</h5>
+    <p>Add HNS Domains To Your Site</p>
+  </a>  
 <a href="./internet-computer-hosting/troubleshooting" class="prev-box">
 <h5>Troubleshooting</h5>
 <p>Common Issues and Fixes for IC-hosted Sites</p>
@@ -83,24 +95,24 @@ Furthermore, for the Internet Computer's ecosystem, we provide the following too
 Got an IPFS or Internet Computer project hosted on Fleek? Then personalize it with a custom domain or use blockchain domains to further decentralize it! We support DNS, ENS, HNS and DNSLink. Here are a couple guides on how to get started, and if you face any issues along the way you can always visit our troubleshooting guide, or reach out to us for help.
 
 <div class="prev-boxes-list">
-  <a href="../custom-dns-domains/" class="prev-box">
+  <a href="./domain-management/custom-dns-domains/" class="prev-box">
     <h5>DNS Domains</h5>
     <p>Add a Custom DNS Domain</p>
   </a>
-  <a href="../ens-domains/" class="prev-box">
+  <a href="./domain-management/ens-domains/ class="prev-box">
     <h5>ENS Domains</h5>
     <p>Use Ethereum Name Servie Domains</p>
   </a>
-    <a href="../hns-domains/" class="prev-box">
+    <a href="./domain-management/hns-domains/ class="prev-box">
     <h5>HNS Domains</h5>
     <p>Use Handshake Domains</p>
   </a>
-  <a href="../dns-link/" class="prev-box">
+  <a href="./domain-management/dns-link/ class="prev-box">
     <h5>DNSLink</h5>
     <p>Activate DNSLink on IPFS Sites</p>
   </a>
   </a>
-    <a href="../troubleshooting/" class="prev-box">
+    <a href="./domain-management/troubleshooting/ class="prev-box">
     <h5>Troubleshooting</h5>
     <p>Troubleshoot Domain Upgrades</p>
   </a>

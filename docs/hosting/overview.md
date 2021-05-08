@@ -26,14 +26,18 @@ If you so choose, you can also deploy by uploading the full code base for you we
     <h5>Build Configurations</h5>
     <p>Get Build Settings for Popular Frameworks</p>
   </a>
-  <a href="../domain-management/" class="prev-box">
+  <a href="https://docs.fleek.co/domain-management/custom-dns-domains/" class="prev-box">
     <h5>Domain management</h5>
     <p>Add Root/Sub Domains To Your Site</p>
   </a>
-  <a href="../domain-management/#adding-ens-domain" class="prev-box">
+  <a href="https://docs.fleek.co/domain-management/ens-domains/" class="prev-box">
     <h5>ENS Domains</h5>
     <p>Add ENS Domains To Your Site</p>
   </a>
+  <a href="https://docs.fleek.co/domain-management/hns-domains/" class="prev-box">
+    <h5>HNS Domains</h5>
+    <p>Add HNS Domains To Your Site</p>
+  </a>  
     <a href="../../tutorials/hosting/" class="prev-box">
     <h5>Tutorials</h5>
     <p>Guides and Tutorials on Popular Frameworks</p>

@@ -104,3 +104,10 @@ To do so, visit the **DNS App** in Cloudflare, and edit your DNS records, there 
 ![](imgs/orange.png)
 
 If you wanted to have that Cloudflare feature on because of its CDN perks and DDOS protection, don't worry, **you will have access to those features through us and BunnyCDN**, which is the reason why we upgraded our DNS configuration.
+
+### How to Upgrade (Using Google Domains)
+There is a workaround for people using Google Domains that don't want to use Cloudflare. This trick could apply to other providers that offer domain forwarding to sub domain from apex domain.
+
+Here is a a [detailed guide on how to do so](https://support.getshifter.io/en/articles/3080501-domain-forwarding-on-google-domains-zone-apex-naked-domain-to-www-prefixed-domain). The idea is that Google Domains doesn't support ANAME/ALIAS records for apex domains (domain.com). But what **you can do** on Google Domains is forward that apex domain to a sub domain (www.domain.com).
+
+In Fleek, subdomains use CNAME records, therefore you could verify it doing this trick, making www. your main point of entry for your website.
