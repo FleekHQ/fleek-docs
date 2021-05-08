@@ -78,6 +78,34 @@ Furthermore, for the Internet Computer's ecosystem, we provide the following too
 </a>
 </div>
 
+## Domain Management
+
+Got an IPFS or Internet Computer project hosted on Fleek? Then personalize it with a custom domain or use blockchain domains to further decentralize it! We support DNS, ENS, HNS and DNSLink. Here are a couple guides on how to get started, and if you face any issues along the way you can always visit our troubleshooting guide, or reach out to us for help.
+
+<div class="prev-boxes-list">
+  <a href="../custom-dns-domains/" class="prev-box">
+    <h5>DNS Domains</h5>
+    <p>Add a Custom DNS Domain</p>
+  </a>
+  <a href="../ens-domains/" class="prev-box">
+    <h5>ENS Domains</h5>
+    <p>Use Ethereum Name Servie Domains</p>
+  </a>
+    <a href="../hns-domains/" class="prev-box">
+    <h5>HNS Domains</h5>
+    <p>Use Handshake Domains</p>
+  </a>
+  <a href="../dns-link/" class="prev-box">
+    <h5>DNSLink</h5>
+    <p>Activate DNSLink on IPFS Sites</p>
+  </a>
+  </a>
+    <a href="../troubleshooting/" class="prev-box">
+    <h5>Troubleshooting</h5>
+    <p>Troubleshoot Domain Upgrades</p>
+  </a>
+</div>
+
 ## Fleek Storage
 
 Fleek storage is the easiest and most performant way to upload, pin, and fetch files on IPFS. For ease of use you can use the Fleek Application UI to manage files, our FleekJs SDK to easily interact programmatically, or our AWS S3 integration if you’re already using S3. You get the fastest IPFS file storage performance with an augmented CDN, File compression, and Image Resizing all packaged up with the Fleek Storage URLs (ex: example-bucket.storage.fleek.co). All files uploaded are published to DNS and can be viewed and referenced via the Fleek Storage URL and/or directly on any IPFS gateway.
