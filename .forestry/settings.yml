@@ -53,6 +53,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: docs/domain-management
+  label: tutorials
+  create: all
+  match: "**/*"  
+- type: directory
   path: docs/examples
   label: examples
   create: all
