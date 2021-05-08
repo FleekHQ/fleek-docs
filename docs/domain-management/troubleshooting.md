@@ -4,8 +4,7 @@ date: "1"
 ---
 # Troubleshooting Custom Domains
 
-## Troubleshooting Custom DNS Domains & DNS Record Updates
-### Custom DNS Domain Stopped Working
+## Custom DNS Domain Stopped Working
 
 The first thing you can check is if your site is visible on the **"Verify on IPFS"** link on your Fleek dashboard. Visit your Fleek dashboard (the hosting tab) and select your affected site to find this button. See the gif below for a reference.
 
@@ -21,7 +20,9 @@ If that is the case, you will need to set new ANAME/ALIAS records for your main 
 
 ![](https://storageapi.fleek.co/fleek-team-bucket/dns-space.png)
 
-### Types of DNS Records Fleek Supports
+------
+
+## Types of DNS Records Fleek Supports
 
 You will need to set an ANAME/ALIAS record for the root domain, and CNAME records for your subdomains (www or other subdomains). If you have DNSLINK activated, it will also ask you to configure a CNAME record.
 
@@ -35,15 +36,17 @@ No, we no longer support configuring custom domains using IP addresses. We only 
 
 No. A records are not the same as ANAME/ALIAS, and trying to configure your DNS domain with one will fail the verification process in Fleek.
 
-### DNS Provider doesn’t support ANAME/ALIAS records?
+------
+
+## DNS Provider doesn’t support ANAME/ALIAS records?
 
 Some providers, like **Google Domains and GoDaddy** don't support ANAME/ALIAS records. You have two options to resolve this.
 
-#### 1) Transfer your domain to a compatible provider.
+### 1) Transfer your domain to a compatible provider.
 
 If your Domain Registrar / DNS provider doesn't support ANAME/ALIAS records, you can **transfer** your domain to a different platform that does support them. Some services facilitate this, [like Namecheap](https://www.namecheap.com/domains/transfer/transfer-from-godaddy). But the transfer process varies, and **it can take time.**
 
-#### 2) Change your domain's nameserver to Cloudflare. (Recommended)
+### 2) Change your domain's nameserver to Cloudflare. (Recommended)
 
 This is our recommended solution. Instead of initiating a domain transfer process, you can instead **change your domain's** nameserver to **point to Cloudflare and manage your DNS settings in Cloudflare**.
 
@@ -51,7 +54,9 @@ Cloudflare supports ANAME/ALIAS records. They need to be set as CNAME in Cloudfl
 
 This **doesn't require you to transfer** your domain, it is quicker, and free.
 
-### Changing domain's nameserver to Cloudflare to set up my Fleek DNS records.
+------
+
+## Changing domain's nameserver to Cloudflare to set up my Fleek DNS records.
 
 First things first. You need to sign up for a [free Cloudflare account](https://www.cloudflare.com/).
 
@@ -78,6 +83,7 @@ This is because when the orange cloud is ON, Cloudflare proxies your site throug
 
 Review the last step from the question above. It is important that you disable the **orange cloud** feature in Cloudflare's DNS app **for all your Fleek DNS records.** Fleek can't verify your domain if Cloudflare is proxying your domain to their CDN.
 
+------
 
 ## Troubleshooting ENS domains
 
@@ -91,6 +97,8 @@ It doesn't work? Then your browser might not support ENS domain resolving native
 
 ### Have a compatible browser, but ENS domain doesn't work?
 It's possible the link doesn't immediately work. Most browsers, if not all of them, will redirect the user to an IPFS gateway and it is possible that the content for that IPFS hash has not yet propagated to the gateway. Wait a few minutes if that is the case.
+
+------
 
 ## Troubleshooting HNS Domains
 
