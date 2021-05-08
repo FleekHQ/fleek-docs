@@ -3,7 +3,6 @@ date: "1"
 
 ---
 # Custom DNS Domains
-## Custom Domains
  Upon site creation, Fleek will automatically assign a domain name depending on if your site is hosted on IPFS or the Internet Computer.
  
 If your site is hosted on IPFS, it will be assigned a random name in the following way: [RANDOM_NAME].on.fleek.co. Of course, we allow users to point the site to a custom domain of their choice or change this random name if a different one is available.

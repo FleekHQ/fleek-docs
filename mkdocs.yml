@@ -23,12 +23,12 @@ nav:
   - IPFS Hosting:
     - Overview: hosting/overview.md
     - Site Deployment: hosting/site-deployment.md
-    - Domain Management: hosting/domain-management.md
+    - Domain Management: domain-management/overview.md
     - Troubleshooting: hosting/troubleshooting.md
   - Internet Computer Hosting:
     - Overview: internet-computer-hosting/overview.md
     - Site Deployment: internet-computer-hosting/site-deployment.md
-    - Domain Management: internet-computer-hosting/domain-management.md
+    - Domain Management: domain-management/overview.md
     - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
     - Troubleshooting: internet-computer-hosting/troubleshooting.md  
   - Domain Management:
