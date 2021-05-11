@@ -100,7 +100,7 @@ If you **don´t turn off the Orange Cloud/Proxy** for your domain when setting y
 
 To do so, visit the **DNS App** in Cloudflare, and edit your DNS records, there you can **Click the orange cloud on each record** to turn it OFF (Grey).
 
-![](imgs/orange.png)
+![](imgs/dns-only.png)
 
 If you wanted to have that Cloudflare feature on because of its CDN perks and DDOS protection, don't worry, **you will have access to those features through us and BunnyCDN**, which is the reason why we upgraded our DNS configuration.
 
