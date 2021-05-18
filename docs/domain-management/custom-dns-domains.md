@@ -11,7 +11,7 @@ If your site is hosted on the Internet Computer, Fleek will automatically assign
 
 !!! info
 
-    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME.
+    As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME/ALIAS.
 
     If you set up your DNS domain before May 2021, you need to migrate to this new configuration before May 31st, where all sites using the legacy proxy/DNS will stop working.
     
@@ -57,9 +57,9 @@ There is a difference in how to upgrade your DNS settings depending whether you 
 
 ### Requirements for Upgrading DNS
 
-This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
+This new infrastructure requires you that your DNS service/provider where you acquired your domain supports **ANAME or ALIAS records**. Make sure your provider does so **before trying to upgrade**, or move to a new provider if needed. 
 
-**Does you DNS provider not support ANAME?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
+**Does you DNS provider not support ANAME/ALIAS?** You can point your domain to Cloudflare name server and use their DNS service. It's free, and it supports ANAME records. [Find more details on this here.](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare)
 
 ### How to Upgrade (Non Cloudflare Providers)
 
@@ -75,11 +75,11 @@ There, you will see the Custom Domains section, showing the Custom DNS Domain na
 
 In a nutshell, you will need to update the records on your DNS domain. This is because your custom domains need to point to Fleek's new upgraded infrastructure. 
 
-Root domain names (space.storage) will ask for an ANAME record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME.
+Root domain names (space.storage) will ask for an ANAME/ALIAS record, whereas any subdomain or www. domain (like www.space.storage) will use CNAME.
 
 **What about DNSLink domains?** Those will continue to point to your Fleek-assigned subdomain and a CNAME record, so keep them that way for now.
 
-**Some providers**, ANAME records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
+**Some providers**, ANAME/ALIAS records are inputted as CNAME, so verify with your provider's documentation first. You might see ANAME records called as ALIAS as well.
 
 ![](imgs/aname1.png)
 
