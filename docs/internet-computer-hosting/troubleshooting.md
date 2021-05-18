@@ -5,12 +5,17 @@ date: "1"
 # Troubleshooting
 
 ## Internet Computer-specific Limitations and Common Issues
-### File Size and Canister Storage Limit
-Currently, there is a temporary file size and storage limitation involved in Internet Computer canisters. There is an approximate 2.5GB total canister storage limit (meaning, your entire repository can't go above that number).
 
-Secondly, there is a 2MB per-file size limit, independently of the total storage utilized on the canister. Usually, this doesn't affect **static sites**. However, it might affect files included and utilized in the website, such as **images, videos, gifs, audio**, or any file with tendency to go above 1MB. Media, naturally, is the most affected.
+### Migrating Site From Alpha Mainnet to Beta Mainnet
+If you originally deploy a static site/app to the Internet Computer's Alpha Mainnet through Fleek, it would have stopped working by now as we migrated to the IC's Beta Mainnet.
 
-To bypass this issue, you can **host and store files in Fleek's IPFS storage** and embed them into your IC hosted site with their public URL. View our Storage [(documentation)](https://docs.fleek.co/storage/storage-app/) for more information.
+Don't worry! It is super easy to redeploy it and get it back live again. Visit the Fleek app, go into the **Hosting Tab** and visit the site you want to redeploy. Once in the site view, visit the **DEPLOYS** tab, and **trigger a new deploy or retrigger the last deployment**. Fleek will rebuild your site and deploy it automatically to Beta Mainnet.
+
+
+### Canister Storage Limit
+Currently, there is a storage limitation involved in Internet Computer canisters. There is an approximate 2.5GB total canister storage limit (meaning, your entire repository can't go above that number). This storage might be increased during the Internet Computer's development
+
+A quick trick to bypass this issue, if you face it, is to **host and store files in Fleek's IPFS storage** and embed them into your IC hosted site with their public URL. View our Storage [(documentation)](https://docs.fleek.co/storage/storage-app/) for more information.
 
 ## Build Troubleshooting Tips
 

@@ -8,10 +8,10 @@ Deploying a static site to DFINITY's Internet Computer on Fleek is as easy as it
 
 With our GitHub integration there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on DFINITY's Internet Computer accordingly.**
 
-### An Alpha Product
-It's important to note that this is an **Alpha product**, which we are building on top of the Internet Computer's Alpha/Testnet. It is an experimental and early version that will help anyone test and build sites, apps or Dapps on the Internet Computer, in preparation for the Mainnet Beta release.
+### A Beta Product
+It's important to note that this is a **Beta product**, which we are building on top of the Internet Computer's Beta Mainnet. It is an early version that will help anyone test and build sites, apps or Dapps on the Internet Computer.
 
-When Mainnet Beta genesis arrives, all sites on the Internet Computer with Fleek will be migrated and redeployed to the Beta.
+If you utilizes the **Alpha version of this product**, and you deployed a site on Alpha Mainnet, you can redeploy it easily to Beta Mainnet by triggering a new deploy from the Fleek app, or pushing a new commit to the associated GitHub repository linked to Fleek. Fleek will automatically rebuild the site and deploy it to the Internet Computer's Beta Mainnet.
 
 ## How Does Fleek Host Static Sites on the Internet Computer?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
@@ -29,7 +29,7 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
 !!! info
 
-    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
+    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; This doesn't affect most static websites, but a quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide. This amount might increase with the Internet Computers continuous development.
 
 With Fleek's [Internet Computer Gateway](https://docs.fleek.co/internet-computer-hosting/ic-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
 
