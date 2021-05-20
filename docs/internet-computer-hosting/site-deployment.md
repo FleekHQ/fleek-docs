@@ -87,32 +87,15 @@ Below are the build parameters which you can modify.
 - `Specify Docker Images`: Customize the docker image to fit your own needs/dependencies, or let Fleek auto-detect it
 
 ## Canister Proxy
-With Fleek, you have **two different options** when it comes to Internet Computer canister static site hosting resolving. 
+With Fleek's transition to the Internet Computer's mainnet, we have now defaulted the canister's resolving through the Internet Computer's main gateway. Therefore, when your site loads, **a brief Internet Computer loading screen** will appear as a Service Worker is installed to resolve the site directly to the Internet Computer; without intermediaries. **This loading screen only appears once**.
 
-![](imgs/canisterpro.png)
-
-- Using Fleek's Proxy as intermediary (middleman, no loading screen)
-- Using Service Workers to go directly to the IC (no middleman, loading screen)
-
-### Using the Proxy versus the Service Worker
-Choosing one or another is a matter of preference. Do you want a seamless experience, but that depends on a middleman; or can you accept a change in the experience, but then decentralize further your resolving?
-
-![](imgs/service-worker.jpeg)
-
-#### **The Fleek Proxy**
-If you choose to **use Fleek as a proxy**, Fleek will use its Internet Computer gateway to **act as a middleman** between users, and your static site canister on the Internet Computer, translating their requests. This is the default option, since it provides the most seamless experience for users and doesn't involve an IC loading screen. However, this option does depend on Fleek's servers, or Fleek itself, as a middleman.
-
-#### **Service Workers**
-The alternative is to use **Service Workers** to connect to the Internet Computer directly. If you select this option, users will interact **once with Fleek´s gateway**, to receive a bootstrap script that installs a service worker and reloads their page, showing a quick animated loading screen (for a very few seconds). 
 
 ![](imgs/loading.gif)
 
-Once the Service Worker is installed, all of the user's requests will communicate directly with the Internet Computer and your canister, **and no loading screen will be present**, that only happens once when the service worker is registered in their browser. This option **doesn't rely on Fleeks servers constantly**.
+Once the Service Worker is installed, all of the user's requests will communicate directly with the Internet Computer and your canister, **and no loading screen will be present**, that only happens once when the service worker is registered in their browser.
 
 ### Bots, Crawlers, and Other Non-human Requests
-To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example) **Fleek handles all bot requests through the Proxy and our IC Gateway**.
-
-
+To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example), **the IC gateway will utilize its proxied solution, that doesn't utilize service workers**.
 
 
 ## Environment Variables

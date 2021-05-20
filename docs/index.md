@@ -55,7 +55,7 @@ With Fleek, you can seamlessly deploy **static sites** to [DFINITY's](https://df
 Furthermore, for the Internet Computer's ecosystem, we provide the following tools:
 
  - Fleek IC Gateway
- - Proxy/Service Worker Resolving Options
+ - Alternative Proxy/Service Worker Resolving Options
  - Automatic Cycle Management
 
 
@@ -73,7 +73,7 @@ Furthermore, for the Internet Computer's ecosystem, we provide the following too
 <p>Seamless Proxy for the IC or No-middleman with Service Workers</p>
 </a>
 <a href="./internet-computer-hosting/ic-gateway-proxy/" class="prev-box">
-<h5>Fleek's Internet Computer Gateway</h5>
+<h5>Fleek's Alternative IC Gateway</h5>
 <p>Access Any Canister's Data on IC Over HTTP With Fleek </p>
 </a>
 <a href="https://docs.fleek.co/domain-management/custom-dns-domains/" class="prev-box">

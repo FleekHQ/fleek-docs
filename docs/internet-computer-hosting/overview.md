@@ -36,7 +36,7 @@ Get started on the Internet Computer with Fleek! What do you need to get started
   </a>
     <a href="../ic-gateway-proxy/" class="prev-box">
     <h5>IC Gateway & Proxying</h5>
-    <p>Resolving Options for IC Canisters</p>
+    <p>Alternative Resolving Options for IC Canisters</p>
   </a>
   <a href="../domain-management/" class="prev-box">
     <h5>IC Domain Management</h5>

@@ -4,9 +4,7 @@ date: "1"
 ---
 # Fleek's Internet Computer Gateway and Proxy
 
-As of today, there is no easy way to access content on Canisters running on the Internet Computer over HTTP, without having to do a direct call to the Canister itself through the Internet Computer (IC).
-
-To solve this temporary issue, we created the Fleek Internet Computer Gateway (ic.fleek.co)! An open source portal into the Internet Computer that anyone can leverage to access their canisters over HTTP.
+We created the Fleek Internet Computer Gateway (ic.fleek.co)! An open source alternative to the main IC gateway portal into the Internet Computer that anyone can leverage to access their canisters over HTTP.
 
 [Visit the Gateways/Proxy Repo](https://github.com/FleekHQ/ic-proxy)
 
@@ -18,14 +16,14 @@ To solve this temporary issue, we created the Fleek Internet Computer Gateway (i
 Again, **anyone can use this gateway with their IC canisters**. They don't have to be Fleek hosted for you to paste the Canister ID and access them via HTTP on our gateway.
 
 ## The Gateway's Proxy and Service Workers
-Our Gateway also serves an important purpose for our Internet Computer hosting feature. It is the hub for our **canister proxying** options. When someone visits your IC-hosted site, there are two ways the visitor's request can be translated so that they receive your website's content from your canister on the IC.
+Before we transitioned to using the main IC Gateway for resolving sites on Fleek, we utilized the Fleek IC Gateway for **canister proxying**. This is no longer the case, but we leave this **information available as an open source resource**. In a nutshell, our IC gateway provided two ways the visitor's request can be translated so that they receive your website's content from your canister on the IC.
 
 1. Using Fleek's seamless proxy (more centralized, but no loading state)
 2. Using Fleek's service workers (less centralized, initial loading state)
 
 !!! info
 
-    We made these two options available to give people the option to prioritize what matters to them the most. If experience is key, then the proxy will work just fine and won't cause visible changes; if avoiding middleman as much as possible is more important, then the service worker is the best option.
+    As of May 2021; Fleek has released hosting on DFINITY's Mainnet, and now utilizes DFINITY's Main Internet Computer Gateway solution. Therefore, these options are no longer available in the Fleek app, but still are available as an open source resource!
 
 ![](imgs/service-worker.jpeg)
 
