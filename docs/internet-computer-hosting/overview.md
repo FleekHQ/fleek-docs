@@ -18,9 +18,6 @@ Furthermore, for the Internet Computer ecosystem, we provide the following tools
 
     When you deploy a static site to the Internet Computer via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your IC site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, we support custom DNS domains on IC projects but ENS and other alternatives will be added in the future.
 
-### A Beta Product
-It's important to note that this is a **Beta product**, which we are building on top of the Internet Computer's Beta Mainnet. It is an early version that will help anyone test and build sites, apps or Dapps on the Internet Computer.
-
 ### Getting Started
 
 Get started on the Internet Computer with Fleek! What do you need to get started? A GitHub repository with a static website (we're Jamstack-ready!) is the fastest way to get started, just link it to Fleek, customize your build settings (or let Fleek do it for you), and hit deploy. You can begin simple, with any Jamstack site!
