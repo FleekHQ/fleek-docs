@@ -87,7 +87,7 @@ Below are the build parameters which you can modify.
 With Fleek's transition to the Internet Computer's mainnet, we have now defaulted the canister's resolving through the Internet Computer's main gateway.
 
 ### Bots, Crawlers, and Other Non-human Requests
-To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example), **the IC gateway will utilize its proxied solution, that doesn't utilize service workers**.
+To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example), **the IC gateway will utilize its proxied solution**.
 
 
 ## Environment Variables
