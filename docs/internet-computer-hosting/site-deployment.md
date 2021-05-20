@@ -31,8 +31,6 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
     IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; This doesn't affect most static websites, but a quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide. This amount might increase with the Internet Computers continuous development.
 
-With Fleek's [Internet Computer Gateway](https://docs.fleek.co/internet-computer-hosting/ic-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
-
 This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for the IC resolving on applications/websites that could help eliminate the need for bridges.
 
 ### Other resources: IC Deploy GitHub Action 
@@ -82,17 +80,11 @@ Below are the build parameters which you can modify.
 
 ## Advanced Settings
 
-- `Canister Proxying:` See below for detailed explanation
 - `Environment variables`: The values of your environment variables. It is here for example that you might set your environment as `production`
 - `Specify Docker Images`: Customize the docker image to fit your own needs/dependencies, or let Fleek auto-detect it
 
 ## Canister Proxy
-With Fleek's transition to the Internet Computer's mainnet, we have now defaulted the canister's resolving through the Internet Computer's main gateway. Therefore, when your site loads, **a brief Internet Computer loading screen** will appear as a Service Worker is installed to resolve the site directly to the Internet Computer; without intermediaries. **This loading screen only appears once**.
-
-
-![](imgs/loading.gif)
-
-Once the Service Worker is installed, all of the user's requests will communicate directly with the Internet Computer and your canister, **and no loading screen will be present**, that only happens once when the service worker is registered in their browser.
+With Fleek's transition to the Internet Computer's mainnet, we have now defaulted the canister's resolving through the Internet Computer's main gateway.
 
 ### Bots, Crawlers, and Other Non-human Requests
 To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example), **the IC gateway will utilize its proxied solution, that doesn't utilize service workers**.
