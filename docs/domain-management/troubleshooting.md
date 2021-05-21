@@ -88,7 +88,7 @@ Review the last step from the question above. It is important that you disable t
 ## Troubleshooting ENS domains
 
 ### Verifying your .eth domain was linked properly
-You can quickly test that the ENS domain is correctly synced with the IPFS hash of the current build by appending `.link` after the domain. EG: <https://fleekhq.eth.link>
+You can quickly test that the ENS domain is correctly synced with the IPFS hash of the current build by appending `.link` after the domain. EG: <https://fleekhq.eth.link>, thanks to a gateway service provided by ENS and Cloudflare. Anyone can access your site this way. Else, you can try an ENS compatible browser like [Brave](https://brave.com/), or install the [MetaMask](https://metamask.io/) browser extension.
 
 ### Can't access your ENS domain via any browser?
 You must ensure that your browser is able to resolve ENS domains. You can test this functionality with Fleek's homepage: [fleek.eth/](https://fleek.eth/).

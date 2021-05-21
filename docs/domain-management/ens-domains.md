@@ -48,3 +48,12 @@ The Fleek controller can also be set manually through the official [ENS frontend
 The value for the controller address must be `0x31166ec8996643A35c2cf8cEbED980e26cd89D06`, which corresponds to the Ethereum address of Fleek's controller.
 
 After manually setting the controller, adding the ENS through the app will work normally, except that Fleek will detect that the controller is already set and will complete the setup without executing an Ethereum transaction.
+
+### Review Your ENS Site with eth.link, MetaMask, or Other Options.
+
+If you’re using an ENS-compatible browser, like [Brave](https://brave.com/), or if you have the [MetaMask](https://metamask.io/) extension installed like in the GIF above, you can just type your address in the search bar “address.eth/” (don’t forget the “/”) and it should be automatically resolved: fleekhq.eth/
+
+**Using eth.link**
+If you have none of those, you can always append the “.link” suffix after your domain to visit your IPFS+ENS website on any browser, thanks to a service made available by ENS and Cloudflare that makes all the .eth domains accessible via traditional DNS addresses. Anyone can visit and resolve your site. [Visit the ENS app with .link!](http://ens.eth.link/) 
+
+**All of these are third-party resolving options** you, or anyone, can use to visit your site using .eth ENS domains. Be aware that these are non-Fleek platforms. If your ENS record is configured properly, and you experience an issue on any of these gateways, contact that specific provider.
