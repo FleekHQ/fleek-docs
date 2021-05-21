@@ -28,7 +28,7 @@ nav:
   - Internet Computer Hosting:
     - Overview: internet-computer-hosting/overview.md
     - Site Deployment: internet-computer-hosting/site-deployment.md
-    - Domain Management: domain-management/overview.md
+    - Domain Management: domain-management/custom-dns-domains.md
     - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
     - Troubleshooting: internet-computer-hosting/troubleshooting.md  
   - Domain Management:
