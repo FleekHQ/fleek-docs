@@ -8,10 +8,8 @@ Deploying a static site to DFINITY's Internet Computer on Fleek is as easy as it
 
 With our GitHub integration there is no risk of outdated content, or delays. When you push to your repository, Fleek will pick up the changes and update your **canister on DFINITY's Internet Computer accordingly.**
 
-### An Alpha Product
-It's important to note that this is an **Alpha product**, which we are building on top of the Internet Computer's Alpha/Testnet. It is an experimental and early version that will help anyone test and build sites, apps or Dapps on the Internet Computer, in preparation for the Mainnet Beta release.
-
-When Mainnet Beta genesis arrives, all sites on the Internet Computer with Fleek will be migrated and redeployed to the Beta.
+### Had a site on Alpha Mainnet and want to redeploy to Mainnet?
+If you utilized the **Alpha version of this product**, and you deployed a site on Alpha Mainnet, you can redeploy it easily to Mainnet by triggering a new deploy from the Fleek app, or pushing a new commit to the associated GitHub repository linked to Fleek. Fleek will automatically rebuild the site and deploy it to the Internet Computer's Mainnet.
 
 ## How Does Fleek Host Static Sites on the Internet Computer?
 Before getting started, let us break down the flow on what is happening when you upload a site to the Internet Computer through Fleek.
@@ -29,9 +27,7 @@ Once your canister and first deployment is set, and your site is live, Fleek wil
 
 !!! info
 
-    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; and a 2MB per-file size limit. This doesn't affect most static websites, but can cause deployment errors when media assets like images, or videos are included. A quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide.
-
-With Fleek's [Internet Computer Gateway](https://docs.fleek.co/internet-computer-hosting/ic-gateway-proxy/), we take care of power SSL certificates, custom DNS domains, and all necessary components to make your Canister-hosted static site reachable via the current web and HTTP. 
+    IMPORTANT: At the moment, there is a 2.5GB (approximate) storage limit on IC canisters; This doesn't affect most static websites, but a quick an easy way to bypass this is to host/store media files on IPFS with Fleek! And embed them through the public/open URL we provide. This amount might increase with the Internet Computers continuous development.
 
 This set of tools that are part of the nexus between the current web (Web 2.0) and the next web (Web 3.0) will be progressively replaced. For example, by native support for the IC resolving on applications/websites that could help eliminate the need for bridges.
 
@@ -82,37 +78,14 @@ Below are the build parameters which you can modify.
 
 ## Advanced Settings
 
-- `Canister Proxying:` See below for detailed explanation
 - `Environment variables`: The values of your environment variables. It is here for example that you might set your environment as `production`
 - `Specify Docker Images`: Customize the docker image to fit your own needs/dependencies, or let Fleek auto-detect it
 
 ## Canister Proxy
-With Fleek, you have **two different options** when it comes to Internet Computer canister static site hosting resolving. 
-
-![](imgs/canisterpro.png)
-
-- Using Fleek's Proxy as intermediary (middleman, no loading screen)
-- Using Service Workers to go directly to the IC (no middleman, loading screen)
-
-### Using the Proxy versus the Service Worker
-Choosing one or another is a matter of preference. Do you want a seamless experience, but that depends on a middleman; or can you accept a change in the experience, but then decentralize further your resolving?
-
-![](imgs/service-worker.jpeg)
-
-#### **The Fleek Proxy**
-If you choose to **use Fleek as a proxy**, Fleek will use its Internet Computer gateway to **act as a middleman** between users, and your static site canister on the Internet Computer, translating their requests. This is the default option, since it provides the most seamless experience for users and doesn't involve an IC loading screen. However, this option does depend on Fleek's servers, or Fleek itself, as a middleman.
-
-#### **Service Workers**
-The alternative is to use **Service Workers** to connect to the Internet Computer directly. If you select this option, users will interact **once with Fleek´s gateway**, to receive a bootstrap script that installs a service worker and reloads their page, showing a quick animated loading screen (for a very few seconds). 
-
-![](imgs/loading.gif)
-
-Once the Service Worker is installed, all of the user's requests will communicate directly with the Internet Computer and your canister, **and no loading screen will be present**, that only happens once when the service worker is registered in their browser. This option **doesn't rely on Fleeks servers constantly**.
+With Fleek's transition to the Internet Computer's mainnet, we have now defaulted the canister's resolving through the Internet Computer's main gateway.
 
 ### Bots, Crawlers, and Other Non-human Requests
-To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example) **Fleek handles all bot requests through the Proxy and our IC Gateway**.
-
-
+To ensure your static sites on the IC are bot-friendly, crawlable by search engines, and show their metadata and link previews (when shared on social, for example), **the IC gateway will utilize its proxied solution**.
 
 
 ## Environment Variables
