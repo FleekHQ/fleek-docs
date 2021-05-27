@@ -31,10 +31,6 @@ Get started on the Internet Computer with Fleek! What do you need to get started
     <h5>Build Configurations</h5>
     <p>Get Build Settings for Popular Frameworks</p>
   </a>
-    <a href="../ic-gateway-proxy/" class="prev-box">
-    <h5>IC Gateway & Proxying</h5>
-    <p>Alternative Resolving Options for IC Canisters</p>
-  </a>
   <a href="https://docs.fleek.co/domain-management/custom-dns-domains/" class="prev-box">
     <h5>IC Domain Management</h5>
     <p>Add Root/Sub Domains To Your Site</p>

@@ -2,7 +2,37 @@
 date: "1"
 
 ---
-# Fleek's Internet Computer Gateway and Proxy
+
+Fleek works with several protocols and blockchain networks that are not directly connected to the Web2, or directly accessible over HTTP in a native way. 
+
+When it comes to IPFS or Internet Computer hosted sites, apps, or files, the actual IPFS content hash address or canister url where the content is stored is not natively resolved by most browsers or served over HTTP.
+
+To solve that, several "gateway" services exist that allow you to access those addresses over HTTP on your browser. Fleek is one provider for these gateways, and has its own IPFS gateway and Internet Computer gateway.
+
+In the case of IPFS, it provides a faster and more performant way of accessing content over IPFS on browser than the native solution; and in the case of the Internet Computer **it is an open source alternative** to the DFINITY Foundation's main Internet Computer gateway, that anyone can leverage.
+
+## Fleek's IPFS Gateway
+
+Our IPFS gateway lives under the `ipfs.fleek.co` url. It provides an easy way to resolve IPFS hashes over http under the following format: `ipfs.fleek.co/ipfs/hash/`. Which, when filled, would look like:
+
+`https://ipfs.fleek.co/ipfs/bafkreicgk6g2aysy544kgyxdvafnysi7wl2ko6wjhegzgjmij75a2tyf54`
+
+Any IPFS hash can be resolved using the Fleek IPFS gateway, whether it is hosted through Fleek or not. This gateway **directly fetches the information on IPFS**, meaning it will always display the exact content of the file on IPFS.
+
+### Fleek's Edge & IPFS CDN
+Aside from Fleek's main IPFS gateway, open to everyone using IPFS, there is a secondary IPFS resolving feature Fleek provides exclusively to its users.
+
+Any file or site hosted on IPFS through Fleek is made immediately available over HTTP through **Fleek's Edge**, over the `siteA.on.fleek.co` path for hosted sites, or the `storageapi.fleek.co` path in the case of specific files stored on Fleek. When you host a new site, that is the url we utilize to give your site a random, and ready to use accessible URL!
+
+**Why does Fleek use this to serve IPFS content?**
+We have built the Fleek edge to add CDN perks and speed improvements that are not native to IPFS, increasing the content delivery speed by up to 10x:
+
+- Built-in pinning orchestration
+- Automatic compression
+- Automatic image resizing
+
+
+## Fleek's Internet Computer Gateway and Proxy
 
 We created the Fleek Internet Computer Gateway (ic.fleek.co)! An open source alternative to the main IC gateway portal into the Internet Computer that anyone can leverage to access their canisters over HTTP.
 
