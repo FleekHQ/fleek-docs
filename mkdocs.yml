@@ -42,8 +42,8 @@ nav:
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
-  - IPFS & IC Gateways:
-   - Overview: gateways/overview.md
+  - IPFS and IC Gateways:
+    - Overview: gateways/overview.md
   - Fleek CLI:
     - Overview: fleek-cli/overview.md 
     - GitHub Actions: fleek-cli/github-actions.md
