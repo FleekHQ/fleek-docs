@@ -28,8 +28,7 @@ nav:
   - Internet Computer Hosting:
     - Overview: internet-computer-hosting/overview.md
     - Site Deployment: internet-computer-hosting/site-deployment.md
-    - Domain Management: domain-management/custom-dns-domains.md
-    - IC Gateway & Proxying: internet-computer-hosting/ic-gateway-proxy.md    
+    - Domain Management: domain-management/custom-dns-domains.md  
     - Troubleshooting: internet-computer-hosting/troubleshooting.md  
   - Domain Management:
     - Overview: domain-management/overview.md
@@ -43,6 +42,8 @@ nav:
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
+  - IPFS and IC Gateways:
+    - Overview: gateways/overview.md
   - Fleek CLI:
     - Overview: fleek-cli/overview.md 
     - GitHub Actions: fleek-cli/github-actions.md
