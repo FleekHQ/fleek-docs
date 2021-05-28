@@ -165,6 +165,18 @@ Deleting a site is an irreversible action so proceed with caution.
 
 To delete a site, go to the settings of the site and navigate to General > Danger Zone. A modal will then appear with a warning and instructions to delete the site.
 
+## Purging Site Cache
+### How to Manually Purge Cache
+If your website is not reflecting the latest changes, you might have a cache-refresh issue. A previous cache layer might be being held by BunnyCDN, and therefore you’re seeing the website from the cache layer, not the most updated version. 
+
+**Fortunately, purging the cache manually fixes this!** and you can do it right from the Fleek app if needed.
+
+Under the **hosting** section in Fleek, find the affected site, and visit the **Settings section** in the sites details. Navigate to **Build and deploy** sub-menu, and find the site management and Purge Cache feature.
+
+![](imgs/purge.png)
+
+All it takes is a click of the button! Fleek will trigger a manual cache purge on BunnyCDN, and after a minute, you can recheck that your site is displaying the latest cache version.
+
 ## Advanced Settings
 
 When building your site, we make some assumptions about system dependencies and tools. If you are using a standard Node.js environment this should be enough. There are some cases though where you might want to use custom tools not provided by default in a standard Node.js distribution. For these cases, you can configure advanced settings. To do this, go to your site overview, click Settings, and scroll down to the Advanced Settings section.

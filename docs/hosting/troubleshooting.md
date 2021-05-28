@@ -68,3 +68,17 @@ Adding a hash router in React: <https://reactrouter.com/web/api/HashRouter>
 If no file is found, IPFS will search for a file called `ipfs-404.html` in the requested path. This file can be used for showing 404 errors or redirecting.
 See the following blog post for more information:
 <https://blog.ipfs.io/2020-06-26-go-ipfs-0-6-0/>
+
+## My site is not reflecting the latest changes! (Cache issue)
+
+If your website is not reflecting the latest changes, you might have a cache-refresh issue. 
+
+A previous cache layer might be being held by BunnyCDN, and therefore you’re seeing the website from the cache layer, not the most updated version. 
+
+**Fortunately, purging the cache manually fixes this!** and you can do it right from the Fleek app if needed.
+
+Under the **hosting** section in Fleek, find the affected site, and visit the **Settings section** in the sites details. Navigate to **Build and deploy** sub-menu, and find the site management and Purge Cache feature.
+
+![](imgs/purge.png)
+
+All it takes is a click of the button! Fleek will trigger a manual cache purge on BunnyCDN, and after a minute, you can recheck that your site is displaying the latest cache version.

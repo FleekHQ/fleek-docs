@@ -82,3 +82,17 @@ The public directory is always relative to the base directory. So to use the `pu
     * This occurs when the number of builds across all of our customers exceeds our current network capacity. When this happens builds will be queued as they come in and be deployed when other builds finish
 * Team queue
     * This occurs when the number of total builds across all of your sites exceeds the build limit. You can increase your concurrent builds by upgrading your account or by contacting support. If you have this issue, you can cancel other builds that may not be as important.
+
+## My site is not reflecting the latest changes! (Cache issue)
+
+If your website is not reflecting the latest changes, you might have a cache-refresh issue. 
+
+A previous cache layer might be being held by BunnyCDN, and therefore you’re seeing the website from the cache layer, not the most updated version. 
+
+**Fortunately, purging the cache manually fixes this!** and you can do it right from the Fleek app if needed.
+
+Under the **hosting** section in Fleek, find the affected site, and visit the **Settings section** in the sites details. Navigate to **Build and deploy** sub-menu, and find the site management and Purge Cache feature.
+
+![](imgs/purge.png)
+
+All it takes is a click of the button! Fleek will trigger a manual cache purge on BunnyCDN, and after a minute, you can recheck that your site is displaying the latest cache version.
