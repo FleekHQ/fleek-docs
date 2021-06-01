@@ -28,26 +28,24 @@ Click Add ENS to add your ENS domain. Input your domain to verify it and add it.
 
 ![](imgs/ens2.png)
 
-### Set Fleek as the Controller through the UI
+### Set the Content Hash
 
-Fleek needs to be a controller of your ENS domain so we can automatically update your domain content hash when a site deployment succeeds. Click the `Set Fleek as Controller` button to set this up.
+Once you add your first ENS domain, you need to trigger one transaction through an Ethereum Web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect.
 
-![](imgs/ens3.png)
+![](imgs/setipns.png)
+
+This transaction sets the initial content hash / IPNS address that Fleek will automatically update on your ENS domain upon each deployment to refresh the content to the latest commit.
+
+![](imgs/ipns-record.png)
+
+**Previously, when Fleek didn't use IPNS**, Fleek was set as the controller of the ENS domain to modify the IPFS content hash manually each time. Now, using IPNS, that is not necessary and only one transaction is needed.
 
 If the domain is using the old ENS resolver, you will be prompted to migrate to the latest resolver. By clicking on the `Migrate` button, you will be redirected to the [ENS Dashboard](https://app.ens.domains) to complete the migration.
-
-Finally, clicking on the `Set Fleek as controller` button will trigger a modal to connect an Ethereum web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect. After, another popup will appear to accept the Ethereum transaction to set Fleek as controller.
 
 ![](imgs/ens4.png)
 
 On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek. 
 
-### Set Fleek as Controller manually
-The Fleek controller can also be set manually through the official [ENS frontend](https://app.ens.domains), or by interacting directly with the smart contracts.
-
-The value for the controller address must be `0x31166ec8996643A35c2cf8cEbED980e26cd89D06`, which corresponds to the Ethereum address of Fleek's controller.
-
-After manually setting the controller, adding the ENS through the app will work normally, except that Fleek will detect that the controller is already set and will complete the setup without executing an Ethereum transaction.
 
 ### Review Your ENS Site with eth.link, MetaMask, or Other Options.
 
