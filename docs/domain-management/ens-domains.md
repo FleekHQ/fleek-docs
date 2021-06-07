@@ -30,9 +30,11 @@ Click Add ENS to add your ENS domain. Input your domain to verify it and add it.
 
 ### Set the Content Hash
 
-Once you add your first ENS domain, you need to trigger one transaction through an Ethereum Web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect.
+Once you add your first ENS domain, you will need to SET THE CONTENT hash. This means you will set the IPNS address that references your site on Fleek, and that Fleek will update periodically upon each deployment to keep your sites' content up to date. **Click set content hash to begin the process**
 
 ![](imgs/setipns.png)
+
+You need to trigger one transaction through an Ethereum Web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect.
 
 This transaction sets the initial content hash / IPNS address that Fleek will automatically update on your ENS domain upon each deployment to refresh the content to the latest commit.
 
@@ -40,7 +42,13 @@ This transaction sets the initial content hash / IPNS address that Fleek will au
 
 **Previously, when Fleek didn't use IPNS**, Fleek was set as the controller of the ENS domain to modify the IPFS content hash manually each time. Now, using IPNS, that is not necessary and only one transaction is needed.
 
-On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek.
+**Once you approve the transaction**, on the Settings section, the domain will show that the Ethereum transaction is pending confirmation. 
+
+**Upon confirmation** the ENS domain will have been successfully added to Fleek.
+
+!!! info
+
+    Important: If when you click 'set content hash', you see a prompt to "Migrate your ENS domain" there is an extra step you need to do before you continue. See the 'Migrate Your ENS Resolver' section below.
 
 ### Migrate Your ENS Resolver
 
