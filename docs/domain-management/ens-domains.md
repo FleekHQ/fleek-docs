@@ -30,9 +30,11 @@ Click Add ENS to add your ENS domain. Input your domain to verify it and add it.
 
 ### Set the Content Hash
 
-Once you add your first ENS domain, you need to trigger one transaction through an Ethereum Web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect.
+Once you add your first ENS domain, you will need to SET THE CONTENT hash. This means you will set the IPNS address that references your site on Fleek, and that Fleek will update periodically upon each deployment to keep your sites' content up to date. **Click set content hash to begin the process**
 
 ![](imgs/setipns.png)
+
+You need to trigger one transaction through an Ethereum Web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect.
 
 This transaction sets the initial content hash / IPNS address that Fleek will automatically update on your ENS domain upon each deployment to refresh the content to the latest commit.
 
@@ -40,11 +42,42 @@ This transaction sets the initial content hash / IPNS address that Fleek will au
 
 **Previously, when Fleek didn't use IPNS**, Fleek was set as the controller of the ENS domain to modify the IPFS content hash manually each time. Now, using IPNS, that is not necessary and only one transaction is needed.
 
-If the domain is using the old ENS resolver, you will be prompted to migrate to the latest resolver. By clicking on the `Migrate` button, you will be redirected to the [ENS Dashboard](https://app.ens.domains) to complete the migration.
+**Once you approve the transaction**, on the Settings section, the domain will show that the Ethereum transaction is pending confirmation. 
 
-![](imgs/ens4.png)
+**Upon confirmation** the ENS domain will have been successfully added to Fleek.
 
-On the Settings section, the domain will show that the Ethereum transaction is pending confirmation. Upon confirmation, the ENS domain will have been successfully added to Fleek. 
+!!! info
+
+    Important: If when you click 'set content hash', you see a prompt to "Migrate your ENS domain" there is an extra step you need to do before you continue. See the 'Migrate Your ENS Resolver' section below.
+
+### Migrate Your ENS Resolver
+
+If when you begin the "Set the Content Hash Flow", you find yourself viewing a **different screen, that tells you you need to "Migrate Your ENS"**, it means you need to migrate your ENS domain's resolver to be able to use that domain with Fleek.
+
+![](imgs/ens-resolver.gif)
+
+!!! info
+
+    Why does this happen? The resolver is the "service" your ENS domain name uses so that when someone visits the domain, it translates the request to the addresses/URLs/content that your ENS name represents. Resolvers are Smart Contracts on Ethereum, and there are many of them to choose from, thereforee they are set as a record in your ENS domain nam where the address of said contract is specified. Usually, when you create a new ENS domain name, a default, public resolver is set. 
+
+
+**If your ENS domain name is configured using a legacy, or outdated resolver** you won't be able to access your site since resolving won't work properly.
+
+**To migrate your domain: Click the Migrate button on the window seen above** and the Ethereum Name Service Application will open, on your domain's details page.
+
+![](imgs/resolver.png)
+
+**In the RESOLVER section, click the SET button** to open up the window that will help you reconfigure your ENS domain resolver. **Click the 'USE PUBLIC RESOLVER' option to have ENS auto-fill with a public, up-to-date, resolver**. Alternatively, you can use a custom one if you now the proper address.
+
+![](imgs/public.png)
+
+**Hit SAVE** and you will prompt a transaction on the ENS application that you will need to confirm with any compatible wallet, like MetaMask, paying the associated gas fee for the transaction that sets the record.
+
+![](imgs/meta.png)
+
+**When the transaction is confirmed**, go back to the Fleek application and your site's domain management page. You will see that if you reopen the 'SET CONTENT HASH' window, the migration will be registered and you can continue with the flow normally following the steps above.
+
+![](imgs/migrate-confirm.png)
 
 
 ### Review Your ENS Site with eth.link, MetaMask, or Other Options.
