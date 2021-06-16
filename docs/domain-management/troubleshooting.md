@@ -98,6 +98,42 @@ It doesn't work? Then your browser might not support ENS domain resolving native
 ### Have a compatible browser, but ENS domain doesn't work?
 It's possible the link doesn't immediately work. Most browsers, if not all of them, will redirect the user to an IPFS gateway and it is possible that the content for that IPFS hash has not yet propagated to the gateway. Wait a few minutes if that is the case.
 
+### ENS domain stuck in "pending transaction" after new deployment
+
+If after making a new deployment, you see in the **Domain Management** tabs in your site that the ENS domain has a "Pending Transaction" alert, you might be experiencing an issue with a **stuck transaction**. 
+
+The most common cause of this is that you were using an ENS domain with Fleek before [Fleek started using IPNS](https://blog.fleek.co/posts/ens-now-on-ipns-hash-updates) to update content records on ENS on each deployment. After this change, all users were migrated to the new IPNS system after they made a new deployment. 
+
+**However, if for some reason, the transaction that migrated your record to IPNS got stuck** (due to shifting gas prices, or an error), it can cause your site to stay in this "Pending Transaction" state indefinitely. 
+
+**Let's solve this.**
+
+#### 1. Visit the ENS Domains App to Confirm the Issue
+
+Visit the [ENS Domains App](https://app.ens.domains/) and verify your address is the domain's controller. An easy way to check this is to see if the **controller address matches the registrant**. If that is not the case, then Fleek is possibly still set as the controller.
+
+![](imgs/registrant.png)
+
+#### 2. Change the Controller Back to Your Address
+If you are not the controller of your ENS domain, **re-set the controller to your own Ethereum address** to retake back full control.  Why do you need to be the controller? You need to be the controller to **modify records yourself**, which you will need to do in step 4 when you set the new Content Hash for your ENS domain.
+
+You will need to authenticate with a wallet/address to prove ownership of the name, and trigger a transaction to update the controller back to your address.
+
+![](imgs/change-controller.gif)
+
+#### 3. Go back to Fleek, and delete the ENS domain from site
+Now that you have permission to edit records on your domain again, you can go back to Fleek and:
+
+1. Find the site that has the ENS domain with a pending transaction.
+2. Delete/remove the ENS domain name from the site.
+
+![](imgs/ens-remove.gif)
+
+#### 4. Re-add the ENS Domain to your site
+After removing it, you can **add the ENS domain name back to your site**, but this time since you are the controller, you will be able to verify, and **Set the Content Hash** for the new IPNS record yourself.
+
+This is done by triggering a transaction verification flow using MetaMask, or any compatible wallet, in which you modify the content hash record on your domain to your new IPNS address.
+
 ------
 
 ## Troubleshooting HNS Domains

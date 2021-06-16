@@ -8,6 +8,10 @@ You can easily point an [Ethereum Name Service](https://ens.domains/) (ENS) doma
 
 It's important to note that, for a user to **resolve/visit an ENS domain** they will need to have a compatible provider/browser installed that is able to resolve them. **Using the MetaMask browser extension is one option**, as it resolves .eth domains.
 
+**Need help with an ENS domain?** Visit the [ENS troubleshooting section](https://docs.fleek.co/domain-management/troubleshooting/#troubleshooting-ens-domains). 
+
+
+
 !!! info
 
     Ethereum Name Service (ENS) domains are only compatible with IPFS sites at the moment. We are exploring ways to bring ENS to Internet Computer hosted sites in the future!
@@ -36,19 +40,18 @@ Once you add your first ENS domain, you will need to SET THE CONTENT hash. This 
 
 You need to trigger one transaction through an Ethereum Web3 provider, such as [Metamask](https://metamask.io/). If using Metamask, a popup will appear asking to connect.
 
+!!! info
+
+    Important: If when you click 'set content hash', you see a prompt to "Migrate your ENS domain" there is an extra step you need to do before you continue. See the 'Migrate Your ENS Resolver' section below.
+
 This transaction sets the initial content hash / IPNS address that Fleek will automatically update on your ENS domain upon each deployment to refresh the content to the latest commit.
 
 ![](imgs/ipns-record.png)
 
 **Previously, when Fleek didn't use IPNS**, Fleek was set as the controller of the ENS domain to modify the IPFS content hash manually each time. Now, using IPNS, that is not necessary and only one transaction is needed.
 
-**Once you approve the transaction**, on the Settings section, the domain will show that the Ethereum transaction is pending confirmation. 
+**Once you approve the transaction**, on the Settings section, the domain will show that the Ethereum transaction is pending confirmation. **Upon confirmation** the ENS domain will have been successfully added to Fleek. Hooray!
 
-**Upon confirmation** the ENS domain will have been successfully added to Fleek.
-
-!!! info
-
-    Important: If when you click 'set content hash', you see a prompt to "Migrate your ENS domain" there is an extra step you need to do before you continue. See the 'Migrate Your ENS Resolver' section below.
 
 ### Migrate Your ENS Resolver
 
