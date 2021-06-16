@@ -35,6 +35,8 @@ The domain must be verified before it is linked to the site. To verify, click on
 Follow the instructions in the modal. The steps to update the records might be slightly different depending on your domain name provider.
 We then must wait for the domain to be propagated before clicking on `Verify DNS configuration` on the modal.
 
+When you set the DNS records in your provider **make sure you double check there is not an old/repeated record** that points to the same host/domain/subdomain you'll be using for your site. Having two different records pointing to the same place can cause conflicts
+
 To verify that the DNS is indeed propagated before clicking on the button, you can use a tool such as <https://dnschecker.org/>
 
 ![](imgs/verifydns.png)

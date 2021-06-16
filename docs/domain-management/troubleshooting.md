@@ -3,7 +3,9 @@ date: "1"
 
 ---
 # Troubleshooting Custom Domains
+Here you can find tips and guides on how to troubleshoot the most common issues with DNS, ENS, and HNS domains on Fleek!
 
+## Troubleshooting DNS Domains
 ## Custom DNS Domain Stopped Working
 
 The first thing you can check is if your site is visible on the **"Verify on IPFS"** link on your Fleek dashboard. Visit your Fleek dashboard (the hosting tab) and select your affected site to find this button. See the gif below for a reference.
@@ -19,6 +21,19 @@ Another quick way for verifying if this is the problem is visiting the **domain 
 If that is the case, you will need to set new ANAME/ALIAS records for your main root domain, and CNAME record for your subdomains. **If you have DNSLINK** **activated**, you will also need to update those records as well to the new configuration.
 
 ![](https://storageapi.fleek.co/fleek-team-bucket/dns-space.png)
+
+------
+## Intermittent SSL Certificate Issues
+If you are experiences intermittent issues with your website's SSL certificates, or see sudden expiration errors, you might be experiencing **an issue with your DNS record configuration**. The most frequent scenarios are:
+
+- Your DNS record is improperly set.
+- Your DNS record is duplicated, or you have an old record conflicting with the new record.
+
+To troubleshoot this issue, the best path to take is:
+
+1. Verify in the DNS provider where you configured your domain's DNS record to point to Fleek, and see that there are not duplicated/old records. If there are, remove old duplicated records to avoid conflicts.
+
+2. If the problem persists, remove the domain from your site on Fleek, and re-add it again. You will be prompted to add a new DNS record (remember to remove the old one) to verify the domain with an updated configuration.
 
 ------
 
