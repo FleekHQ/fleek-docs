@@ -97,7 +97,7 @@ Under the **hosting** section in Fleek, find the affected site, and visit the **
 
 All it takes is a click of the button! Fleek will trigger a manual cache purge on BunnyCDN, and after a minute, you can recheck that your site is displaying the latest cache version.
 
-## Cache Issue - Create React App Service Worker Offline Mode Conflict
+## Cache Issue - Create React App Service Worker Conflict
 
 If your site is a **CRA (Create React App),** and your site doesn't reflect the latest changes **even after manually purging the cache using Fleek's Purge Cache feature**, you are probably facing a conflict issue with the default `serviceworker.js` configuration.
 
