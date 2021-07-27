@@ -69,13 +69,17 @@ Almost there! The last step? Go to your Cloudflare account, and setup a CNAME an
 In a nutshell, you need to create **two DNS records**:
 
 1. A CNAME record under your domain, pointing to ``cloudflare-ipfs.com``
-2. A TXT record for ``_dnslink.your.website`` pointing to the value ``dnslink=/ipns/<your_hash_here>
+2. A TXT record for ``_dnslink`` pointing to the value ``dnslink=/ipns/<your_hash_here>
 ``
+
+If you are not using a subdomain, the CNAME record you can input `@` as the Name for root. If you are using a subdomain, input that as the name (e.g. if it is subdomain.fleek.co, you input `subdomain`).
+
+In the case of the TXT record, if you use a root domain, simply put ``_dnslink``, else if using a subdomain do ``_dnslink.subdomain`` (e.g for "test.fleek.co" = `_dnslink.test`)
 
 Using the domain ``fleek.co`` and the IPNS address shown in step 2 as an example, these would look like:
 
-![](imgs/cloudflarefleek.png)
-![](imgs/dnsfleek.png)
+![](imgs/cloudflare.png)
+![](imgs/dnslink.png)
 
 #### 4- Done! Verify your website.
 
