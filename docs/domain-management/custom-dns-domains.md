@@ -17,7 +17,16 @@ If your site is hosted on the Internet Computer, Fleek will automatically assign
     
     See the section "Upgrading to New DNS Configuration".
 
-### Adding a Custom Domain 
+## Choosing your CDN/Cache Layer - Fleek or Cloudflare
+
+For your websites, you have currently two options regarding the **CDN/DNS/Cache infrastructure** your domain and site utilizes.
+
+1. Use Fleek's CDN/Cache/Edge infrastructure, using BunnyCDN to provide fast access to IPFS.
+2. Bypass Fleek, and use Cloudflare's Distributed Web IPFS gateway, using Cloudflare's CDN/Cache/DNS layer instead.
+
+To use Fleek, follow the normal instructions below. To use Cloudflare, follow the instructions in [this article of the documentation.](https://docs.fleek.co/domain-management/dns-link/#setting-up-dnslink-with-ipns-cloudflare) as you will need to use DNSLink and IPNS to do so. In the near future, we will add an UI option that simplifies the Cloudflare option for users and makes it available via the Fleek UI.
+
+## Adding a Custom Domain 
 
 ![](imgs/add-custom-domain.png)
 
