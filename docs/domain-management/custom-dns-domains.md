@@ -17,7 +17,8 @@ If your site is hosted on the Internet Computer, Fleek will automatically assign
     
     See the section "Upgrading to New DNS Configuration".
 
-### Adding a Custom Domain 
+
+## Adding a Custom Domain 
 
 ![](imgs/add-custom-domain.png)
 
