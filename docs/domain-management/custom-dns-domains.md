@@ -29,6 +29,8 @@ If your site is hosted on the Internet Computer, Fleek will automatically assign
 The process for adding a custom DNS domain **is the same for both IPFS & Internet Computer sites/apps**.
 
 ### Verifying the Custom Domain
+If you wish to use Fleek's infrastructure for your domain's CDN, keep on reading. However, if you wish to use Cloudflare as the CDN, [click here](https://docs.fleek.co/domain-management/custom-dns-domains/#setting-up-cloudflare) for the instructions.
+
 After adding the custom domain, it will appear in the site's settings under `Domain Management` > `Domains`.
 ![](imgs/checkdns.png)
 
@@ -43,6 +45,38 @@ To verify that the DNS is indeed propagated before clicking on the button, you c
 If the verify dns was successful, the domain name will become blue.
 
 ![](imgs/finished-add-domain.png)
+
+## Setting Up Cloudflare
+
+This setup is a sturdy alternative to using Fleek's CDN/Cache layer. Instead, with this you would use Cloudflare for CDN/Cache/DNS features and STILL benefit from Fleek's CI/CD pipeline for deploying to IPFS. How cool is that?
+
+### 1- Go to the settings and add a new custom domain
+
+First, a new custom domain must be added.
+
+![](imgs/cloudflare.png)
+
+After the domain is added, it will appear in the custom domains section.
+
+### 2- Configure DNS settings
+
+![](imgs/cloudflare2.png)
+
+The `Set up Cloudflare` option will be available by clicking on the three dots next to the custom domain.
+
+![](imgs/cloudflare3.png)
+
+From there, you are given instructions pertaining the DNS settings to input in your domain provider.
+
+![](imgs/cloudflare4.png)
+
+After adding the DNS records, click on the `Verify DNS configuration` button.
+
+### 3- Done! Verify your website.
+
+![](imgs/cloudflare5.png)
+
+With this DNS record setup, your domain would be using the CDN & Cache features from Cloudflare. Take note that the TLS must be configured outside of Fleek. For example, Orange Cloud can be used to provide this functionality.
 
 ## Upgrading to New DNS Configuration
 
