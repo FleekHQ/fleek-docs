@@ -94,6 +94,18 @@ const ipfs = sdk.ipfs();
 ```js
 await sdk.ipfs().add(...);
 ```
+
+### Viewing Your Pins on the Fleek App
+You can view the IPFS hashes of all your current files pinned to IPFS in the PINNING tab on the Fleek app (app.fleek.co). Log in, and visit this section to view a list of them, and copy the hash if necessary:
+
+(((IMAGE)))
+
+This tab is an overview of all the IPFS hashes attached to your account. This includes:
+
+- Files pinned to IPFS directly using the Fleek SDK.
+- Files from sites hosted on IPFS through Fleek.
+- Files uploaded to your IPFS storage from the Storage Tab / UI.
+
 ----
 ## Storing on the Internet Computer
 To start using IC Storage, you need to first **go to the Fleek app, visit the Canisters tab and deploy a new Asset Canister**. Fleek will automatically handle the deploy for you.
