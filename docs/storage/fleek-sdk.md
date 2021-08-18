@@ -2,7 +2,7 @@
 date: "1"
 
 ---
-The Fleek SDK is a tool that allows you to interact programmatically with two features on the Fleek platform **IPFS Pinning** and **Internet Computer (IC) Storage**. It is an alternative to the Fleek Storage JS (the Storage JS uses S3/MinioDB to interact with Fleek's Storage/IPFS products, while the Fleek SDK doesn't).
+The Fleek SDK is a tool that allows you to interact programmatically with two features on the Fleek platform **IPFS APIs** and **Internet Computer (IC) Storage**. It is an alternative to the Fleek Storage JS and our S3 Storage which uses MinIO to store file metadata (on top of our IPFS storage layer).
 
 ---
 
@@ -10,17 +10,17 @@ The Fleek SDK is a tool that allows you to interact programmatically with two fe
 
 First, the **IC Storage** tool. Which you can use to deploy asset canisters on the Internet Computer (through Fleek's UI), which you then interact with using this SDK tool to store and fetch files on the Internet Computer. This product and the canister deployment flow can be found in the Fleek App under the **Canisters** tab.
 
-## IPFS Direct Pinning
+## Direct Pinning with the IPFS APIs
 
-Secondly,  **IPFS Direct Pinning**. This is an alternative to using Fleek's Storage JS. When you store on Fleek's IPFS Storage via the UI, or the Storage JS, you interact with Fleek's IPFS infrastructure through an S3/MinioDB gateway that is on top of it, providing you with human readable live URLs and file metadata that are not native to IPFS. 
+Secondly,  the **IPFS API**. This is an alternative to using Fleek's Storage JS. When you store on Fleek's IPFS Storage via the UI, or the Storage JS, you interact with Fleek's IPFS infrastructure through an S3/MinIO gateway that is on top of it, providing you with human readable live URLs and file metadata that are not native to IPFS.
 
-**Direct Pinning** is an alternative to this, and instead, using the **Fleek SDK** you can store/pin files directly to Fleek's IPFS nodes without going through that centralized layer (S3/MinioDB). 
+Our S3 Gateways to IPFS use the IPFS APIs underneath, but with the **Fleek SDK** you can use the IPFS APIs directly (like a shortcut!) without interacting with S3. The main benefit of these new APIs is that there is **better regional coverage across the globe**.
 
 Instead, you upload files directly using an IPFS client instance in the SDK, and only get the file's IPFS hash. It is a tradeoff approach, where you focus on an IPFS-only more decentralized option, which means your files will only be accessible through interfaces that resolve IPFS hashes (since our S3/MinioDB interface doesn't provide live Web2 URLs for resolving).
 
 ---
 
-## Using the IC Storage & Pinning SDK
+## Using the Fleek SDK
 
 ### Getting the Necessary API Key
 
