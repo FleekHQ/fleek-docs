@@ -206,5 +206,6 @@ In this case, we created an NFTs app where users can connect via Metamask, uploa
 This example also showcases an example of handling authentication with custom tokens provided by a lambda service.
 
 
-**[See the live application, with live examples here!](https://bafybeigu677y3k6f7ttvpztewk5sbtla4z3tlxvhddzpghjch55ibz4cee.ipfs.dweb.link/)**
+- **[See the live application, with live examples here!](https://bafybeigu677y3k6f7ttvpztewk5sbtla4z3tlxvhddzpghjch55ibz4cee.ipfs.dweb.link/)**
+- **[And check out the source code for this in the SDKs example repo!](https://github.com/FleekHQ/sdk/tree/master/examples/nodejs-ipfs-with-ic-metadata)**
 
