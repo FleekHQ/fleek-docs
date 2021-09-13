@@ -90,6 +90,8 @@ Review the last step from the question above. It is important that you disable t
 ### Verifying your .eth domain was linked properly
 You can quickly test that the ENS domain is correctly synced with the IPFS hash of the current build by appending `.link` after the domain. EG: <https://fleekhq.eth.link>, thanks to a gateway service provided by ENS and Cloudflare. Anyone can access your site this way. Else, you can try an ENS compatible browser like [Brave](https://brave.com/), or install the [MetaMask](https://metamask.io/) browser extension.
 
+An alternative to eth.link is eth.limo! It's a decentralized option (Cloudflare's eth.link is centralized and can experience downtimes) that was created so that there is not only one Web2 gateway to IPFS+ENS sites. As easy as .eth.link. You just add .limo at the end of your ENS name. EG, http://ens.eth.limo/
+
 ### Can't access your ENS domain via any browser?
 You must ensure that your browser is able to resolve ENS domains. You can test this functionality with Fleek's homepage: [fleek.eth/](https://fleek.eth/).
 

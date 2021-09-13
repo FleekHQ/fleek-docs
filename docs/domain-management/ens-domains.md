@@ -83,11 +83,14 @@ If when you begin the "Set the Content Hash Flow", you find yourself viewing a *
 ![](imgs/migrate-confirm.png)
 
 
-### Review Your ENS Site with eth.link, MetaMask, or Other Options.
+### Review Your ENS Site with eth.link, ens.limo, MetaMask, or Other Options.
 
 If you’re using an ENS-compatible browser, like [Brave](https://brave.com/), or if you have the [MetaMask](https://metamask.io/) extension installed like in the GIF above, you can just type your address in the search bar “address.eth/” (don’t forget the “/”) and it should be automatically resolved: fleekhq.eth/
 
 **Using eth.link**
-If you have none of those, you can always append the “.link” suffix after your domain to visit your IPFS+ENS website on any browser, thanks to a service made available by ENS and Cloudflare that makes all the .eth domains accessible via traditional DNS addresses. Anyone can visit and resolve your site. [Visit the ENS app with .link!](http://ens.eth.link/) 
+If you have none of those, you can always append the “.link” suffix after your domain to visit your IPFS+ENS website on any browser, thanks to a service made available by ENS and Cloudflare that makes all the .eth domains accessible via traditional DNS addresses. Anyone can visit and resolve your site. [Visit the ENS app with .link!](http://ens.eth.link/)
+
+**Using eth.limo**
+An alternative to eth.link is eth.limo! It's a decentralized option (Cloudflare's eth.link is centralized and can experience downtimes) that was created so that there is not only one Web2 gateway to IPFS+ENS sites. As easy as .eth.link. You just add .limo at the end of your ENS name. EG, http://ens.eth.limo/
 
 **All of these are third-party resolving options** you, or anyone, can use to visit your site using .eth ENS domains. Be aware that these are non-Fleek platforms. If your ENS record is configured properly, and you experience an issue on any of these gateways, contact that specific provider.
