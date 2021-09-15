@@ -122,6 +122,9 @@ fs.readFile(filePath, async (error, fileData) => {
     apiSecret: 'my-secret',
     key: 'my-file-key',
     data: fileData,
+    httpUploadProgressCallback: (event) => {
+      console.log(Math.round(event.loaded/event.total*100)+ '% done');
+    }
   });
 })
 ```
@@ -135,6 +138,7 @@ fs.readFile(filePath, async (error, fileData) => {
 | key 	|  String	| The key identifying the requested file in the bucket  	|
 | bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
 | data 	| Any 	| The data of the file to be uploaded |
+| httpUploadProgressCallback 	| Function 	| Callback function to track the progress of the upload |
 
 ### deleteFile
 
