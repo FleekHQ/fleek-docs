@@ -140,6 +140,35 @@ fs.readFile(filePath, async (error, fileData) => {
 | data 	| Any 	| The data of the file to be uploaded |
 | httpUploadProgressCallback 	| Function 	| Callback function to track the progress of the upload |
 
+### streamUpload
+
+The `streamUpload` method uploads a file, identified by a key, to a bucket.
+The function returns the hash of the file, the publicUrl, the key and the bucket.
+The difference between `upload` and `streamUpload` is that `streamUpload` does not store the entire file in memory prior to uploading, which is useful for very large files.
+
+Example of usage:
+
+```js
+  const stream  = fs.createReadStream('./bike.mp4');
+
+  const uploadedFile = await fleekStorage.streamUpload({
+    apiKey: 'my-key',
+    apiSecret: 'my-secret',
+    key: 'my-file-key',
+    stream,
+  });
+```
+
+**Input parameters of streamUpload**
+
+|param  	|type  	|description  	|
+|-:	|-	|-	|
+| apiKey 	| String 	|  The api key used for authentication	|
+| apiSecret 	| String 	|  The api secret used for authentication	|
+| key 	|  String	| The key identifying the requested file in the bucket  	|
+| bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
+| stream 	| Any 	| The data of the file to be uploaded as a stream|
+
 ### deleteFile
 
 The `deleteFile` method deletes a file, identified by its key and bucket.
