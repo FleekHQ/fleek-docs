@@ -8,32 +8,6 @@ Our Storage SDK allows developers to easily integrate our storage solution throu
 
 ## Getting an API Key
 
-### From the Fleek CLI
-
-The [Fleek CLI](https://www.npmjs.com/package/@fleekhq/fleek-cli) is a tool that allows access to Fleek's products from the command line.
-
-### Installation
-
-```sh
-npm install -g @fleekhq/fleek-cli
-```
-
-Run the following command:
-
-```sh
-fleek login
-```
-
-It should open a browser window prompting you to log in. If you are already logged in, it will automatically close the browser window and generate the keys.
-
-Next, run the command
-
-```sh
-fleek whoami
-```
-
-Take note of the fields apiKey and apiSecret which will be needed in the next step.
-
 ### From the Web app
 
 You can also generate a new api key from the Web app at [app.fleek.co](https://app.fleek.co).

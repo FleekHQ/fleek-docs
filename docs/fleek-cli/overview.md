@@ -49,9 +49,6 @@ You can use the Fleek CLI to interact directly with the deployment/hosting workf
 **Using GitHub Actions on your Deployments**
 The CLI also enables a second powerful developer feature, the use of custom GitHub actions on your Fleek deployments, letting you further customize your deployment workflow and making way for custom automations.
 
-### API Key Generation
-The CLI also provides an easy way to generate the necessary API keys to interact with our other interfaces, like the Fleek Storage JS, or any S3 compatible SDK (since Fleek provides an S3 interface as well)
-
 ### Command Categorization
 
 Each command is categorized by topic, and has the following general structure:
@@ -77,28 +74,14 @@ npm install -g @fleekhq/fleek-cli
 ```
 You can confirm that the CLI has been installed correctly by running the 'fleek help' command and receiving a full list of the currently supported subcommands.
 
-### Logging in to Fleek
-To use the CLI, you need to log into your Fleek account and authenticate yourself. To do so, run the following command that will prompt a browser window with a Fleek login, where you can do so:
-```
-fleek login
-```
-Once you are logged in, the CLI will store your authentication token.
+### Retrieving and Using an API Key
+In order to use the CLI, you must generate an api key and then add this api key as an environment variable in your system.
 
-### Retrieving Your API Key
-To retrieve your API key, make sure you are logged into Fleek (see above), and then run the following command:
-```
-fleek whoami
-```
-When you do so, you will receive a response with the complete details of your current session/account, similar to the following:
-```
-{
-  environment: 'prd',
-  apiKey: '[[apikey]]',
-  apiSecret: '[[apisecret]]',
-  username: '[[username]]',
-  _id: '[[id]]'
-}
-```
+Generating an API key can be done in the Fleek user interface. Click on your profile on the bottom left of the screen, select `Settings`, find the `Hosting API` section and then click on `Generate API`.
+
+From there copy the key that is generated.
+
+Next, in order to use the key with the Fleek CLI, add an environment variable named `FLEEK_API_KEY` and give it the generated key as value. After this point, the Fleek Cli can be used.
 
 ## Sites
 
