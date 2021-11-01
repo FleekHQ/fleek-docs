@@ -32,6 +32,14 @@ type Mutation {
 	Retry a previous deployment
 	"""
   retryDeploy(siteId: ID!, deployId: ID!): Deploy
+	"""
+	Purge the bunny CDN cache
+	"""
+  purgeCache(input: PurgeCacheInput!): Boolean
+}
+
+input PurgeCacheInput {
+  siteId: String!
 }
 
 type SiteConnection {
