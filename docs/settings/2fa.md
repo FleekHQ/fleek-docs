@@ -7,6 +7,8 @@ Fleek’s **2-factor authentication** setting will help you protect your account
 
 Each time you log in, you will receive a **2FA confirmation code to that associated phone number** that you’ll need to enter during your login, aside from your password.
 
+> Alternatively, if you use **GitHub as your one-click login option for Fleek**, you can activate 2FA in your **GitHub account itself** and gain the same security benefits, but applied through the GitHub service.
+
 ## Setting up 2-factor authentication in Fleek
 
 To get started, visit your **account's settings,** by clicking on the bottom left account name on the Fleek app.
