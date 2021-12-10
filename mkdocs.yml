@@ -62,6 +62,8 @@ nav:
     - Overview: space-desktop/overview.md
   - Space SDK:
     - Overview: space-sdk/overview.md
+  - Account Settings:
+    - 2FA: settings/2fa.md    
   - Tutorials:
     - Hosting: tutorials/hosting.md
     - Storage: tutorials/storage.md
