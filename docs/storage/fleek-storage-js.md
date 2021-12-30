@@ -43,7 +43,7 @@ The api generator is located in the user settings.
 ![](imgs/user-settings.png)
 
 The new keys can be generated in the api section by clicking on `Create API keys`.
-Make sense to copy the secret somewhere because it is only visible once.
+Make sure to copy the secret somewhere because it is only visible once.
 
 ![](imgs/api-keys.png)
 
