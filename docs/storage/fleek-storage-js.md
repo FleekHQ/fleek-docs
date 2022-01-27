@@ -121,6 +121,7 @@ fs.readFile(filePath, async (error, fileData) => {
     apiKey: 'my-key',
     apiSecret: 'my-secret',
     key: 'my-file-key',
+    ContentType: 'image/png'
     data: fileData,
     httpUploadProgressCallback: (event) => {
       console.log(Math.round(event.loaded/event.total*100)+ '% done');
@@ -139,6 +140,7 @@ fs.readFile(filePath, async (error, fileData) => {
 | bucket 	| String, optional, defaults to the default account bucket 	|  The name of the bucket containing the file. A bucket is created by default with every Fleek account	|
 | data 	| Any 	| The data of the file to be uploaded |
 | httpUploadProgressCallback 	| Function 	| Callback function to track the progress of the upload |
+| ContentType 	| String 	| Type of data to be uploaded, MIME type |
 
 ### streamUpload
 
