@@ -130,7 +130,7 @@ fs.readFile(filePath, async (error, fileData) => {
 })
 ```
 
->  It is advised that your client code now handle errors for the upload file call.  Previously, the library was swallowing errors in an attempt to handle errors during conversion from v0 hash to v1 hash.  Now the client is handling that error separately and rejecting the promise for other errors, which means if your client code isn't handling errors on this call your app can break.
+>  It is advised that your client code now handle errors for the upload file call.  Previously, the library was swallowing errors in an attempt to handle errors during conversion from v0 hash to v1 hash.  Now the client is handling that error separately and rejecting the promise for other errors, which means if your client code isn't handling errors on this call your app can break. You can see the [community improvement PR proposal here for further context.](https://github.com/FleekHQ/fleek-storage-js/pull/37)
 
 **Input parameters of upload**
 
