@@ -22,7 +22,8 @@ Any IPFS hash can be resolved using the Fleek IPFS gateway, whether it is hosted
 ### Fleek's Edge & IPFS CDN
 Aside from Fleek's main IPFS gateway, open to everyone using IPFS, there is a secondary IPFS resolving feature Fleek provides exclusively to its users.
 
-Any file or site hosted on IPFS through Fleek is made immediately available over HTTP through **Fleek's Edge**, over the `siteA.on.fleek.co` path for hosted sites, or the `storageapi.fleek.co` path in the case of specific files stored on Fleek. When you host a new site, that is the url we utilize to give your site a random, and ready to use accessible URL!
+Any file or site hosted on IPFS through Fleek is made immediately available over HTTP through **Fleek's Edge**, over the `siteA.on.fleek.co` path for hosted sites, or the `storageapi2.fleek.co` path in the case of specific files stored on Fleek. When you host a new site, that is the url we utilize to give your site a random, and ready to use accessible URL! Files are also available on a user's specific bucket url: `[bucketName].s3.fleek.co` (e.g.`https://flk-team-bucket.s3.fleek.co/filename` ).
+
 
 **Why does Fleek use this to serve IPFS content?**
 We have built the Fleek edge to add CDN perks and speed improvements that are not native to IPFS, increasing the content delivery speed by up to 10x:

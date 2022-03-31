@@ -132,13 +132,15 @@ First, make sure that you install the dependencies in your package.json file. Yo
 
 Then, the following script outlines how to list your Fleek Storage buckets (replacing [[apiKey]] and [[apiSecret]] with the values obtained in the previous step).
 
+For [[endpoint]], you can either go for our shared gateway 'https://storageapi2.fleek.co' or use your bucket-specific URL 'https://[bucketName].s3.fleek.co/' (e.g.https://flk-team-bucket.s3.fleek.co/' ).
+
     const AWS = require('aws-sdk');
    
     const s3 = new AWS.S3({
         apiVersion: '2006-03-01',
         accessKeyId: '[[apiKey]]',
         secretAccessKey: '[[apiSecret]]',
-        endpoint: 'https://storageapi.fleek.co',
+        endpoint: '[[endpoint]]',
         region: 'us-east-1',
         s3ForcePathStyle: true
      });
@@ -182,8 +184,10 @@ Default output format [None]: ENTER
 
 To list your buckets, run the following command:
 
-`aws --endpoint-url https://storageapi.fleek.co s3 ls`
+`aws --endpoint-url https://storageapi2.fleek.co s3 ls`
 
 To list objects within a bucket, run:
 
-`aws --endpoint-url https://storageapi.fleek.co s3 ls s3://my-bucket`
+`aws --endpoint-url https://storageapi2.fleek.co s3 ls s3://my-bucket`
+
+Instead of storageapi2.fleek.co you can also use your bucket-specific URL 'https://[bucketName].s3.fleek.co/' (e.g.https://flk-team-bucket.s3.fleek.co/' ).
