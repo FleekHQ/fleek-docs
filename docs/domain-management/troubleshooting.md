@@ -8,17 +8,17 @@ date: "1"
 
 The first thing you can check is if your site is visible on the **"Verify on IPFS"** link on your Fleek dashboard. Visit your Fleek dashboard (the hosting tab) and select your affected site to find this button. See the gif below for a reference.
 
-![](https://storageapi.fleek.co/fleek-team-bucket/Blog%20Inline/verify-ipfs.gif)
+![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/verify-ipfs.gif)
 
 Can you access your site via the IPFS link? Then the most possible scenario is **you're using our old DNS configuration and need to upgrade**. Follow the steps [on this documentation](https://docs.fleek.co/hosting/domain-management/#upgrading-to-new-dns-configuration) to update your domain records.
 
 Another quick way for verifying if this is the problem is visiting the **domain management tab** on your site and seeing if the "Upgrade DNS Configuration" message is present.
 
-![](https://storageapi.fleek.co/fleek-team-bucket/Blog Inline/verify.png)
+![](https://storageapi2.fleek.co/fleek-team-bucket/Blog Inline/verify.png)
 
 If that is the case, you will need to set new ANAME/ALIAS records for your main root domain, and CNAME record for your subdomains. **If you have DNSLINK** **activated**, you will also need to update those records as well to the new configuration.
 
-![](https://storageapi.fleek.co/fleek-team-bucket/dns-space.png)
+![](https://storageapi2.fleek.co/fleek-team-bucket/dns-space.png)
 
 ------
 
@@ -77,7 +77,7 @@ This is because when the orange cloud is ON, Cloudflare proxies your site throug
 
 **Remember to go back to Fleek** after setting your DNS records on Cloudflare, and click on the "Verify DNS configuration button" for each of the domains you configured to complete the process. It might take a couple minutes for your site to reflect the change.
 
-![](https://storageapi.fleek.co/fleek-team-bucket/Blog%20Inline/Group%205832.png)
+![](https://storageapi2.fleek.co/fleek-team-bucket/Blog%20Inline/Group%205832.png)
 
 ### DNS records set up on Cloudflare but fail verification.
 
