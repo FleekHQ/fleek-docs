@@ -36,7 +36,7 @@ npm install --save   aws-sdk
 
 Then, we can declare the S3 client. You must replace [[apiKey]] and [[apiSecret]] with your [Api Key and Secret](/storage/storage-aws-s3-integration/#getting-an-api-key).
 
-For [[endpoint]], you can either go for our shared gateway 'https://storageapi2.fleek.co' or use your bucket-specific URL 'https://[bucketName].s3.fleek.co/' (e.g.https://flk-team-bucket.s3.fleek.co/' ).
+For [[endpoint]], you can either go for our shared gateway 'https://storageapi2.fleek.co' or use your bucket-specific URL 'https://[bucketName].s3.fleek.co/' (e.g.https://flk-team-bucket.s3.fleek.co/' ). The bucket option is still in alpha and might present issues for larger files.
 
 ```js
 const AWS = require('aws-sdk');
@@ -203,4 +203,4 @@ To list objects within a bucket, run:
 ```sh
 aws --endpoint-url https://storageapi2.fleek.co s3 ls s3://my-bucket
 ```
-Files are also available on a user's specific bucket url: `[bucketName].s3.fleek.co` (e.g.`https://flk-team-bucket.s3.fleek.co/filename` ).
+Files are also available on a user's specific bucket url: `[bucketName].s3.fleek.co` (e.g.`https://flk-team-bucket.s3.fleek.co/filename` ). The bucket option is still in alpha and might present issues for larger files.
