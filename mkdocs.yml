@@ -40,8 +40,9 @@ nav:
   - Fleek Storage:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
-    - Fleek Storage JS: storage/fleek-storage-js.md
+    - Storage JS (S3 / MinioDB): storage/fleek-storage-js.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
+    - Fleek SDK (IPFS / IC Storage): storage/fleek-sdk.md
   - IPFS and IC Gateways:
     - Overview: gateways/overview.md
   - Fleek CLI:
