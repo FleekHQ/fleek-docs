@@ -14,7 +14,7 @@ With Custom Storage API Domains, we're increasing the uptime, availability, and 
 
 Navigate to the storage tab, denoted by a `new` prompt and found in the vertical navigation bar of the Fleek.co app.
 
-![](docs/storage/imgs/add-domain.png)
+![](imgs/add-domain1.png)
 
 ### 1.  Click `Add a Custom Domain`
 
@@ -22,7 +22,7 @@ Navigate to the storage tab, denoted by a `new` prompt and found in the vertical
 
 ### 3.  Click `Check DNS Configuration` and copy the URL that is in the format of 'bucket-id.b-cdn.net`, in order to let the custom domain know the location of your storage bucket.
 
-![](docs/storage/imgs/dns-config.png)
+![](imgs/dns-config.png)
 
 ## Verifying the Custom Domain
 
@@ -34,7 +34,7 @@ If done properly Fleek will now be able to verify your domain, and your storage 
 
 This Fleek Storage bucket can now be accessed from `storage.mergeit.xyz/e402cc35-7532-4131-8ebe-dd4a5f506c5-bucket`.
 
-![](docs/storage/imgs/final-merge-it-bucket.png)
+![](imgs/final-merge-it-bucket.png)
 
 All storage buckets will remain accessible from `storageapi.fleek.one/bucket-id`, even when a custom domain has been added. 
 
