@@ -6,9 +6,9 @@ Upon creation of a Fleek.co Storage bucket, users are assigned a default API URL
 
 With Custom Storage API Domains, we're increasing the uptime, availability, and accessibility of these storage buckets by allowing existing Fleek.co storage users to add their own custom domains to map to their Fleek storage buckets.
 
-!!! Important Info
+!!! info
 
-> We have recently deprecated (blog link) the ability for new storage buckets to be created on Fleek.co as a part of the sunsetting process the platform is going through. Users that don't already have a storage bucket with Fleek can sign up to be on the waitlist (link) for our new platform, Fleek.xyz.
+    When you deploy on Fleek your site will have an IPFS hash and future automatic deployments will also update the IPFS hash of your site. Your site comes with a CDN, free SSL certificate, and a Fleek preview URL. You can add Custom Domains, ENS Domains, Configure Deploy Previews, and more.
 
 ## Add Custom Domain
 
