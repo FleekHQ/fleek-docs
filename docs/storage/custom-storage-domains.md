@@ -14,15 +14,16 @@ With Custom Storage API Domains, we're increasing the uptime, availability, and 
 
 Navigate to the storage tab, denoted by a `new` prompt and found in the vertical navigation bar of the Fleek.co app.
 
-![](imgs/add-domain1.png)
 
 ### 1.  Click `Add a Custom Domain`
 
-![](imgs/ad-custom-storage-domain.png)
+![](imgs/add-domain1.png)
 
 ### 2.  Enter the Domain you want to map to your storage bucket -- make sure this is a domain you own.
 
-### 3.  After a bit of thinking, Fleek will recognize the domain you’re attempting to map. To let your custom domain know the location of your storage bucket, click `⚠ Check DNS Configuration` for the relevant domain information. 
+![](imgs/ad-custom-storage-domain.png)
+
+### 3.  After a bit of thinking, Fleek will recognize the domain you’re attempting to map. To let your custom domain know the location of your storage bucket, click `⚠ Check DNS Configuration` for the relevant domain information. The "Points to" field what you need to set your DNS CNAME record to. 
 
 ![](imgs/dns-config.png)
 
@@ -38,13 +39,12 @@ This Fleek Storage bucket can now be accessed from `storage.mergeit.xyz/e402cc35
 
 ![](imgs/final-merge-it-bucket.png)
 
-All storage buckets will remain accessible from `storageapi.fleek.one/bucket-id`, even when a custom domain has been added. 
 
 ## Consuming Your New Endpoint Via the Fleek.co SDK
 
-If you use the Fleek SDK to consume your storage bucket, please make sure you upgrade the `@fleekhq/fleek-storage-js` package to `version 1.0.23`. This new version allows you to input your custom storage domain as the endpoint.
+If you use the Fleek SDK to consume your storage bucket, please make sure you upgrade the `@fleekhq/fleek-storage-js` package to `version 1.0.23 or higher`. This will allow you to input your custom storage domain as the endpoint.
 
-After updating to `version 1.0.23`, you can now do the following to use the custom domain added in the Fleek app:
+After updating the Fleek SDK to `version 1.0.23 or anyone higher`, you can now do the following to use the custom domain added in the Fleek app:
 
 ```js
 
