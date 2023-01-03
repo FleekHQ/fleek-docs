@@ -16,11 +16,11 @@ Navigate to the storage tab, denoted by a `new` prompt and found in the vertical
 
 ![](imgs/add-domain1.png)
 
-### 1.  Click `Add a Custom Domain`
+#### 1.  Click `Add a Custom Domain`
 
-### 2.  Enter the Domain you want to map to your storage bucket -- make sure this is a domain you own.
+#### 2.  Enter the Domain you want to map to your storage bucket -- make sure this is a domain you own.
 
-### 3.  Click `Check DNS Configuration` and copy the URL that is in the format of 'bucket-id.b-cdn.net`, in order to let the custom domain know the location of your storage bucket.
+#### 3.  Click `Check DNS Configuration` and copy the URL that is in the format of 'bucket-id.b-cdn.net`, in order to let the custom domain know the location of your storage bucket.
 
 ![](imgs/dns-config.png)
 

@@ -41,6 +41,7 @@ nav:
     - Overview: storage/overview.md
     - Storage App: storage/storage-app.md
     - Fleek Storage JS: storage/fleek-storage-js.md
+    - Custom Storage Domains: storage/custom-storage-domains.md
     - Storage AWS S3 Integration: storage/storage-aws-s3-integration.md
   - IPFS and IC Gateways:
     - Overview: gateways/overview.md
