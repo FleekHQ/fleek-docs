@@ -8,13 +8,13 @@ With Custom Storage API Domains, we're increasing the uptime, availability, and 
 
 !!! Important Info
 
-We have recently deprecated (blog link) the ability for new storage buckets to be created on Fleek.co as a part of the sunsetting process the platform is going through. Users that don't already have a storage bucket with Fleek can sign up to be on the waitlist (link) for our new platform, Fleek.xyz.
+> We have recently deprecated (blog link) the ability for new storage buckets to be created on Fleek.co as a part of the sunsetting process the platform is going through. Users that don't already have a storage bucket with Fleek can sign up to be on the waitlist (link) for our new platform, Fleek.xyz.
 
 ## Add Custom Domain
 
 Navigate to the storage tab, denoted by a `new` prompt and found in the vertical navigation bar of the Fleek.co app.
 
-![](docs/storage/imgs/add-domain-#1.png)
+![](docs/storage/imgs/add-domain.png)
 
 ### 1.  Click `Add a Custom Domain`
 
