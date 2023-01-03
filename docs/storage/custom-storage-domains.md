@@ -49,13 +49,9 @@ After updating the Fleek SDK to `version 1.0.23 or anyone higher`, you can now d
 ```js
 
 const buckets = await fleekStorage.listBuckets({
-
-`        `apiKey: 'your key',
-
-`        `apiSecret: 'your secret,
-
-`        `domain: "your custom domain"
-
+  apiKey: 'your key',
+  apiSecret: 'your secret',
+  domain: 'your custom domain'
 });
 
 ```
