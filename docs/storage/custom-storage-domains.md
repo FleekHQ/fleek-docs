@@ -15,15 +15,15 @@ With Custom Storage API Domains, we're increasing the uptime, availability, and 
 Navigate to the storage tab, denoted by a `new` prompt and found in the vertical navigation bar of the Fleek.co app.
 
 
-### 1.  Click `Add a Custom Domain`
+#### 1.  Click `Add a Custom Domain`
 
 ![](imgs/add-domain1.png)
 
-### 2.  Enter the Domain you want to map to your storage bucket -- make sure this is a domain you own.
+#### 2.  Enter the Domain you want to map to your storage bucket -- make sure this is a domain you own.
 
 ![](imgs/ad-custom-storage-domain.png)
 
-### 3.  After a bit of thinking, Fleek will recognize the domain you’re attempting to map. To let your custom domain know the location of your storage bucket click `⚠ Check DNS Configuration` for the relevant domain information. The "Points to" field what you need to set your DNS CNAME record to. 
+#### 3.  After a bit of thinking, Fleek will recognize the domain you’re attempting to map. To let your custom domain know the location of your storage bucket click `⚠ Check DNS Configuration` for the relevant domain information. The "Points to" field what you need to set your DNS CNAME record to. 
 
 ![](imgs/dns-config.png)
 
