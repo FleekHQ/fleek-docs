@@ -1,11 +1,13 @@
 site_name: "Documentation"
 site_author: fleek.co
+site_description: Fleek is a suite of tools with everything you need to build modern sites and apps on the Open Web and its protocols seamlessly.
 site_url: https://docs.fleek.co/
 copyright: '© 2020 Fleek'
 repo_name: fleekhq/fleek-docs
 repo_url: https://github.com/fleekhq/fleek-docs
 theme:
   name: material
+  custom_dir: overrides
   favicon: './imgs/favicon.ico'
   logo: './imgs/logo.png'
   font:
