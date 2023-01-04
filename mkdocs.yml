@@ -6,6 +6,7 @@ repo_name: fleekhq/fleek-docs
 repo_url: https://github.com/fleekhq/fleek-docs
 theme:
   name: material
+  custom_dir: overrides
   favicon: './imgs/favicon.ico'
   logo: './imgs/logo.png'
   font:
