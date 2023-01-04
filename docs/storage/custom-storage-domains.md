@@ -1,6 +1,9 @@
 ﻿---
 date: "1"
-image: "https://terminalco.wpcomstaging.com/wp-content/uploads/2020/03/FleekMeta.jpg"
+<meta property="og:image" content="https://terminalco.wpcomstaging.com/wp-content/uploads/2020/03/FleekMeta.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="628" />
+<meta name="twitter:card" content="summary_large_image" />
 ---
 
 # Custom Storage API Domains
