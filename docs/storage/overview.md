@@ -17,7 +17,7 @@ Whether you prefer to use simple interfaces, programming, or use your current co
 <div class="prev-boxes-list">
   <a href="../storage-app/" class="prev-box">
     <h5>Storage App UI</h5>
-    <p>Manage Files Through Pretty UI</p>
+    <p>Manage Files Through An UI</p>
   </a>
   <a href="../fleek-storage-js/" class="prev-box">
     <h5>Storage Fleek JS</h5>
@@ -27,6 +27,10 @@ Whether you prefer to use simple interfaces, programming, or use your current co
     <h5>AWS S3 Integration</h5>
     <p>Integrate and Transfer from S3 Seamlessly</p>
   </a>
+  <a href="../custom-storage-domains/" class="prev-box">
+    <h5>Custom Storage Domains</h5>
+    <p>Add a Domain to Your Storage Endpoint</p>
+  </a>  
 </div>
 
 We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://slack.fleek.co/), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co
