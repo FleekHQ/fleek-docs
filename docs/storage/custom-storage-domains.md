@@ -23,7 +23,7 @@ Navigate to the storage tab, denoted by a `new` prompt and found in the vertical
 
 ![](imgs/ad-custom-storage-domain.png)
 
-### 3.  After a bit of thinking, Fleek will recognize the domain you’re attempting to map. To let your custom domain know the location of your storage bucket, click `⚠ Check DNS Configuration` for the relevant domain information. The "Points to" field what you need to set your DNS CNAME record to. 
+### 3.  After a bit of thinking, Fleek will recognize the domain you’re attempting to map. To let your custom domain know the location of your storage bucket click `⚠ Check DNS Configuration` for the relevant domain information. The "Points to" field what you need to set your DNS CNAME record to. 
 
 ![](imgs/dns-config.png)
 
