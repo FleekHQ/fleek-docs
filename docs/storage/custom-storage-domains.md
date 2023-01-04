@@ -35,7 +35,7 @@ Click `Verify DNS Configuration` in the `DNS Configuration` modal to verify chan
 
 If done properly Fleek will now be able to verify your domain, and your storage domain will change from the default `storageapi.fleek.one` URL to your custom domain + bucket ID. In the example below, we've successfully added `storage.mergeit.xyz` as the custom domain for a user with a bucket ID `e402cc35-7532-4131-...`.
 
-This Fleek Storage bucket can now be accessed from `storage.mergeit.xyz/e402cc35-7532-4131-8ebe-dd4a5f506c5-bucket`.
+This Fleek Storage bucket can then be accessed from `storage.mergeit.xyz/e402cc35-7532-4131-8ebe-dd4a5f506c5-bucket`.
 
 ![](imgs/final-merge-it-bucket.png)
 
