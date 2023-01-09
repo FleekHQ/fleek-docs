@@ -6,6 +6,10 @@ Upload, browse, and manage all your files through the app interface. All files u
 
 The Fleek Storage app is a tool meant to host public web assets.
 
+!!! info
+
+    As of 2023, we have begun the a gradual deprecation of Fleek.co's storage API endpoints in favor of custom, per-user, domains. Read more about how to prepare for this transition, and the road to a new storage service [in this blog](https://blog.fleek.co/posts/fleek-co-gateway-storage-url-deprecation)
+
 ## Upload Folders and Files
 
 Go to the Storage page by selecting storage on the left-hand side navigation.

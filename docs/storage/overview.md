@@ -10,7 +10,11 @@ Fleek storage is the easiest and most performant way to upload, pin, and fetch f
 
 For ease of use you can use the Fleek Application UI to manage files, our FleekJs SDK to easily interact programmatically, or our AWS S3 integration if you're already using S3. You get the fastest IPFS file storage performance with an augmented CDN, File compression, and Image Resizing all packaged up with the Fleek Storage URLs (ex: example-bucket.storage.fleek.co).
 
-All files uploaded are published to DNS and can be viewed and referenced via the Fleek Storage URL and/or directly on any IPFS gateway.
+!!! info
+
+    As of 2023, we have begun the a gradual deprecation of Fleek.co's storage API endpoints in favor of custom, per-user, domains. Read more about how to prepare for this transition, and the road to a new storage service [in this blog](https://blog.fleek.co/posts/fleek-co-gateway-storage-url-deprecation)
+
+All files uploaded are published to DNS and can be viewed and referenced via a custom domain and/or directly on any IPFS gateway.
 
 Whether you prefer to use simple interfaces, programming, or use your current code, we have you covered.
 
