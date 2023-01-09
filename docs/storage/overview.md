@@ -14,6 +14,10 @@ All files uploaded are published to DNS and can be viewed and referenced via the
 
 Whether you prefer to use simple interfaces, programming, or use your current code, we have you covered.
 
+!!! info
+
+    As of 2023, we have begun the a gradual deprecation of Fleek.co's storage API endpoints in favor of custom, per-user, domains. Read more about how to prepare for this transition, and the road to a new storage service [in this blog](https://blog.fleek.co/posts/fleek-co-gateway-storage-url-deprecation)
+
 <div class="prev-boxes-list">
   <a href="../storage-app/" class="prev-box">
     <h5>Storage App UI</h5>
