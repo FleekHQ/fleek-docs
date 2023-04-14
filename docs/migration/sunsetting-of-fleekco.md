@@ -14,23 +14,23 @@ To be more organized we are separating the road towards sunsetting the old platf
 
 ## Phase 1: Reaching Feature Parity (Current)
 
-Before we begin a migration or transition from Fleek.co to Fleek.xyz, we need the new platform to reach feature parity with the current app and services:
+Before we begin a migration or transition from Fleek.co to Fleek.xyz, we need the new platform to reach feature parity with the current app and services. These are the items we are working on right now:
 
-### Today: Building Site Deployments, Domains, Storage, CLI/SDK
+### Building Site Deployments, Domains, Storage, CLI/SDK (Today)
 
 This is our **current stage** where users can interact with our SDK and CLI to store files in IPFS, deploy their sites, and configure custom domains on top of it. These services are available in early beta on Fleek.xyz.
 
-### Next: The Release of the Beta UI for Fleek.xyz
+### The Release of the Beta UI for Fleek.xyz
 
 The next phase involves releasing the beta UI of the new platform which will allow us to replicate all the features available in the CLI to the UI for those users who prefer this type of interface.  During this phase, we will be collecting feedback actively and setting the groundwork for customer support moving forward.
 
-### Final: Full feature parity.
+### Git Connection & Managed Custom Deployments
 
 While we collect feedback and optimize the UI flows we will be focusing on finishing the features that are needed to complete the feature parity, out of all the missing pieces these are the two key ones:
 
 **Git connection:** Connecting with GitHub tools to grant access to the platform to download and perform deployments directly from a repository.
 
-**Custom Deployments:** Right now the build before the upload is being done on the users end, with this feature Fleek will collect the source code and run the build on our infrastructure controlling all the process
+**Managed Deployments:** Right now the build before the upload is being done on the users' end in Fleek.xyz's beta. This feature Fleek will collect the source code and run the build on our infrastructure controlling all the process, as in Fleek.co
 
 ---
 
