@@ -22,7 +22,7 @@ markdown_extensions:
       permalink: true
 nav:
   - Introduction: index.md
-  - Migration to Fleek.xyz: index.md
+  - Migration to Fleek.xyz: migration/sunsetting-of-fleekco.md
   - IPFS Hosting:
     - Overview: hosting/overview.md
     - Site Deployment: hosting/site-deployment.md
