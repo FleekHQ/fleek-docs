@@ -82,6 +82,15 @@ If when you begin the "Set the Content Hash Flow", you find yourself viewing a *
 
 ![](imgs/migrate-confirm.png)
 
+## Adding an ENS Subname
+
+Normally, trying to add an ENS subdomain or Subname of ENS V3 can trigger an errors due to controller settings in ENS. To ensure you can easily add any ENS subdomain to any Fleek site you want, go to the ENS app at https://app.ens.domains/yourname and:
+
+1. Visit the subnames tab, and select the subname you want to add to Fleek.
+2. Unwrap your subname.
+2. Set it as a primary name.
+3. Done! Go back to Fleek, and follow the normal ENS flow.
+
 
 ### Review Your ENS Site with eth.link, ens.limo, MetaMask, or Other Options.
 
