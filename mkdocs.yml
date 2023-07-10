@@ -76,6 +76,7 @@ nav:
     - Hosting: examples/hosting.md
     - Storage: examples/storage.md
     - Daemon: examples/daemon.md
+  - Knowledge Hub: "https://support.fleek.xyz/hc/en-us"
 extra:
   social:
     - icon: fontawesome/brands/github-alt
