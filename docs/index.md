@@ -6,7 +6,7 @@ title: "Fleek's Documentation"
 
 # 
 
-Welcome to the Fleek documentation. Whether you are an expert or an absolute beginner, you'll find your answers here. Pick a starting point below, or use the search box to find documents matching your keywords.
+Welcome to the Fleek documentation. Whether you are an expert or an absolute beginner, you'll find your answers here. Pick a starting point below, or use the search box to find documents matching your keywords. For questions on pricing, our general troubleshooting, visit our [Knowledge Hub](https://support.fleek.xyz/hc/en-us).
 
 !!! info
 
