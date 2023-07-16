@@ -61,7 +61,7 @@ If when you begin the "Set the Content Hash Flow", you find yourself viewing a *
 
 !!! info
 
-    Why does this happen? The resolver is the "service" your ENS domain name uses so that when someone visits the domain, it translates the request to the addresses/URLs/content that your ENS name represents. Resolvers are Smart Contracts on Ethereum, and there are many of them to choose from, thereforee they are set as a record in your ENS domain nam where the address of said contract is specified. Usually, when you create a new ENS domain name, a default, public resolver is set. 
+    Why does this happen? The resolver is the "service" your ENS domain name uses so that when someone visits the domain, it translates the request to the addresses/URLs/content that your ENS name represents. Resolvers are Smart Contracts on Ethereum, and there are many of them to choose from, therefore they are set as a record in your ENS domain name where the address of said contract is specified. Usually, when you create a new ENS domain name, a default, public resolver is set. 
 
 
 **If your ENS domain name is configured using a legacy, or outdated resolver** you won't be able to access your site since resolving won't work properly.
@@ -70,7 +70,7 @@ If when you begin the "Set the Content Hash Flow", you find yourself viewing a *
 
 ![](imgs/resolver.png)
 
-**In the RESOLVER section, click the SET button** to open up the window that will help you reconfigure your ENS domain resolver. **Click the 'USE PUBLIC RESOLVER' option to have ENS auto-fill with a public, up-to-date, resolver**. Alternatively, you can use a custom one if you now the proper address.
+**In the RESOLVER section, click the SET button** to open up the window that will help you reconfigure your ENS domain resolver. **Click the 'USE PUBLIC RESOLVER' option to have ENS auto-fill with a public, up-to-date, resolver**. Alternatively, you can use a custom one if you know the proper address.
 
 ![](imgs/public.png)
 
@@ -84,7 +84,7 @@ If when you begin the "Set the Content Hash Flow", you find yourself viewing a *
 
 ## Adding an ENS Subname
 
-Normally, trying to add an ENS subdomain or Subname of ENS V3 can trigger an errors due to controller settings in ENS. To ensure you can easily add any ENS subdomain to any Fleek site you want, go to the ENS app at https://app.ens.domains/yourname and:
+Normally, trying to add an ENS subdomain or Subname of ENS V3 can trigger an error due to controller settings in ENS. To ensure you can easily add any ENS subdomain to any Fleek site you want, go to the ENS app at https://app.ens.domains/yourname and:
 
 1. Visit the subnames tab, and select the subname you want to add to Fleek.
 2. Unwrap your subname.
