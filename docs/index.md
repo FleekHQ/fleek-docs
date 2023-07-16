@@ -65,7 +65,7 @@ Furthermore, for the Internet Computer's ecosystem, we provide the following too
 
 !!! info
 
-    When you deploy a static site to the IC via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Internet Computer site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, we supports custom DNS domains, but ENS and other alternatives will be added in the future for IC-hosted sites.
+    When you deploy a static site to the IC via Fleek, a front-end canister will be created, and updated automatically by Fleek with each deployment. You can choose to proxy your Internet Computer site via a service worker, connecting directly to the IC, or Fleek's seamless proxy. Everything is deployed to our CDN as a performance front, with free SSL certificate and preview URL. Currently, we support custom DNS domains, but ENS and other alternatives will be added in the future for IC-hosted sites.
 
 <div class="prev-boxes-list">
 <a href="./internet-computer-hosting/site-deployment/" class="prev-box">
@@ -97,7 +97,7 @@ Got an IPFS or Internet Computer project hosted on Fleek? Then personalize it wi
   </a>
   <a href="./domain-management/ens-domains/" class="prev-box">
     <h5>ENS Domains</h5>
-    <p>Use Ethereum Name Servie Domains</p>
+    <p>Use Ethereum Name Service Domains</p>
   </a>
     <a href="./domain-management/hns-domains/" class="prev-box">
     <h5>HNS Domains</h5>
@@ -135,7 +135,7 @@ Fleek storage is the easiest and most performant way to upload, pin, and fetch f
 
 ## Space Daemon
 
-The Space Daemon packages together IPFS, Textile Threads/Buckets, and Textile Powergate (Filecoin) into one easy to install and JS interface to make it easy to build peer to peer and privacy focused apps. Installing the Space Daemon is easy and comes with all the tools packaged together including IPFS and Textile nodes, and and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets, and User Controlled Data. You can access same methods using our JS client, so you don't need to worry about gRCP calls.
+The Space Daemon packages together IPFS, Textile Threads/Buckets, and Textile Powergate (Filecoin) into one easy to install and JS interface to make it easy to build peer to peer and privacy focused apps. Installing the Space Daemon is easy and comes with all the tools packaged together including IPFS and Textile nodes, and also exposes gRPC methods specific to the features you want for your app including: File Upload (encrypted), File Sharing, Filecoin Markets, and User Controlled Data. You can access same methods using our JS client, so you don't need to worry about gRCP calls.
 
 <div class="prev-boxes-list">
 <a href="./space-daemon/getting-started/#installation" class="prev-box">
