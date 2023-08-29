@@ -7,7 +7,7 @@ date: "1"
 
 At the end of last year (2022), we brought many updates to the world of Fleek. Among those updates, our plan to build a new Fleek ([fleek.xyz](https://fleek.xyz)) with a new fully event-based architecture, fully modular, and extensible. A new foundation upon which Fleek could grow to offer any folder of infrastructure and development services, out of the constraints of the current platform.
 
-Once the platform is live, **we will begin the sunsetting of Fleek.co, and full migration to the new improved platform**.
+Once the platform is live **we will begin the sunsetting of Fleek.co, and full migration to the new improved platform**.
 
 ## Phases:
 To be more organized we are separating the road towards sunsetting the old platform in different sequential phases that help us to ensure that the migration is up to our standards and every user has a fantastic experience leading into the new platform.
