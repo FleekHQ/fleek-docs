@@ -19,7 +19,7 @@ Got an IPFS or Internet Computer project hosted on Fleek? Then personalize it wi
   </a>
   <a href="../ens-domains/" class="prev-box">
     <h5>ENS Domains</h5>
-    <p>Use Ethereum Name Servie Domains</p>
+    <p>Use Ethereum Name Service Domains</p>
   </a>
     <a href="../hns-domains/" class="prev-box">
     <h5>HNS Domains</h5>

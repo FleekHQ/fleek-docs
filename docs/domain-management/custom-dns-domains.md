@@ -13,7 +13,7 @@ If your site is hosted on the Internet Computer, Fleek will automatically assign
 
     As of May 2021, we've upgraded our DNS custom domain configuration to unlock extra CDN features, automatic and scalable DDOS protection, and other perks like perma-caching for all sites/apps using DNS names on Fleek. This new setup requires that your DNS service/provider supports ANAME/ALIAS.
 
-    If you set up your DNS domain before May 2021, you need to migrate to this new configuration before May 31st, where all sites using the legacy proxy/DNS will stop working.
+    If you set up your DNS domain before May 2021, you need to migrate to this new configuration before May 31st, when all sites using the legacy proxy/DNS will stop working.
     
     See the section "Upgrading to New DNS Configuration".
 
@@ -111,6 +111,6 @@ If you wanted to have that Cloudflare feature on because of its CDN perks and DD
 ### How to Upgrade (Using Google Domains)
 There is a workaround for people using Google Domains that don't want to use Cloudflare. This trick could apply to other providers that offer domain forwarding to sub domain from apex domain.
 
-Here is a a [detailed guide on how to do so](https://support.getshifter.io/en/articles/3080501-domain-forwarding-on-google-domains-zone-apex-naked-domain-to-www-prefixed-domain). The idea is that Google Domains doesn't support ANAME/ALIAS records for apex domains (domain.com). But what **you can do** on Google Domains is forward that apex domain to a sub domain (www.domain.com).
+Here is a [detailed guide on how to do so](https://support.getshifter.io/en/articles/3080501-domain-forwarding-on-google-domains-zone-apex-naked-domain-to-www-prefixed-domain). The idea is that Google Domains doesn't support ANAME/ALIAS records for apex domains (domain.com). But what **you can do** on Google Domains is forward that apex domain to a sub domain (www.domain.com).
 
 In Fleek, subdomains use CNAME records, therefore you could verify it doing this trick, making www. your main point of entry for your website.

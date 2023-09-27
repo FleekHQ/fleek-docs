@@ -41,7 +41,7 @@ Here you will find the **Hosting API Key** generator, which you can use to creat
 ![](imgs/apikey.gif)
 
 ## Authentication
-To authenticate against the API, pass your API Key as the `Authorization` header to the request, this will be use to authenticate the request against the team the key was generated for.
+To authenticate against the API, pass your API Key as the `Authorization` header to the request, this will be used to authenticate the request against the team the key was generated for.
 
 Example curl request can be authenticated like so:
 
@@ -108,7 +108,7 @@ mutation {
 
 NOTE: `siteId` is different from site name/slug, you can get the id from the `[Site.id](http://site.id)` field of the `Site` type. Also, the `commit` input is not required, omitting it would deploy the latest commit on the configured sites repository branch.
 
-You can can then query the status of the latest deployment using the following query:
+You can then query the status of the latest deployment using the following query:
 
 ```graphql
 query {

@@ -11,4 +11,4 @@ date: "1"
 
 This decentralized app demonstrates how Fleek Storage can be leveraged to store the assets of ERC-721 NFTs on IPFS. The dapp mints new tokens with an IPFS hash of an image stored on the smart contract itself.
 
-It was made using the AWS S3-based SDK of Fleek Storage, but it is recommendeded to use Fleek Storage Js for newer apps.
+It was made using the AWS S3-based SDK of Fleek Storage, but it is recommended to use Fleek Storage Js for newer apps.
