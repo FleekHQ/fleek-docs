@@ -159,6 +159,8 @@ Creates a new bucket. Returns a Promise that resolves to the new bucket instance
       console.log(bucket.getPath());
       console.log(bucket.getCreatedat());
       console.log(bucket.getUpdatedat());
+      console.log(bucket.getMembersList());
+      console.log(bucket.getIsselectgroupbucket());
     })
     .catch((err) => {
       console.error(err);
@@ -185,7 +187,7 @@ Returns all the buckets available
 
 ```js
   client
-    .listBuckets()
+    .listBuckets({})
     .then((res) => {
       const buckets = res.getBucketsList();
       
@@ -195,6 +197,8 @@ Returns all the buckets available
         console.log('path:', bucket.getPath());
         console.log('createdAt:', bucket.getCreatedat());
         console.log('updatedAt:', bucket.getUpdatedat());
+        console.log('membersList:', bucket.getMembersList());
+        console.log('isSelectGroupBucket:', bucket.getIsselectgroupbucket());
       });
     })
     .catch((err) => {
