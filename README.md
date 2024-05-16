@@ -1,10 +1,11 @@
 # Fleek Documentation
 
-Join our public [Slack](https://slack.fleek.co/), visit our [GitHub](https://github.com/FleekHQ), follow us on [Twitter](https://twitter.com/FleekHQ), and check out the [Blog](https://blog.fleek.co)!
+Join our public [Slack](https://slack.fleek.co/), visit our [GitHub](https://github.com/FleekHQ), follow us on [Twitter](https://twitter.com/fleek), and check out the [Blog](https://blog.fleek.co)!
 
 ## Getting started
 
 ### Prerequisites
+
 - python >= 3.7.4
 - pip >= 20.1.1
 
@@ -17,11 +18,13 @@ pip install mkdocs-material
 ```
 
 #### Run Locally
+
 ```sh
 mkdocs serve
 ```
 
 #### Build
+
 ```sh
 mkdocs build
 ```
