@@ -1,7 +1,7 @@
 ---
 date: "1"
-
 ---
+
 # Overview
 
 ![](imgs/hero.png)
@@ -37,4 +37,4 @@ Whether you prefer to use simple interfaces, programming, or use your current co
   </a>  
 </div>
 
-We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://slack.fleek.co/), on [Twitter](https://twitter.com/FleekHQ), or at support@Fleek.co
+We are happy to help get your website up and running. Please feel free to reach out on our [website](https://Fleek.co), in our [Community Chat](https://slack.fleek.co/), on [Twitter](https://twitter.com/fleek), or at support@Fleek.co

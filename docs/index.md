@@ -2,9 +2,10 @@
 date: "1"
 title: "Fleek's Documentation"
 ---
+
 ![](imgs/fleek-docs-group.png)
 
-# 
+#
 
 Welcome to the Fleek documentation. Whether you are an expert or an absolute beginner, you'll find your answers here. Pick a starting point below, or use the search box to find documents matching your keywords. For questions on pricing, our general troubleshooting, visit our [Knowledge Hub](https://support.fleek.xyz/hc/en-us).
 
@@ -15,7 +16,6 @@ Welcome to the Fleek documentation. Whether you are an expert or an absolute beg
 Fleek makes it easy to build on Open Web protocols and a base layer infrastructure powered by them. Build and host your sites, apps, Dapps, and other services on trustless, permissionless, and open technologies focused on creating user-controlled, encrypted, private, p2p experiences easily. Build on the New Internet, and take the road to Web 3.0.
 
 Packaging Open Web protocols like the Internet Computer, IPFS, Filecoin, Ethereum, GunDB, ENS, and more, in an ever-shifting stack of technologies that provide technical guarantees, no promises or trust issues.
-
 
 ## Fleek IPFS Hosting
 
@@ -58,10 +58,9 @@ With Fleek, you can seamlessly deploy **static sites** to [DFINITY's](https://df
 
 Furthermore, for the Internet Computer's ecosystem, we provide the following tools:
 
- - Fleek IC Gateway
- - Alternative Proxy/Service Worker Resolving Options
- - Automatic Cycle Management
-
+- Fleek IC Gateway
+- Alternative Proxy/Service Worker Resolving Options
+- Automatic Cycle Management
 
 !!! info
 
@@ -158,7 +157,7 @@ The Space Daemon packages together IPFS, Textile Threads/Buckets, and Textile Po
 
 ## Space SDK
 
-The Space web application is built using the Space SDK, a modular JS library that packages the IPFS, Textile, Filecoin, and GunDB implementations necessary to build Open Web apps into easy to use commands and interfaces. It's open source and designed as a tool that anyone can plug into their websites or applications and implement Web3-enabled functionalities to make their projects more trustless and user-controlled. 
+The Space web application is built using the Space SDK, a modular JS library that packages the IPFS, Textile, Filecoin, and GunDB implementations necessary to build Open Web apps into easy to use commands and interfaces. It's open source and designed as a tool that anyone can plug into their websites or applications and implement Web3-enabled functionalities to make their projects more trustless and user-controlled.
 
 It's the successor of the Space Daemon, our desktop-based library. The Space SDK take the perks of the Daemon (encryption, user-controlled storage, peer-to-peer interactions, etc.) and makes them available on browser and mobile experiences. It's modular, and protocol agnostic, meaning you can use our own implementations (Textile hub for users, for example) or plug in your own layer and still leverage the SDK as an interface to manage it. For example, we plug in Torus as a seamless key management layer!
 
@@ -195,4 +194,4 @@ Also, you can easily download files from the gateway using the [getFileFromHash]
 
 ## Other Resources
 
-Join our public [Slack](https://slack.fleek.co/), visit our [GitHub](https://github.com/FleekHQ), follow us on [Twitter](https://twitter.com/FleekHQ), and check out the [Blog](https://blog.fleek.co)!
+Join our public [Slack](https://slack.fleek.co/), visit our [GitHub](https://github.com/FleekHQ), follow us on [Twitter](https://twitter.com/fleek), and check out the [Blog](https://blog.fleek.co)!
