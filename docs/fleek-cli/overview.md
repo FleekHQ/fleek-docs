@@ -6,6 +6,10 @@ date: "1"
 
 ![](imgs/fleekcli.png)
 
+!!! warning
+
+    We’ve upgraded! The deprecated Fleek CLI is now part of our all-new Fleek Platform CLI, which brings enhanced performance, new features, and broader support for all your development needs. Head to https://www.npmjs.com/package/@fleek-platform/cli to get started, or visit https://fleek.xyz/docs to learn even more.
+
 The Fleek CLI is a command line interface that allows you to interact and control Fleek suite of tools and products. Currently, you can access to our **hosting**  products, or retrieve an API key to authenticate yourself when using the [Fleek Storage JS](https://docs.fleek.co/storage/fleek-storage-js/). It is in active development, and we will continue to add the rest of our suite's tools in the future.
 
 ### **Deployment Location**
