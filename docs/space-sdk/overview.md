@@ -5,6 +5,10 @@ date: "1"
 
 ![](imgs/sdk.png)
 
+!!! warning
+
+    We’ve upgraded! The deprecated Fleek Storage SDK is now part of our all-new Fleek Platform SDK, which brings enhanced performance, new features, and broader support for all your development needs. Head to https://www.npmjs.com/package/@fleek-platform/sdk to get started, or visit https://fleek.xyz/docs to learn even more.
+
 The [Space SDK](https://github.com/FleekHQ/space-sdk) is a Javascript/Typescript modular library and set of interfaces that packages tools and features enabled by Open Web protocols like [IPFS](https://ipfs.io/), [Textile](https://textile.io/), [Filecoin](https://filecoin.io/), [GunDB](https://gun.eco/), and [Ethereum](https://ethereum.org/) in easy to use commands, **via the Space API**, for anyone to use when building applications or websites powered by the Distributed Open Web.
 
 ![](imgs/protocols1.png)
