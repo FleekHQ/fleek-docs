@@ -4,7 +4,7 @@ title: "Fleek's Documentation"
 ---
 
 ![](imgs/fleek-docs-group.png)
-
+maxgrillasca09@gmail.com
 #
 
 Welcome to the Fleek documentation. Whether you are an expert or an absolute beginner, you'll find your answers here. Pick a starting point below, or use the search box to find documents matching your keywords. For questions on pricing, our general troubleshooting, visit our [Knowledge Hub](https://support.fleek.xyz/hc/en-us).
@@ -50,8 +50,9 @@ From local development to global deployment, Fleek is everything you need to hos
     <h5>HNS Domains</h5>
     <p>Add HNS Domains To Your Site</p>
   </a>  
-</div>
-
+</div>  
+your mail
+</mail>:`maxgrillasca09@gmail.com`
 ## Fleek Internet Computer Site Hosting
 
 With Fleek, you can seamlessly deploy **static sites** to [DFINITY's](https://dfinity.org/) Internet Computer ('IC'). The entire deployment process, from front-end canister creation to cycle management is abstracted and automated so that you can build fast sites on the IC trustless, permissionless, and open infrastructure in a couple clicks.
